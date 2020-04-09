@@ -1,0 +1,48 @@
+[general]
+FrameworkPath=/lustre/home/dc010/pcerro/mutomvo_projects
+ApplicationPath=/lustre/home/dc010/pcerro/mutomvo_projects/apps
+MutantPath=/lustre/home/dc010/pcerro/mutomvo_projects/project_fft_cirrus/mutants
+ApplicationName=fft_master
+ExecutionLineOriginal=[[MUTANTS_PATH]]/[[INDEX_MUTANT]]/
+ExecutionLineMutants=[[MUTANTS_PATH]]/[[INDEX_MUTANT]]/
+GenerationLineMutants=cd /lustre/home/dc010/pcerro/mutomvo/bin &&java -jar mutomvo.jar -p fft_cirrus -g
+TotalTests=1	
+TotalMutants=75000
+StartingMutant=1
+
+[optimizations]
+DistributeOriginal=1
+SortTestSuite=0
+ScatterWorkload=1
+ClusterMutants=0
+ParallelCompilation=1
+ParallelMd5sum=1
+MultipleCoordinators=0
+
+[standalone]
+Standalone=1
+TestSuiteFile=/lustre/home/dc010/pcerro/mutomvo_projects/project_fft_cirrus/testsFile.sh
+
+[compilation]
+CompilationEnabled=1
+CompilationLineOriginal=gcc -O3 -lm -Wall [[ORIGINAL_PATH]]/fft_master.c -o [[ORIGINAL_PATH]]/fft_master -lcrypto -lssl 
+CompilationLineMutants=gcc -O3 -lm -Wall [[MUTANTS_PATH]]/[[INDEX_MUTANT]]/bmp.c -o [[MUTANTS_PATH]]/[[INDEX_MUTANT]]/bmp -lcrypto -lssl
+CompilationNumWorkers=64
+CompilationWithScript=0
+CompilationScript=
+
+[timeouts]
+MALONE_MAX_ORIGINAL_TIMEOUT=3601
+MALONE_MAX_MUTANTS_TIMEOUT_FACTOR=10
+MALONE_MAX_MUTANTS_MINIMUM_TIME=17
+
+[monitor]
+MonitorEnabled=0
+MonitorLines=vmstat,ip -s link,top -n 1 -b
+MonitorOnceLines=sysctl -a,lscpu,cat /proc/meminfo
+MonitorFrequency=60
+
+[misc]
+MarkerToken=-
+MutantGenerationEnabled=0
+

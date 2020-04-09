@@ -1,0 +1,95 @@
+\hypertarget{EquivalenceChecking_8c}{\section{Equivalence\-Checking.\-c File Reference}
+\label{EquivalenceChecking_8c}\index{Equivalence\-Checking.\-c@{Equivalence\-Checking.\-c}}
+}
+{\ttfamily \#include \char`\"{}Options.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Auxiliars.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Malone.\-h\char`\"{}}\\*
+Include dependency graph for Equivalence\-Checking.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{EquivalenceChecking_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{EquivalenceChecking_8c_a0f95b2e3a9d83780eeafa936ab28bbd1}{E\-Q\-U\-I\-V\-A\-L\-E\-N\-C\-E\-\_\-\-P\-R\-I\-N\-T}~1
+\item 
+\#define \hyperlink{EquivalenceChecking_8c_af2ed4018e0ef5f6bdc995be314e21171}{E\-Q\-U\-I\-V\-A\-L\-E\-N\-C\-E\-\_\-\-P\-R\-I\-N\-T\-\_\-\-D\-E\-B\-U\-G}~0
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{EquivalenceChecking_8c_aaad6d0b4d0f8530d704aeaf2bd10e30e}{create\-Clusters} ()
+\item 
+int \hyperlink{EquivalenceChecking_8c_ac30870c39df1d875ac2c8349a70ee98a}{are\-Equals} (int n\-Mutant\-Source, int n\-Mutant\-Dest)
+\item 
+void \hyperlink{EquivalenceChecking_8c_a35e84a93532b64083198e5f68d4529e7}{check\-Mutants\-Equivalence} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{EquivalenceChecking_8c_a0f95b2e3a9d83780eeafa936ab28bbd1}{\index{Equivalence\-Checking.\-c@{Equivalence\-Checking.\-c}!E\-Q\-U\-I\-V\-A\-L\-E\-N\-C\-E\-\_\-\-P\-R\-I\-N\-T@{E\-Q\-U\-I\-V\-A\-L\-E\-N\-C\-E\-\_\-\-P\-R\-I\-N\-T}}
+\index{E\-Q\-U\-I\-V\-A\-L\-E\-N\-C\-E\-\_\-\-P\-R\-I\-N\-T@{E\-Q\-U\-I\-V\-A\-L\-E\-N\-C\-E\-\_\-\-P\-R\-I\-N\-T}!EquivalenceChecking.c@{Equivalence\-Checking.\-c}}
+\subsubsection[{E\-Q\-U\-I\-V\-A\-L\-E\-N\-C\-E\-\_\-\-P\-R\-I\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-Q\-U\-I\-V\-A\-L\-E\-N\-C\-E\-\_\-\-P\-R\-I\-N\-T~1}}\label{EquivalenceChecking_8c_a0f95b2e3a9d83780eeafa936ab28bbd1}
+\hypertarget{EquivalenceChecking_8c_af2ed4018e0ef5f6bdc995be314e21171}{\index{Equivalence\-Checking.\-c@{Equivalence\-Checking.\-c}!E\-Q\-U\-I\-V\-A\-L\-E\-N\-C\-E\-\_\-\-P\-R\-I\-N\-T\-\_\-\-D\-E\-B\-U\-G@{E\-Q\-U\-I\-V\-A\-L\-E\-N\-C\-E\-\_\-\-P\-R\-I\-N\-T\-\_\-\-D\-E\-B\-U\-G}}
+\index{E\-Q\-U\-I\-V\-A\-L\-E\-N\-C\-E\-\_\-\-P\-R\-I\-N\-T\-\_\-\-D\-E\-B\-U\-G@{E\-Q\-U\-I\-V\-A\-L\-E\-N\-C\-E\-\_\-\-P\-R\-I\-N\-T\-\_\-\-D\-E\-B\-U\-G}!EquivalenceChecking.c@{Equivalence\-Checking.\-c}}
+\subsubsection[{E\-Q\-U\-I\-V\-A\-L\-E\-N\-C\-E\-\_\-\-P\-R\-I\-N\-T\-\_\-\-D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-Q\-U\-I\-V\-A\-L\-E\-N\-C\-E\-\_\-\-P\-R\-I\-N\-T\-\_\-\-D\-E\-B\-U\-G~0}}\label{EquivalenceChecking_8c_af2ed4018e0ef5f6bdc995be314e21171}
+
+
+\subsection{Function Documentation}
+\hypertarget{EquivalenceChecking_8c_ac30870c39df1d875ac2c8349a70ee98a}{\index{Equivalence\-Checking.\-c@{Equivalence\-Checking.\-c}!are\-Equals@{are\-Equals}}
+\index{are\-Equals@{are\-Equals}!EquivalenceChecking.c@{Equivalence\-Checking.\-c}}
+\subsubsection[{are\-Equals}]{\setlength{\rightskip}{0pt plus 5cm}int are\-Equals (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Mutant\-Source, }
+\item[{int}]{n\-Mutant\-Dest}
+\end{DoxyParamCaption}
+)}}\label{EquivalenceChecking_8c_ac30870c39df1d875ac2c8349a70ee98a}
+Compare the binary files, using M\-D5 hash, of two mutants. A\-Ctually this method is never used during the equivalent detection phase due to the high computational cost 
+\begin{DoxyParams}{Parameters}
+{\em n\-Mutant\-Source} & \\
+\hline
+{\em n\-Mutant\-Dest} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{EquivalenceChecking_8c_ac30870c39df1d875ac2c8349a70ee98a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{EquivalenceChecking_8c_a35e84a93532b64083198e5f68d4529e7}{\index{Equivalence\-Checking.\-c@{Equivalence\-Checking.\-c}!check\-Mutants\-Equivalence@{check\-Mutants\-Equivalence}}
+\index{check\-Mutants\-Equivalence@{check\-Mutants\-Equivalence}!EquivalenceChecking.c@{Equivalence\-Checking.\-c}}
+\subsubsection[{check\-Mutants\-Equivalence}]{\setlength{\rightskip}{0pt plus 5cm}void check\-Mutants\-Equivalence (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{EquivalenceChecking_8c_a35e84a93532b64083198e5f68d4529e7}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{EquivalenceChecking_8c_a35e84a93532b64083198e5f68d4529e7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{EquivalenceChecking_8c_aaad6d0b4d0f8530d704aeaf2bd10e30e}{\index{Equivalence\-Checking.\-c@{Equivalence\-Checking.\-c}!create\-Clusters@{create\-Clusters}}
+\index{create\-Clusters@{create\-Clusters}!EquivalenceChecking.c@{Equivalence\-Checking.\-c}}
+\subsubsection[{create\-Clusters}]{\setlength{\rightskip}{0pt plus 5cm}void create\-Clusters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{EquivalenceChecking_8c_aaad6d0b4d0f8530d704aeaf2bd10e30e}

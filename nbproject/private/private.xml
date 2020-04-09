@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <activeConfTypeElem>1</activeConfTypeElem>
+        <activeConfIndexElem>0</activeConfIndexElem>
+    </data>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/pablo/NetBeansProjects/Malone/ToDo</file>
+            <file>file:/home/pablo/NetBeansProjects/Malone/EquivalenceChecking.c</file>
+            <file>file:/home/pablo/NetBeansProjects/Malone/Options.h</file>
+            <file>file:/home/pablo/NetBeansProjects/Malone/Malone.c</file>
+            <file>file:/home/pablo/NetBeansProjects/Malone/MPI_Operations.c</file>
+            <file>file:/home/pablo/NetBeansProjects/Malone/distribution_full_dynamic.c</file>
+            <file>file:/home/pablo/NetBeansProjects/Malone/Auxiliars.c</file>
+            <file>file:/home/pablo/NetBeansProjects/Malone/distribution_adaptive_grain.c</file>
+            <file>file:/home/pablo/NetBeansProjects/Malone/distribution_full_dynamic_scatter.c</file>
+            <file>file:/home/pablo/NetBeansProjects/Malone/MPI_Operations.h</file>
+            <file>file:/home/pablo/NetBeansProjects/Malone/md5Parallel.c</file>
+            <file>file:/home/pablo/NetBeansProjects/Malone/main.c</file>
+        </group>
+    </open-files>
+</project-private>

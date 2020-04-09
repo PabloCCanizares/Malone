@@ -1,0 +1,6 @@
+<map id="initializeMPI" name="initializeMPI">
+<area shape="rect" id="node2" href="$MPI__Operations_8c.html#a3bb1a9d01cf34745e4b28907f68d1484" title="initializeMPI_Datatype" alt="" coords="147,56,301,83"/>
+<area shape="rect" id="node3" href="$MPI__Operations_8c.html#a4678fa2ef9d01dc04615a9a18adaed3a" title="init_Datatype_deploy" alt="" coords="351,5,495,32"/>
+<area shape="rect" id="node4" href="$MPI__Operations_8c.html#a71478d86fc7c35bd6a2449504ff17909" title="init_Datatype_test" alt="" coords="359,56,487,83"/>
+<area shape="rect" id="node5" href="$MPI__Operations_8c.html#a7fa7e7c84b6281d2ea9b1c5500e24c25" title="init_Datatype_mutant" alt="" coords="349,107,496,133"/>
+</map>

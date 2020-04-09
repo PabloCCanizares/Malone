@@ -1,0 +1,6 @@
+<map id="malone_compile_mutants" name="malone_compile_mutants">
+<area shape="rect" id="node2" href="$Auxiliars_8c.html#a60ab9fcbd72061289ed7af622754751b" title="getTick" alt="" coords="274,5,339,32"/>
+<area shape="rect" id="node3" href="$Auxiliars_8c.html#abf20f0d0256aca4acc21a8bcef943aa2" title="generateCompilationLine" alt="" coords="224,56,389,83"/>
+<area shape="rect" id="node5" href="$Auxiliars_8c.html#a312b37675e7e147fb30b0cb53d7d8479" title="execCommandLine" alt="" coords="239,107,374,133"/>
+<area shape="rect" id="node4" href="$Auxiliars_8c.html#a59689ac62cb991f149d59ff57f678550" title="replace" alt="" coords="437,56,501,83"/>
+</map>

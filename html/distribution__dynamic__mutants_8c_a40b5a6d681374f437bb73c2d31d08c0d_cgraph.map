@@ -1,0 +1,30 @@
+<map id="distribution_dynamic_mutants" name="distribution_dynamic_mutants">
+<area shape="rect" id="node2" href="$MPI__Operations_8c.html#a694d58e8f4120ad389e8f5e784c5e4c9" title="sendDeployMode" alt="" coords="219,62,341,89"/>
+<area shape="rect" id="node4" href="$printers_8c.html#a7d3990d33437fc5e3533b4999a7ec6e5" title="printDeployStruct" alt="" coords="433,11,556,38"/>
+<area shape="rect" id="node5" href="$MPI__Operations_8c.html#a358cbb24fe485a8baf301cf3349d2f6a" title="receiveMutants" alt="" coords="225,721,335,747"/>
+<area shape="rect" id="node13" href="$MPI__Operations_8c.html#ae74b17c84089d558b044ba4b14e68250" title="receiveDeployMode" alt="" coords="211,399,349,426"/>
+<area shape="rect" id="node14" href="$Malone_8c.html#a6848801ebab1f07e7756644a86eb4efd" title="malone_execute_mutants\l_by_scheme" alt="" coords="195,333,365,375"/>
+<area shape="rect" id="node29" href="$MPI__Operations_8c.html#a353da00d2b623fe485a1c8ed8fc30792" title="sendMutants" alt="" coords="446,670,543,697"/>
+<area shape="rect" id="node3" href="$Auxiliars_8c.html#a60ab9fcbd72061289ed7af622754751b" title="getTick" alt="" coords="462,62,527,89"/>
+<area shape="rect" id="node6" href="$transformations_8c.html#a7c4fe205e349fdc6b1b3fe74ba370010" title="redMut2Mut" alt="" coords="449,771,540,798"/>
+<area shape="rect" id="node8" href="$Auxiliars_8c.html#ae868349a1b9962bef735c645c8af8429" title="insertMutantTestByTest" alt="" coords="413,721,576,747"/>
+<area shape="rect" id="node7" href="$printers_8c.html#a7de3b9fc7ba84cdd4262a8b196cd6d0a" title="printMutant" alt="" coords="669,670,755,697"/>
+<area shape="rect" id="node9" href="$Auxiliars_8c.html#ad977bb957ddd724b9dd590e37d9fe093" title="isMutantAllocated" alt="" coords="849,670,975,697"/>
+<area shape="rect" id="node10" href="$Auxiliars_8c.html#a3ac75c1ea5af10a333cbda886d5b486d" title="allocMutant" alt="" coords="667,619,757,646"/>
+<area shape="rect" id="node11" href="$printers_8c.html#a3d68e172294e99732704a5e61cb62d33" title="printTest" alt="" coords="675,569,749,595"/>
+<area shape="rect" id="node12" href="$Auxiliars_8c.html#afa2214923ca27bb087ebe0622ba7c152" title="insertTestResult" alt="" coords="653,721,771,747"/>
+<area shape="rect" id="node15" href="$Auxiliars_8c.html#a89d711e5c117f1a990a8cf5e5c8630dc" title="buildExeLine" alt="" coords="447,265,543,291"/>
+<area shape="rect" id="node19" href="$Auxiliars_8c.html#ac65810d8fde88b1a003403d3894e070e" title="getOriginalTime" alt="" coords="438,366,551,393"/>
+<area shape="rect" id="node20" href="$Malone_8c.html#a4ce692c454d76ccafb98eeb286d5aaff" title="getMutantsTimeout" alt="" coords="427,417,562,443"/>
+<area shape="rect" id="node21" href="$Auxiliars_8c.html#a312b37675e7e147fb30b0cb53d7d8479" title="execCommandLine" alt="" coords="427,467,562,494"/>
+<area shape="rect" id="node22" href="$Malone_8c.html#a2310c48071c070dcf580c7aaf3f6387c" title="getMarkerToken" alt="" coords="437,113,553,139"/>
+<area shape="rect" id="node23" href="$Malone_8c.html#a84de055a3e128207df7c87e8073bd558" title="createTestTrap2" alt="" coords="436,163,553,190"/>
+<area shape="rect" id="node24" href="$Auxiliars_8c.html#a83dd3e45bbd9220ce41c2a2785ee2571" title="checkResult" alt="" coords="447,214,542,241"/>
+<area shape="rect" id="node25" href="$MPI__Operations_8c.html#a1150f211512315a77cf72e83e81af3bb" title="sendTest" alt="" coords="457,315,533,342"/>
+<area shape="rect" id="node28" href="$Auxiliars_8c.html#a468c24e305d956cf0bb31debf9ff8a97" title="insertTestResult_unsorted" alt="" coords="625,518,799,545"/>
+<area shape="rect" id="node16" href="$Auxiliars_8c.html#a82109f9207eb5c668dcffd36565eaee7" title="buildExeLine_general" alt="" coords="639,265,785,291"/>
+<area shape="rect" id="node17" href="$Auxiliars_8c.html#a94eb643b244f2e7018d5a205b18cd4dc" title="buildExeLine_StandAlone" alt="" coords="627,214,797,241"/>
+<area shape="rect" id="node18" href="$Auxiliars_8c.html#a59689ac62cb991f149d59ff57f678550" title="replace" alt="" coords="880,214,944,241"/>
+<area shape="rect" id="node26" href="$transformations_8c.html#ace04f22f6809f6ee2452be1ccb4065b9" title="test2redTest" alt="" coords="665,315,759,342"/>
+<area shape="rect" id="node27" href="$printers_8c.html#a404e32e1876760b4beffbf348f5dc9b2" title="printTestRed" alt="" coords="663,366,761,393"/>
+</map>

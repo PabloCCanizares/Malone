@@ -1,0 +1,109 @@
+\hypertarget{configuration_8c}{\section{configuration.\-c File Reference}
+\label{configuration_8c}\index{configuration.\-c@{configuration.\-c}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}configuration.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Options.\-h\char`\"{}}\\*
+Include dependency graph for configuration.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{configuration_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{configuration_8c_ad5ed6ddd9940c0097cc91774056df1c2}{load\-Config} ()
+\item 
+\hyperlink{structT__stConfigValues}{T\-\_\-st\-Config\-Values} $\ast$ \hyperlink{configuration_8c_a3cef3589b845d74e6abb41c9d52ada3d}{load\-Config\-From\-Ini} (char $\ast$str\-Path)
+\item 
+\hyperlink{structT__stIniValues}{T\-\_\-st\-Ini\-Values} $\ast$ \hyperlink{configuration_8c_aa2b23411e3652d16c61db09763bba644}{load\-Environment\-From\-Ini\-File} (char $\ast$str\-Path)
+\item 
+\hyperlink{structT__stIniValues}{T\-\_\-st\-Ini\-Values} $\ast$ \hyperlink{configuration_8c_a9e8f363ac5cd9dc04603644592421ac4}{load\-Environment\-Keys} (G\-Key\-File $\ast$key\-\_\-file)
+\item 
+\hyperlink{structT__stIniValues}{T\-\_\-st\-Ini\-Values} $\ast$ \hyperlink{configuration_8c_a63a188784f1a565b87a789e33f3562b3}{load\-Environment\-From\-Ini\-Memory} (const char $\ast$p\-Buffer, int n\-Size)
+\item 
+int \hyperlink{configuration_8c_ac4b5363f6a34730d07d721a1b3043fc6}{is\-Enabled\-Config\-Log} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{configuration_8c_ac4b5363f6a34730d07d721a1b3043fc6}{\index{configuration.\-c@{configuration.\-c}!is\-Enabled\-Config\-Log@{is\-Enabled\-Config\-Log}}
+\index{is\-Enabled\-Config\-Log@{is\-Enabled\-Config\-Log}!configuration.c@{configuration.\-c}}
+\subsubsection[{is\-Enabled\-Config\-Log}]{\setlength{\rightskip}{0pt plus 5cm}int is\-Enabled\-Config\-Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{configuration_8c_ac4b5363f6a34730d07d721a1b3043fc6}
+\hypertarget{configuration_8c_ad5ed6ddd9940c0097cc91774056df1c2}{\index{configuration.\-c@{configuration.\-c}!load\-Config@{load\-Config}}
+\index{load\-Config@{load\-Config}!configuration.c@{configuration.\-c}}
+\subsubsection[{load\-Config}]{\setlength{\rightskip}{0pt plus 5cm}void load\-Config (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{configuration_8c_ad5ed6ddd9940c0097cc91774056df1c2}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{configuration_8c_ad5ed6ddd9940c0097cc91774056df1c2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{configuration_8c_a3cef3589b845d74e6abb41c9d52ada3d}{\index{configuration.\-c@{configuration.\-c}!load\-Config\-From\-Ini@{load\-Config\-From\-Ini}}
+\index{load\-Config\-From\-Ini@{load\-Config\-From\-Ini}!configuration.c@{configuration.\-c}}
+\subsubsection[{load\-Config\-From\-Ini}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-\_\-st\-Config\-Values}$\ast$ load\-Config\-From\-Ini (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str\-Path}
+\end{DoxyParamCaption}
+)}}\label{configuration_8c_a3cef3589b845d74e6abb41c9d52ada3d}
+\hypertarget{configuration_8c_aa2b23411e3652d16c61db09763bba644}{\index{configuration.\-c@{configuration.\-c}!load\-Environment\-From\-Ini\-File@{load\-Environment\-From\-Ini\-File}}
+\index{load\-Environment\-From\-Ini\-File@{load\-Environment\-From\-Ini\-File}!configuration.c@{configuration.\-c}}
+\subsubsection[{load\-Environment\-From\-Ini\-File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-\_\-st\-Ini\-Values}$\ast$ load\-Environment\-From\-Ini\-File (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str\-Path}
+\end{DoxyParamCaption}
+)}}\label{configuration_8c_aa2b23411e3652d16c61db09763bba644}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{configuration_8c_aa2b23411e3652d16c61db09763bba644_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{configuration_8c_a63a188784f1a565b87a789e33f3562b3}{\index{configuration.\-c@{configuration.\-c}!load\-Environment\-From\-Ini\-Memory@{load\-Environment\-From\-Ini\-Memory}}
+\index{load\-Environment\-From\-Ini\-Memory@{load\-Environment\-From\-Ini\-Memory}!configuration.c@{configuration.\-c}}
+\subsubsection[{load\-Environment\-From\-Ini\-Memory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-\_\-st\-Ini\-Values}$\ast$ load\-Environment\-From\-Ini\-Memory (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p\-Buffer, }
+\item[{int}]{n\-Size}
+\end{DoxyParamCaption}
+)}}\label{configuration_8c_a63a188784f1a565b87a789e33f3562b3}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{configuration_8c_a63a188784f1a565b87a789e33f3562b3_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{configuration_8c_a9e8f363ac5cd9dc04603644592421ac4}{\index{configuration.\-c@{configuration.\-c}!load\-Environment\-Keys@{load\-Environment\-Keys}}
+\index{load\-Environment\-Keys@{load\-Environment\-Keys}!configuration.c@{configuration.\-c}}
+\subsubsection[{load\-Environment\-Keys}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-\_\-st\-Ini\-Values}$\ast$ load\-Environment\-Keys (
+\begin{DoxyParamCaption}
+\item[{G\-Key\-File $\ast$}]{key\-\_\-file}
+\end{DoxyParamCaption}
+)}}\label{configuration_8c_a9e8f363ac5cd9dc04603644592421ac4}
+Load the .ini file getting the keys associated to the different values that comprises the file. 

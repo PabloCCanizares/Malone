@@ -1,0 +1,8 @@
+<map id="receiveSingleTestAndCheck" name="receiveSingleTestAndCheck">
+<area shape="rect" id="node2" href="$Auxiliars_8c.html#a60ab9fcbd72061289ed7af622754751b" title="getTick" alt="" coords="269,5,334,32"/>
+<area shape="rect" id="node3" href="$Auxiliars_8c.html#a483eea21188eae7d531a113493aacd6b" title="checkTestResult" alt="" coords="241,56,362,83"/>
+<area shape="rect" id="node5" href="$Auxiliars_8c.html#a3ac75c1ea5af10a333cbda886d5b486d" title="allocMutant" alt="" coords="257,107,346,133"/>
+<area shape="rect" id="node7" href="$Auxiliars_8c.html#afa2214923ca27bb087ebe0622ba7c152" title="insertTestResult" alt="" coords="242,157,361,184"/>
+<area shape="rect" id="node4" href="$Auxiliars_8c.html#a83dd3e45bbd9220ce41c2a2785ee2571" title="checkResult" alt="" coords="427,56,522,83"/>
+<area shape="rect" id="node6" href="$Auxiliars_8c.html#ad977bb957ddd724b9dd590e37d9fe093" title="isMutantAllocated" alt="" coords="411,132,538,159"/>
+</map>

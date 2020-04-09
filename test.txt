@@ -1,0 +1,204 @@
+MALONE: Manager for pAralleL mutatiON tEsting v1.0
+MALONE: Manager for pAralleL mutatiON tEsting v1.0
+<0> Initialized process 0 of 2
+<1> Initialized process 1 of 2
+<0>INTERNAL CONFIGURATION: 
+<0>Log:
+<0>MALONE_DEBUG_MAIN_MASTER_LOG: 0
+<0>MALONE_DEBUG_MAIN_WORKERS_LOG: 0
+<0>MALONE_DEBUG_MPI_OPS_LOG: 0
+<0>MALONE_DEBUG_AUX_LOG: 1
+<0>MALONE_DEBUG_DIST_COMMON_LOG: 0
+<0>MALONE_DEBUG_DIST_MASTER_LOG: 0
+<0>MALONE_DEBUG_DIST_WORKERS_LOG: 0
+<0>MALONE_DEBUG_PRINT_LOG: 0
+<0>MALONE_DEBUG_TRANS_LOG: 0
+<0>MALONE_DEBUG_CONFIG_LOG: 0
+<0>MALONE_DEBUG_MAIN_COMMAND_LOG: 0
+<0>
+<0>Misc:
+<0>RedirectionFile: /tmp/test.txt
+<0> malone_load_environment_values - Init
+<0> malone_load_environment_values - loading env file: /home/pablo/NetBeansProjects/Malone/Environments/local/test_FFT_stand.ini
+loadEnvironmentKeys - Checking configuration errors
+loadEnvironmentKeys - Total errors found: 0
+<0>----------
+#General:
+Framework: /localSpace/mutomvo
+AppPath: /localSpace/mutomvo/apps
+MutantPath: /localSpace/mutomvo/project_fft/mutants
+AppName: fft_master
+Compilation line original: gcc -O3 -lm -Wall [[ORIGINAL_PATH]]/fft_master.c -o [[ORIGINAL_PATH]]/fft_master -lcrypto -lssl -lm
+Compilation line mutants: gcc -O3 -lm -Wall [[MUTANTS_PATH]]/[[INDEX_MUTANT]]/fft_master.c -o [[MUTANTS_PATH]]/[[INDEX_MUTANT]]/fft_master -lcrypto -lssl -lm
+Execution line original: [[MUTANTS_PATH]]/[[INDEX_MUTANT]]/
+Execution line mutants: [[MUTANTS_PATH]]/[[INDEX_MUTANT]]/
+Total tests: 10
+Total mutants: 1000
+
+#Optimizations: 
+DistributeOriginal: 1
+SortTestSuite: 0
+ScatterWorkload: 1
+ClusterMutants: 1
+ParallelCompilation: 1
+MultipleCoordinators: 0
+ParallelMd5: 1
+
+#Standalone: 
+Standalone: 1
+Test suite file: /localSpace/mutomvo/project_fft/testsFile.sh
+
+#Compilation: 
+CompilationEnabled: 0
+CompilationWithScript: 0
+CompilationScript: 
+CompilationNumWorkers: 3
+
+#Timeouts: 
+MALONE_MAX_ORIGINAL_TIMEOUT: 1
+MALONE_MAX_MUTANTS_TIMEOUT_FACTOR: 5
+MALONE_MAX_MUTANTS_MINIMUM_TIME: 17
+
+#Monitor: 
+MALONE_ENV_MONITOR_ENABLED: 0
+MALONE_ENV_MONITOR_FREQ: 60
+MALONE_ENV_MONITOR_LINES: vmstat,ip -s link,top -n 1 -b
+MALONE_ENV_MONITOR_ONCE_LINES: sysctl -a,lscpu,cat /proc/meminfo
+
+#Misc: 
+MarkerToken: -
+MutantGenerationEnabled: 0
+----------
+commandLine=[vmstat]
+commandLine=[ip -s link]
+commandLine=[top -n 1 -b]
+
+commandLineOnce=[vmstat]
+
+<0> malone_load_environment_values - sending env file: /home/pablo/NetBeansProjects/Malone/Environments/local/test_FFT_stand.ini
+<0> malone_load_environment_values - End
+<0> isReadyToRumble - Checking the validity of the global configuration
+<0> isReadyToRumble - Code res 1
+<0> MALONE INITIALIZED: Total processes:2
+<0> Executing environment: /home/pablo/NetBeansProjects/Malone/Environments/local/test_FFT_stand.ini
+<0> Malone process initialized with PID 3542 on J ready for attach
+<0> malone_initialize - Standalone!!
+<0>readTestSuite - Init
+readTestSuite - Total lines readed: 10
+readTestSuite - End with code 10 
+readTestSuite - End
+<0> malone_initialize - Test suite (10 tcs) readed sucessfully!!
+<0> malone_initialize - Final barrier completed! Lets get ready
+MALONE - Executing in normal mode
+<0> Selmode: 5
+masterExecutionOperations - Selected mode: Adaptive distribution
+<0> malone_distributed_mutation_testing - Init
+<0> malone_distributed_mutation_testing - Compiling original program
+<0> malone_compile_original - Compilation mode is disabled
+<0> malone_distributed_mutation_testing - Executing original program
+<0> malone_execute_Original_Program - Executing original program, selecting mode ... 
+<0> malone_execute - Executing in Distributed mode!
+loadEnvironmentKeys - Checking configuration errors
+loadEnvironmentKeys - Total errors found: 0
+<1> isReadyToRumble - Code res 1
+<1> Malone process initialized with PID 3543 on J ready for attach
+<1>readTestSuite - Init
+readTestSuite - Total lines readed: 10
+<1> Tc: 0 - fft_master -a 2 -m 1 -v 1 | md5sum
+<1> Tc: 1 - fft_master -a 2 -m 1 -v 1 | md5sum
+<1> Tc: 2 - fft_master -a 3 -m 1 -v 1 | md5sum
+<1> Tc: 3 - fft_master -a 4 -m 1 -v 1 | md5sum
+<1> Tc: 4 - fft_master -a 5 -m 1 -v 1 | md5sum
+<1> Tc: 5 - fft_master -a 6 -m 1 -v 1 | md5sum
+<1> Tc: 6 - fft_master -a 2 -m 1 -v 2 | md5sum
+<1> Tc: 7 - fft_master -a 3 -m 1 -v 2 | md5sum
+<1> Tc: 8 - fft_master -a 4 -m 1 -v 2 | md5sum
+<1> Tc: 9 - fft_master -a 5 -m 1 -v 2 | md5sum
+readTestSuite - End with code 10 
+readTestSuite - End
+<1> malone_initialize - Test suite (10 tcs) readed sucessfully!!
+Build line: /localSpace/mutomvo/project_fft/mutants/0/fft_master -a 2 -m 1 -v 1 | md5sum
+<0>checkResultOriginal - Init
+checkResultOriginal - Result obtained sucessfully
+checkResultOriginal - End
+Build line: /localSpace/mutomvo/project_fft/mutants/0/fft_master -a 2 -m 1 -v 1 | md5sum
+<0>checkResultOriginal - Init
+checkResultOriginal - Result obtained sucessfully
+checkResultOriginal - End
+Build line: /localSpace/mutomvo/project_fft/mutants/0/fft_master -a 3 -m 1 -v 1 | md5sum
+<0>checkResultOriginal - Init
+checkResultOriginal - Result obtained sucessfully
+checkResultOriginal - End
+Build line: /localSpace/mutomvo/project_fft/mutants/0/fft_master -a 4 -m 1 -v 1 | md5sum
+<0>checkResultOriginal - Init
+checkResultOriginal - Result obtained sucessfully
+checkResultOriginal - End
+Build line: /localSpace/mutomvo/project_fft/mutants/0/fft_master -a 5 -m 1 -v 1 | md5sum
+<0>checkResultOriginal - Init
+checkResultOriginal - Result obtained sucessfully
+checkResultOriginal - End
+Build line: /localSpace/mutomvo/project_fft/mutants/0/fft_master -a 6 -m 1 -v 1 | md5sum
+<0>checkResultOriginal - Init
+checkResultOriginal - Result obtained sucessfully
+checkResultOriginal - End
+Build line: /localSpace/mutomvo/project_fft/mutants/0/fft_master -a 2 -m 1 -v 2 | md5sum
+<0>checkResultOriginal - Init
+checkResultOriginal - Result obtained sucessfully
+checkResultOriginal - End
+Build line: /localSpace/mutomvo/project_fft/mutants/0/fft_master -a 3 -m 1 -v 2 | md5sum
+<0>checkResultOriginal - Init
+checkResultOriginal - Result obtained sucessfully
+checkResultOriginal - End
+Build line: /localSpace/mutomvo/project_fft/mutants/0/fft_master -a 4 -m 1 -v 2 | md5sum
+<0>checkResultOriginal - Init
+checkResultOriginal - Result obtained sucessfully
+checkResultOriginal - End
+Build line: /localSpace/mutomvo/project_fft/mutants/0/fft_master -a 5 -m 1 -v 2 | md5sum
+<0>checkResultOriginal - Init
+checkResultOriginal - Result obtained sucessfully
+checkResultOriginal - End
+<0>-------------------------------------------------------------------->INIT
+<0>parallelEquivalenceChecking - Master!! mode!
+<0>parallelEquivalenceChecking - 0
+Build line with 1 mode: /localSpace/mutomvo/apps/fft_master
+buildEquivLine - End (1 mode)
+<0>parallelEquivalenceChecking - 1
+<0>parallelEquivalenceChecking - Original program binary: /localSpace/mutomvo/apps/fft_master
+<0>parallelEquivalenceChecking - Line to execute: openssl md5 -r /localSpace/mutomvo/apps/fft_master | cut -f 1 -d " "
+<0>parallelEquivalenceChecking - Obtained MD5: openssl md5 -r /localSpace/mutomvo/apps/fft_master | cut -f 1 -d " "
+<0>parallelEquivalenceChecking - Original md5: cc2b1a9eddda7087dd9cf95948ec5c91
+ [size: 33]!!
+<0><--------------------------------------------------------------------END
+<0> malone_distributed_mutation_testing - Sending original results
+<0> malone_distributed_mutation_testing - Generating mutants
+<0> Malone_generate_mutants - Init
+<0> malone_compile - Compilation mode is disabled
+<0> Malone_generate_mutants - End
+<0> malone_distributed_mutation_testing - Compiling mutants
+<0> malone_compile_mutants - Compilation mode is disabled
+<0> distribution_full_dynamic_scatter - Updating structures
+<0> distribution_full_dynamic_scatter - Mutants: 1000 Tests :10 
+initializeEquivalentMap - Initializing equivalent map
+<1> malone_compile_mutants - Compilation mode is disabled
+<1>parallelEquivalenceChecking - Init
+<1>parallelEquivalenceChecking - Workers mode!
+initializeEquivalentMap - End
+<0> Checking equivalences!!
+<0>parallelEquivalenceChecking - Init
+<0>parallelEquivalenceChecking - Master!! mode!
+<0>parallelEquivalenceChecking - 0
+Build line with 1 mode: /localSpace/mutomvo/apps/fft_master
+buildEquivLine - End (1 mode)
+<0>parallelEquivalenceChecking - 1
+<0>parallelEquivalenceChecking - Original program binary: /localSpace/mutomvo/apps/fft_master
+<0>parallelEquivalenceChecking - Line to execute: openssl md5 -r /localSpace/mutomvo/apps/fft_master | cut -f 1 -d " "
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   EXIT CODE: 134
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+YOUR APPLICATION TERMINATED WITH THE EXIT STRING: Aborted (signal 6)
+This typically refers to a problem with your application.
+Please see the FAQ page for debugging suggestions

@@ -1,0 +1,37 @@
+<map id="distribution_adaptive_grain_scatter" name="distribution_adaptive_grain_scatter">
+<area shape="rect" id="node2" href="$distribution__adaptive__grain_8c.html#a0f70ea863f88a7edefd48759a7780036" title="updateCounters_adaptive" alt="" coords="197,5,368,32"/>
+<area shape="rect" id="node3" href="$MPI__Operations_8c.html#a694d58e8f4120ad389e8f5e784c5e4c9" title="sendDeployMode" alt="" coords="221,107,344,133"/>
+<area shape="rect" id="node4" href="$Auxiliars_8c.html#a60ab9fcbd72061289ed7af622754751b" title="getTick" alt="" coords="470,20,535,47"/>
+<area shape="rect" id="node5" href="$printers_8c.html#a7d3990d33437fc5e3533b4999a7ec6e5" title="printDeployStruct" alt="" coords="441,71,564,97"/>
+<area shape="rect" id="node6" href="$MPI__Operations_8c.html#af898f54e4b36018446d815266b629491" title="receiveMutants_adaptive" alt="" coords="199,729,366,756"/>
+<area shape="rect" id="node15" href="$DistributionAlgorithms_8c.html#ad2e6853e858c1423404e49b8f190ff4e" title="hasRemainingWork" alt="" coords="215,383,351,409"/>
+<area shape="rect" id="node16" href="$distribution__adaptive__grain_8c.html#a6aa203b510604838013c32fa45670bbc" title="checkMutantsAlive" alt="" coords="216,433,349,460"/>
+<area shape="rect" id="node17" href="$distribution__adaptive__grain_8c.html#aa606a467f04ac00cc1062f82100c2de8" title="updateKillMutant_adaptive" alt="" coords="195,484,370,511"/>
+<area shape="rect" id="node18" href="$Auxiliars_8c.html#a3abc72bb2b5e7aa536901b5c47dd146f" title="freeMutantList" alt="" coords="230,535,335,561"/>
+<area shape="rect" id="node19" href="$MPI__Operations_8c.html#ae74b17c84089d558b044ba4b14e68250" title="receiveDeployMode" alt="" coords="214,585,351,612"/>
+<area shape="rect" id="node20" href="$Malone_8c.html#a6848801ebab1f07e7756644a86eb4efd" title="malone_execute_mutants\l_by_scheme" alt="" coords="197,317,368,358"/>
+<area shape="rect" id="node35" href="$MPI__Operations_8c.html#a353da00d2b623fe485a1c8ed8fc30792" title="sendMutants" alt="" coords="454,679,551,705"/>
+<area shape="rect" id="node36" href="$MPI__Operations_8c.html#a5357b3e589892d99960d62c37ef364da" title="resetMutant" alt="" coords="237,780,328,807"/>
+<area shape="rect" id="node7" href="$Auxiliars_8c.html#af0f8d130a0e61d129d7173fdada44943" title="generateCleanMutantList" alt="" coords="419,780,586,807"/>
+<area shape="rect" id="node8" href="$transformations_8c.html#a7c4fe205e349fdc6b1b3fe74ba370010" title="redMut2Mut" alt="" coords="457,831,548,857"/>
+<area shape="rect" id="node10" href="$Auxiliars_8c.html#ae868349a1b9962bef735c645c8af8429" title="insertMutantTestByTest" alt="" coords="421,729,584,756"/>
+<area shape="rect" id="node9" href="$printers_8c.html#a7de3b9fc7ba84cdd4262a8b196cd6d0a" title="printMutant" alt="" coords="679,679,766,705"/>
+<area shape="rect" id="node11" href="$Auxiliars_8c.html#ad977bb957ddd724b9dd590e37d9fe093" title="isMutantAllocated" alt="" coords="859,679,986,705"/>
+<area shape="rect" id="node12" href="$Auxiliars_8c.html#a3ac75c1ea5af10a333cbda886d5b486d" title="allocMutant" alt="" coords="678,628,767,655"/>
+<area shape="rect" id="node13" href="$printers_8c.html#a3d68e172294e99732704a5e61cb62d33" title="printTest" alt="" coords="686,515,759,541"/>
+<area shape="rect" id="node14" href="$Auxiliars_8c.html#afa2214923ca27bb087ebe0622ba7c152" title="insertTestResult" alt="" coords="663,780,782,807"/>
+<area shape="rect" id="node21" href="$Auxiliars_8c.html#a89d711e5c117f1a990a8cf5e5c8630dc" title="buildExeLine" alt="" coords="455,172,551,199"/>
+<area shape="rect" id="node25" href="$Auxiliars_8c.html#ac65810d8fde88b1a003403d3894e070e" title="getOriginalTime" alt="" coords="446,273,559,300"/>
+<area shape="rect" id="node26" href="$Malone_8c.html#a4ce692c454d76ccafb98eeb286d5aaff" title="getMutantsTimeout" alt="" coords="435,324,570,351"/>
+<area shape="rect" id="node27" href="$Auxiliars_8c.html#a312b37675e7e147fb30b0cb53d7d8479" title="execCommandLine" alt="" coords="435,476,570,503"/>
+<area shape="rect" id="node28" href="$Malone_8c.html#a2310c48071c070dcf580c7aaf3f6387c" title="getMarkerToken" alt="" coords="445,527,561,553"/>
+<area shape="rect" id="node29" href="$Malone_8c.html#a84de055a3e128207df7c87e8073bd558" title="createTestTrap2" alt="" coords="444,577,561,604"/>
+<area shape="rect" id="node30" href="$Auxiliars_8c.html#a83dd3e45bbd9220ce41c2a2785ee2571" title="checkResult" alt="" coords="455,121,550,148"/>
+<area shape="rect" id="node31" href="$MPI__Operations_8c.html#a1150f211512315a77cf72e83e81af3bb" title="sendTest" alt="" coords="465,375,541,401"/>
+<area shape="rect" id="node34" href="$Auxiliars_8c.html#a468c24e305d956cf0bb31debf9ff8a97" title="insertTestResult_unsorted" alt="" coords="635,273,810,300"/>
+<area shape="rect" id="node22" href="$Auxiliars_8c.html#a82109f9207eb5c668dcffd36565eaee7" title="buildExeLine_general" alt="" coords="650,197,795,224"/>
+<area shape="rect" id="node23" href="$Auxiliars_8c.html#a94eb643b244f2e7018d5a205b18cd4dc" title="buildExeLine_StandAlone" alt="" coords="637,147,808,173"/>
+<area shape="rect" id="node24" href="$Auxiliars_8c.html#a59689ac62cb991f149d59ff57f678550" title="replace" alt="" coords="891,147,955,173"/>
+<area shape="rect" id="node32" href="$transformations_8c.html#ace04f22f6809f6ee2452be1ccb4065b9" title="test2redTest" alt="" coords="675,349,770,376"/>
+<area shape="rect" id="node33" href="$printers_8c.html#a404e32e1876760b4beffbf348f5dc9b2" title="printTestRed" alt="" coords="674,400,771,427"/>
+</map>

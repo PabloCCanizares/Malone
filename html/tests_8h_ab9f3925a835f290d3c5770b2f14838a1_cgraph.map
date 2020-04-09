@@ -1,0 +1,6 @@
+<map id="mutantDataType_w" name="mutantDataType_w">
+<area shape="rect" id="node2" href="$MPI__Operations_8c.html#a26759b11c4aef4f30ae45fc0b72e6ae9" title="receiveMutant" alt="" coords="193,5,297,32"/>
+<area shape="rect" id="node5" href="$printers_8c.html#a4478e7956b6e13411d1ead7c8cc8edae" title="printfMutantFull" alt="" coords="189,56,301,83"/>
+<area shape="rect" id="node3" href="$transformations_8c.html#a7c4fe205e349fdc6b1b3fe74ba370010" title="redMut2Mut" alt="" coords="349,5,440,32"/>
+<area shape="rect" id="node4" href="$printers_8c.html#a7de3b9fc7ba84cdd4262a8b196cd6d0a" title="printMutant" alt="" coords="489,5,575,32"/>
+</map>

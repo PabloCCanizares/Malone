@@ -1,0 +1,11 @@
+<map id="Auxiliars.h" name="Auxiliars.h">
+<area shape="rect" id="node2" href="$Auxiliars_8c.html" title="Auxiliars.c" alt="" coords="5,88,87,115"/>
+<area shape="rect" id="node3" href="$debugMode_8c.html" title="debugMode.c" alt="" coords="111,88,211,115"/>
+<area shape="rect" id="node4" href="$distribution__adaptive__grain_8c.html" title="distribution_adaptive\l_grain.c" alt="" coords="235,81,375,122"/>
+<area shape="rect" id="node5" href="$EnvFileSend_8c.html" title="EnvFileSend.c" alt="" coords="400,88,507,115"/>
+<area shape="rect" id="node6" href="$EquivalenceChecking_8c.html" title="EquivalenceChecking.c" alt="" coords="531,88,689,115"/>
+<area shape="rect" id="node7" href="$main_8c.html" title="main.c" alt="" coords="715,88,776,115"/>
+<area shape="rect" id="node8" href="$Malone_8c.html" title="Malone.c" alt="" coords="800,88,873,115"/>
+<area shape="rect" id="node9" href="$MPI__Operations_8c.html" title="MPI_Operations.c" alt="" coords="899,88,1025,115"/>
+<area shape="rect" id="node10" href="$randomElements_8c.html" title="randomElements.c" alt="" coords="1051,88,1180,115"/>
+</map>

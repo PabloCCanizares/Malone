@@ -1,0 +1,340 @@
+\hypertarget{DistributionAlgorithms_8h}{\section{Distribution\-Algorithms.\-h File Reference}
+\label{DistributionAlgorithms_8h}\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}}
+}
+{\ttfamily \#include \char`\"{}Options.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}printers.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}M\-P\-I\-\_\-\-Operations.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Malone.\-h\char`\"{}}\\*
+Include dependency graph for Distribution\-Algorithms.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DistributionAlgorithms_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DistributionAlgorithms_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{DistributionAlgorithms_8h_a1a69f097c78a4845ce5adba7d906685f}{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-W\-O\-R\-K\-E\-R\-S}~\hyperlink{DistributionAlgorithms_8h_a23d7b61c8c3bd2a33eb50bc49ae87016}{is\-Enabled\-Dist\-Workers\-Log}()
+\item 
+\#define \hyperlink{DistributionAlgorithms_8h_a2319cbeafffb9f07985a408227aaae5f}{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-M\-A\-S\-T\-E\-R}~\hyperlink{DistributionAlgorithms_8h_a7fb1c4f4b92f417ec03e73b72ef4ab63}{is\-Enabled\-Dist\-Master\-Log}()
+\item 
+\#define \hyperlink{DistributionAlgorithms_8h_a874b5de8771006369f63de1b1a51e78f}{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-C\-O\-M\-M\-O\-N}~\hyperlink{DistributionAlgorithms_8h_aa0295526a5141657c9832483f1386fcf}{is\-Enabled\-Dist\-Common\-Log}()
+\item 
+\#define \hyperlink{DistributionAlgorithms_8h_ad3ff72be9f06cc6df14bc20618563565}{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-U\-P\-D\-A\-T\-E}~\hyperlink{DistributionAlgorithms_8h_a93043eff2afec584b9bdd299b2852826}{is\-Enabled\-Dist\-Update\-Log}()
+\item 
+\#define \hyperlink{DistributionAlgorithms_8h_a7f1f20f238d0b2f5091f1d4c017c2dbf}{S\-E\-A\-R\-C\-H\-\_\-\-I\-N\-I\-T\-I\-A\-L}~5
+\item 
+\#define \hyperlink{DistributionAlgorithms_8h_ab64c6c5d8506571337b64efd9da11481}{S\-E\-A\-R\-C\-H\-\_\-\-S\-I\-N\-G\-L\-E\-P\-H\-A\-S\-E}~2
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{DistributionAlgorithms_8h_a40b5a6d681374f437bb73c2d31d08c0d}{distribution\-\_\-dynamic\-\_\-mutants} (\hyperlink{Options_8h_a8859326946ba85db44b56cab4ce88aff}{T\-\_\-e\-Execution\-Mode} e\-Method)
+\item 
+int \hyperlink{DistributionAlgorithms_8h_a6e86574e4c95af1c02c12a5030b48bdf}{distribution\-\_\-static\-\_\-mutants} (\hyperlink{Options_8h_a8859326946ba85db44b56cab4ce88aff}{T\-\_\-e\-Execution\-Mode} e\-Method)
+\item 
+int \hyperlink{DistributionAlgorithms_8h_a709a710adb0ee53ce85adc6c59c12494}{distribution\-\_\-adaptive\-\_\-grain\-\_\-scatter} (\hyperlink{Options_8h_a8859326946ba85db44b56cab4ce88aff}{T\-\_\-e\-Execution\-Mode} e\-Method)
+\item 
+int \hyperlink{DistributionAlgorithms_8h_ab2ad736ea5cd8ae9aca26b2081792eb7}{distribution\-\_\-full\-\_\-dynamic\-\_\-scatter} (\hyperlink{Options_8h_a8859326946ba85db44b56cab4ce88aff}{T\-\_\-e\-Execution\-Mode} e\-Method)
+\item 
+int \hyperlink{DistributionAlgorithms_8h_aaaab88163670001aef0e78bfc18c032e}{distribution\-\_\-full\-\_\-dynamic} (\hyperlink{Options_8h_a8859326946ba85db44b56cab4ce88aff}{T\-\_\-e\-Execution\-Mode} e\-Method)
+\item 
+void \hyperlink{DistributionAlgorithms_8h_a5e51f8e1c7893750c59a22b11521d841}{inc\-Counters} (int $\ast$n\-Index\-Test, int $\ast$n\-Index\-Mutant)
+\item 
+int \hyperlink{DistributionAlgorithms_8h_a4570368fc916e228f8925bbb03cf4473}{update\-Counters} (\hyperlink{structT__stExecutionMap}{T\-\_\-st\-Execution\-Map} $\ast$exe\-Map, \hyperlink{structT__stExecutionStructure}{T\-\_\-st\-Execution\-Structure} $\ast$exe\-Worker, int $\ast$n\-Index\-Test, int $\ast$n\-Index\-Mutant)
+\item 
+int \hyperlink{DistributionAlgorithms_8h_ac2986a71d3fbf82726cf191b3a6bc8b3}{update\-Counters\-\_\-\-Equiv} (\hyperlink{structT__stExecutionMap}{T\-\_\-st\-Execution\-Map} $\ast$exe\-Map, \hyperlink{structT__stExecutionStructure}{T\-\_\-st\-Execution\-Structure} $\ast$exe\-Worker, int $\ast$n\-Index\-Test, int $\ast$n\-Index\-Mutant)
+\item 
+int \hyperlink{DistributionAlgorithms_8h_a0f70ea863f88a7edefd48759a7780036}{update\-Counters\-\_\-adaptive} (\hyperlink{structT__stExecutionMap}{T\-\_\-st\-Execution\-Map} $\ast$exe\-Map, \hyperlink{structT__stExecutionStructure}{T\-\_\-st\-Execution\-Structure} $\ast$exe\-Worker, int $\ast$n\-Index\-Test\-Init, int $\ast$n\-Index\-Test\-End, int $\ast$n\-Index\-Mutant\-Init, int $\ast$n\-Index\-Mutant\-End)
+\item 
+int \hyperlink{DistributionAlgorithms_8h_a80ba9f8e83755a9d72851b29df7cd8b6}{check\-Equivalence} (\hyperlink{structT__stExecutionMap}{T\-\_\-st\-Execution\-Map} $\ast$exe\-Map, \hyperlink{structT__stExecutionStructure}{T\-\_\-st\-Execution\-Structure} $\ast$exe\-Worker, int $\ast$n\-Index\-Test, int $\ast$n\-Index\-Mutant)
+\item 
+void \hyperlink{DistributionAlgorithms_8h_a118a2f055d38d214cb1656302070b41e}{update\-Kill\-Mutant} (\hyperlink{structT__stExecutionMap}{T\-\_\-st\-Execution\-Map} $\ast$exe\-Map, \hyperlink{structT__stExecutionStructure}{T\-\_\-st\-Execution\-Structure} $\ast$exe\-Worker)
+\item 
+void \hyperlink{DistributionAlgorithms_8h_aa606a467f04ac00cc1062f82100c2de8}{update\-Kill\-Mutant\-\_\-adaptive} (\hyperlink{structT__stExecutionMap}{T\-\_\-st\-Execution\-Map} $\ast$exe\-Map, \hyperlink{structT__stExecutionStructure}{T\-\_\-st\-Execution\-Structure} $\ast$exe\-Worker, \hyperlink{structMutantList}{Mutant\-List} $\ast$p\-Mutant\-List)
+\item 
+int \hyperlink{DistributionAlgorithms_8h_ac231776d4d028750d84473172016202f}{has\-Original\-Program\-Remaining\-Work} (int n\-Index\-Tests)
+\item 
+int \hyperlink{DistributionAlgorithms_8h_ad2e6853e858c1423404e49b8f190ff4e}{has\-Remaining\-Work} (int n\-Index\-Mutant, int n\-Index\-Tests)
+\item 
+int \hyperlink{DistributionAlgorithms_8h_a266ef9ecf4fd346d480318cf2ec327fe}{get\-Next\-Workload\-Grain\-\_\-equiv} (\hyperlink{structT__stExecutionMap}{T\-\_\-st\-Execution\-Map} $\ast$$\ast$exe\-Map, \hyperlink{structT__stExecutionStructure}{T\-\_\-st\-Execution\-Structure} $\ast$$\ast$exe\-Worker, \hyperlink{structT__stMutantExecution}{T\-\_\-st\-Mutant\-Execution} $\ast$$\ast$p\-Mutant\-Exec, int $\ast$$\ast$n\-Index\-Test, int $\ast$$\ast$n\-Index\-Mutant)
+\item 
+int \hyperlink{DistributionAlgorithms_8h_a23d7b61c8c3bd2a33eb50bc49ae87016}{is\-Enabled\-Dist\-Workers\-Log} ()
+\item 
+int \hyperlink{DistributionAlgorithms_8h_a7fb1c4f4b92f417ec03e73b72ef4ab63}{is\-Enabled\-Dist\-Master\-Log} ()
+\item 
+int \hyperlink{DistributionAlgorithms_8h_aa0295526a5141657c9832483f1386fcf}{is\-Enabled\-Dist\-Common\-Log} ()
+\item 
+int \hyperlink{DistributionAlgorithms_8h_a93043eff2afec584b9bdd299b2852826}{is\-Enabled\-Dist\-Update\-Log} ()
+\item 
+int \hyperlink{DistributionAlgorithms_8h_a6aa203b510604838013c32fa45670bbc}{check\-Mutants\-Alive} (\hyperlink{structMutantList}{Mutant\-List} $\ast$p\-Mutant\-List)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{DistributionAlgorithms_8h_a874b5de8771006369f63de1b1a51e78f}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-C\-O\-M\-M\-O\-N@{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-C\-O\-M\-M\-O\-N}}
+\index{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-C\-O\-M\-M\-O\-N@{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-C\-O\-M\-M\-O\-N}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-C\-O\-M\-M\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-C\-O\-M\-M\-O\-N~{\bf is\-Enabled\-Dist\-Common\-Log}()}}\label{DistributionAlgorithms_8h_a874b5de8771006369f63de1b1a51e78f}
+\hypertarget{DistributionAlgorithms_8h_a2319cbeafffb9f07985a408227aaae5f}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-M\-A\-S\-T\-E\-R@{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-M\-A\-S\-T\-E\-R}}
+\index{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-M\-A\-S\-T\-E\-R@{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-M\-A\-S\-T\-E\-R}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-M\-A\-S\-T\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-M\-A\-S\-T\-E\-R~{\bf is\-Enabled\-Dist\-Master\-Log}()}}\label{DistributionAlgorithms_8h_a2319cbeafffb9f07985a408227aaae5f}
+\hypertarget{DistributionAlgorithms_8h_ad3ff72be9f06cc6df14bc20618563565}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-U\-P\-D\-A\-T\-E@{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-U\-P\-D\-A\-T\-E}}
+\index{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-U\-P\-D\-A\-T\-E@{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-U\-P\-D\-A\-T\-E}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-U\-P\-D\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-U\-P\-D\-A\-T\-E~{\bf is\-Enabled\-Dist\-Update\-Log}()}}\label{DistributionAlgorithms_8h_ad3ff72be9f06cc6df14bc20618563565}
+\hypertarget{DistributionAlgorithms_8h_a1a69f097c78a4845ce5adba7d906685f}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-W\-O\-R\-K\-E\-R\-S@{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-W\-O\-R\-K\-E\-R\-S}}
+\index{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-W\-O\-R\-K\-E\-R\-S@{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-W\-O\-R\-K\-E\-R\-S}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-W\-O\-R\-K\-E\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-L\-O\-N\-E\-\_\-\-D\-E\-B\-U\-G\-\_\-\-D\-I\-S\-T\-\_\-\-W\-O\-R\-K\-E\-R\-S~{\bf is\-Enabled\-Dist\-Workers\-Log}()}}\label{DistributionAlgorithms_8h_a1a69f097c78a4845ce5adba7d906685f}
+\hypertarget{DistributionAlgorithms_8h_a7f1f20f238d0b2f5091f1d4c017c2dbf}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!S\-E\-A\-R\-C\-H\-\_\-\-I\-N\-I\-T\-I\-A\-L@{S\-E\-A\-R\-C\-H\-\_\-\-I\-N\-I\-T\-I\-A\-L}}
+\index{S\-E\-A\-R\-C\-H\-\_\-\-I\-N\-I\-T\-I\-A\-L@{S\-E\-A\-R\-C\-H\-\_\-\-I\-N\-I\-T\-I\-A\-L}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{S\-E\-A\-R\-C\-H\-\_\-\-I\-N\-I\-T\-I\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-E\-A\-R\-C\-H\-\_\-\-I\-N\-I\-T\-I\-A\-L~5}}\label{DistributionAlgorithms_8h_a7f1f20f238d0b2f5091f1d4c017c2dbf}
+\hypertarget{DistributionAlgorithms_8h_ab64c6c5d8506571337b64efd9da11481}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!S\-E\-A\-R\-C\-H\-\_\-\-S\-I\-N\-G\-L\-E\-P\-H\-A\-S\-E@{S\-E\-A\-R\-C\-H\-\_\-\-S\-I\-N\-G\-L\-E\-P\-H\-A\-S\-E}}
+\index{S\-E\-A\-R\-C\-H\-\_\-\-S\-I\-N\-G\-L\-E\-P\-H\-A\-S\-E@{S\-E\-A\-R\-C\-H\-\_\-\-S\-I\-N\-G\-L\-E\-P\-H\-A\-S\-E}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{S\-E\-A\-R\-C\-H\-\_\-\-S\-I\-N\-G\-L\-E\-P\-H\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-E\-A\-R\-C\-H\-\_\-\-S\-I\-N\-G\-L\-E\-P\-H\-A\-S\-E~2}}\label{DistributionAlgorithms_8h_ab64c6c5d8506571337b64efd9da11481}
+
+
+\subsection{Function Documentation}
+\hypertarget{DistributionAlgorithms_8h_a80ba9f8e83755a9d72851b29df7cd8b6}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!check\-Equivalence@{check\-Equivalence}}
+\index{check\-Equivalence@{check\-Equivalence}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{check\-Equivalence}]{\setlength{\rightskip}{0pt plus 5cm}int check\-Equivalence (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Execution\-Map} $\ast$}]{exe\-Map, }
+\item[{{\bf T\-\_\-st\-Execution\-Structure} $\ast$}]{exe\-Worker, }
+\item[{int $\ast$}]{n\-Index\-Test, }
+\item[{int $\ast$}]{n\-Index\-Mutant}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_a80ba9f8e83755a9d72851b29df7cd8b6}
+\hypertarget{DistributionAlgorithms_8h_a6aa203b510604838013c32fa45670bbc}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!check\-Mutants\-Alive@{check\-Mutants\-Alive}}
+\index{check\-Mutants\-Alive@{check\-Mutants\-Alive}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{check\-Mutants\-Alive}]{\setlength{\rightskip}{0pt plus 5cm}int check\-Mutants\-Alive (
+\begin{DoxyParamCaption}
+\item[{{\bf Mutant\-List} $\ast$}]{p\-Mutant\-List}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_a6aa203b510604838013c32fa45670bbc}
+\hypertarget{DistributionAlgorithms_8h_a709a710adb0ee53ce85adc6c59c12494}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!distribution\-\_\-adaptive\-\_\-grain\-\_\-scatter@{distribution\-\_\-adaptive\-\_\-grain\-\_\-scatter}}
+\index{distribution\-\_\-adaptive\-\_\-grain\-\_\-scatter@{distribution\-\_\-adaptive\-\_\-grain\-\_\-scatter}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{distribution\-\_\-adaptive\-\_\-grain\-\_\-scatter}]{\setlength{\rightskip}{0pt plus 5cm}int distribution\-\_\-adaptive\-\_\-grain\-\_\-scatter (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-e\-Execution\-Mode}}]{e\-Method}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_a709a710adb0ee53ce85adc6c59c12494}
+This distribution takes advance of two previous algorithms\-: dynamic\-\_\-mutants and full\-\_\-fynamic\-\_\-scatter. As a result, we present a mixed algorithm which changes the size of the execution grain depending on the remaining workload. 
+\begin{DoxyParams}{Parameters}
+{\em e\-Method} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DistributionAlgorithms_8h_a709a710adb0ee53ce85adc6c59c12494_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{DistributionAlgorithms_8h_a40b5a6d681374f437bb73c2d31d08c0d}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!distribution\-\_\-dynamic\-\_\-mutants@{distribution\-\_\-dynamic\-\_\-mutants}}
+\index{distribution\-\_\-dynamic\-\_\-mutants@{distribution\-\_\-dynamic\-\_\-mutants}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{distribution\-\_\-dynamic\-\_\-mutants}]{\setlength{\rightskip}{0pt plus 5cm}int distribution\-\_\-dynamic\-\_\-mutants (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-e\-Execution\-Mode}}]{e\-Method}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_a40b5a6d681374f437bb73c2d31d08c0d}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DistributionAlgorithms_8h_a40b5a6d681374f437bb73c2d31d08c0d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{DistributionAlgorithms_8h_aaaab88163670001aef0e78bfc18c032e}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!distribution\-\_\-full\-\_\-dynamic@{distribution\-\_\-full\-\_\-dynamic}}
+\index{distribution\-\_\-full\-\_\-dynamic@{distribution\-\_\-full\-\_\-dynamic}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{distribution\-\_\-full\-\_\-dynamic}]{\setlength{\rightskip}{0pt plus 5cm}int distribution\-\_\-full\-\_\-dynamic (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-e\-Execution\-Mode}}]{e\-Method}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_aaaab88163670001aef0e78bfc18c032e}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DistributionAlgorithms_8h_aaaab88163670001aef0e78bfc18c032e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{DistributionAlgorithms_8h_ab2ad736ea5cd8ae9aca26b2081792eb7}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!distribution\-\_\-full\-\_\-dynamic\-\_\-scatter@{distribution\-\_\-full\-\_\-dynamic\-\_\-scatter}}
+\index{distribution\-\_\-full\-\_\-dynamic\-\_\-scatter@{distribution\-\_\-full\-\_\-dynamic\-\_\-scatter}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{distribution\-\_\-full\-\_\-dynamic\-\_\-scatter}]{\setlength{\rightskip}{0pt plus 5cm}int distribution\-\_\-full\-\_\-dynamic\-\_\-scatter (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-e\-Execution\-Mode}}]{e\-Method}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_ab2ad736ea5cd8ae9aca26b2081792eb7}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DistributionAlgorithms_8h_ab2ad736ea5cd8ae9aca26b2081792eb7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{DistributionAlgorithms_8h_a6e86574e4c95af1c02c12a5030b48bdf}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!distribution\-\_\-static\-\_\-mutants@{distribution\-\_\-static\-\_\-mutants}}
+\index{distribution\-\_\-static\-\_\-mutants@{distribution\-\_\-static\-\_\-mutants}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{distribution\-\_\-static\-\_\-mutants}]{\setlength{\rightskip}{0pt plus 5cm}int distribution\-\_\-static\-\_\-mutants (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-e\-Execution\-Mode}}]{e\-Method}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_a6e86574e4c95af1c02c12a5030b48bdf}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DistributionAlgorithms_8h_a6e86574e4c95af1c02c12a5030b48bdf_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{DistributionAlgorithms_8h_a266ef9ecf4fd346d480318cf2ec327fe}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!get\-Next\-Workload\-Grain\-\_\-equiv@{get\-Next\-Workload\-Grain\-\_\-equiv}}
+\index{get\-Next\-Workload\-Grain\-\_\-equiv@{get\-Next\-Workload\-Grain\-\_\-equiv}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{get\-Next\-Workload\-Grain\-\_\-equiv}]{\setlength{\rightskip}{0pt plus 5cm}int get\-Next\-Workload\-Grain\-\_\-equiv (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Execution\-Map} $\ast$$\ast$}]{exe\-Map, }
+\item[{{\bf T\-\_\-st\-Execution\-Structure} $\ast$$\ast$}]{exe\-Worker, }
+\item[{{\bf T\-\_\-st\-Mutant\-Execution} $\ast$$\ast$}]{p\-Mutant\-Exec, }
+\item[{int $\ast$$\ast$}]{n\-Index\-Test, }
+\item[{int $\ast$$\ast$}]{n\-Index\-Mutant}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_a266ef9ecf4fd346d480318cf2ec327fe}
+\hypertarget{DistributionAlgorithms_8h_ac231776d4d028750d84473172016202f}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!has\-Original\-Program\-Remaining\-Work@{has\-Original\-Program\-Remaining\-Work}}
+\index{has\-Original\-Program\-Remaining\-Work@{has\-Original\-Program\-Remaining\-Work}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{has\-Original\-Program\-Remaining\-Work}]{\setlength{\rightskip}{0pt plus 5cm}int has\-Original\-Program\-Remaining\-Work (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Index\-Tests}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_ac231776d4d028750d84473172016202f}
+\hypertarget{DistributionAlgorithms_8h_ad2e6853e858c1423404e49b8f190ff4e}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!has\-Remaining\-Work@{has\-Remaining\-Work}}
+\index{has\-Remaining\-Work@{has\-Remaining\-Work}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{has\-Remaining\-Work}]{\setlength{\rightskip}{0pt plus 5cm}int has\-Remaining\-Work (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Index\-Mutant, }
+\item[{int}]{n\-Index\-Tests}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_ad2e6853e858c1423404e49b8f190ff4e}
+\hypertarget{DistributionAlgorithms_8h_a5e51f8e1c7893750c59a22b11521d841}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!inc\-Counters@{inc\-Counters}}
+\index{inc\-Counters@{inc\-Counters}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{inc\-Counters}]{\setlength{\rightskip}{0pt plus 5cm}void inc\-Counters (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{n\-Index\-Test, }
+\item[{int $\ast$}]{n\-Index\-Mutant}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_a5e51f8e1c7893750c59a22b11521d841}
+\hypertarget{DistributionAlgorithms_8h_aa0295526a5141657c9832483f1386fcf}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!is\-Enabled\-Dist\-Common\-Log@{is\-Enabled\-Dist\-Common\-Log}}
+\index{is\-Enabled\-Dist\-Common\-Log@{is\-Enabled\-Dist\-Common\-Log}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{is\-Enabled\-Dist\-Common\-Log}]{\setlength{\rightskip}{0pt plus 5cm}int is\-Enabled\-Dist\-Common\-Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_aa0295526a5141657c9832483f1386fcf}
+\hypertarget{DistributionAlgorithms_8h_a7fb1c4f4b92f417ec03e73b72ef4ab63}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!is\-Enabled\-Dist\-Master\-Log@{is\-Enabled\-Dist\-Master\-Log}}
+\index{is\-Enabled\-Dist\-Master\-Log@{is\-Enabled\-Dist\-Master\-Log}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{is\-Enabled\-Dist\-Master\-Log}]{\setlength{\rightskip}{0pt plus 5cm}int is\-Enabled\-Dist\-Master\-Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_a7fb1c4f4b92f417ec03e73b72ef4ab63}
+\hypertarget{DistributionAlgorithms_8h_a93043eff2afec584b9bdd299b2852826}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!is\-Enabled\-Dist\-Update\-Log@{is\-Enabled\-Dist\-Update\-Log}}
+\index{is\-Enabled\-Dist\-Update\-Log@{is\-Enabled\-Dist\-Update\-Log}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{is\-Enabled\-Dist\-Update\-Log}]{\setlength{\rightskip}{0pt plus 5cm}int is\-Enabled\-Dist\-Update\-Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_a93043eff2afec584b9bdd299b2852826}
+\hypertarget{DistributionAlgorithms_8h_a23d7b61c8c3bd2a33eb50bc49ae87016}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!is\-Enabled\-Dist\-Workers\-Log@{is\-Enabled\-Dist\-Workers\-Log}}
+\index{is\-Enabled\-Dist\-Workers\-Log@{is\-Enabled\-Dist\-Workers\-Log}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{is\-Enabled\-Dist\-Workers\-Log}]{\setlength{\rightskip}{0pt plus 5cm}int is\-Enabled\-Dist\-Workers\-Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_a23d7b61c8c3bd2a33eb50bc49ae87016}
+\hypertarget{DistributionAlgorithms_8h_a4570368fc916e228f8925bbb03cf4473}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!update\-Counters@{update\-Counters}}
+\index{update\-Counters@{update\-Counters}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{update\-Counters}]{\setlength{\rightskip}{0pt plus 5cm}int update\-Counters (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Execution\-Map} $\ast$}]{exe\-Map, }
+\item[{{\bf T\-\_\-st\-Execution\-Structure} $\ast$}]{exe\-Worker, }
+\item[{int $\ast$}]{n\-Index\-Test, }
+\item[{int $\ast$}]{n\-Index\-Mutant}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_a4570368fc916e228f8925bbb03cf4473}
+\hypertarget{DistributionAlgorithms_8h_a0f70ea863f88a7edefd48759a7780036}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!update\-Counters\-\_\-adaptive@{update\-Counters\-\_\-adaptive}}
+\index{update\-Counters\-\_\-adaptive@{update\-Counters\-\_\-adaptive}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{update\-Counters\-\_\-adaptive}]{\setlength{\rightskip}{0pt plus 5cm}int update\-Counters\-\_\-adaptive (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Execution\-Map} $\ast$}]{exe\-Map, }
+\item[{{\bf T\-\_\-st\-Execution\-Structure} $\ast$}]{exe\-Worker, }
+\item[{int $\ast$}]{n\-Index\-Test\-Init, }
+\item[{int $\ast$}]{n\-Index\-Test\-End, }
+\item[{int $\ast$}]{n\-Index\-Mutant\-Init, }
+\item[{int $\ast$}]{n\-Index\-Mutant\-End}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_a0f70ea863f88a7edefd48759a7780036}
+\hypertarget{DistributionAlgorithms_8h_ac2986a71d3fbf82726cf191b3a6bc8b3}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!update\-Counters\-\_\-\-Equiv@{update\-Counters\-\_\-\-Equiv}}
+\index{update\-Counters\-\_\-\-Equiv@{update\-Counters\-\_\-\-Equiv}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{update\-Counters\-\_\-\-Equiv}]{\setlength{\rightskip}{0pt plus 5cm}int update\-Counters\-\_\-\-Equiv (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Execution\-Map} $\ast$}]{exe\-Map, }
+\item[{{\bf T\-\_\-st\-Execution\-Structure} $\ast$}]{exe\-Worker, }
+\item[{int $\ast$}]{n\-Index\-Test, }
+\item[{int $\ast$}]{n\-Index\-Mutant}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_ac2986a71d3fbf82726cf191b3a6bc8b3}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{DistributionAlgorithms_8h_ac2986a71d3fbf82726cf191b3a6bc8b3_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{DistributionAlgorithms_8h_a118a2f055d38d214cb1656302070b41e}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!update\-Kill\-Mutant@{update\-Kill\-Mutant}}
+\index{update\-Kill\-Mutant@{update\-Kill\-Mutant}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{update\-Kill\-Mutant}]{\setlength{\rightskip}{0pt plus 5cm}void update\-Kill\-Mutant (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Execution\-Map} $\ast$}]{exe\-Map, }
+\item[{{\bf T\-\_\-st\-Execution\-Structure} $\ast$}]{exe\-Worker}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_a118a2f055d38d214cb1656302070b41e}
+\hypertarget{DistributionAlgorithms_8h_aa606a467f04ac00cc1062f82100c2de8}{\index{Distribution\-Algorithms.\-h@{Distribution\-Algorithms.\-h}!update\-Kill\-Mutant\-\_\-adaptive@{update\-Kill\-Mutant\-\_\-adaptive}}
+\index{update\-Kill\-Mutant\-\_\-adaptive@{update\-Kill\-Mutant\-\_\-adaptive}!DistributionAlgorithms.h@{Distribution\-Algorithms.\-h}}
+\subsubsection[{update\-Kill\-Mutant\-\_\-adaptive}]{\setlength{\rightskip}{0pt plus 5cm}void update\-Kill\-Mutant\-\_\-adaptive (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Execution\-Map} $\ast$}]{exe\-Map, }
+\item[{{\bf T\-\_\-st\-Execution\-Structure} $\ast$}]{exe\-Worker, }
+\item[{{\bf Mutant\-List} $\ast$}]{p\-Mutant\-List}
+\end{DoxyParamCaption}
+)}}\label{DistributionAlgorithms_8h_aa606a467f04ac00cc1062f82100c2de8}

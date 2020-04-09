@@ -1,0 +1,656 @@
+\hypertarget{Auxiliars_8c}{\section{Auxiliars.\-c File Reference}
+\label{Auxiliars_8c}\index{Auxiliars.\-c@{Auxiliars.\-c}}
+}
+{\ttfamily \#include \char`\"{}Options.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Auxiliars.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Malone.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$errno.\-h$>$}\\*
+{\ttfamily \#include $<$fcntl.\-h$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include $<$sys/wait.\-h$>$}\\*
+Include dependency graph for Auxiliars.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Auxiliars_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{Auxiliars_8c_a86cb15faafedbfea31f54519d6940bba}{S\-L\-E\-E\-P\-\_\-\-F\-O\-R\-\_\-\-D\-E\-B\-U\-G}~0
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Auxiliars_8c_a10491c96545ab6d0b126d2ca0db07cc6}{initialize\-\_\-auxiliars} ()
+\item 
+void \hyperlink{Auxiliars_8c_aad2abc7509dca3a174711497c2a2bbe4}{initialize\-Execution\-Map} (int n\-Mutants, int n\-Tests)
+\item 
+void \hyperlink{Auxiliars_8c_a7387501825c9e531f32281f0dcf07e07}{initialize\-Equivalent\-Map} (int n\-Mutants, int n\-Tests)
+\item 
+void \hyperlink{Auxiliars_8c_a07ed422b9084fb6a2fc2edb155ae590b}{redirect\-\_\-stdout} (char $\ast$str\-File)
+\item 
+int \hyperlink{Auxiliars_8c_ad524f269a2713fec2f64053c3704503b}{getenv\-\_\-int} (char $\ast$str\-Key)
+\item 
+long int \hyperlink{Auxiliars_8c_a60ab9fcbd72061289ed7af622754751b}{get\-Tick} ()
+\item 
+void \hyperlink{Auxiliars_8c_a0021dd07c447d6eecf839803f987b7c9}{add\-Result\-Index} (\hyperlink{structT__stTestList}{T\-\_\-st\-Test\-List} $\ast$p\-Test\-List, int n\-Index, const char $\ast$t, double d\-Time, int n\-Kill)
+\item 
+int \hyperlink{Auxiliars_8c_a6d20a5a58c64584accdeb1a904de9d83}{add\-Result} (\hyperlink{structT__stTestList}{T\-\_\-st\-Test\-List} $\ast$p\-Test\-List, const char $\ast$t, double d\-Time, int n\-Kill)
+\item 
+char $\ast$ \hyperlink{Auxiliars_8c_a6fb95aaf1a67c0dfc9e35416a96e58aa}{replace\-\_\-char} (const char $\ast$s, char ch, const char $\ast$repl)
+\item 
+char $\ast$ \hyperlink{Auxiliars_8c_a59689ac62cb991f149d59ff57f678550}{replace} (char const $\ast$const original, char const $\ast$const pattern, char const $\ast$const replacement)
+\item 
+char $\ast$ \hyperlink{Auxiliars_8c_a94eb643b244f2e7018d5a205b18cd4dc}{build\-Exe\-Line\-\_\-\-Stand\-Alone} (int n\-Index\-Mutant, int n\-Index\-Test, int n\-Original\-Mode)
+\item 
+char $\ast$ \hyperlink{Auxiliars_8c_a82109f9207eb5c668dcffd36565eaee7}{build\-Exe\-Line\-\_\-general} (int n\-Index\-Mutant, int n\-Index\-Test, int n\-Original\-Mode)
+\item 
+char $\ast$ \hyperlink{Auxiliars_8c_a89d711e5c117f1a990a8cf5e5c8630dc}{build\-Exe\-Line} (int n\-Index\-Mutant, int n\-Index\-Test, int n\-Original\-Mode)
+\item 
+char $\ast$ \hyperlink{Auxiliars_8c_aac97a075ec4d2647a6f281d3ef207202}{build\-Equiv\-Line} (int n\-Index\-Mutant, int n\-Original\-Mode)
+\item 
+char $\ast$ \hyperlink{Auxiliars_8c_abf20f0d0256aca4acc21a8bcef943aa2}{generate\-Compilation\-Line} (int n\-Index\-Mutant, int n\-Original\-Mode)
+\item 
+int \hyperlink{Auxiliars_8c_ad977bb957ddd724b9dd590e37d9fe093}{is\-Mutant\-Allocated} (int n\-Index\-Mutant)
+\item 
+int \hyperlink{Auxiliars_8c_a3ac75c1ea5af10a333cbda886d5b486d}{alloc\-Mutant} (int n\-Index\-Mutant)
+\item 
+void \hyperlink{Auxiliars_8c_a3b80d6dfc602edb25b80149fffe6ea9b}{insert\-Mutant} (\hyperlink{structT__stMutant}{T\-\_\-st\-Mutant} $\ast$p\-Mutant, int n\-Index\-Mutant)
+\item 
+void \hyperlink{Auxiliars_8c_ae868349a1b9962bef735c645c8af8429}{insert\-Mutant\-Test\-By\-Test} (\hyperlink{structT__stMutant}{T\-\_\-st\-Mutant} $\ast$p\-Mutant, int n\-Index\-Mutant, int n\-Worker\-Source)
+\item 
+int \hyperlink{Auxiliars_8c_afa2214923ca27bb087ebe0622ba7c152}{insert\-Test\-Result} (int n\-Mutant, int n\-Test, \hyperlink{structT__stTestInfo}{T\-\_\-st\-Test\-Info} $\ast$p\-Test)
+\item 
+int \hyperlink{Auxiliars_8c_a468c24e305d956cf0bb31debf9ff8a97}{insert\-Test\-Result\-\_\-unsorted} (int n\-Mutant, int n\-Test, \hyperlink{structT__stTestInfo}{T\-\_\-st\-Test\-Info} $\ast$p\-Test)
+\item 
+void \hyperlink{Auxiliars_8c_a146a12561b1a6fdedea1505ac4434faa}{insert\-Full\-Mutant\-Info} (int n\-Mutant, int n\-Mutant\-State, \hyperlink{structT__stTestList}{T\-\_\-st\-Test\-List} $\ast$p\-List)
+\item 
+int \hyperlink{Auxiliars_8c_a483eea21188eae7d531a113493aacd6b}{check\-Test\-Result} (\hyperlink{structT__stTestInfo}{T\-\_\-st\-Test\-Info} $\ast$p\-Test)
+\item 
+int \hyperlink{Auxiliars_8c_a438dd8b30a1f8b16fd956363f6909f29}{read\-Test\-Suite} ()
+\item 
+int \hyperlink{Auxiliars_8c_a1676fd50e6015c0f173b606f30b20127}{check\-Test\-Result\-Original} (\hyperlink{structT__stTestInfo}{T\-\_\-st\-Test\-Info} $\ast$p\-Test)
+\item 
+int \hyperlink{Auxiliars_8c_aa18130a85476ab3847ee9eb448fc4f03}{check\-Result\-Original} (int n\-Index\-Test, const char $\ast$str\-Result)
+\item 
+int \hyperlink{Auxiliars_8c_ac65810d8fde88b1a003403d3894e070e}{get\-Original\-Time} (\hyperlink{structT__stTestList}{T\-\_\-st\-Test\-List} $\ast$p\-List, int n\-Test)
+\item 
+int \hyperlink{Auxiliars_8c_a83dd3e45bbd9220ce41c2a2785ee2571}{check\-Result} (int n\-Index\-Test, const char $\ast$str\-Result)
+\item 
+\hyperlink{structT__stTestInfo}{T\-\_\-st\-Test\-Info} $\ast$ \hyperlink{Auxiliars_8c_a256f1dad89862377930e90a792b8e37d}{create\-Test} (int n\-Index\-Test, char $\ast$str\-Result, double d\-Time, int n\-Kill)
+\item 
+int \hyperlink{Auxiliars_8c_a5891dfe1066ac082980db1c3eb4c9f2c}{pretty\-Print} (int n\-Index, int n\-Total, int n\-Ant\-Prog)
+\item 
+void \hyperlink{Auxiliars_8c_ac08052e787477c50ef64b7ab0d7f1424}{show\-Debug\-Options} ()
+\item 
+int \hyperlink{Auxiliars_8c_a9fc952cf76aa8896184df882c33ed1c8}{is\-Enabled\-Aux\-Log} ()
+\item 
+int \hyperlink{Auxiliars_8c_a928b1da945af8413e422d1749058d33a}{file\-\_\-exist} (char $\ast$filename)
+\item 
+int \hyperlink{Auxiliars_8c_adcab8832f40183a4b4db8df7666bb42d}{dir\-\_\-exist} (const char $\ast$d)
+\item 
+void \hyperlink{Auxiliars_8c_a572fc7e90a3041bc8c17d3f23ad0a78d}{recursive\-\_\-mkdir} (char $\ast$path)
+\item 
+F\-I\-L\-E $\ast$ \hyperlink{Auxiliars_8c_a60db6d4d611a750ba6e19774ac2bcebb}{fopen\-\_\-mkdir} (char $\ast$path, char $\ast$mode)
+\item 
+int \hyperlink{Auxiliars_8c_a3201f70287d7dcf94efb84b3629deaf0}{generate\-Res\-Folder} ()
+\item 
+void \hyperlink{Auxiliars_8c_a41d4d001d9bf9a77465ed907374e0658}{copy} (char $\ast$source, char $\ast$dest)
+\item 
+void \hyperlink{Auxiliars_8c_af1f1971eb763b91534b6d0037b284193}{save\-Config\-And\-Environment\-Files} ()
+\item 
+char $\ast$ \hyperlink{Auxiliars_8c_a312b37675e7e147fb30b0cb53d7d8479}{exec\-Command\-Line} (const char $\ast$fmt,...)
+\item 
+\hyperlink{structMutantList}{Mutant\-List} $\ast$ \hyperlink{Auxiliars_8c_af0f8d130a0e61d129d7173fdada44943}{generate\-Clean\-Mutant\-List} (int n\-Mutants)
+\item 
+void \hyperlink{Auxiliars_8c_a3abc72bb2b5e7aa536901b5c47dd146f}{free\-Mutant\-List} (\hyperlink{structMutantList}{Mutant\-List} $\ast$p\-List)
+\item 
+int \hyperlink{Auxiliars_8c_af3d2268d78c36203c367ad1fe581743f}{is\-Enabled\-Debug\-Main\-Command\-Log} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{Auxiliars_8c_a86cb15faafedbfea31f54519d6940bba}{\index{Auxiliars.\-c@{Auxiliars.\-c}!S\-L\-E\-E\-P\-\_\-\-F\-O\-R\-\_\-\-D\-E\-B\-U\-G@{S\-L\-E\-E\-P\-\_\-\-F\-O\-R\-\_\-\-D\-E\-B\-U\-G}}
+\index{S\-L\-E\-E\-P\-\_\-\-F\-O\-R\-\_\-\-D\-E\-B\-U\-G@{S\-L\-E\-E\-P\-\_\-\-F\-O\-R\-\_\-\-D\-E\-B\-U\-G}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{S\-L\-E\-E\-P\-\_\-\-F\-O\-R\-\_\-\-D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-L\-E\-E\-P\-\_\-\-F\-O\-R\-\_\-\-D\-E\-B\-U\-G~0}}\label{Auxiliars_8c_a86cb15faafedbfea31f54519d6940bba}
+
+
+\subsection{Function Documentation}
+\hypertarget{Auxiliars_8c_a6d20a5a58c64584accdeb1a904de9d83}{\index{Auxiliars.\-c@{Auxiliars.\-c}!add\-Result@{add\-Result}}
+\index{add\-Result@{add\-Result}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{add\-Result}]{\setlength{\rightskip}{0pt plus 5cm}int add\-Result (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Test\-List} $\ast$}]{p\-Test\-List, }
+\item[{const char $\ast$}]{t, }
+\item[{double}]{d\-Time, }
+\item[{int}]{n\-Kill}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a6d20a5a58c64584accdeb1a904de9d83}
+\hypertarget{Auxiliars_8c_a0021dd07c447d6eecf839803f987b7c9}{\index{Auxiliars.\-c@{Auxiliars.\-c}!add\-Result\-Index@{add\-Result\-Index}}
+\index{add\-Result\-Index@{add\-Result\-Index}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{add\-Result\-Index}]{\setlength{\rightskip}{0pt plus 5cm}void add\-Result\-Index (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Test\-List} $\ast$}]{p\-Test\-List, }
+\item[{int}]{n\-Index, }
+\item[{const char $\ast$}]{t, }
+\item[{double}]{d\-Time, }
+\item[{int}]{n\-Kill}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a0021dd07c447d6eecf839803f987b7c9}
+\hypertarget{Auxiliars_8c_a3ac75c1ea5af10a333cbda886d5b486d}{\index{Auxiliars.\-c@{Auxiliars.\-c}!alloc\-Mutant@{alloc\-Mutant}}
+\index{alloc\-Mutant@{alloc\-Mutant}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{alloc\-Mutant}]{\setlength{\rightskip}{0pt plus 5cm}int alloc\-Mutant (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Index\-Mutant}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a3ac75c1ea5af10a333cbda886d5b486d}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{Auxiliars_8c_a3ac75c1ea5af10a333cbda886d5b486d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{Auxiliars_8c_aac97a075ec4d2647a6f281d3ef207202}{\index{Auxiliars.\-c@{Auxiliars.\-c}!build\-Equiv\-Line@{build\-Equiv\-Line}}
+\index{build\-Equiv\-Line@{build\-Equiv\-Line}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{build\-Equiv\-Line}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ build\-Equiv\-Line (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Index\-Mutant, }
+\item[{int}]{n\-Original\-Mode}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_aac97a075ec4d2647a6f281d3ef207202}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{Auxiliars_8c_aac97a075ec4d2647a6f281d3ef207202_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{Auxiliars_8c_a89d711e5c117f1a990a8cf5e5c8630dc}{\index{Auxiliars.\-c@{Auxiliars.\-c}!build\-Exe\-Line@{build\-Exe\-Line}}
+\index{build\-Exe\-Line@{build\-Exe\-Line}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{build\-Exe\-Line}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ build\-Exe\-Line (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Index\-Mutant, }
+\item[{int}]{n\-Index\-Test, }
+\item[{int}]{n\-Original\-Mode}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a89d711e5c117f1a990a8cf5e5c8630dc}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Auxiliars_8c_a89d711e5c117f1a990a8cf5e5c8630dc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{Auxiliars_8c_a82109f9207eb5c668dcffd36565eaee7}{\index{Auxiliars.\-c@{Auxiliars.\-c}!build\-Exe\-Line\-\_\-general@{build\-Exe\-Line\-\_\-general}}
+\index{build\-Exe\-Line\-\_\-general@{build\-Exe\-Line\-\_\-general}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{build\-Exe\-Line\-\_\-general}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ build\-Exe\-Line\-\_\-general (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Index\-Mutant, }
+\item[{int}]{n\-Index\-Test, }
+\item[{int}]{n\-Original\-Mode}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a82109f9207eb5c668dcffd36565eaee7}
+\hypertarget{Auxiliars_8c_a94eb643b244f2e7018d5a205b18cd4dc}{\index{Auxiliars.\-c@{Auxiliars.\-c}!build\-Exe\-Line\-\_\-\-Stand\-Alone@{build\-Exe\-Line\-\_\-\-Stand\-Alone}}
+\index{build\-Exe\-Line\-\_\-\-Stand\-Alone@{build\-Exe\-Line\-\_\-\-Stand\-Alone}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{build\-Exe\-Line\-\_\-\-Stand\-Alone}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ build\-Exe\-Line\-\_\-\-Stand\-Alone (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Index\-Mutant, }
+\item[{int}]{n\-Index\-Test, }
+\item[{int}]{n\-Original\-Mode}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a94eb643b244f2e7018d5a205b18cd4dc}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{Auxiliars_8c_a94eb643b244f2e7018d5a205b18cd4dc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{Auxiliars_8c_a83dd3e45bbd9220ce41c2a2785ee2571}{\index{Auxiliars.\-c@{Auxiliars.\-c}!check\-Result@{check\-Result}}
+\index{check\-Result@{check\-Result}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{check\-Result}]{\setlength{\rightskip}{0pt plus 5cm}int check\-Result (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Index\-Test, }
+\item[{const char $\ast$}]{str\-Result}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a83dd3e45bbd9220ce41c2a2785ee2571}
+\hypertarget{Auxiliars_8c_aa18130a85476ab3847ee9eb448fc4f03}{\index{Auxiliars.\-c@{Auxiliars.\-c}!check\-Result\-Original@{check\-Result\-Original}}
+\index{check\-Result\-Original@{check\-Result\-Original}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{check\-Result\-Original}]{\setlength{\rightskip}{0pt plus 5cm}int check\-Result\-Original (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Index\-Test, }
+\item[{const char $\ast$}]{str\-Result}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_aa18130a85476ab3847ee9eb448fc4f03}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{Auxiliars_8c_aa18130a85476ab3847ee9eb448fc4f03_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{Auxiliars_8c_a483eea21188eae7d531a113493aacd6b}{\index{Auxiliars.\-c@{Auxiliars.\-c}!check\-Test\-Result@{check\-Test\-Result}}
+\index{check\-Test\-Result@{check\-Test\-Result}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{check\-Test\-Result}]{\setlength{\rightskip}{0pt plus 5cm}int check\-Test\-Result (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Test\-Info} $\ast$}]{p\-Test}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a483eea21188eae7d531a113493aacd6b}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{Auxiliars_8c_a483eea21188eae7d531a113493aacd6b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{Auxiliars_8c_a1676fd50e6015c0f173b606f30b20127}{\index{Auxiliars.\-c@{Auxiliars.\-c}!check\-Test\-Result\-Original@{check\-Test\-Result\-Original}}
+\index{check\-Test\-Result\-Original@{check\-Test\-Result\-Original}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{check\-Test\-Result\-Original}]{\setlength{\rightskip}{0pt plus 5cm}int check\-Test\-Result\-Original (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Test\-Info} $\ast$}]{p\-Test}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a1676fd50e6015c0f173b606f30b20127}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Auxiliars_8c_a1676fd50e6015c0f173b606f30b20127_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{Auxiliars_8c_a41d4d001d9bf9a77465ed907374e0658}{\index{Auxiliars.\-c@{Auxiliars.\-c}!copy@{copy}}
+\index{copy@{copy}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}void copy (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{source, }
+\item[{char $\ast$}]{dest}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a41d4d001d9bf9a77465ed907374e0658}
+\hypertarget{Auxiliars_8c_a256f1dad89862377930e90a792b8e37d}{\index{Auxiliars.\-c@{Auxiliars.\-c}!create\-Test@{create\-Test}}
+\index{create\-Test@{create\-Test}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{create\-Test}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-\_\-st\-Test\-Info}$\ast$ create\-Test (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Index\-Test, }
+\item[{char $\ast$}]{str\-Result, }
+\item[{double}]{d\-Time, }
+\item[{int}]{n\-Kill}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a256f1dad89862377930e90a792b8e37d}
+\hypertarget{Auxiliars_8c_adcab8832f40183a4b4db8df7666bb42d}{\index{Auxiliars.\-c@{Auxiliars.\-c}!dir\-\_\-exist@{dir\-\_\-exist}}
+\index{dir\-\_\-exist@{dir\-\_\-exist}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{dir\-\_\-exist}]{\setlength{\rightskip}{0pt plus 5cm}int dir\-\_\-exist (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{d}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_adcab8832f40183a4b4db8df7666bb42d}
+\hypertarget{Auxiliars_8c_a312b37675e7e147fb30b0cb53d7d8479}{\index{Auxiliars.\-c@{Auxiliars.\-c}!exec\-Command\-Line@{exec\-Command\-Line}}
+\index{exec\-Command\-Line@{exec\-Command\-Line}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{exec\-Command\-Line}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ exec\-Command\-Line (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a312b37675e7e147fb30b0cb53d7d8479}
+\hypertarget{Auxiliars_8c_a928b1da945af8413e422d1749058d33a}{\index{Auxiliars.\-c@{Auxiliars.\-c}!file\-\_\-exist@{file\-\_\-exist}}
+\index{file\-\_\-exist@{file\-\_\-exist}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{file\-\_\-exist}]{\setlength{\rightskip}{0pt plus 5cm}int file\-\_\-exist (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a928b1da945af8413e422d1749058d33a}
+\hypertarget{Auxiliars_8c_a60db6d4d611a750ba6e19774ac2bcebb}{\index{Auxiliars.\-c@{Auxiliars.\-c}!fopen\-\_\-mkdir@{fopen\-\_\-mkdir}}
+\index{fopen\-\_\-mkdir@{fopen\-\_\-mkdir}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{fopen\-\_\-mkdir}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E$\ast$ fopen\-\_\-mkdir (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{path, }
+\item[{char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a60db6d4d611a750ba6e19774ac2bcebb}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{Auxiliars_8c_a60db6d4d611a750ba6e19774ac2bcebb_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{Auxiliars_8c_a3abc72bb2b5e7aa536901b5c47dd146f}{\index{Auxiliars.\-c@{Auxiliars.\-c}!free\-Mutant\-List@{free\-Mutant\-List}}
+\index{free\-Mutant\-List@{free\-Mutant\-List}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{free\-Mutant\-List}]{\setlength{\rightskip}{0pt plus 5cm}void free\-Mutant\-List (
+\begin{DoxyParamCaption}
+\item[{{\bf Mutant\-List} $\ast$}]{p\-List}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a3abc72bb2b5e7aa536901b5c47dd146f}
+\hypertarget{Auxiliars_8c_af0f8d130a0e61d129d7173fdada44943}{\index{Auxiliars.\-c@{Auxiliars.\-c}!generate\-Clean\-Mutant\-List@{generate\-Clean\-Mutant\-List}}
+\index{generate\-Clean\-Mutant\-List@{generate\-Clean\-Mutant\-List}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{generate\-Clean\-Mutant\-List}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mutant\-List}$\ast$ generate\-Clean\-Mutant\-List (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Mutants}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_af0f8d130a0e61d129d7173fdada44943}
+\hypertarget{Auxiliars_8c_abf20f0d0256aca4acc21a8bcef943aa2}{\index{Auxiliars.\-c@{Auxiliars.\-c}!generate\-Compilation\-Line@{generate\-Compilation\-Line}}
+\index{generate\-Compilation\-Line@{generate\-Compilation\-Line}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{generate\-Compilation\-Line}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ generate\-Compilation\-Line (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Index\-Mutant, }
+\item[{int}]{n\-Original\-Mode}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_abf20f0d0256aca4acc21a8bcef943aa2}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{Auxiliars_8c_abf20f0d0256aca4acc21a8bcef943aa2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{Auxiliars_8c_a3201f70287d7dcf94efb84b3629deaf0}{\index{Auxiliars.\-c@{Auxiliars.\-c}!generate\-Res\-Folder@{generate\-Res\-Folder}}
+\index{generate\-Res\-Folder@{generate\-Res\-Folder}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{generate\-Res\-Folder}]{\setlength{\rightskip}{0pt plus 5cm}int generate\-Res\-Folder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a3201f70287d7dcf94efb84b3629deaf0}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{Auxiliars_8c_a3201f70287d7dcf94efb84b3629deaf0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{Auxiliars_8c_ad524f269a2713fec2f64053c3704503b}{\index{Auxiliars.\-c@{Auxiliars.\-c}!getenv\-\_\-int@{getenv\-\_\-int}}
+\index{getenv\-\_\-int@{getenv\-\_\-int}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{getenv\-\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}int getenv\-\_\-int (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str\-Key}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_ad524f269a2713fec2f64053c3704503b}
+\hypertarget{Auxiliars_8c_ac65810d8fde88b1a003403d3894e070e}{\index{Auxiliars.\-c@{Auxiliars.\-c}!get\-Original\-Time@{get\-Original\-Time}}
+\index{get\-Original\-Time@{get\-Original\-Time}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{get\-Original\-Time}]{\setlength{\rightskip}{0pt plus 5cm}int get\-Original\-Time (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Test\-List} $\ast$}]{p\-List, }
+\item[{int}]{n\-Test}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_ac65810d8fde88b1a003403d3894e070e}
+Get the execution time needed to apply the test over the original program 
+\begin{DoxyParams}{Parameters}
+{\em n\-Test} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{Auxiliars_8c_a60ab9fcbd72061289ed7af622754751b}{\index{Auxiliars.\-c@{Auxiliars.\-c}!get\-Tick@{get\-Tick}}
+\index{get\-Tick@{get\-Tick}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{get\-Tick}]{\setlength{\rightskip}{0pt plus 5cm}long int get\-Tick (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a60ab9fcbd72061289ed7af622754751b}
+\hypertarget{Auxiliars_8c_a10491c96545ab6d0b126d2ca0db07cc6}{\index{Auxiliars.\-c@{Auxiliars.\-c}!initialize\-\_\-auxiliars@{initialize\-\_\-auxiliars}}
+\index{initialize\-\_\-auxiliars@{initialize\-\_\-auxiliars}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{initialize\-\_\-auxiliars}]{\setlength{\rightskip}{0pt plus 5cm}void initialize\-\_\-auxiliars (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a10491c96545ab6d0b126d2ca0db07cc6}
+\hypertarget{Auxiliars_8c_a7387501825c9e531f32281f0dcf07e07}{\index{Auxiliars.\-c@{Auxiliars.\-c}!initialize\-Equivalent\-Map@{initialize\-Equivalent\-Map}}
+\index{initialize\-Equivalent\-Map@{initialize\-Equivalent\-Map}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{initialize\-Equivalent\-Map}]{\setlength{\rightskip}{0pt plus 5cm}void initialize\-Equivalent\-Map (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Mutants, }
+\item[{int}]{n\-Tests}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a7387501825c9e531f32281f0dcf07e07}
+\hypertarget{Auxiliars_8c_aad2abc7509dca3a174711497c2a2bbe4}{\index{Auxiliars.\-c@{Auxiliars.\-c}!initialize\-Execution\-Map@{initialize\-Execution\-Map}}
+\index{initialize\-Execution\-Map@{initialize\-Execution\-Map}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{initialize\-Execution\-Map}]{\setlength{\rightskip}{0pt plus 5cm}void initialize\-Execution\-Map (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Mutants, }
+\item[{int}]{n\-Tests}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_aad2abc7509dca3a174711497c2a2bbe4}
+\hypertarget{Auxiliars_8c_a146a12561b1a6fdedea1505ac4434faa}{\index{Auxiliars.\-c@{Auxiliars.\-c}!insert\-Full\-Mutant\-Info@{insert\-Full\-Mutant\-Info}}
+\index{insert\-Full\-Mutant\-Info@{insert\-Full\-Mutant\-Info}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{insert\-Full\-Mutant\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void insert\-Full\-Mutant\-Info (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Mutant, }
+\item[{int}]{n\-Mutant\-State, }
+\item[{{\bf T\-\_\-st\-Test\-List} $\ast$}]{p\-List}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a146a12561b1a6fdedea1505ac4434faa}
+\hypertarget{Auxiliars_8c_a3b80d6dfc602edb25b80149fffe6ea9b}{\index{Auxiliars.\-c@{Auxiliars.\-c}!insert\-Mutant@{insert\-Mutant}}
+\index{insert\-Mutant@{insert\-Mutant}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{insert\-Mutant}]{\setlength{\rightskip}{0pt plus 5cm}void insert\-Mutant (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Mutant} $\ast$}]{p\-Mutant, }
+\item[{int}]{n\-Index\-Mutant}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a3b80d6dfc602edb25b80149fffe6ea9b}
+\hypertarget{Auxiliars_8c_ae868349a1b9962bef735c645c8af8429}{\index{Auxiliars.\-c@{Auxiliars.\-c}!insert\-Mutant\-Test\-By\-Test@{insert\-Mutant\-Test\-By\-Test}}
+\index{insert\-Mutant\-Test\-By\-Test@{insert\-Mutant\-Test\-By\-Test}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{insert\-Mutant\-Test\-By\-Test}]{\setlength{\rightskip}{0pt plus 5cm}void insert\-Mutant\-Test\-By\-Test (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Mutant} $\ast$}]{p\-Mutant, }
+\item[{int}]{n\-Index\-Mutant, }
+\item[{int}]{n\-Worker\-Source}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_ae868349a1b9962bef735c645c8af8429}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Auxiliars_8c_ae868349a1b9962bef735c645c8af8429_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{Auxiliars_8c_afa2214923ca27bb087ebe0622ba7c152}{\index{Auxiliars.\-c@{Auxiliars.\-c}!insert\-Test\-Result@{insert\-Test\-Result}}
+\index{insert\-Test\-Result@{insert\-Test\-Result}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{insert\-Test\-Result}]{\setlength{\rightskip}{0pt plus 5cm}int insert\-Test\-Result (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Mutant, }
+\item[{int}]{n\-Test, }
+\item[{{\bf T\-\_\-st\-Test\-Info} $\ast$}]{p\-Test}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_afa2214923ca27bb087ebe0622ba7c152}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{Auxiliars_8c_afa2214923ca27bb087ebe0622ba7c152_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{Auxiliars_8c_a468c24e305d956cf0bb31debf9ff8a97}{\index{Auxiliars.\-c@{Auxiliars.\-c}!insert\-Test\-Result\-\_\-unsorted@{insert\-Test\-Result\-\_\-unsorted}}
+\index{insert\-Test\-Result\-\_\-unsorted@{insert\-Test\-Result\-\_\-unsorted}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{insert\-Test\-Result\-\_\-unsorted}]{\setlength{\rightskip}{0pt plus 5cm}int insert\-Test\-Result\-\_\-unsorted (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Mutant, }
+\item[{int}]{n\-Test, }
+\item[{{\bf T\-\_\-st\-Test\-Info} $\ast$}]{p\-Test}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a468c24e305d956cf0bb31debf9ff8a97}
+This function is designed to insert a test in the first free position in the vector. The main diference with insert\-Result is related with the order. In this case we can have a test vector such \mbox{[}t2,t3,t5\mbox{]} since with insert\-Result we'd have \mbox{[}null,null,t2,t3,null,t5\mbox{]}. We have designed it to achieve a better performance 
+\begin{DoxyParams}{Parameters}
+{\em n\-Mutant} & Mutant where the test will be inserted \\
+\hline
+{\em p\-Test} & Test to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the mutant is not allocated 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{Auxiliars_8c_a468c24e305d956cf0bb31debf9ff8a97_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{Auxiliars_8c_a9fc952cf76aa8896184df882c33ed1c8}{\index{Auxiliars.\-c@{Auxiliars.\-c}!is\-Enabled\-Aux\-Log@{is\-Enabled\-Aux\-Log}}
+\index{is\-Enabled\-Aux\-Log@{is\-Enabled\-Aux\-Log}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{is\-Enabled\-Aux\-Log}]{\setlength{\rightskip}{0pt plus 5cm}int is\-Enabled\-Aux\-Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a9fc952cf76aa8896184df882c33ed1c8}
+\hypertarget{Auxiliars_8c_af3d2268d78c36203c367ad1fe581743f}{\index{Auxiliars.\-c@{Auxiliars.\-c}!is\-Enabled\-Debug\-Main\-Command\-Log@{is\-Enabled\-Debug\-Main\-Command\-Log}}
+\index{is\-Enabled\-Debug\-Main\-Command\-Log@{is\-Enabled\-Debug\-Main\-Command\-Log}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{is\-Enabled\-Debug\-Main\-Command\-Log}]{\setlength{\rightskip}{0pt plus 5cm}int is\-Enabled\-Debug\-Main\-Command\-Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_af3d2268d78c36203c367ad1fe581743f}
+\hypertarget{Auxiliars_8c_ad977bb957ddd724b9dd590e37d9fe093}{\index{Auxiliars.\-c@{Auxiliars.\-c}!is\-Mutant\-Allocated@{is\-Mutant\-Allocated}}
+\index{is\-Mutant\-Allocated@{is\-Mutant\-Allocated}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{is\-Mutant\-Allocated}]{\setlength{\rightskip}{0pt plus 5cm}int is\-Mutant\-Allocated (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Index\-Mutant}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_ad977bb957ddd724b9dd590e37d9fe093}
+\hypertarget{Auxiliars_8c_a5891dfe1066ac082980db1c3eb4c9f2c}{\index{Auxiliars.\-c@{Auxiliars.\-c}!pretty\-Print@{pretty\-Print}}
+\index{pretty\-Print@{pretty\-Print}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{pretty\-Print}]{\setlength{\rightskip}{0pt plus 5cm}int pretty\-Print (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Index, }
+\item[{int}]{n\-Total, }
+\item[{int}]{n\-Ant\-Prog}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a5891dfe1066ac082980db1c3eb4c9f2c}
+\hypertarget{Auxiliars_8c_a438dd8b30a1f8b16fd956363f6909f29}{\index{Auxiliars.\-c@{Auxiliars.\-c}!read\-Test\-Suite@{read\-Test\-Suite}}
+\index{read\-Test\-Suite@{read\-Test\-Suite}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{read\-Test\-Suite}]{\setlength{\rightskip}{0pt plus 5cm}int read\-Test\-Suite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a438dd8b30a1f8b16fd956363f6909f29}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{Auxiliars_8c_a438dd8b30a1f8b16fd956363f6909f29_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{Auxiliars_8c_a572fc7e90a3041bc8c17d3f23ad0a78d}{\index{Auxiliars.\-c@{Auxiliars.\-c}!recursive\-\_\-mkdir@{recursive\-\_\-mkdir}}
+\index{recursive\-\_\-mkdir@{recursive\-\_\-mkdir}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{recursive\-\_\-mkdir}]{\setlength{\rightskip}{0pt plus 5cm}void recursive\-\_\-mkdir (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{path}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a572fc7e90a3041bc8c17d3f23ad0a78d}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{Auxiliars_8c_a572fc7e90a3041bc8c17d3f23ad0a78d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{Auxiliars_8c_a07ed422b9084fb6a2fc2edb155ae590b}{\index{Auxiliars.\-c@{Auxiliars.\-c}!redirect\-\_\-stdout@{redirect\-\_\-stdout}}
+\index{redirect\-\_\-stdout@{redirect\-\_\-stdout}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{redirect\-\_\-stdout}]{\setlength{\rightskip}{0pt plus 5cm}void redirect\-\_\-stdout (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str\-File}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a07ed422b9084fb6a2fc2edb155ae590b}
+\hypertarget{Auxiliars_8c_a59689ac62cb991f149d59ff57f678550}{\index{Auxiliars.\-c@{Auxiliars.\-c}!replace@{replace}}
+\index{replace@{replace}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{replace}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ replace (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$const}]{original, }
+\item[{char const $\ast$const}]{pattern, }
+\item[{char const $\ast$const}]{replacement}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a59689ac62cb991f149d59ff57f678550}
+\hypertarget{Auxiliars_8c_a6fb95aaf1a67c0dfc9e35416a96e58aa}{\index{Auxiliars.\-c@{Auxiliars.\-c}!replace\-\_\-char@{replace\-\_\-char}}
+\index{replace\-\_\-char@{replace\-\_\-char}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{replace\-\_\-char}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ replace\-\_\-char (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{s, }
+\item[{char}]{ch, }
+\item[{const char $\ast$}]{repl}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_a6fb95aaf1a67c0dfc9e35416a96e58aa}
+\hypertarget{Auxiliars_8c_af1f1971eb763b91534b6d0037b284193}{\index{Auxiliars.\-c@{Auxiliars.\-c}!save\-Config\-And\-Environment\-Files@{save\-Config\-And\-Environment\-Files}}
+\index{save\-Config\-And\-Environment\-Files@{save\-Config\-And\-Environment\-Files}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{save\-Config\-And\-Environment\-Files}]{\setlength{\rightskip}{0pt plus 5cm}void save\-Config\-And\-Environment\-Files (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_af1f1971eb763b91534b6d0037b284193}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{Auxiliars_8c_af1f1971eb763b91534b6d0037b284193_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{Auxiliars_8c_ac08052e787477c50ef64b7ab0d7f1424}{\index{Auxiliars.\-c@{Auxiliars.\-c}!show\-Debug\-Options@{show\-Debug\-Options}}
+\index{show\-Debug\-Options@{show\-Debug\-Options}!Auxiliars.c@{Auxiliars.\-c}}
+\subsubsection[{show\-Debug\-Options}]{\setlength{\rightskip}{0pt plus 5cm}void show\-Debug\-Options (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{Auxiliars_8c_ac08052e787477c50ef64b7ab0d7f1424}

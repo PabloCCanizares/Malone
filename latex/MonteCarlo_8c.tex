@@ -1,0 +1,86 @@
+\hypertarget{MonteCarlo_8c}{\section{Monte\-Carlo.\-c File Reference}
+\label{MonteCarlo_8c}\index{Monte\-Carlo.\-c@{Monte\-Carlo.\-c}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$math.\-h$>$}\\*
+{\ttfamily \#include $<$time.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}mpi.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Options.\-h\char`\"{}}\\*
+Include dependency graph for Monte\-Carlo.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MonteCarlo_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{MonteCarlo_8c_ad72dbcf6d0153db1b8d8a58001feed83}{D\-E\-B\-U\-G}~0
+\item 
+\#define \hyperlink{MonteCarlo_8c_a239bebe1697b474e6f84945e9fb9faee}{C\-H\-U\-N\-K\-S\-I\-Z\-E}~2000
+\item 
+\#define \hyperlink{MonteCarlo_8c_a990edf51308a42b583fde55e2b9bedb7}{R\-A\-N\-D\-O\-M\-\_\-\-S\-E\-E\-D}~0
+\item 
+\#define \hyperlink{MonteCarlo_8c_a3d161748ff4bed8281fe4adc73514469}{N\-E\-E\-D\-\_\-\-N\-U\-M\-B\-E\-R\-S}~1
+\item 
+\#define \hyperlink{MonteCarlo_8c_af6e2c1630f732c6eac4f22fe0926136f}{R\-A\-N\-D\-O\-M\-\_\-\-N\-U\-M\-B\-E\-R\-S}~2
+\item 
+\#define \hyperlink{MonteCarlo_8c_ac1c7bc76dbfd8378fc96541a6243afd1}{T\-I\-M\-E\-\_\-\-S\-I\-Z\-E}~40
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{MonteCarlo_8c_a48dea840430525d6327934ab9406f714}{do\-Monte\-Carlo} ()
+\item 
+void \hyperlink{MonteCarlo_8c_a02d8f81e512334c1e2e5be025c41afa8}{timestamp} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{MonteCarlo_8c_a239bebe1697b474e6f84945e9fb9faee}{\index{Monte\-Carlo.\-c@{Monte\-Carlo.\-c}!C\-H\-U\-N\-K\-S\-I\-Z\-E@{C\-H\-U\-N\-K\-S\-I\-Z\-E}}
+\index{C\-H\-U\-N\-K\-S\-I\-Z\-E@{C\-H\-U\-N\-K\-S\-I\-Z\-E}!MonteCarlo.c@{Monte\-Carlo.\-c}}
+\subsubsection[{C\-H\-U\-N\-K\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-U\-N\-K\-S\-I\-Z\-E~2000}}\label{MonteCarlo_8c_a239bebe1697b474e6f84945e9fb9faee}
+\hypertarget{MonteCarlo_8c_ad72dbcf6d0153db1b8d8a58001feed83}{\index{Monte\-Carlo.\-c@{Monte\-Carlo.\-c}!D\-E\-B\-U\-G@{D\-E\-B\-U\-G}}
+\index{D\-E\-B\-U\-G@{D\-E\-B\-U\-G}!MonteCarlo.c@{Monte\-Carlo.\-c}}
+\subsubsection[{D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-B\-U\-G~0}}\label{MonteCarlo_8c_ad72dbcf6d0153db1b8d8a58001feed83}
+\hypertarget{MonteCarlo_8c_a3d161748ff4bed8281fe4adc73514469}{\index{Monte\-Carlo.\-c@{Monte\-Carlo.\-c}!N\-E\-E\-D\-\_\-\-N\-U\-M\-B\-E\-R\-S@{N\-E\-E\-D\-\_\-\-N\-U\-M\-B\-E\-R\-S}}
+\index{N\-E\-E\-D\-\_\-\-N\-U\-M\-B\-E\-R\-S@{N\-E\-E\-D\-\_\-\-N\-U\-M\-B\-E\-R\-S}!MonteCarlo.c@{Monte\-Carlo.\-c}}
+\subsubsection[{N\-E\-E\-D\-\_\-\-N\-U\-M\-B\-E\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-E\-E\-D\-\_\-\-N\-U\-M\-B\-E\-R\-S~1}}\label{MonteCarlo_8c_a3d161748ff4bed8281fe4adc73514469}
+\hypertarget{MonteCarlo_8c_af6e2c1630f732c6eac4f22fe0926136f}{\index{Monte\-Carlo.\-c@{Monte\-Carlo.\-c}!R\-A\-N\-D\-O\-M\-\_\-\-N\-U\-M\-B\-E\-R\-S@{R\-A\-N\-D\-O\-M\-\_\-\-N\-U\-M\-B\-E\-R\-S}}
+\index{R\-A\-N\-D\-O\-M\-\_\-\-N\-U\-M\-B\-E\-R\-S@{R\-A\-N\-D\-O\-M\-\_\-\-N\-U\-M\-B\-E\-R\-S}!MonteCarlo.c@{Monte\-Carlo.\-c}}
+\subsubsection[{R\-A\-N\-D\-O\-M\-\_\-\-N\-U\-M\-B\-E\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-A\-N\-D\-O\-M\-\_\-\-N\-U\-M\-B\-E\-R\-S~2}}\label{MonteCarlo_8c_af6e2c1630f732c6eac4f22fe0926136f}
+\hypertarget{MonteCarlo_8c_a990edf51308a42b583fde55e2b9bedb7}{\index{Monte\-Carlo.\-c@{Monte\-Carlo.\-c}!R\-A\-N\-D\-O\-M\-\_\-\-S\-E\-E\-D@{R\-A\-N\-D\-O\-M\-\_\-\-S\-E\-E\-D}}
+\index{R\-A\-N\-D\-O\-M\-\_\-\-S\-E\-E\-D@{R\-A\-N\-D\-O\-M\-\_\-\-S\-E\-E\-D}!MonteCarlo.c@{Monte\-Carlo.\-c}}
+\subsubsection[{R\-A\-N\-D\-O\-M\-\_\-\-S\-E\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-A\-N\-D\-O\-M\-\_\-\-S\-E\-E\-D~0}}\label{MonteCarlo_8c_a990edf51308a42b583fde55e2b9bedb7}
+\hypertarget{MonteCarlo_8c_ac1c7bc76dbfd8378fc96541a6243afd1}{\index{Monte\-Carlo.\-c@{Monte\-Carlo.\-c}!T\-I\-M\-E\-\_\-\-S\-I\-Z\-E@{T\-I\-M\-E\-\_\-\-S\-I\-Z\-E}}
+\index{T\-I\-M\-E\-\_\-\-S\-I\-Z\-E@{T\-I\-M\-E\-\_\-\-S\-I\-Z\-E}!MonteCarlo.c@{Monte\-Carlo.\-c}}
+\subsubsection[{T\-I\-M\-E\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-I\-M\-E\-\_\-\-S\-I\-Z\-E~40}}\label{MonteCarlo_8c_ac1c7bc76dbfd8378fc96541a6243afd1}
+
+
+\subsection{Function Documentation}
+\hypertarget{MonteCarlo_8c_a48dea840430525d6327934ab9406f714}{\index{Monte\-Carlo.\-c@{Monte\-Carlo.\-c}!do\-Monte\-Carlo@{do\-Monte\-Carlo}}
+\index{do\-Monte\-Carlo@{do\-Monte\-Carlo}!MonteCarlo.c@{Monte\-Carlo.\-c}}
+\subsubsection[{do\-Monte\-Carlo}]{\setlength{\rightskip}{0pt plus 5cm}int do\-Monte\-Carlo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{MonteCarlo_8c_a48dea840430525d6327934ab9406f714}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{MonteCarlo_8c_a48dea840430525d6327934ab9406f714_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{MonteCarlo_8c_a02d8f81e512334c1e2e5be025c41afa8}{\index{Monte\-Carlo.\-c@{Monte\-Carlo.\-c}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!MonteCarlo.c@{Monte\-Carlo.\-c}}
+\subsubsection[{timestamp}]{\setlength{\rightskip}{0pt plus 5cm}void timestamp (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{MonteCarlo_8c_a02d8f81e512334c1e2e5be025c41afa8}

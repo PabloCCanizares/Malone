@@ -1,0 +1,4 @@
+gnuplot -e "outputfile='executionmap_32.eps'; datafile='executionMap_32.txt'" graph2d.gnu
+gnuplot -e "outputfile='executionmap_16.eps'; datafile='executionMap_16.txt'" graph2d.gnu
+gnuplot -e "outputfile='outridermap.eps'; datafile='outridermap.txt'" graph2d.gnu
+gnuplot -e "outputfile='execMap.eps'; datafile='execMap.txt'" graph2d.gnu

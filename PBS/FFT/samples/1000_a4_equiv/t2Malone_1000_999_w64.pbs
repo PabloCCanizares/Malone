@@ -1,0 +1,36 @@
+#!/bin/bash --login
+
+# This is a PBS script for the Tier2 system Cirrus
+
+
+# select sets number of nodes, each has 36 cores
+# ncpus=36 is because of hyperthreading
+
+# PBS job options (name, compute nodes, job time)
+#PBS -N malone_fft_m1000_t975_w64_a4
+#PBS -l walltime=00:30:00
+#PBS -A dc010-pcerro
+#PBS -l place=excl
+#PBS -l select=2:ncpus=36
+
+module load mpt
+
+# Change to the directory that the job was submitted from
+# (remember this should be on the /work filesystem)
+cd $PBS_O_WORKDIR
+
+# Launch the parallel job using 3 full nodes, i.e. 108 processes
+# with 36 Processes Per Node
+#export MPI_SHEPHERD=true
+
+mpiexec_mpt -n 64 -ppn 32 ./malone -a 4 -e FFT/fft_m1000_t975_equiv.ini
+
+# Note: for more than 36 processes you will need to:
+#
+# a) Edit "select=1:ncpus=36" to select more nodes. You need a node for
+#    every 36 processes, e.g. between 37 and 72 processes use "select=2".
+#
+# b) Edit "-n 4" be the number of processes you want to run on.
+#
+# c) Edit "-ppn 4" to set the number of Processes Per Node, e.g for 72
+#    processes you would set this to 36.

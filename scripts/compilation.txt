@@ -1,0 +1,516 @@
+Milu home: /home/pablo/Frameworks/Milu
+/home/pablo/Frameworks/Milu/examples/imgFilter/milu_output/mutants
+0
+1
+10
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+11
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+12
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+13
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+14
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+15
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+16
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+17
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+18
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+19
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+2
+20
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+21
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+22
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+23
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+24
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+25
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+26
+260
+261
+262
+27
+28
+29
+3
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+4
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+5
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+6
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+7
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+8
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+9
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+bmp_test.c
+Compiling mutants: 
+ ======================> 127
+gcc -lm -Wall 127/src/*.c -o 127/bin/mut.exe -lcrypto -lssl
+ ======================> 128
+gcc -lm -Wall 128/src/*.c -o 128/bin/mut.exe -lcrypto -lssl
+ ======================> 129
+gcc -lm -Wall 129/src/*.c -o 129/bin/mut.exe -lcrypto -lssl
+ ======================> 130
+gcc -lm -Wall 130/src/*.c -o 130/bin/mut.exe -lcrypto -lssl
+ ======================> 131
+gcc -lm -Wall 131/src/*.c -o 131/bin/mut.exe -lcrypto -lssl
+ ======================> 132
+gcc -lm -Wall 132/src/*.c -o 132/bin/mut.exe -lcrypto -lssl
+ ======================> 133
+gcc -lm -Wall 133/src/*.c -o 133/bin/mut.exe -lcrypto -lssl
+ ======================> 134
+gcc -lm -Wall 134/src/*.c -o 134/bin/mut.exe -lcrypto -lssl
+ ======================> 135
+gcc -lm -Wall 135/src/*.c -o 135/bin/mut.exe -lcrypto -lssl
+ ======================> 136
+gcc -lm -Wall 136/src/*.c -o 136/bin/mut.exe -lcrypto -lssl
+ ======================> 137
+gcc -lm -Wall 137/src/*.c -o 137/bin/mut.exe -lcrypto -lssl
+ ======================> 138
+gcc -lm -Wall 138/src/*.c -o 138/bin/mut.exe -lcrypto -lssl
+ ======================> 139
+gcc -lm -Wall 139/src/*.c -o 139/bin/mut.exe -lcrypto -lssl
+ ======================> 140
+gcc -lm -Wall 140/src/*.c -o 140/bin/mut.exe -lcrypto -lssl
+ ======================> 141
+gcc -lm -Wall 141/src/*.c -o 141/bin/mut.exe -lcrypto -lssl
+ ======================> 142
+gcc -lm -Wall 142/src/*.c -o 142/bin/mut.exe -lcrypto -lssl
+ ======================> 143
+gcc -lm -Wall 143/src/*.c -o 143/bin/mut.exe -lcrypto -lssl
+ ======================> 144
+gcc -lm -Wall 144/src/*.c -o 144/bin/mut.exe -lcrypto -lssl
+ ======================> 145
+gcc -lm -Wall 145/src/*.c -o 145/bin/mut.exe -lcrypto -lssl
+ ======================> 146
+gcc -lm -Wall 146/src/*.c -o 146/bin/mut.exe -lcrypto -lssl
+ ======================> 147
+gcc -lm -Wall 147/src/*.c -o 147/bin/mut.exe -lcrypto -lssl
+ ======================> 148
+gcc -lm -Wall 148/src/*.c -o 148/bin/mut.exe -lcrypto -lssl
+ ======================> 149
+gcc -lm -Wall 149/src/*.c -o 149/bin/mut.exe -lcrypto -lssl
+ ======================> 150
+gcc -lm -Wall 150/src/*.c -o 150/bin/mut.exe -lcrypto -lssl
+ ======================> 151
+gcc -lm -Wall 151/src/*.c -o 151/bin/mut.exe -lcrypto -lssl
+ ======================> 152
+gcc -lm -Wall 152/src/*.c -o 152/bin/mut.exe -lcrypto -lssl
+ ======================> 153
+gcc -lm -Wall 153/src/*.c -o 153/bin/mut.exe -lcrypto -lssl
+ ======================> 154
+gcc -lm -Wall 154/src/*.c -o 154/bin/mut.exe -lcrypto -lssl
+ ======================> 155
+gcc -lm -Wall 155/src/*.c -o 155/bin/mut.exe -lcrypto -lssl
+ ======================> 156
+gcc -lm -Wall 156/src/*.c -o 156/bin/mut.exe -lcrypto -lssl
+ ======================> 157
+gcc -lm -Wall 157/src/*.c -o 157/bin/mut.exe -lcrypto -lssl
+ ======================> 158
+gcc -lm -Wall 158/src/*.c -o 158/bin/mut.exe -lcrypto -lssl
+ ======================> 159
+gcc -lm -Wall 159/src/*.c -o 159/bin/mut.exe -lcrypto -lssl
+ ======================> 160
+gcc -lm -Wall 160/src/*.c -o 160/bin/mut.exe -lcrypto -lssl
+ ======================> 161
+gcc -lm -Wall 161/src/*.c -o 161/bin/mut.exe -lcrypto -lssl
+ ======================> 162
+gcc -lm -Wall 162/src/*.c -o 162/bin/mut.exe -lcrypto -lssl
+ ======================> 163
+gcc -lm -Wall 163/src/*.c -o 163/bin/mut.exe -lcrypto -lssl
+ ======================> 164
+gcc -lm -Wall 164/src/*.c -o 164/bin/mut.exe -lcrypto -lssl
+ ======================> 165
+gcc -lm -Wall 165/src/*.c -o 165/bin/mut.exe -lcrypto -lssl
+ ======================> 166
+gcc -lm -Wall 166/src/*.c -o 166/bin/mut.exe -lcrypto -lssl
+ ======================> 167
+gcc -lm -Wall 167/src/*.c -o 167/bin/mut.exe -lcrypto -lssl
+ ======================> 168
+gcc -lm -Wall 168/src/*.c -o 168/bin/mut.exe -lcrypto -lssl
+ ======================> 169
+gcc -lm -Wall 169/src/*.c -o 169/bin/mut.exe -lcrypto -lssl
+ ======================> 170
+gcc -lm -Wall 170/src/*.c -o 170/bin/mut.exe -lcrypto -lssl
+ ======================> 171
+gcc -lm -Wall 171/src/*.c -o 171/bin/mut.exe -lcrypto -lssl
+ ======================> 172
+gcc -lm -Wall 172/src/*.c -o 172/bin/mut.exe -lcrypto -lssl
+ ======================> 173
+gcc -lm -Wall 173/src/*.c -o 173/bin/mut.exe -lcrypto -lssl
+ ======================> 174
+gcc -lm -Wall 174/src/*.c -o 174/bin/mut.exe -lcrypto -lssl
+ ======================> 175
+gcc -lm -Wall 175/src/*.c -o 175/bin/mut.exe -lcrypto -lssl
+ ======================> 176
+gcc -lm -Wall 176/src/*.c -o 176/bin/mut.exe -lcrypto -lssl
+ ======================> 177
+gcc -lm -Wall 177/src/*.c -o 177/bin/mut.exe -lcrypto -lssl
+ ======================> 178
+gcc -lm -Wall 178/src/*.c -o 178/bin/mut.exe -lcrypto -lssl
+ ======================> 179
+gcc -lm -Wall 179/src/*.c -o 179/bin/mut.exe -lcrypto -lssl
+ ======================> 180
+gcc -lm -Wall 180/src/*.c -o 180/bin/mut.exe -lcrypto -lssl
+ ======================> 181
+gcc -lm -Wall 181/src/*.c -o 181/bin/mut.exe -lcrypto -lssl
+ ======================> 182
+gcc -lm -Wall 182/src/*.c -o 182/bin/mut.exe -lcrypto -lssl
+ ======================> 183
+gcc -lm -Wall 183/src/*.c -o 183/bin/mut.exe -lcrypto -lssl
+ ======================> 184
+gcc -lm -Wall 184/src/*.c -o 184/bin/mut.exe -lcrypto -lssl
+ ======================> 185
+gcc -lm -Wall 185/src/*.c -o 185/bin/mut.exe -lcrypto -lssl
+ ======================> 186
+gcc -lm -Wall 186/src/*.c -o 186/bin/mut.exe -lcrypto -lssl
+ ======================> 187
+gcc -lm -Wall 187/src/*.c -o 187/bin/mut.exe -lcrypto -lssl
+ ======================> 188
+gcc -lm -Wall 188/src/*.c -o 188/bin/mut.exe -lcrypto -lssl
+ ======================> 189
+gcc -lm -Wall 189/src/*.c -o 189/bin/mut.exe -lcrypto -lssl
+ ======================> 190
+gcc -lm -Wall 190/src/*.c -o 190/bin/mut.exe -lcrypto -lssl
+ ======================> 191
+gcc -lm -Wall 191/src/*.c -o 191/bin/mut.exe -lcrypto -lssl
+ ======================> 192
+gcc -lm -Wall 192/src/*.c -o 192/bin/mut.exe -lcrypto -lssl
+ ======================> 193
+gcc -lm -Wall 193/src/*.c -o 193/bin/mut.exe -lcrypto -lssl
+ ======================> 194
+gcc -lm -Wall 194/src/*.c -o 194/bin/mut.exe -lcrypto -lssl
+ ======================> 195
+gcc -lm -Wall 195/src/*.c -o 195/bin/mut.exe -lcrypto -lssl
+ ======================> 196
+gcc -lm -Wall 196/src/*.c -o 196/bin/mut.exe -lcrypto -lssl
+ ======================> 197
+gcc -lm -Wall 197/src/*.c -o 197/bin/mut.exe -lcrypto -lssl
+ ======================> 198
+gcc -lm -Wall 198/src/*.c -o 198/bin/mut.exe -lcrypto -lssl
+ ======================> 199
+gcc -lm -Wall 199/src/*.c -o 199/bin/mut.exe -lcrypto -lssl
+ ======================> 200
+gcc -lm -Wall 200/src/*.c -o 200/bin/mut.exe -lcrypto -lssl
+ ======================> 201
+gcc -lm -Wall 201/src/*.c -o 201/bin/mut.exe -lcrypto -lssl
+ ======================> 202
+gcc -lm -Wall 202/src/*.c -o 202/bin/mut.exe -lcrypto -lssl
+ ======================> 203
+gcc -lm -Wall 203/src/*.c -o 203/bin/mut.exe -lcrypto -lssl
+ ======================> 204
+gcc -lm -Wall 204/src/*.c -o 204/bin/mut.exe -lcrypto -lssl
+ ======================> 205
+gcc -lm -Wall 205/src/*.c -o 205/bin/mut.exe -lcrypto -lssl
+ ======================> 206
+gcc -lm -Wall 206/src/*.c -o 206/bin/mut.exe -lcrypto -lssl
+ ======================> 207
+gcc -lm -Wall 207/src/*.c -o 207/bin/mut.exe -lcrypto -lssl
+ ======================> 208
+gcc -lm -Wall 208/src/*.c -o 208/bin/mut.exe -lcrypto -lssl
+ ======================> 209
+gcc -lm -Wall 209/src/*.c -o 209/bin/mut.exe -lcrypto -lssl
+ ======================> 210
+gcc -lm -Wall 210/src/*.c -o 210/bin/mut.exe -lcrypto -lssl
+ ======================> 211
+gcc -lm -Wall 211/src/*.c -o 211/bin/mut.exe -lcrypto -lssl
+ ======================> 212
+gcc -lm -Wall 212/src/*.c -o 212/bin/mut.exe -lcrypto -lssl
+ ======================> 213
+gcc -lm -Wall 213/src/*.c -o 213/bin/mut.exe -lcrypto -lssl
+ ======================> 214
+gcc -lm -Wall 214/src/*.c -o 214/bin/mut.exe -lcrypto -lssl
+ ======================> 215
+gcc -lm -Wall 215/src/*.c -o 215/bin/mut.exe -lcrypto -lssl
+ ======================> 216
+gcc -lm -Wall 216/src/*.c -o 216/bin/mut.exe -lcrypto -lssl
+ ======================> 217
+gcc -lm -Wall 217/src/*.c -o 217/bin/mut.exe -lcrypto -lssl
+ ======================> 218
+gcc -lm -Wall 218/src/*.c -o 218/bin/mut.exe -lcrypto -lssl
+ ======================> 219
+gcc -lm -Wall 219/src/*.c -o 219/bin/mut.exe -lcrypto -lssl
+ ======================> 220
+gcc -lm -Wall 220/src/*.c -o 220/bin/mut.exe -lcrypto -lssl
+ ======================> 221
+gcc -lm -Wall 221/src/*.c -o 221/bin/mut.exe -lcrypto -lssl
+ ======================> 222
+gcc -lm -Wall 222/src/*.c -o 222/bin/mut.exe -lcrypto -lssl
+ ======================> 223
+gcc -lm -Wall 223/src/*.c -o 223/bin/mut.exe -lcrypto -lssl
+ ======================> 224
+gcc -lm -Wall 224/src/*.c -o 224/bin/mut.exe -lcrypto -lssl
+ ======================> 225
+gcc -lm -Wall 225/src/*.c -o 225/bin/mut.exe -lcrypto -lssl
+ ======================> 226
+gcc -lm -Wall 226/src/*.c -o 226/bin/mut.exe -lcrypto -lssl
+ ======================> 227
+gcc -lm -Wall 227/src/*.c -o 227/bin/mut.exe -lcrypto -lssl
+ ======================> 228
+gcc -lm -Wall 228/src/*.c -o 228/bin/mut.exe -lcrypto -lssl
+ ======================> 229
+gcc -lm -Wall 229/src/*.c -o 229/bin/mut.exe -lcrypto -lssl
+ ======================> 230
+gcc -lm -Wall 230/src/*.c -o 230/bin/mut.exe -lcrypto -lssl
+ ======================> 231
+gcc -lm -Wall 231/src/*.c -o 231/bin/mut.exe -lcrypto -lssl
+ ======================> 232
+gcc -lm -Wall 232/src/*.c -o 232/bin/mut.exe -lcrypto -lssl
+ ======================> 233
+gcc -lm -Wall 233/src/*.c -o 233/bin/mut.exe -lcrypto -lssl
+ ======================> 234
+gcc -lm -Wall 234/src/*.c -o 234/bin/mut.exe -lcrypto -lssl
+ ======================> 235
+gcc -lm -Wall 235/src/*.c -o 235/bin/mut.exe -lcrypto -lssl
+ ======================> 236
+gcc -lm -Wall 236/src/*.c -o 236/bin/mut.exe -lcrypto -lssl
+ ======================> 237
+gcc -lm -Wall 237/src/*.c -o 237/bin/mut.exe -lcrypto -lssl
+ ======================> 238
+gcc -lm -Wall 238/src/*.c -o 238/bin/mut.exe -lcrypto -lssl
+ ======================> 239
+gcc -lm -Wall 239/src/*.c -o 239/bin/mut.exe -lcrypto -lssl
+ ======================> 240
+gcc -lm -Wall 240/src/*.c -o 240/bin/mut.exe -lcrypto -lssl
+ ======================> 241
+gcc -lm -Wall 241/src/*.c -o 241/bin/mut.exe -lcrypto -lssl
+ ======================> 242
+gcc -lm -Wall 242/src/*.c -o 242/bin/mut.exe -lcrypto -lssl
+ ======================> 243
+gcc -lm -Wall 243/src/*.c -o 243/bin/mut.exe -lcrypto -lssl
+ ======================> 244
+gcc -lm -Wall 244/src/*.c -o 244/bin/mut.exe -lcrypto -lssl
+ ======================> 245
+gcc -lm -Wall 245/src/*.c -o 245/bin/mut.exe -lcrypto -lssl
+ ======================> 246
+gcc -lm -Wall 246/src/*.c -o 246/bin/mut.exe -lcrypto -lssl
+ ======================> 247
+gcc -lm -Wall 247/src/*.c -o 247/bin/mut.exe -lcrypto -lssl
+ ======================> 248
+gcc -lm -Wall 248/src/*.c -o 248/bin/mut.exe -lcrypto -lssl
+ ======================> 249
+gcc -lm -Wall 249/src/*.c -o 249/bin/mut.exe -lcrypto -lssl
+ ======================> 250
+gcc -lm -Wall 250/src/*.c -o 250/bin/mut.exe -lcrypto -lssl
+Compilation Ends

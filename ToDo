@@ -1,0 +1,28 @@
+ICCS'17:
+-----------
+* Los test del programa original se ejecutan de forma distribuida.
+* Ordenar los tests por tiempo de ejecucion para tratar de matar antes.
+* Mientras sea posible, desplegar las ejecuciones de tal forma que no haya mas de un proceso 
+worker ejecutando el mismo mutante (Por si muere, no desperdiciar capacidad de computo).
+* Clusterizar los mutantes por medio de la técnica de compilación
+* Los mutantes equivalentes no ejecutarlos.
+
+- Utilizar las variables de log.
+TODO: At this point, it is necessary to check if the original program is correct!!!
+-----------
+Anterior:
+- Cada nodo únicamente debería compilar 1 vez. 
+    -> Si tenemos varios hilos de ejecución y todos ellos compilan, se consideraría tiempo perdido y podría haber colisiones.
+
+-------------------
+Future:
+Investigar como hace SQLITE el TH3 (https://sqlite.org/th3.html)
+Se generan los mutantes on the fly. Estaría muy interesante poder realizar un enfoque a poder testear aplicaciones reales
+de una forma asequible y en pararlelo. Hacer una modificacion del framework que permita, por ejemplo, para cada worker
+dedicarse a un mutante completo, y hacer la mutación on the fly. Cuando termine borra el binario y asi ahorra espacio.
+
+* Segun lo que pone en esta pagina: https://tool.oschina.net/uploads/apidocs/sqlite/testing.html
+  Con TCL scripting son capaces de testear 90k lineas de codigo, que estan distribuidas en distintos objetos
+  AKA, nuestro metodo vale poco (malhablando vale perga). Hay que ver la forma de poder ejecutar en paralelo
+  esta forma de generar test y revolucionar un pelin esta linea.
+

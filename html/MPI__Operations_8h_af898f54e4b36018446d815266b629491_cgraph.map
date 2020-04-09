@@ -1,0 +1,10 @@
+<map id="receiveMutants_adaptive" name="receiveMutants_adaptive">
+<area shape="rect" id="node2" href="$Auxiliars_8c.html#af0f8d130a0e61d129d7173fdada44943" title="generateCleanMutantList" alt="" coords="222,5,389,32"/>
+<area shape="rect" id="node3" href="$transformations_8c.html#a7c4fe205e349fdc6b1b3fe74ba370010" title="redMut2Mut" alt="" coords="260,56,351,83"/>
+<area shape="rect" id="node5" href="$Auxiliars_8c.html#ae868349a1b9962bef735c645c8af8429" title="insertMutantTestByTest" alt="" coords="224,132,387,159"/>
+<area shape="rect" id="node4" href="$printers_8c.html#a7de3b9fc7ba84cdd4262a8b196cd6d0a" title="printMutant" alt="" coords="454,31,541,57"/>
+<area shape="rect" id="node6" href="$Auxiliars_8c.html#ad977bb957ddd724b9dd590e37d9fe093" title="isMutantAllocated" alt="" coords="606,132,733,159"/>
+<area shape="rect" id="node7" href="$Auxiliars_8c.html#a3ac75c1ea5af10a333cbda886d5b486d" title="allocMutant" alt="" coords="453,132,542,159"/>
+<area shape="rect" id="node8" href="$printers_8c.html#a3d68e172294e99732704a5e61cb62d33" title="printTest" alt="" coords="461,183,534,209"/>
+<area shape="rect" id="node9" href="$Auxiliars_8c.html#afa2214923ca27bb087ebe0622ba7c152" title="insertTestResult" alt="" coords="438,233,557,260"/>
+</map>

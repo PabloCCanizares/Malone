@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>DistributionAlgorithms.h</itemPath>
+      <itemPath>MPIDataTypes.h</itemPath>
+      <itemPath>MPI_Operations.h</itemPath>
+      <itemPath>Malone.h</itemPath>
+      <itemPath>Options.h</itemPath>
+      <itemPath>Vector.h</itemPath>
+      <itemPath>configuration.h</itemPath>
+      <itemPath>kvec.h</itemPath>
+      <itemPath>printers.h</itemPath>
+      <itemPath>randomElements.h</itemPath>
+      <itemPath>transformations.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="f2" displayName="LaunchModes" projectFiles="true">
+        <itemPath>debugMode.c</itemPath>
+        <itemPath>executionMode.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f1" displayName="Operations" projectFiles="true">
+        <logicalFolder name="f1" displayName="Aux" projectFiles="true">
+          <itemPath>Auxiliars.c</itemPath>
+          <itemPath>ExecutionMapSaver.c</itemPath>
+          <itemPath>configuration.c</itemPath>
+          <itemPath>printers.c</itemPath>
+          <itemPath>randomElements.c</itemPath>
+          <itemPath>transformations.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f3"
+                       displayName="DistributionAlgorithms"
+                       projectFiles="true">
+          <itemPath>DistributionAlgorithms.c</itemPath>
+          <itemPath>distribution_adaptive_grain.c</itemPath>
+          <itemPath>distribution_dynamic_mutants.c</itemPath>
+          <itemPath>distribution_full_dynamic.c</itemPath>
+          <itemPath>distribution_full_dynamic_scatter.c</itemPath>
+          <itemPath>distribution_static_mutants.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f4" displayName="Equivalence" projectFiles="true">
+          <itemPath>EquivalenceChecking.c</itemPath>
+          <itemPath>md5Parallel.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f2" displayName="Examples" projectFiles="true">
+          <itemPath>MPIDataTypes.c</itemPath>
+          <itemPath>MonteCarlo.c</itemPath>
+          <itemPath>PiReduce.c</itemPath>
+          <itemPath>testVec.c</itemPath>
+          <itemPath>tests.c</itemPath>
+        </logicalFolder>
+        <itemPath>EnvFileSend.c</itemPath>
+        <itemPath>MPI_Operations.c</itemPath>
+      </logicalFolder>
+      <itemPath>Malone.c</itemPath>
+      <itemPath>main.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <itemPath>ToDo</itemPath>
+    <itemPath>backup.txt</itemPath>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <commandlineTool>mpicc</commandlineTool>
+          <incDir>
+            <pElem>../../libraries/mpich-3.1.4/src</pElem>
+          </incDir>
+          <commandLine>-g</commandLine>
+        </cTool>
+        <asmTool>
+          <commandLine>-g -O0</commandLine>
+        </asmTool>
+        <linkerTool>
+          <commandlineTool>mpicc</commandlineTool>
+          <linkerLibItems>
+            <linkerOptionItem>`pkg-config --libs glib-2.0`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs mpich`</linkerOptionItem>
+            <linkerLibStdlibItem>Mathematics</linkerLibStdlibItem>
+            <linkerLibStdlibItem>PosixThreads</linkerLibStdlibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="Auxiliars.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="DistributionAlgorithms.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="DistributionAlgorithms.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="EnvFileSend.c" ex="false" tool="0" flavor2="0">
+        <cTool>
+          <commandlineTool>gcc</commandlineTool>
+          <incDir>
+            <pElem>../../libraries/mpich-3.1.4/src</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="EquivalenceChecking.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ExecutionMapSaver.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="MPIDataTypes.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="MPIDataTypes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MPI_Operations.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="MPI_Operations.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Malone.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MonteCarlo.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Options.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PiReduce.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ToDo" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Vector.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="backup.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="configuration.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="configuration.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="debugMode.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="distribution_adaptive_grain.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="distribution_dynamic_mutants.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="distribution_full_dynamic.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="distribution_full_dynamic_scatter.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="distribution_static_mutants.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="executionMode.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kvec.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.c" ex="false" tool="0" flavor2="0">
+        <cTool>
+          <commandlineTool>gcc</commandlineTool>
+          <additionalDep></additionalDep>
+        </cTool>
+      </item>
+      <item path="md5Parallel.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="printers.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="printers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="randomElements.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="randomElements.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="testVec.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="transformations.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="transformations.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <commandlineTool>mpicc</commandlineTool>
+          <incDir>
+            <pElem>../../libraries/mpich-3.1.4/src</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerOptionItem>`pkg-config --libs glib-2.0`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs mpich`</linkerOptionItem>
+            <linkerLibStdlibItem>Mathematics</linkerLibStdlibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="Auxiliars.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="DistributionAlgorithms.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="DistributionAlgorithms.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="EnvFileSend.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="EquivalenceChecking.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ExecutionMapSaver.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="MPIDataTypes.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="MPIDataTypes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MPI_Operations.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="MPI_Operations.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Malone.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MonteCarlo.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Options.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PiReduce.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ToDo" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Vector.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="backup.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="configuration.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="configuration.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="debugMode.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="distribution_adaptive_grain.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="distribution_dynamic_mutants.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="distribution_full_dynamic.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="distribution_full_dynamic_scatter.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="distribution_static_mutants.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="executionMode.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="kvec.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="md5Parallel.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="printers.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="printers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="randomElements.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="randomElements.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="testVec.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="transformations.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="transformations.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

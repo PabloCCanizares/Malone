@@ -1,0 +1,7 @@
+
+LOCAL
+/usr/bin/time --format "mem=%K RSS=%M elapsed=%E cpu.sys=%S .user=%U fileSys=%I pageSize=%Z socket.send=%s socket.receive=%r" /localSpace/mutomvo/project_bmp/mutants/0/bmp -f c -i /localSpace/bmp/image_0000.bmp -o /localSpace/output/salida_ | grep '#__#'
+
+CIRRUS:
+/usr/bin/time --format "mem=%K RSS=%M elapsed=%E cpu.sys=%S .user=%U fileSys=%I pageSize=%Z socket.send=%s socket.receive=%r" /lustre/home/dc010/pcerro/mutomvo_projects/project_bzip2_cirrus/mutants/0/bzipM -kc /lustre/home/dc010/pcerro/repository/bmp/image_0000.bmp | md5sum | grep '-'
+

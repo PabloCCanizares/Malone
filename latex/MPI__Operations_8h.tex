@@ -1,0 +1,366 @@
+\hypertarget{MPI__Operations_8h}{\section{M\-P\-I\-\_\-\-Operations.\-h File Reference}
+\label{MPI__Operations_8h}\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}}
+}
+This graph shows which files directly or indirectly include this file\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MPI__Operations_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structT__stTestList}{T\-\_\-st\-Test\-List} $\ast$ \hyperlink{MPI__Operations_8h_ab8a4e94d5e4deca0bd442370cb058608}{receive\-Original\-Test\-Results\-\_\-r} ()
+\item 
+void \hyperlink{MPI__Operations_8h_a449f033f603abd2c12a240d2305ba055}{receive\-Original\-Test\-Results} (\hyperlink{structT__stTestList}{T\-\_\-st\-Test\-List} $\ast$p\-Res\-List)
+\item 
+int \hyperlink{MPI__Operations_8h_aca256423ab76366117f7ce3328303435}{send\-Original\-Test\-Results} (\hyperlink{structT__stTestList}{T\-\_\-st\-Test\-List} $\ast$p\-Test\-List)
+\item 
+\hyperlink{structT__stMutant}{T\-\_\-st\-Mutant} $\ast$ \hyperlink{MPI__Operations_8h_a26759b11c4aef4f30ae45fc0b72e6ae9}{receive\-Mutant} (int n\-Source)
+\item 
+int \hyperlink{MPI__Operations_8h_a358cbb24fe485a8baf301cf3349d2f6a}{receive\-Mutants} (\hyperlink{structT__stExecutionStructure}{T\-\_\-st\-Execution\-Structure} p\-Exe\-Mode\mbox{[}\hyperlink{Options_8h_a7553a3b6420fd55ba1caaf53d271f1f8}{M\-A\-X\-\_\-\-W\-O\-R\-K\-E\-R\-S}\mbox{]})
+\item 
+\hyperlink{structMutantList}{Mutant\-List} $\ast$ \hyperlink{MPI__Operations_8h_af898f54e4b36018446d815266b629491}{receive\-Mutants\-\_\-adaptive} (\hyperlink{structT__stExecutionStructure}{T\-\_\-st\-Execution\-Structure} p\-Exe\-Mode\mbox{[}\hyperlink{Options_8h_a7553a3b6420fd55ba1caaf53d271f1f8}{M\-A\-X\-\_\-\-W\-O\-R\-K\-E\-R\-S}\mbox{]}, int $\ast$pn\-Worker\-Source)
+\item 
+int \hyperlink{MPI__Operations_8h_a5641d5309347c75e2c46eeb82ae06ae8}{receive\-Single\-Test\-Original} (\hyperlink{structT__stExecutionStructure}{T\-\_\-st\-Execution\-Structure} p\-Exe\-Mode\mbox{[}\hyperlink{Options_8h_a7553a3b6420fd55ba1caaf53d271f1f8}{M\-A\-X\-\_\-\-W\-O\-R\-K\-E\-R\-S}\mbox{]}, int $\ast$pn\-Worker\-Source)
+\item 
+int \hyperlink{MPI__Operations_8h_a5cafeb305aeb8fe846f803f4a55c85e9}{receive\-Single\-Test\-And\-Check} (\hyperlink{structT__stExecutionStructure}{T\-\_\-st\-Execution\-Structure} p\-Exe\-Mode\mbox{[}\hyperlink{Options_8h_a7553a3b6420fd55ba1caaf53d271f1f8}{M\-A\-X\-\_\-\-W\-O\-R\-K\-E\-R\-S}\mbox{]}, int $\ast$pn\-Worker\-Source)
+\item 
+void \hyperlink{MPI__Operations_8h_a353da00d2b623fe485a1c8ed8fc30792}{send\-Mutants} (\hyperlink{structT__stExecutionStructure}{T\-\_\-st\-Execution\-Structure} $\ast$p\-Exe\-Mode, int n\-Dest)
+\item 
+void \hyperlink{MPI__Operations_8h_a476914662140572321cca639d0f56938}{send\-Mutant} (\hyperlink{structT__stMutant}{T\-\_\-st\-Mutant} $\ast$p\-Mutant, int n\-Dest)
+\item 
+void \hyperlink{MPI__Operations_8h_a5357b3e589892d99960d62c37ef364da}{reset\-Mutant} (\hyperlink{structT__stExecutionStructure}{T\-\_\-st\-Execution\-Structure} $\ast$p\-Exe\-Mode)
+\item 
+\hyperlink{structT__stTestInfo}{T\-\_\-st\-Test\-Info} $\ast$ \hyperlink{MPI__Operations_8h_a8bba478279817f166fb269233c0d1526}{receive\-Test\-List} (int n\-Source, int n\-Tests)
+\item 
+\hyperlink{structT__stTestInfo}{T\-\_\-st\-Test\-Info} $\ast$ \hyperlink{MPI__Operations_8h_a4e150661f0ba2fce30a33d8c22cf081f}{receive\-Test} (int n\-Source)
+\item 
+void \hyperlink{MPI__Operations_8h_a87de681d99c3f1438a72342e73ed2ee9}{send\-Tests} (\hyperlink{structT__stExecutionStructure}{T\-\_\-st\-Execution\-Structure} $\ast$p\-Exe\-Ret\-Mode, int n\-Dest)
+\item 
+void \hyperlink{MPI__Operations_8h_a1150f211512315a77cf72e83e81af3bb}{send\-Test} (\hyperlink{structT__stTestInfo}{T\-\_\-st\-Test\-Info} $\ast$p\-Test, int n\-Dest)
+\item 
+\hyperlink{structT__stExecutionStructure}{T\-\_\-st\-Execution\-Structure} $\ast$ \hyperlink{MPI__Operations_8h_ae74b17c84089d558b044ba4b14e68250}{receive\-Deploy\-Mode} ()
+\item 
+void \hyperlink{MPI__Operations_8h_a694d58e8f4120ad389e8f5e784c5e4c9}{send\-Deploy\-Mode} (\hyperlink{structT__stExecutionStructure}{T\-\_\-st\-Execution\-Structure} $\ast$exe\-Mode, int n\-Dest)
+\item 
+void \hyperlink{MPI__Operations_8h_a3bb1a9d01cf34745e4b28907f68d1484}{initialize\-M\-P\-I\-\_\-\-Datatype} ()
+\item 
+void \hyperlink{MPI__Operations_8h_a7fa7e7c84b6281d2ea9b1c5500e24c25}{init\-\_\-\-Datatype\-\_\-mutant} ()
+\item 
+void \hyperlink{MPI__Operations_8h_a71478d86fc7c35bd6a2449504ff17909}{init\-\_\-\-Datatype\-\_\-test} ()
+\item 
+void \hyperlink{MPI__Operations_8h_a4678fa2ef9d01dc04615a9a18adaed3a}{init\-\_\-\-Datatype\-\_\-deploy} ()
+\item 
+int \hyperlink{MPI__Operations_8h_a8867740fa106e80d18aa4aa20aa262cc}{is\-Enabled\-Mpi\-Operations} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{MPI__Operations_8h_a4678fa2ef9d01dc04615a9a18adaed3a}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!init\-\_\-\-Datatype\-\_\-deploy@{init\-\_\-\-Datatype\-\_\-deploy}}
+\index{init\-\_\-\-Datatype\-\_\-deploy@{init\-\_\-\-Datatype\-\_\-deploy}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{init\-\_\-\-Datatype\-\_\-deploy}]{\setlength{\rightskip}{0pt plus 5cm}void init\-\_\-\-Datatype\-\_\-deploy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_a4678fa2ef9d01dc04615a9a18adaed3a}
+\hypertarget{MPI__Operations_8h_a7fa7e7c84b6281d2ea9b1c5500e24c25}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!init\-\_\-\-Datatype\-\_\-mutant@{init\-\_\-\-Datatype\-\_\-mutant}}
+\index{init\-\_\-\-Datatype\-\_\-mutant@{init\-\_\-\-Datatype\-\_\-mutant}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{init\-\_\-\-Datatype\-\_\-mutant}]{\setlength{\rightskip}{0pt plus 5cm}void init\-\_\-\-Datatype\-\_\-mutant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_a7fa7e7c84b6281d2ea9b1c5500e24c25}
+\hypertarget{MPI__Operations_8h_a71478d86fc7c35bd6a2449504ff17909}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!init\-\_\-\-Datatype\-\_\-test@{init\-\_\-\-Datatype\-\_\-test}}
+\index{init\-\_\-\-Datatype\-\_\-test@{init\-\_\-\-Datatype\-\_\-test}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{init\-\_\-\-Datatype\-\_\-test}]{\setlength{\rightskip}{0pt plus 5cm}void init\-\_\-\-Datatype\-\_\-test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_a71478d86fc7c35bd6a2449504ff17909}
+\hypertarget{MPI__Operations_8h_a3bb1a9d01cf34745e4b28907f68d1484}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!initialize\-M\-P\-I\-\_\-\-Datatype@{initialize\-M\-P\-I\-\_\-\-Datatype}}
+\index{initialize\-M\-P\-I\-\_\-\-Datatype@{initialize\-M\-P\-I\-\_\-\-Datatype}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{initialize\-M\-P\-I\-\_\-\-Datatype}]{\setlength{\rightskip}{0pt plus 5cm}void initialize\-M\-P\-I\-\_\-\-Datatype (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_a3bb1a9d01cf34745e4b28907f68d1484}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{MPI__Operations_8h_a3bb1a9d01cf34745e4b28907f68d1484_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{MPI__Operations_8h_a8867740fa106e80d18aa4aa20aa262cc}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!is\-Enabled\-Mpi\-Operations@{is\-Enabled\-Mpi\-Operations}}
+\index{is\-Enabled\-Mpi\-Operations@{is\-Enabled\-Mpi\-Operations}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{is\-Enabled\-Mpi\-Operations}]{\setlength{\rightskip}{0pt plus 5cm}int is\-Enabled\-Mpi\-Operations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_a8867740fa106e80d18aa4aa20aa262cc}
+\hypertarget{MPI__Operations_8h_ae74b17c84089d558b044ba4b14e68250}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!receive\-Deploy\-Mode@{receive\-Deploy\-Mode}}
+\index{receive\-Deploy\-Mode@{receive\-Deploy\-Mode}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{receive\-Deploy\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-\_\-st\-Execution\-Structure}$\ast$ receive\-Deploy\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_ae74b17c84089d558b044ba4b14e68250}
+\hypertarget{MPI__Operations_8h_a26759b11c4aef4f30ae45fc0b72e6ae9}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!receive\-Mutant@{receive\-Mutant}}
+\index{receive\-Mutant@{receive\-Mutant}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{receive\-Mutant}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-\_\-st\-Mutant}$\ast$ receive\-Mutant (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Source}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_a26759b11c4aef4f30ae45fc0b72e6ae9}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MPI__Operations_8h_a26759b11c4aef4f30ae45fc0b72e6ae9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{MPI__Operations_8h_a358cbb24fe485a8baf301cf3349d2f6a}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!receive\-Mutants@{receive\-Mutants}}
+\index{receive\-Mutants@{receive\-Mutants}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{receive\-Mutants}]{\setlength{\rightskip}{0pt plus 5cm}int receive\-Mutants (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Execution\-Structure}}]{p\-Exe\-Mode\mbox{[}\-M\-A\-X\-\_\-\-W\-O\-R\-K\-E\-R\-S\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_a358cbb24fe485a8baf301cf3349d2f6a}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MPI__Operations_8h_a358cbb24fe485a8baf301cf3349d2f6a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{MPI__Operations_8h_af898f54e4b36018446d815266b629491}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!receive\-Mutants\-\_\-adaptive@{receive\-Mutants\-\_\-adaptive}}
+\index{receive\-Mutants\-\_\-adaptive@{receive\-Mutants\-\_\-adaptive}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{receive\-Mutants\-\_\-adaptive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mutant\-List}$\ast$ receive\-Mutants\-\_\-adaptive (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Execution\-Structure}}]{p\-Exe\-Mode\mbox{[}\-M\-A\-X\-\_\-\-W\-O\-R\-K\-E\-R\-S\mbox{]}, }
+\item[{int $\ast$}]{pn\-Worker\-Source}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_af898f54e4b36018446d815266b629491}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MPI__Operations_8h_af898f54e4b36018446d815266b629491_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{MPI__Operations_8h_a449f033f603abd2c12a240d2305ba055}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!receive\-Original\-Test\-Results@{receive\-Original\-Test\-Results}}
+\index{receive\-Original\-Test\-Results@{receive\-Original\-Test\-Results}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{receive\-Original\-Test\-Results}]{\setlength{\rightskip}{0pt plus 5cm}void receive\-Original\-Test\-Results (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Test\-List} $\ast$}]{p\-Res\-List}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_a449f033f603abd2c12a240d2305ba055}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MPI__Operations_8h_a449f033f603abd2c12a240d2305ba055_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{MPI__Operations_8h_ab8a4e94d5e4deca0bd442370cb058608}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!receive\-Original\-Test\-Results\-\_\-r@{receive\-Original\-Test\-Results\-\_\-r}}
+\index{receive\-Original\-Test\-Results\-\_\-r@{receive\-Original\-Test\-Results\-\_\-r}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{receive\-Original\-Test\-Results\-\_\-r}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-\_\-st\-Test\-List}$\ast$ receive\-Original\-Test\-Results\-\_\-r (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_ab8a4e94d5e4deca0bd442370cb058608}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MPI__Operations_8h_ab8a4e94d5e4deca0bd442370cb058608_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{MPI__Operations_8h_a5cafeb305aeb8fe846f803f4a55c85e9}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!receive\-Single\-Test\-And\-Check@{receive\-Single\-Test\-And\-Check}}
+\index{receive\-Single\-Test\-And\-Check@{receive\-Single\-Test\-And\-Check}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{receive\-Single\-Test\-And\-Check}]{\setlength{\rightskip}{0pt plus 5cm}int receive\-Single\-Test\-And\-Check (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Execution\-Structure}}]{p\-Exe\-Mode\mbox{[}\-M\-A\-X\-\_\-\-W\-O\-R\-K\-E\-R\-S\mbox{]}, }
+\item[{int $\ast$}]{pn\-Worker\-Source}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_a5cafeb305aeb8fe846f803f4a55c85e9}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MPI__Operations_8h_a5cafeb305aeb8fe846f803f4a55c85e9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{MPI__Operations_8h_a5641d5309347c75e2c46eeb82ae06ae8}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!receive\-Single\-Test\-Original@{receive\-Single\-Test\-Original}}
+\index{receive\-Single\-Test\-Original@{receive\-Single\-Test\-Original}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{receive\-Single\-Test\-Original}]{\setlength{\rightskip}{0pt plus 5cm}int receive\-Single\-Test\-Original (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Execution\-Structure}}]{p\-Exe\-Mode\mbox{[}\-M\-A\-X\-\_\-\-W\-O\-R\-K\-E\-R\-S\mbox{]}, }
+\item[{int $\ast$}]{pn\-Worker\-Source}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_a5641d5309347c75e2c46eeb82ae06ae8}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MPI__Operations_8h_a5641d5309347c75e2c46eeb82ae06ae8_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{MPI__Operations_8h_a4e150661f0ba2fce30a33d8c22cf081f}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!receive\-Test@{receive\-Test}}
+\index{receive\-Test@{receive\-Test}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{receive\-Test}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-\_\-st\-Test\-Info}$\ast$ receive\-Test (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Source}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_a4e150661f0ba2fce30a33d8c22cf081f}
+\hypertarget{MPI__Operations_8h_a8bba478279817f166fb269233c0d1526}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!receive\-Test\-List@{receive\-Test\-List}}
+\index{receive\-Test\-List@{receive\-Test\-List}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{receive\-Test\-List}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-\_\-st\-Test\-Info}$\ast$ receive\-Test\-List (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Source, }
+\item[{int}]{n\-Tests}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_a8bba478279817f166fb269233c0d1526}
+\hypertarget{MPI__Operations_8h_a5357b3e589892d99960d62c37ef364da}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!reset\-Mutant@{reset\-Mutant}}
+\index{reset\-Mutant@{reset\-Mutant}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{reset\-Mutant}]{\setlength{\rightskip}{0pt plus 5cm}void reset\-Mutant (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Execution\-Structure} $\ast$}]{p\-Exe\-Mode}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_a5357b3e589892d99960d62c37ef364da}
+\hypertarget{MPI__Operations_8h_a694d58e8f4120ad389e8f5e784c5e4c9}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!send\-Deploy\-Mode@{send\-Deploy\-Mode}}
+\index{send\-Deploy\-Mode@{send\-Deploy\-Mode}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{send\-Deploy\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Deploy\-Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Execution\-Structure} $\ast$}]{exe\-Mode, }
+\item[{int}]{n\-Dest}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_a694d58e8f4120ad389e8f5e784c5e4c9}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{MPI__Operations_8h_a694d58e8f4120ad389e8f5e784c5e4c9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{MPI__Operations_8h_a476914662140572321cca639d0f56938}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!send\-Mutant@{send\-Mutant}}
+\index{send\-Mutant@{send\-Mutant}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{send\-Mutant}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Mutant (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Mutant} $\ast$}]{p\-Mutant, }
+\item[{int}]{n\-Dest}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_a476914662140572321cca639d0f56938}
+\hypertarget{MPI__Operations_8h_a353da00d2b623fe485a1c8ed8fc30792}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!send\-Mutants@{send\-Mutants}}
+\index{send\-Mutants@{send\-Mutants}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{send\-Mutants}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Mutants (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Execution\-Structure} $\ast$}]{p\-Exe\-Mode, }
+\item[{int}]{n\-Dest}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_a353da00d2b623fe485a1c8ed8fc30792}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{MPI__Operations_8h_a353da00d2b623fe485a1c8ed8fc30792_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{MPI__Operations_8h_aca256423ab76366117f7ce3328303435}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!send\-Original\-Test\-Results@{send\-Original\-Test\-Results}}
+\index{send\-Original\-Test\-Results@{send\-Original\-Test\-Results}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{send\-Original\-Test\-Results}]{\setlength{\rightskip}{0pt plus 5cm}int send\-Original\-Test\-Results (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Test\-List} $\ast$}]{p\-Test\-List}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_aca256423ab76366117f7ce3328303435}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MPI__Operations_8h_aca256423ab76366117f7ce3328303435_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{MPI__Operations_8h_a1150f211512315a77cf72e83e81af3bb}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!send\-Test@{send\-Test}}
+\index{send\-Test@{send\-Test}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{send\-Test}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Test (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Test\-Info} $\ast$}]{p\-Test, }
+\item[{int}]{n\-Dest}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_a1150f211512315a77cf72e83e81af3bb}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{MPI__Operations_8h_a1150f211512315a77cf72e83e81af3bb_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{MPI__Operations_8h_a87de681d99c3f1438a72342e73ed2ee9}{\index{M\-P\-I\-\_\-\-Operations.\-h@{M\-P\-I\-\_\-\-Operations.\-h}!send\-Tests@{send\-Tests}}
+\index{send\-Tests@{send\-Tests}!MPI_Operations.h@{M\-P\-I\-\_\-\-Operations.\-h}}
+\subsubsection[{send\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}void send\-Tests (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Execution\-Structure} $\ast$}]{p\-Exe\-Ret\-Mode, }
+\item[{int}]{n\-Dest}
+\end{DoxyParamCaption}
+)}}\label{MPI__Operations_8h_a87de681d99c3f1438a72342e73ed2ee9}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{MPI__Operations_8h_a87de681d99c3f1438a72342e73ed2ee9_cgraph}
+\end{center}
+\end{figure}
+
+

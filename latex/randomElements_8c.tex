@@ -1,0 +1,132 @@
+\hypertarget{randomElements_8c}{\section{random\-Elements.\-c File Reference}
+\label{randomElements_8c}\index{random\-Elements.\-c@{random\-Elements.\-c}}
+}
+{\ttfamily \#include \char`\"{}Options.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Auxiliars.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$time.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+Include dependency graph for random\-Elements.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{randomElements_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structT__stTestInfo}{T\-\_\-st\-Test\-Info} $\ast$ \hyperlink{randomElements_8c_a9c9ccad72c8e7f8cf47244dbfcf2780b}{generate\-Random\-Test} (int n\-Test)
+\item 
+\hyperlink{structT__stTestInfo}{T\-\_\-st\-Test\-Info} $\ast$ \hyperlink{randomElements_8c_a952a1f465d0879fff397e057f4832caa}{create\-Test\-Trap} (int n\-Index\-Test, char $\ast$str\-Result, double d\-Time, int n\-Kill)
+\item 
+\hyperlink{structT__stTestInfo}{T\-\_\-st\-Test\-Info} $\ast$ \hyperlink{randomElements_8c_ab88c3111284ce4840ffad300b68083ca}{generate\-Test\-Trap} (int n\-Test, char $\ast$str\-Result)
+\item 
+void \hyperlink{randomElements_8c_afc84da2cc08c75ec474eac4d14c24ce0}{doing\-Traps} ()
+\item 
+\hyperlink{structT__stTestList}{T\-\_\-st\-Test\-List} $\ast$ \hyperlink{randomElements_8c_a6b440cc60eddfdac7008807a6e16447c}{generate\-Random\-Test\-List\-\_\-r} (int n\-Tests)
+\item 
+void \hyperlink{randomElements_8c_a3686a06fd3fa65e169ebcf503c4e76ce}{generate\-Random\-Test\-List} (\hyperlink{structT__stTestList}{T\-\_\-st\-Test\-List} $\ast$p\-Test\-List, int n\-Tests)
+\item 
+\hyperlink{structT__stMutant}{T\-\_\-st\-Mutant} $\ast$ \hyperlink{randomElements_8c_a7f0f0094af9657adf9fb1488b58df1c1}{generate\-Random\-Mutant} (int n\-Tests)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{randomElements_8c_a952a1f465d0879fff397e057f4832caa}{\index{random\-Elements.\-c@{random\-Elements.\-c}!create\-Test\-Trap@{create\-Test\-Trap}}
+\index{create\-Test\-Trap@{create\-Test\-Trap}!randomElements.c@{random\-Elements.\-c}}
+\subsubsection[{create\-Test\-Trap}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-\_\-st\-Test\-Info}$\ast$ create\-Test\-Trap (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Index\-Test, }
+\item[{char $\ast$}]{str\-Result, }
+\item[{double}]{d\-Time, }
+\item[{int}]{n\-Kill}
+\end{DoxyParamCaption}
+)}}\label{randomElements_8c_a952a1f465d0879fff397e057f4832caa}
+\hypertarget{randomElements_8c_afc84da2cc08c75ec474eac4d14c24ce0}{\index{random\-Elements.\-c@{random\-Elements.\-c}!doing\-Traps@{doing\-Traps}}
+\index{doing\-Traps@{doing\-Traps}!randomElements.c@{random\-Elements.\-c}}
+\subsubsection[{doing\-Traps}]{\setlength{\rightskip}{0pt plus 5cm}void doing\-Traps (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{randomElements_8c_afc84da2cc08c75ec474eac4d14c24ce0}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{randomElements_8c_afc84da2cc08c75ec474eac4d14c24ce0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{randomElements_8c_a7f0f0094af9657adf9fb1488b58df1c1}{\index{random\-Elements.\-c@{random\-Elements.\-c}!generate\-Random\-Mutant@{generate\-Random\-Mutant}}
+\index{generate\-Random\-Mutant@{generate\-Random\-Mutant}!randomElements.c@{random\-Elements.\-c}}
+\subsubsection[{generate\-Random\-Mutant}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-\_\-st\-Mutant}$\ast$ generate\-Random\-Mutant (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Tests}
+\end{DoxyParamCaption}
+)}}\label{randomElements_8c_a7f0f0094af9657adf9fb1488b58df1c1}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{randomElements_8c_a7f0f0094af9657adf9fb1488b58df1c1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{randomElements_8c_a9c9ccad72c8e7f8cf47244dbfcf2780b}{\index{random\-Elements.\-c@{random\-Elements.\-c}!generate\-Random\-Test@{generate\-Random\-Test}}
+\index{generate\-Random\-Test@{generate\-Random\-Test}!randomElements.c@{random\-Elements.\-c}}
+\subsubsection[{generate\-Random\-Test}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-\_\-st\-Test\-Info}$\ast$ generate\-Random\-Test (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Test}
+\end{DoxyParamCaption}
+)}}\label{randomElements_8c_a9c9ccad72c8e7f8cf47244dbfcf2780b}
+\hypertarget{randomElements_8c_a3686a06fd3fa65e169ebcf503c4e76ce}{\index{random\-Elements.\-c@{random\-Elements.\-c}!generate\-Random\-Test\-List@{generate\-Random\-Test\-List}}
+\index{generate\-Random\-Test\-List@{generate\-Random\-Test\-List}!randomElements.c@{random\-Elements.\-c}}
+\subsubsection[{generate\-Random\-Test\-List}]{\setlength{\rightskip}{0pt plus 5cm}void generate\-Random\-Test\-List (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-\_\-st\-Test\-List} $\ast$}]{p\-Test\-List, }
+\item[{int}]{n\-Tests}
+\end{DoxyParamCaption}
+)}}\label{randomElements_8c_a3686a06fd3fa65e169ebcf503c4e76ce}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{randomElements_8c_a3686a06fd3fa65e169ebcf503c4e76ce_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{randomElements_8c_a6b440cc60eddfdac7008807a6e16447c}{\index{random\-Elements.\-c@{random\-Elements.\-c}!generate\-Random\-Test\-List\-\_\-r@{generate\-Random\-Test\-List\-\_\-r}}
+\index{generate\-Random\-Test\-List\-\_\-r@{generate\-Random\-Test\-List\-\_\-r}!randomElements.c@{random\-Elements.\-c}}
+\subsubsection[{generate\-Random\-Test\-List\-\_\-r}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-\_\-st\-Test\-List}$\ast$ generate\-Random\-Test\-List\-\_\-r (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Tests}
+\end{DoxyParamCaption}
+)}}\label{randomElements_8c_a6b440cc60eddfdac7008807a6e16447c}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{randomElements_8c_a6b440cc60eddfdac7008807a6e16447c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{randomElements_8c_ab88c3111284ce4840ffad300b68083ca}{\index{random\-Elements.\-c@{random\-Elements.\-c}!generate\-Test\-Trap@{generate\-Test\-Trap}}
+\index{generate\-Test\-Trap@{generate\-Test\-Trap}!randomElements.c@{random\-Elements.\-c}}
+\subsubsection[{generate\-Test\-Trap}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\-\_\-st\-Test\-Info}$\ast$ generate\-Test\-Trap (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-Test, }
+\item[{char $\ast$}]{str\-Result}
+\end{DoxyParamCaption}
+)}}\label{randomElements_8c_ab88c3111284ce4840ffad300b68083ca}

@@ -1,0 +1,23 @@
+/* This file was automatically generated.  Do not edit! */
+T_stTestList *receiveOriginalTestResults_r();
+void receiveOriginalTestResults(T_stTestList *pResList);
+int sendOriginalTestResults(T_stTestList *pTestList);
+T_stMutant *receiveMutant(int nSource);
+int receiveMutants(T_stExecutionStructure pExeMode[MAX_WORKERS]);
+MutantList* receiveMutants_adaptive(T_stExecutionStructure pExeMode[MAX_WORKERS],int *pnWorkerSource);
+int receiveSingleTestOriginal(T_stExecutionStructure pExeMode[MAX_WORKERS],int *pnWorkerSource);
+int receiveSingleTestAndCheck(T_stExecutionStructure pExeMode[MAX_WORKERS],int *pnWorkerSource);
+void sendMutants(T_stExecutionStructure *pExeMode,int nDest);
+void sendMutant(T_stMutant *pMutant,int nDest);
+void resetMutant(T_stExecutionStructure* pExeMode);
+T_stTestInfo *receiveTestList(int nSource,int nTests);
+T_stTestInfo *receiveTest(int nSource);
+void sendTests(T_stExecutionStructure *pExeRetMode,int nDest);
+void sendTest(T_stTestInfo *pTest,int nDest);
+T_stExecutionStructure *receiveDeployMode();
+void sendDeployMode(T_stExecutionStructure *exeMode,int nDest);
+void initializeMPI_Datatype();
+void init_Datatype_mutant();
+void init_Datatype_test();
+void init_Datatype_deploy();
+int isEnabledMpiOperations();
