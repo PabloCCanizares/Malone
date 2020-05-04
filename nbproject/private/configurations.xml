@@ -17,8 +17,8 @@
           <DebugOptions>
             <option name="gdb_detach_on_fork" value="off"/>
             <option name="debug_command"
-                    value="&quot;${OUTPUT_PATH}&quot; -a 4 -e local/test_EDI_stand.ini"/>
-            <option name="symbol_file" value="-a 4 -e local/test_EDI_stand.ini"/>
+                    value="&quot;${OUTPUT_PATH}&quot; -e local/test_FFT_stand.ini"/>
+            <option name="symbol_file" value=" -e local/test_FFT_stand.ini"/>
           </DebugOptions>
         </gdb_options>
         <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
@@ -31,14 +31,16 @@
           <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" -np 4</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" -e env_first.ini</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -e local/FFT</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" -e local/test_FFT_stand.ini</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" -e env_first.ini</runcommand>
+        <runcommand>"${OUTPUT_PATH}" -e local/test_FFT_stand.ini</runcommand>
         <rundir></rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>
         <remove-instrumentation>0</remove-instrumentation>
         <environment>
-          <variable name="MALONE_HOME" value="/home/pablo/NetBeansProjects/Malone"/>
+          <variable name="MALONE_HOME" value="/home/j0hn/NetBeansProjects/Malone"/>
         </environment>
       </runprofile>
     </conf>

@@ -8,6 +8,8 @@
 #define ROWS  10
 #define COLS  10
 
+#define COMPATIBLE_MODE 1
+
 struct _cell {
   int coord[2];           /* cell coordinates */
   double elevation;       /* cell elevation */
@@ -314,6 +316,7 @@ struct _test {
   int coord;            //cell coordinates 
   double elevation;       //cell elevation   
 };
+
 struct _test tests[ROWS];
 int doA()
 {
@@ -324,14 +327,29 @@ int doA()
   MPI_Aint disp[3];
   MPI_Status status;
 
-  // compute displacements of structure components 
-  MPI_Address(tests, disp);
-  MPI_Address(&tests[0].coord, disp+1);
-  MPI_Address(&tests[0].elevation, disp+2);
+  if(COMPATIBLE_MODE)
+  {
+    MPI_Aint baseAddr, addr1, addr2;
+    MPI_Get_address(&tests[0].landcover, &baseAddr); 
+    MPI_Get_address(&tests[0].coord, &addr1); 
+    MPI_Get_address(&tests[0].elevation, &addr2); 
+    
+    disp[0] = 0;
+    disp[1] = addr1 - baseAddr;
+    disp[2] = addr2 - baseAddr;
+  }
+  else
+  {
+    // compute displacements of structure components 
+    MPI_Address(tests, disp);
+    MPI_Address(&tests[0].coord, disp+1);
+    MPI_Address(&tests[0].elevation, disp+2);
+
+    base = disp[0];
+    for (i = 0; i < 3; i++) 
+        disp[i] -= base;
+  }
   
-  base = disp[0];
-  for (i = 0; i < 3; i++) 
-      disp[i] -= base;
 
   MPI_Type_struct(3, blocklen, disp, type, &Cells);
   MPI_Type_commit(&Cells);

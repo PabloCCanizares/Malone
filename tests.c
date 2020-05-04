@@ -6,34 +6,37 @@ void testDataType(int choice)
 {
     int i;
     int nValue;
-    printf("testDataType - Init\n");        
+    printf("<%d>testDataType - Init\n", m_nRank);        
     MPI_Bcast(&choice, 1, MPI_INT, 0, MPI_COMM_WORLD);
     
     //
+    
     nValue =33;
     MPI_Send(&nValue, 1, MPI_INT, 1, 0, MPI_COMM_WORLD);
-    printf("testDataType - End\n");
+    
     //    
     T_stTestInfo oTest;
     oTest.dTime = 66.6;
     oTest.nKill = 1;
         
-    printf("testDataType - Test single send\n");
+    printf("<%d>testDataType - Testing single send...\n", m_nRank);
     
     strcpy(oTest.res, "EHH!");
     sendTest(&oTest, 1);
-    printf("testDataType - Moreover!!\n");
+    printf("<%d>testDataType - sent...\n", m_nRank);
+    
+    printf("<%d>testDataType - Waiting barrier!!\n", m_nRank);
     MPI_Barrier(MPI_COMM_WORLD);
     
-    printf("testDataType - Test multiple send\n");
+    printf("<%d>testDataType - Test multiple send\n", m_nRank);
     T_stTestList* pList = generateRandomTestList_r(3);            
     printTestResults(pList);
     sendOriginalTestResults(pList);
     
-    printf("testDataType - Testing the single mode\n");
+    printf("<%d>testDataType - Testing the single mode\n", m_nRank);
     for(i = 0;i<2;i++)
     {
-        printf("testDataType - Sending a random test case: %d\n", i);
+        printf("<%d>testDataType - Sending a random test case: %d\n", i, m_nRank);
         T_stTestInfo* pTest = generateRandomTest(i);
         sendTest(pTest,1);
     }
@@ -41,12 +44,12 @@ void testDataType(int choice)
     //
     nValue =33;
     MPI_Send(&nValue, 1, MPI_INT, 1, 0, MPI_COMM_WORLD);
-    printf("testDataType - End\n");
+    printf("<%d>testDataType - End\n", m_nRank);
 }
 
 void testDataType_w()
 {
-    printf("testDataType_w - Init!! \n");
+    printf("<%d>testDataType_w - Init!! \n", m_nRank);
     T_stTestInfo* pTest;     
     T_stTestList* ptList;
     T_stExecutionStructure oExecution;
@@ -58,10 +61,10 @@ void testDataType_w()
     nRecvCode = MPI_Recv(&nValue, 1, MPI_INT, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD,&status);     
     printf("<%d>testDataType - Receiving a test from %d with value: %d| code: %d | error: %d\n", m_nRank, status.MPI_SOURCE, nValue, nRecvCode, status.MPI_ERROR);
     
-    
-    printf("testDataType_w - Test single receive\n");
+   
+    printf("<%d>testDataType_w - Test single receive\n", m_nRank);
     pTest = receiveTest(0);
-    printf("testDataType_w - Moreover!!\n");
+    printf("<%d>testDataType_w - Moreover!!\n", m_nRank);
     sleep(1);
     MPI_Barrier(MPI_COMM_WORLD);
     
@@ -69,7 +72,7 @@ void testDataType_w()
     printTestResults(ptList);
     
     
-    printf("testDataType - Testing the single mode\n");
+    printf("<%d>testDataType - Testing the single mode\n", m_nRank);
     for(i = 0;i<2;i++)
     {
         oExecution.nExecutionMode = 4;
@@ -78,9 +81,9 @@ void testDataType_w()
         oExecution.nMutantInit = 1;
         oExecution.nMutantEnd = 1;
     
-        printf("testDataType - Receiving a random test case: %d\n", i);
+        printf("<%d>testDataType - Receiving a random test case: %d\n", i, m_nRank);
         receiveSingleTestAndCheck(&oExecution, &nWorker);  
-        printf("testDataType - Received from <%d>\n", nWorker);
+        printf("<%d>testDataType - Received from <%d>\n", nWorker, m_nRank);
         printTest(pTest);
     }
     
@@ -109,14 +112,23 @@ void mutantDataType_w()
 void testSendRecv()
 {
     MPI_Status status;
-    int number;
+    int number, numberRcv;
     if (m_nRank == 0) {
-        number = -1;
+        printf("------------------------------------------\n");
+        printf("TestId: SencRcv\n");
+        number = 20994;
         MPI_Send(&number, 1, MPI_INT, 1, 0, MPI_COMM_WORLD);
     } else{
-        MPI_Recv(&number, 1, MPI_INT, 0, 0, MPI_COMM_WORLD,
+        MPI_Recv(&numberRcv, 1, MPI_INT, 0, 0, MPI_COMM_WORLD,
                  &status);
-        printf("Process %d received number %d from process %d\n",m_nRank, number, status.MPI_SOURCE);
+        printf("Process %d received number %d from process %d\n",m_nRank, numberRcv, status.MPI_SOURCE);
+        
+        if(numberRcv == 20994)
+            printf("Test OK\n");
+        else
+            printf("Test FAIL!\n");
+        
+        printf("------------------------------------------\n");
     }
 }
 void createIndexVector(T_stTestList** pResList, int  vector[])

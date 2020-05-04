@@ -1,0 +1,1 @@
+mpicc `pkg-config --cflags glib-2.0` -I/usr/include/glib-2.0 -o autotest autotest.c configuration.c Auxiliars.c popen_noshell.c printers.c test_envfile.c test_command.c test_conffile.c test_deploys.c test_testcases.c Options.h MPI_Operations.c transformations.c -lglib-2.0 randomElements.c -lm -lc -O3

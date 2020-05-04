@@ -18,7 +18,7 @@
 #include "printers.h"
 #include "MPI_Operations.h"
 #include "Malone.h"
-
+#include "Auxiliars.h"
 
 #ifdef DISABLELOGS
 #define MALONE_DEBUG_DIST_WORKERS 0
@@ -56,6 +56,7 @@ int hasRemainingWork(int nIndexMutant,int nIndexTests);
 int getNextWorkloadGrain_equiv(T_stExecutionMap** exeMap, T_stExecutionStructure** exeWorker, T_stMutantExecution** pMutantExec, int** nIndexTest, int** nIndexMutant);
 
 int searchNextMutantNotProcessed(T_stExecutionMap* exeMap, int* nSearch, int* nIndex, T_stMutantExecution** pMutantExec);
+int searchNextMutantNotProcessed_equiv_aggresive(T_stExecutionMap* exeMap, int* nSearch, int* nIndex, T_stMutantExecution** pMutantExec);
 
 //Logs
 int isEnabledDistWorkersLog();

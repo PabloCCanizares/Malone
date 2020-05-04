@@ -10,10 +10,14 @@
  *
  * Created on October 4, 2018, 12:54 PM
  */
-#include "Options.h"
+
+
+#define EQUIVALENCE_PRINT 1
+
 #include "printers.h"
 #include "Auxiliars.h"
-#define EQUIVALENCE_PRINT 0
+#include "MPI_Operations.h"
+#include "EquivalenceChecking.h"
 
 int testEquivalenceChecking()
 {
@@ -43,7 +47,8 @@ int testEquivalenceChecking()
         if(strMutantFile != NULL)
         {            
             if(EQUIVALENCE_PRINT)  printf("<%d>parallelEquivalenceChecking - Original program binary: %s\n", m_nRank, strMutantFile);
-            sprintf (exeLine, "openssl md5 -r %s | cut -f 1 -d \" \"", strMutantFile);      
+            //sprintf (exeLine, "openssl md5 -r %s | cut -f 1 -d \" \"", strMutantFile);      
+            sprintf (exeLine, "openssl md5 -r %s | cut -f 1 -d ' '", strMutantFile);      
             
             if(exeLine!=NULL)
             {                   
@@ -102,6 +107,7 @@ int parallelEquivalenceChecking() {
         nEnd = nNumReceives = nTotalSent = 0;
         strMd5 = NULL;
         
+        
         //Md5Hash Original
         if(EQUIVALENCE_PRINT)  printf("<%d>parallelEquivalenceChecking - 0\n", m_nRank);
         strMutantFile = (char*) buildEquivLine(0,BUILD_LINE_ORIGINAL_MODE);  
@@ -109,13 +115,13 @@ int parallelEquivalenceChecking() {
         if(strMutantFile != NULL)
         {            
             if(EQUIVALENCE_PRINT)  printf("<%d>parallelEquivalenceChecking - Original program binary: %s\n", m_nRank, strMutantFile);
-            //sprintf (exeLine, "openssl md5 -r %s | cut -f 1 -d \" \"", strMutantFile);      
-            sprintf (exeLine, "openssl md5 -binary %s", strMutantFile);      
+            sprintf (exeLine, "openssl md5 -r %s | cut -f 1 -d ' '", strMutantFile);      
+            //sprintf (exeLine, "openssl md5 -binary %s", strMutantFile);      
             
             if(exeLine!=NULL)
             {                   
                 if(EQUIVALENCE_PRINT)  printf("<%d>parallelEquivalenceChecking - Line to execute: %s\n", m_nRank, exeLine);
-                strMd5 = (char*) execCommandLineHPC("%s", exeLine);
+                strMd5 = (char*) execCommandLine("%s", exeLine);
                 if(EQUIVALENCE_PRINT)  printf("<%d>parallelEquivalenceChecking - Obtained MD5: %s\n", m_nRank, exeLine);
             }
             else
@@ -154,6 +160,7 @@ int parallelEquivalenceChecking() {
         printDeployArray(&oIndex, m_nSize);
         //exeMode.nExecutionMode = (int) eMethod;
 
+        
         //Fill the env values to send it to workers
         for (i = 1; i < m_nSize; i++) {
             nEnd += oIndex[i];
@@ -162,7 +169,7 @@ int parallelEquivalenceChecking() {
             exeVector[i].nTestInit = 0;
             exeVector[i].nTestEnd = m_stEnvValues->nTotalTests - 1;
 
-            sendDeployMode(&exeVector[i], i);
+            sendDeployMode((T_stExecutionStructure*) &exeVector[i], i);
             nInit = nEnd;
         }
         //Wait for receiving values from all workers and filling final result
@@ -170,13 +177,21 @@ int parallelEquivalenceChecking() {
             receiveMd5Mutants(&exeVector);
             nNumReceives++;
         } while (nNumReceives < (m_nSize - 1)); // Decreasing in 1, due to the master
-    } else 
+    }
+    else 
     {
         if (EQUIVALENCE_PRINT) printf("<%d>parallelEquivalenceChecking - Workers mode!\n", m_nRank);
-
+        pExeRetMode = NULL;
         //receive the deployment method
-        pExeRetMode = receiveDeployMode();
+        
+        if(COMPATIBLE_MODE)
+            receiveDeployModeRefP(&pExeRetMode);
+        else            
+            pExeRetMode = receiveDeployMode();
 
+        assert(pExeRetMode != NULL);
+        printf(" DP %d, %d\n", pExeRetMode->nExecutionMode, pExeRetMode->nMutantInit);
+        
         if (EQUIVALENCE_PRINT) printf("<%d>parallelEquivalenceChecking - Received deploy mode!\n", m_nRank);
         if(pExeRetMode)
         {

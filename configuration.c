@@ -13,9 +13,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "configuration.h"
 #include "Options.h"    
-
+#include "Auxiliars.h"
 void loadConfig() {
     char* strMaloneHome;
     int nLen;
@@ -290,29 +289,37 @@ T_stIniValues* loadEnvironmentKeys(GKeyFile *key_file) {
         printf("MutantGenerationEnabled: %d\n", pReturn->nMutantGenerationEnabled);
         printf("----------\n");
         
-        m_pListMonitorLines = str_split(pReturn->strMonitorLines, ',');
+        if(pReturn->strMonitorLines != NULL)
+        {   
+           if (DEBUG_CONFIG) printf("loadEnvironmentKeys - Analysing monitor lines\n");
+           m_pListMonitorLines = str_split(pReturn->strMonitorLines, ',');
 
-        if (m_pListMonitorLines)
-        {
-            int i;
-            for (i = 0; *(m_pListMonitorLines + i); i++)
+           printf("LEts invalidate the monitor lines temporally\n");
+           if (NULL && m_pListMonitorLines)
+           {
+               int i;
+               printf("1.1\n");
+               
+               for (i = 0; *(m_pListMonitorLines + i); i++)
+               {
+                   printf("commandLine=[%s]\n", *(m_pListMonitorLines + i));  
+               }
+               printf("\n");
+           }
+           
+           if (DEBUG_CONFIG) printf("loadEnvironmentKeys - Analysing monitor line once!\n");
+           m_pListMonitorOnceLines = str_split(pReturn->strMonitorOnceLines, ',');
+           
+           if (NULL && m_pListMonitorOnceLines)
             {
-                printf("commandLine=[%s]\n", *(m_pListMonitorLines + i));  
+                int i;
+                for (i = 0; *(m_pListMonitorOnceLines + i); i++)
+                {
+                    printf("commandLineOnce=[%s]\n", *(m_pListMonitorOnceLines + i));
+                }
+                printf("\n");
             }
-            printf("\n");
         }
-        m_pListMonitorOnceLines = str_split(pReturn->strMonitorLines, ',');
-
-        if (m_pListMonitorOnceLines)
-        {
-            int i;
-            for (i = 0; *(m_pListMonitorOnceLines + i); i++)
-            {
-                printf("commandLineOnce=[%s]\n", *(m_pListMonitorOnceLines + i));
-            }
-            printf("\n");
-        }
-        
     }
     
     if (nErrorFound != 0) {

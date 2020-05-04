@@ -79,7 +79,10 @@ int distribution_dynamic_mutants(T_eExecutionMode eMethod) {
         //if(DEBUG)
         do {
             //receive the deployment method
-            pExeRetMode = receiveDeployMode();
+            if(COMPATIBLE_MODE)
+                receiveDeployModeRefP(&pExeRetMode);
+            else
+                pExeRetMode = receiveDeployMode();
 
             if (MALONE_DEBUG_DIST_WORKERS) printf("distribution_dynamic_mutants - Received deploy mode!\n");
 

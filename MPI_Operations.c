@@ -1,4 +1,11 @@
 
+/* 
+ * File:   MPI_Operations.c
+ * Author: Pablo C. Cañizares
+ *
+ * Created on December 4, 2015.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "mpi.h"
@@ -16,13 +23,14 @@
 #endif
 
 void init_Datatype_deploy() {
-    int exeParams[NUM_DEPLOY_PARAMS];
-
     //Commit the struct
-    MPI_Type_contiguous(NUM_DEPLOY_PARAMS, MPI_INT, &m_DeployType);
+    MPI_Type_contiguous(NUM_DEPLOY_PARAMS, MPI_INT, &m_DeployType);    
     MPI_Type_commit(&m_DeployType);
 }
 
+/**
+ * Initialise the datatype that corresponds with a test case
+ */
 void init_Datatype_test() {
     //Lets initialize all the datatypes neccesary to perform the MALONE process
 
@@ -33,16 +41,36 @@ void init_Datatype_test() {
     MPI_Aint disp[5];
     MPI_Status status;
 
-    MPI_Address(m_oTest, disp);
-    MPI_Address(&m_oTest[0].dTime, disp + 1);
-    MPI_Address(&m_oTest[0].nKill, disp + 2);
-    MPI_Address(&m_oTest[0].nTest, disp + 3);
-    MPI_Address(&m_oTest[0].nMutant, disp + 4);
+    //Fix the deprecated function    
+    if(COMPATIBLE_MODE)
+    {
+        MPI_Aint baseAddr, addr1, addr2, addr3, addr4;
+        MPI_Get_address(&m_oTest[0].res, &baseAddr); 
+        MPI_Get_address(&m_oTest[0].dTime, &addr1); 
+        MPI_Get_address(&m_oTest[0].nKill, &addr2); 
+        MPI_Get_address(&m_oTest[0].nTest, &addr3); 
+        MPI_Get_address(&m_oTest[0].nMutant, &addr4); 
 
-    base = disp[0];
-    for (i = 0; i < 5; i++)
-        disp[i] -= base;
+        disp[0] = 0;
+        disp[1] = addr1 - baseAddr;
+        disp[2] = addr2 - baseAddr;
+        disp[3] = addr3 - baseAddr;
+        disp[4] = addr4 - baseAddr;
+    }
+    else
+    {
+        //
+        MPI_Address(&m_oTest[0], disp);
+        MPI_Address(&m_oTest[0].dTime, disp + 1);
+        MPI_Address(&m_oTest[0].nKill, disp + 2);
+        MPI_Address(&m_oTest[0].nTest, disp + 3);
+        MPI_Address(&m_oTest[0].nMutant, disp + 4);
 
+        base = disp[0];
+        for (i = 0; i < 5; i++)
+            disp[i] -= base;
+    }
+       
     MPI_Type_struct(5, blocklen, disp, type, &m_TestType);
     MPI_Type_commit(&m_TestType);
 }
@@ -55,23 +83,60 @@ void init_Datatype_mutant() {
     MPI_Aint disp[7];
     MPI_Status status;
 
-    MPI_Address(m_oMutant, disp);
-    MPI_Address(&m_oMutant[0].nState, disp + 1);
-    MPI_Address(&m_oMutant[0].nTestKiller, disp + 2);
-    MPI_Address(&m_oMutant[0].nTests, disp + 3);
-    MPI_Address(&m_oMutant[0].oTime, disp + 4);
-    MPI_Address(&m_oMutant[0].oKill, disp + 5);
-    MPI_Address(&m_oMutant[0].oTest, disp + 6);
+    if(COMPATIBLE_MODE)
+    {
+        MPI_Aint baseAddr, addr1, addr2, addr3, addr4, addr5, addr6;
+        MPI_Get_address(&m_oMutant[0].nNumber, &baseAddr); 
+        MPI_Get_address(&m_oMutant[0].nState, &addr1); 
+        MPI_Get_address(&m_oMutant[0].nTestKiller, &addr2); 
+        MPI_Get_address(&m_oMutant[0].nTests, &addr3); 
+        MPI_Get_address(&m_oMutant[0].oTime, &addr4); 
+        MPI_Get_address(&m_oMutant[0].oKill, &addr5);
+        MPI_Get_address(&m_oMutant[0].oTest, &addr6);
+        
+        disp[0] = 0;
+        disp[1] = addr1 - baseAddr;
+        disp[2] = addr2 - baseAddr;
+        disp[3] = addr3 - baseAddr;
+        disp[4] = addr4 - baseAddr;
+        disp[5] = addr5 - baseAddr;
+        disp[6] = addr6 - baseAddr;
+    }
+    else
+    {
+        MPI_Address(m_oMutant, disp);
+        MPI_Address(&m_oMutant[0].nState, disp + 1);
+        MPI_Address(&m_oMutant[0].nTestKiller, disp + 2);
+        MPI_Address(&m_oMutant[0].nTests, disp + 3);
+        MPI_Address(&m_oMutant[0].oTime, disp + 4);
+        MPI_Address(&m_oMutant[0].oKill, disp + 5);
+        MPI_Address(&m_oMutant[0].oTest, disp + 6);
 
-    base = disp[0];
-    for (i = 0; i < 7; i++)
-        disp[i] -= base;
+        base = disp[0];
+        for (i = 0; i < 7; i++)
+            disp[i] -= base;
+    }
+    
+    
 
     MPI_Type_struct(7, blocklen, disp, type, &m_MutantType);
     MPI_Type_commit(&m_MutantType);
 
 }
-
+/**
+ *  Initialize the MPICH library
+ */
+void initializeMPI() {
+    // m_nRank = m_nSize = 0;
+    MPI_Init(0, 0);
+    MPI_Comm_rank(MPI_COMM_WORLD, &m_nRank);
+    MPI_Comm_size(MPI_COMM_WORLD, &m_nSize);
+    initializeMPI_Datatype();
+    printf("<%d> Initialized process %d of %d\n", m_nRank, m_nRank, m_nSize);
+}
+/**
+ * Initialise the MPI Datatypes that are used in Malone
+ */
 void initializeMPI_Datatype() {
     init_Datatype_deploy();
     init_Datatype_test();
@@ -84,9 +149,9 @@ void sendDeployMode(T_stExecutionStructure* exeMode, int nDest) {
     int i;
     int exeParams[NUM_DEPLOY_PARAMS];
 
-    if (DEBUG_MPI_OPS) printf("sendDeployMode - Init!\n");
+    if (DEBUG_MPI_OPS) printf("<%d>sendDeployMode - Init!\n", m_nRank);
 
-    if (DEBUG_MPI_OPS) printf("sendDeployMode - Initialiting values!\n");
+    if (DEBUG_MPI_OPS) printf("<%d>sendDeployMode - Initialiting values!\n", m_nRank);
 
     //Copy the values from the struct
     exeParams[0] = exeMode->nExecutionMode;
@@ -108,7 +173,6 @@ void sendDeployMode(T_stExecutionStructure* exeMode, int nDest) {
 }
 
 T_stExecutionStructure* receiveDeployMode() {
-    int i;
     MPI_Status status;
     T_stExecutionStructure* exeMode;
     int exeParams[NUM_DEPLOY_PARAMS];
@@ -126,7 +190,56 @@ T_stExecutionStructure* receiveDeployMode() {
     exeMode->nTestEnd = exeParams[4];
 
     if (DEBUG_MPI_OPS) printf("<%d> receiveDeployMode - End\n", m_nRank);
+    
     return exeMode;
+}
+
+void receiveDeployModeRefP(T_stExecutionStructure** exeMode) {
+    MPI_Status status;
+    //T_stExecutionStructure* exeMode;
+    int exeParams[NUM_DEPLOY_PARAMS];
+
+    if (DEBUG_MPI_OPS) printf("<%d> receiveDeployMode - Receiving\n", m_nRank);
+
+    MPI_Recv(&exeParams, 1, m_DeployType, 0, 0, MPI_COMM_WORLD, &status);
+
+    //Copy parameters    
+    *exeMode = (T_stExecutionStructure*) malloc(sizeof (T_stExecutionStructure));
+    (*exeMode)->nExecutionMode = exeParams[0];
+    (*exeMode)->nMutantInit = exeParams[1];
+    (*exeMode)->nMutantEnd = exeParams[2];
+    (*exeMode)->nTestInit = exeParams[3];
+    (*exeMode)->nTestEnd = exeParams[4];
+    (*exeMode)->nWorker = m_nRank;
+    (*exeMode)->dInitTick = 0.0;
+    (*exeMode)->dInitTick = 0.0;
+
+    if (DEBUG_MPI_OPS) printf("<%d> receiveDeployMode - End\n", m_nRank);    
+}
+
+ void receiveDeployModeRef(T_stExecutionStructure* exeMode) {
+    MPI_Status status;
+    int exeParams[NUM_DEPLOY_PARAMS];
+
+    if (DEBUG_MPI_OPS) printf("<%d> receiveDeployMode - Receiving\n", m_nRank);
+
+    //Receive the deploy
+    MPI_Recv(&exeParams, 1, m_DeployType, 0, 0, MPI_COMM_WORLD, &status);
+
+    //Copy parameters    
+    if(exeMode == NULL)
+        exeMode = (T_stExecutionStructure*) malloc(sizeof (T_stExecutionStructure));
+    
+    exeMode->nExecutionMode = exeParams[0];
+    exeMode->nMutantInit = exeParams[1];
+    exeMode->nMutantEnd = exeParams[2];
+    exeMode->nTestInit = exeParams[3];
+    exeMode->nTestEnd = exeParams[4];
+    exeMode->nWorker = m_nRank;
+    exeMode->dInitTick = 0.0;
+    exeMode->dInitTick = 0.0; 
+    
+    if (DEBUG_MPI_OPS) printf("<%d> receiveDeployMode - End\n", m_nRank);    
 }
 
 void sendTest(T_stTestInfo* pTest, int nDest) {
@@ -135,6 +248,7 @@ void sendTest(T_stTestInfo* pTest, int nDest) {
         printTest(pTest);
         test2redTest(pTest, &m_oTest[0]);
         printTestRed(&m_oTest[0]);
+              
         MPI_Send(m_oTest, 1, m_TestType, nDest, 0, MPI_COMM_WORLD);
     } else
         printf("WARNING!! The test is empty\n");
@@ -181,6 +295,27 @@ T_stTestInfo* receiveTest(int nSource) {
     if (DEBUG_MPI_OPS) printf("<%d> End!\n", m_nRank);
 
     return pTest;
+}
+
+void receiveTestRefP(int nSource, T_stTestInfo** pTest) {
+    
+    MPI_Status status;
+    T_stTI oTest;
+    MPI_Recv(&oTest, 1, m_TestType, nSource, 0, MPI_COMM_WORLD, &status);
+    if (m_nRank != MALONE_MASTER) {
+        if (DEBUG_MPI_OPS) printf("Received Test: [%d] %s %lf %d | from %d | error %d\n",
+                0, oTest.res, oTest.dTime, oTest.nKill, status.MPI_SOURCE, status.MPI_ERROR);
+
+        //copy the values!!
+        *pTest = malloc(sizeof (T_stTestInfo));
+        bzero((*pTest)->res, MAX_RESULT_SIZE);
+        strcpy((*pTest)->res, oTest.res);
+        (*pTest)->dTime = oTest.dTime;
+        (*pTest)->nKill = oTest.nKill;
+        (*pTest)->nTest = oTest.nTest;
+    }
+
+    if (DEBUG_MPI_OPS) printf("<%d> End!\n", m_nRank);
 }
 
 T_stTestInfo* receiveTestList(int nSource, int nTests) {
@@ -512,6 +647,7 @@ int receiveSingleTestOriginal(T_stExecutionStructure pExeMode[MAX_WORKERS], int 
 
     nWorkerSource = status.MPI_SOURCE;
 
+    //TODO: Desacoplar aqui este m_oTest[0], ponerlo a oTest y que sea local
     if (nWorkerSource != -1 && nWorkerSource < m_nSize) {
         nTestInit = pExeMode[nWorkerSource].nTestInit;
 
@@ -658,7 +794,7 @@ int receiveMd5Mutants(T_stExecutionStructure pExeMode[MAX_WORKERS]) {
                         nInterLen += strlen(strMd5) + 1;
                     } else {
                         m_oTestExecMap.oMd5Map[i] = NULL;
-                        nInterLen += strlen(strMd5) + 1;
+                        //nInterLen += ((int) strlen(strMd5)) + 1;
                     }
 
                 }
@@ -807,7 +943,7 @@ void receiveOriginalTestResults(T_stTestList* pResList) {
 
     if (pResList) {
         //Receive from master the number of tests to process
-        if (DEBUG_MPI_OPS) printf("Receiving the size of the test suite\n");
+        if (DEBUG_MPI_OPS) printf("Receiving the size of the test suite\n");        
         MPI_Bcast(&nTestItems, 1, MPI_INT, 0, MPI_COMM_WORLD);
 
         if (DEBUG_MPI_OPS) printf("receiveOriginalTestResults - Receiving the size of the test suite: %d\n", nTestItems);
@@ -819,7 +955,7 @@ void receiveOriginalTestResults(T_stTestList* pResList) {
             MPI_Bcast(&m_oTest, nTestItems, m_TestType, 0, MPI_COMM_WORLD);
 
             //transform the test list to a compatible structure
-            redtestList2TestList((T_stTI*) & m_oTest, pResList, nTestItems);
+            redtestList2TestList((T_stTI*) &m_oTest, pResList, nTestItems);
         } else {
             printf("None elements received!!\n");
         }

@@ -72,7 +72,7 @@ int distribution_full_dynamic_scatter(T_eExecutionMode eMethod) {
             
             sendDeployMode(&exeVector[nIndex], nIndex);
 
-            if (MALONE_DEBUG_DIST_MASTER) printf("<%d>distribution_full_dynamic_scatter - Distributing Mutant %d.%d to worker %d| Remaining blocks: %d | elapsed: %d\n", m_nRank, nIndexMutant, nIndexTest, nIndex, nSent, (getTick() - m_lMutantInitTick));
+            if (MALONE_DEBUG_DIST_MASTER) printf("<%d>distribution_full_dynamic_scatter - Distributing Mutant %d.%d to worker %d| Remaining blocks: %d | elapsed: %ld\n", m_nRank, nIndexMutant, nIndexTest, nIndex, nSent, (long int) getTick() - m_lMutantInitTick);
             //Inc counters
             nIndex++;
         }
@@ -109,7 +109,7 @@ int distribution_full_dynamic_scatter(T_eExecutionMode eMethod) {
                 exeVector[nWorkerSource].nTestInit = nIndexTest;
                 exeVector[nWorkerSource].nTestEnd = nIndexTest;
                 nRemainBlocks++;
-                if (MALONE_DEBUG_DIST_MASTER) printf("<%d>distribution_full_dynamic_scatter - Distributing Mutant %d.%d to worker %d | Remaining blocks: %d | Finished: %d | elapsed: %d\n", m_nRank, nIndexMutant, nIndexTest, nWorkerSource, nRemainBlocks, nFinish, (getTick() - m_lMutantInitTick));
+                if (MALONE_DEBUG_DIST_MASTER) printf("<%d>distribution_full_dynamic_scatter - Distributing Mutant %d.%d to worker %d | Remaining blocks: %d | Finished: %d | elapsed: %ld\n", m_nRank, nIndexMutant, nIndexTest, nWorkerSource, nRemainBlocks, nFinish, (long int)getTick() - m_lMutantInitTick);
                 sendDeployMode(&exeVector[nWorkerSource], nWorkerSource);
                 
             } else {
@@ -128,7 +128,10 @@ int distribution_full_dynamic_scatter(T_eExecutionMode eMethod) {
         //if(DEBUG)
         do {
             //receive the deployment method
-            pExeRetMode = receiveDeployMode();
+            if(COMPATIBLE_MODE)
+                receiveDeployModeRefP(&pExeRetMode);
+            else
+                pExeRetMode = receiveDeployMode();
 
             if (MALONE_DEBUG_DIST_WORKERS) printf("<%d>distribution_full_dynamic_scatter - Received deploy mode!\n", m_nRank);
 

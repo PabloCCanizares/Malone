@@ -8,7 +8,6 @@ worker ejecutando el mismo mutante (Por si muere, no desperdiciar capacidad de c
 * Los mutantes equivalentes no ejecutarlos.
 
 - Utilizar las variables de log.
-TODO: At this point, it is necessary to check if the original program is correct!!!
 -----------
 Anterior:
 - Cada nodo únicamente debería compilar 1 vez. 
@@ -23,6 +22,44 @@ dedicarse a un mutante completo, y hacer la mutación on the fly. Cuando termine
 
 * Segun lo que pone en esta pagina: https://tool.oschina.net/uploads/apidocs/sqlite/testing.html
   Con TCL scripting son capaces de testear 90k lineas de codigo, que estan distribuidas en distintos objetos
-  AKA, nuestro metodo vale poco (malhablando vale perga). Hay que ver la forma de poder ejecutar en paralelo
+  AKA, nuestro metodo vale poco. Hay que ver la forma de poder ejecutar en paralelo
   esta forma de generar test y revolucionar un pelin esta linea.
 
+* Eliminar las estructuras estaticas y tener un malone totalmente dinamico
+* Multiples coordinadores
+* Dinamico y adaptable por tramo con granos mas grandes aun. (50% - 20% - 10%, algo asi.)
+-------------------
+Manual:
+
+- Hay que meter la variable de entorno MALONE_HOME
+- Al iniciar MALONE, pone invalid arguments, la cosa es mostrar por pantalla como saldria
+- Meter un archivo .sh donde haya algun test, algo para iniciar. (un .sh que tenga el modo test por ejemplo)
+- En general da la sensacion de que se hace dificil arrancar.
+- Añadir un modo autotest, que se pruebe el solo
+
+
+------------------
+Tools:
+ - Debugear: http://www.paradyn.org/STAT/STAT.html
+ - Usar gdb xterm para encontrar problemas debug de forma rapida es bastante util
+
+------------------
+Fallos integracion:
+ - Lectura de monitor da excepcion. Fixed [28/04/2020]
+ - Cuando no se tienen permisos para ejecutar los comandos, excepcion!
+ - Crash en el parallel equivalence. Fixed [28/04/2020]
+
+------------------------
+TODO cercano:
+- Eliminar warnings
+- Creacion de modo autotest
+- Inclusion de un mini proyecto de mutation con la suma por ejemplo
+    + Utilizar este proyecto para el auto test
+    + Con este proyecto podemos dejar .sh que permitan ver como se utiliza el programa
+- Organizar las carpetas (Importante, porque vaya mierda comp.)
+- Comentar algo el codigo
+- Quitar todo lo estatico posible, m_oTest[0] -> no hay necesidad
+- Comentar los tipos de Options.h
+- Tratar de eliminar los tipos que no aplican.
+- Convertir oMap de estatico a dinamico (Pruebas empezadas en malone lab)
+- Probar si los datatypes se pueden adaptar al maximo de test/mutantes para ahorrar envio por red.

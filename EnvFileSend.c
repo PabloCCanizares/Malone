@@ -31,7 +31,7 @@
         m_fh = fopen(strFileName, "r");
         
         //Read the file into the buffer
-        fread(buffer, sizeof(char),size, m_fh);
+        length = fread(buffer, sizeof(char),size, m_fh);
            
         //Send the structure size
         MPI_Bcast(&size, 1, MPI_INT, 0, MPI_COMM_WORLD);

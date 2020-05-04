@@ -45,6 +45,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Malone.o \
 	${OBJECTDIR}/MonteCarlo.o \
 	${OBJECTDIR}/PiReduce.o \
+	${OBJECTDIR}/autotest.o \
 	${OBJECTDIR}/configuration.o \
 	${OBJECTDIR}/debugMode.o \
 	${OBJECTDIR}/distribution_adaptive_grain.o \
@@ -55,9 +56,16 @@ OBJECTFILES= \
 	${OBJECTDIR}/executionMode.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/md5Parallel.o \
+	${OBJECTDIR}/particles.o \
+	${OBJECTDIR}/popen_noshell.o \
 	${OBJECTDIR}/printers.o \
 	${OBJECTDIR}/randomElements.o \
 	${OBJECTDIR}/testVec.o \
+	${OBJECTDIR}/test_command.o \
+	${OBJECTDIR}/test_conffile.o \
+	${OBJECTDIR}/test_deploys.o \
+	${OBJECTDIR}/test_envfile.o \
+	${OBJECTDIR}/test_testcases.o \
 	${OBJECTDIR}/tests.o \
 	${OBJECTDIR}/transformations.o
 
@@ -136,6 +144,11 @@ ${OBJECTDIR}/PiReduce.o: PiReduce.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PiReduce.o PiReduce.c
 
+${OBJECTDIR}/autotest.o: autotest.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/autotest.o autotest.c
+
 ${OBJECTDIR}/configuration.o: configuration.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -186,6 +199,16 @@ ${OBJECTDIR}/md5Parallel.o: md5Parallel.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/md5Parallel.o md5Parallel.c
 
+${OBJECTDIR}/particles.o: particles.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/particles.o particles.c
+
+${OBJECTDIR}/popen_noshell.o: popen_noshell.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/popen_noshell.o popen_noshell.c
+
 ${OBJECTDIR}/printers.o: printers.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -200,6 +223,31 @@ ${OBJECTDIR}/testVec.o: testVec.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/testVec.o testVec.c
+
+${OBJECTDIR}/test_command.o: test_command.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/test_command.o test_command.c
+
+${OBJECTDIR}/test_conffile.o: test_conffile.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/test_conffile.o test_conffile.c
+
+${OBJECTDIR}/test_deploys.o: test_deploys.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/test_deploys.o test_deploys.c
+
+${OBJECTDIR}/test_envfile.o: test_envfile.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/test_envfile.o test_envfile.c
+
+${OBJECTDIR}/test_testcases.o: test_testcases.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/test_testcases.o test_testcases.c
 
 ${OBJECTDIR}/tests.o: tests.c
 	${MKDIR} -p ${OBJECTDIR}

@@ -16,18 +16,29 @@
 #include "MPIDataTypes.h"
 #include "MonteCarlo.h"
 #include "randomElements.h"
+#include "particles.h"
+
 void doStaticMT()
 {
     printf("Single MT process\n"); 
     m_lTotalTime = getTick();
-    m_stEnvValues = (T_stIniValues*) loadEnvironmentFromIniFile(m_strEnvironment);
+    
+    //It is possible that this values are already loaded
+    if(m_stEnvValues ==NULL)        
+    {
+        m_stEnvValues = (T_stIniValues*) loadEnvironmentFromIniFile(m_strEnvironment);
+    }
+        
     if(m_stEnvValues != NULL)
     {                
         printEnvFile(m_stEnvValues);                
         malone_generate_mutants();
-        malone_execute_Original_Program();
-        printTestResults(m_pResList);
-        malone_execute_mutants_single(1,m_stEnvValues->nTotalMutants);
+        if(malone_execute_Original_Program_Sequential())
+        {
+            printTestResults(m_pResList);
+            malone_execute_mutants_single(1,m_stEnvValues->nTotalMutants);
+        }
+        
         m_lTotalTime = getTick()-m_lTotalTime;
         printResults(m_oMutantList.nElems, m_oMutantList.nDead, m_oTestExecMap.nEquivalents, m_oTestExecMap.nDupped, 0, 0, 0,m_lTotalTime);        
     }   
@@ -38,7 +49,7 @@ void doStaticMT()
             
 }
 
-void doPirata()
+void doPirata()//TODO: Quitar esta mierda de aqui.
 {
     printf("Doing it pirata!!\n"); 
     m_lTotalTime = getTick();
@@ -73,11 +84,11 @@ void masterDebugOperations()
     {
      MPI_Barrier(MPI_COMM_WORLD);
      printf("MALONE says:\n\n");
-     printf("0. Basic send/recv test\n");
+     printf("0. Basic Send/Recv test (PiReduce)\n");
      printf("1. Monte-Carlo test\n");     
-     printf("2. Send an TestSuite to all nodes\n");
-     printf("3. Perform the static mutation testing process\n");
-     printf("4. Check MPIDataTypes!!\n");
+     printf("2. Send a EnvFile to all nodes\n");     
+     printf("3. Perform the sequential mutation testing process\n");
+     printf("4. Check Generic MPIDataTypes!!\n");
      printf("5. Check Test MPIDataTypes!!\n");
      printf("6. Check Mutants MPIDataTypes!!\n");
      printf("7. Distributed mutation testing!\n");
@@ -101,7 +112,9 @@ void masterDebugOperations()
            case 2: 
                printf("Sending SendFile choice: %d\n", choice);
                MPI_Bcast(&choice, 1, MPI_INT, 0, MPI_COMM_WORLD);
-               doSendEnvFile("/home/pablo/Frameworks/Milu/env.ini");               
+               
+               char* strFileSend = createFileToSend("test.ini");
+               doSendEnvFile(strFileSend);               
                break;
            case 3: 
                doStaticMT();
@@ -118,6 +131,7 @@ void masterDebugOperations()
                exe.nTestInit=3;
                exe.nTestEnd=4;            
                //sendDeployMode(exe);
+               severalParticles();
                doA();
                break;
            case 5:
@@ -137,13 +151,14 @@ void masterDebugOperations()
                    printf("2 - Distribute Test Cases Algorithm (Static DTC)\n"); 
                    printf("3 - Give Mutants On Demand (Dynamic - GMOD)\n"); 
                    printf("4 - F.U.L.L. \n"); 
-                   printf("5 - Back ...\n");
+                   printf("5 - Adaptive grain ...\n");
+                   printf("6 - Back ...\n");
                    nRes = scanf("%d",&nAlgorithm);
-                   if(nAlgorithm<1 || nAlgorithm>5)
+                   if(nAlgorithm<1 || nAlgorithm>6)
                        printf("Wrong selection!!\n");
-               }while(nAlgorithm<1 || nAlgorithm>5);
+               }while(nAlgorithm<1 || nAlgorithm>6);
 
-               if(nAlgorithm != 5)
+               if(nAlgorithm != 6)
                {
                    T_eExecutionMode eMode = (T_eExecutionMode) nAlgorithm;
                    malone_distributed_mutation_testing(eMode);
@@ -162,6 +177,28 @@ void masterDebugOperations()
     }while (choice != 9); 
         
 }
+char* createFileToSend(char* strEnvFile)
+{
+    char* strMaloneHome, *strRet;
+    int nLen;
+    strMaloneHome = strRet = NULL; 
+    
+    //Obtain the MALONE_HOME env value
+     strMaloneHome = getenv("MALONE_HOME");
+     
+     if(strMaloneHome != NULL)
+     {
+        nLen = strlen(strMaloneHome) + strlen(PATH_ENV_DIR) + strlen(strEnvFile) + 1;
+        strRet = malloc((nLen + 1) * sizeof (char));
+        sprintf(strRet, "%s%s%s", strMaloneHome, PATH_ENV_DIR, strEnvFile);
+        
+        printf("Created file: %s", strRet);
+     }
+     else
+         printf("ERROR! Insert the MALONE_HOME env variable");
+     
+     return strRet;
+}
 void workersDebugOperations()
 {
     int number;
@@ -173,7 +210,7 @@ void workersDebugOperations()
 
         //Receiving number
         MPI_Bcast(&number, 1, MPI_INT, 0, MPI_COMM_WORLD);
-        printf("Receiving number: %d\n", number);
+        printf("Received test: %d\n", number);
          switch (number)
          {
             case 0:                
@@ -194,6 +231,7 @@ void workersDebugOperations()
                 printf("MPI_DataTypes!! \n");
                 T_stExecutionStructure exe;
                 //sendDeployMode(exe);
+                severalParticles();
                 doA();
                 break;  
             case 5:

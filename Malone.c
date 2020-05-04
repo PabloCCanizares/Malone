@@ -10,16 +10,16 @@
 #include "EnvFileSend.h"
 
 #ifdef DISABLELOGS
-#define MALONE_MASTER_LOG 0
-#define MALONE_WORKER_LOG 0
-#define MALONE_MAIN_COMMAND 0 
+#define MALONE_MASTER_LOG 1
+#define MALONE_WORKER_LOG 1
+#define MALONE_MAIN_COMMAND 1
 #else
 #define MALONE_MASTER_LOG isEnabledMasterLog()
 #define MALONE_WORKER_LOG isEnabledWorkersLog()
 #endif
 
 //TODO: Temporal define to disable memory allocation
-#define FREE_MEM 1
+#define FREE_MEM 0
 
 void MonitorAlarmhandler(int sig) {
     char* strCommand, *strResult;
@@ -27,7 +27,7 @@ void MonitorAlarmhandler(int sig) {
     // ignore this signal
     signal(SIGALRM, SIG_IGN);
         
-    printf("<%d>Alarm [MonitorAlarmhandler] hanlded [%d]\n", m_nRank, m_oMonitorLines.nAlarms);
+    printf("<%d>Alarm [MonitorAlarmhandler] handled [%d]\n", m_nRank, m_oMonitorLines.nAlarms);
     
     if (m_pListMonitorLines)
     {
@@ -65,13 +65,13 @@ void MonitorAlarmhandler(int sig) {
     printf("<%d>Alarm [MonitorAlarmhandler] hanlded end [Elems:%d, alarms: %d]\n", m_nRank, m_oMonitorLines.nElems, m_oMonitorLines.nAlarms);
 }
 
-int isReadyToRumble() {
+int malone_isReady() {
     int nRet, nError;
 
     nRet = nError = 0;
 
     if (m_nRank == MALONE_MASTER) {
-        printf("<%d> isReadyToRumble - Checking the validity of the global configuration\n", m_nRank);
+        printf("<%d> isReadyTomalone_isReadyRumble - Checking the validity of the global configuration\n", m_nRank);
 
         if (m_stConfigValues != NULL && m_stEnvValues != NULL) {
             //Analyse if the number of mutants is greater than the maximum/minimum allowed
@@ -87,73 +87,59 @@ int isReadyToRumble() {
                         }
                         nRet = (nError == 0);
                     } else
-                        printf("<%d> isReadyToRumble - Error setting the number of TCs to be applied, valid range [%d - %d]\n", m_nRank, 1, MAX_TESTS);
+                        printf("<%d> malone_isReady - Error setting the number of TCs to be applied, valid range [%d - %d]\n", m_nRank, 1, MAX_TESTS);
                 } else
-                    printf("<%d> isReadyToRumble - Error configurating the number of WORKERS, the valid range is [%d - %d]. "
+                    printf("<%d> malone_isReady - Error configurating the number of WORKERS, the valid range is [%d - %d]. "
                         "A unique worker only is valid for non-sequential mode (selected: %d)\n", m_nRank, 2, MAX_TESTS, m_nSelAlgorithm);
             } else
-                printf("<%d> isReadyToRumble - Error setting the number of workers, valid range [%d - %d]\n", m_nRank, 1, MAX_WORKERS);
+                printf("<%d> malone_isReady - Error setting the number of workers, valid range [%d - %d]\n", m_nRank, 1, MAX_WORKERS);
         } else {
             if (m_stConfigValues == NULL)
-                printf("<%d> isReadyToRumble - Error loading config structure\n", m_nRank);
+                printf("<%d> malone_isReady - Error loading config structure\n", m_nRank);
             if (m_stEnvValues == NULL)
-                printf("<%d> isReadyToRumble - Error loading environment structure\n", m_nRank);
+                printf("<%d> malone_isReady - Error loading environment structure\n", m_nRank);
         }
     } else {
         if (m_strConfig != NULL)
             nRet = 1;
     }
 
-    printf("<%d> isReadyToRumble - Code res %d\n", m_nRank, nRet);
+    printf("<%d> malone_isReady - Code res %d\n", m_nRank, nRet);
 
     return nRet;
 }
 
-T_stTestInfo* createTestTrap2(int nIndexTest, char* strResult, double dTime, int nKill) {
-    T_stTestInfo* pTest;
+int malone_initialize_debug_mode()
+{
+    int nRet, nTCs;
 
-    pTest = (T_stTestInfo*) malloc(sizeof (T_stTestInfo));
-    pTest->dTime = dTime;
-    pTest->nKill = nKill;
-    pTest->nTest = nIndexTest;
-    bzero(pTest->res, MAX_RESULT_SIZE);
+    printf("malone_initialize_debug_mode - Init\n");
+    nTCs = 0;
+    nRet = 1;
+    m_lInitTick = getTick();
+    m_lInitializeInitTick = getTick();
 
-    if (strResult != NULL)
-        strcpy(pTest->res, strResult);
+    initialize_auxiliars();
+    initializeMPI();
+    loadConfig();
+    
+    m_lInitializeEndTick = getTick();
 
-    return pTest;
-}
-
-/**
- * Initialise the structures neccesaries to carry out the different heuristics and optimisations
- */
-void createHeuristicStructures() {
-    int nMutants, nTests;
-
-    //Initialize some information related with execution map and equivalent mutants
-    if (m_stEnvValues != NULL) {
-        printf("<%d> distribution_full_dynamic_scatter - Updating structures\n", m_nRank);
-        nMutants = m_stEnvValues->nTotalMutants;
-        nTests = m_stEnvValues->nTotalTests;
-        printf("<%d> distribution_full_dynamic_scatter - Mutants: %d Tests :%d \n", m_nRank, nMutants, nTests);
-        initializeExecutionMap(nMutants, nTests);
-        if (m_stEnvValues->nClusterMutants != 0)
-            initializeEquivalentMap(nMutants, nTests);
+    //The main difference between this method and the previous one, is the existence of a environment variable
+    if(m_strEnvironment != NULL)
+    {
+        printf("malone_initialize_debug_mode - Loading the environment from file\n");
+        nRet = malone_load_environment_debug();
     }
-}
+    else
+        printf("Environment file is empty ... %s", m_strEnvironment);
+    
+    m_lInitializeEndTick = getTick();
 
-/**
- *  Initialize the MPICH library
- */
-void initializeMPI() {
-    // m_nRank = m_nSize = 0;
-    MPI_Init(0, 0);
-    MPI_Comm_rank(MPI_COMM_WORLD, &m_nRank);
-    MPI_Comm_size(MPI_COMM_WORLD, &m_nSize);
-    initializeMPI_Datatype();
-    printf("<%d> Initialized process %d of %d\n", m_nRank, m_nRank, m_nSize);
+    printf("malone_initialize_debug_mode - End\n");
+    
+    return nRet;
 }
-
 int malone_initialize() {
     int nRet, nTCs;
 
@@ -166,7 +152,7 @@ int malone_initialize() {
     loadConfig();
 
     if (malone_load_environment_values(m_strEnvironment)) {
-        if (isReadyToRumble()) {
+        if (malone_isReady()) {
             
             if (m_stEnvValues->nMonitorEnabled == 1) {
                 if (m_nRank == MALONE_MASTER)
@@ -244,7 +230,7 @@ void malone_free() {
 
 int malone_compile_original() {
     int nRet;
-    char* strCompilationOriginal, strCompilationMutants;
+    char* strCompilationOriginal;
     if (MALONE_MASTER_LOG) printf("<%d> malone_compile - Init\n", m_nRank);
 
     //Initialise
@@ -684,6 +670,11 @@ int malone_distribute_workflow(T_eExecutionMode eMethod) {
     return nRet;
 }
 
+/**
+ * In this function, the worker processes execute the mutants given by the input structure T_stExecutionStructure.
+ * @param pExeMode Scheme of the execution mode, 
+ * @return 
+ */
 int malone_execute_mutants_by_scheme(T_stExecutionStructure* pExeMode) {
     char* dir;
     int nRet, nIndexTest, i, nTotalTests, nReorderTest, nTotalMutants, nIndexMutant;
@@ -765,7 +756,7 @@ int malone_execute_mutants_by_scheme(T_stExecutionStructure* pExeMode) {
                             }
                             if (strResult == NULL) {
                                 strResult = malloc(4 * sizeof (char));
-                                strcpy(strResult, "<%d> N!L\0");
+                                strcpy(strResult, "N!L\0");
                             }
                         }
                     }
@@ -784,7 +775,7 @@ int malone_execute_mutants_by_scheme(T_stExecutionStructure* pExeMode) {
                     else //Fail
                     {
                         if (MALONE_WORKER_LOG) printf("<%d> M.E. [MUT] - Test fail!!\n", m_nRank);
-                        pTest = (T_stTestInfo*) createTestTrap2(nReorderTest, strResult, dTime, 1);
+                        pTest = (T_stTestInfo*) createTestTrap2(nReorderTest, strResult, dTime, 1);//TODO:pabloSays: esto que es?
                         nRet = 0;
                         printTest(pTest);
                     }
@@ -883,6 +874,8 @@ int malone_execute_originalprogram_by_scheme(T_stExecutionStructure* pExeMode) {
                         if (strResult == NULL) {
                             strResult = malloc(4 * sizeof (char));
                             strcpy(strResult, "N!L\0");
+                            //strlcpy(strResult, "N!L\0", 4);
+                            
                         }
                     }
                 }
@@ -982,6 +975,7 @@ int malone_execute_mutants_single(int nMutantInit, int nMutantEnd) {
             dOriginalTime = getMutantsTimeout(dOriginalTime);
 
             strResult = (char*) execCommandLine("cd %s \n timeout %f %s | grep '%s'", m_stEnvValues->strAppPath, dOriginalTime, exeLine, getMarkerToken());
+            
             dTime = getTick() - dInit;
 
             if (strResult != NULL && !strstr(strResult, "Error") && strstr(strResult, getMarkerToken())) {
@@ -1245,41 +1239,6 @@ int isEnabledWorkersLog() {
     return m_stConfigValues != NULL ? m_stConfigValues->nDebugMainWorkers : 0;
 }
 
-double getOriginalTimeout() {
-    double dRet;
-
-    if (m_stEnvValues != NULL && m_stEnvValues->nDebugMaxOriginalTimeout >= 0) {
-        dRet = m_stEnvValues->nDebugMaxOriginalTimeout;
-    } else
-        dRet = MAX_ORIGINAL_TIMEOUT;
-
-    return dRet;
-}
-
-double getMutantsTimeout(double dOriginalTime) {
-    double dRet;
-
-    if (m_stEnvValues != NULL && m_stEnvValues->nDebugMaxMutantsTimeout >= 0) {
-        dRet = dOriginalTime * m_stEnvValues->nDebugMaxMutantsTimeout;
-        if (dRet < 1 && m_stEnvValues->nDebugMutantsMinimumTimeout >= 0)
-            dRet = m_stEnvValues->nDebugMutantsMinimumTimeout;
-    } else
-        dRet = MINIMUM_WORKER_TIME_MARGIN;
-
-    return dRet;
-}
-
-char* getMarkerToken() {
-    char* strRet;
-
-    if (m_stEnvValues != NULL && m_stEnvValues->strMarkerToken != NULL) {
-        strRet = m_stEnvValues->strMarkerToken;
-    } else
-        strRet = DEFAULT_MARKER_TOKEN;
-
-    return strRet;
-}
-
 /**
  * Save the results of the mutation testing process to disk:
  * - Time spent during the main phases: initialization, generation, compilation, original program and mutant execution
@@ -1335,4 +1294,70 @@ int malone_save_results() {
 
 
     return nRet;
+}
+
+int malone_load_environment_debug()
+{
+    int nRet, nTCs;
+    
+    nRet = nTCs = 0;
+    
+    if (malone_load_environment_values(m_strEnvironment)) {
+        
+        printf("DebugMode? %d", m_nDebugMode);
+        if (1 || m_nDebugMode){// || isReadyToRumble()) {
+            
+            if (m_stEnvValues->nMonitorEnabled == 1) {
+                if (m_nRank == MALONE_MASTER)
+                    printf("<%d> Monitor enabled\n", m_nRank);
+                                
+                signal(SIGALRM, MonitorAlarmhandler);
+                if (m_stEnvValues->nMonitorFrequency >= 0)
+                {
+                    alarm(1);
+                    if (m_nRank == MALONE_MASTER)
+                        printf("<%d> Monitor enabled, alarm clock each: %d\n", m_nRank, m_stEnvValues->nMonitorFrequency);
+                }
+                else
+                {
+                    if (m_nRank == MALONE_MASTER)
+                        printf("<%d> Monitor disabled due to the invalid frequency%d\n", m_nRank, m_stEnvValues->nMonitorFrequency);
+                }
+            }
+            if (m_nRedirectToDiskEnabled) {
+                if (m_nRank == MALONE_MASTER)
+                    printf("<%d> Redirecting stdout to %s\n", m_nRank, m_stConfigValues->strResultsFile);
+                redirect_stdout(m_stConfigValues->strResultsFile);
+            }
+
+            if (m_nRank == MALONE_MASTER) {
+                printf("<%d> MALONE INITIALIZED: Total processes:%d\n", m_nRank, m_nSize);
+                if (m_strEnvironment != NULL)
+                    printf("<%d> Executing environment: %s\n", m_nRank, m_strEnvironment);
+            }
+
+            showDebugOptions();
+
+            if (m_stEnvValues != NULL && m_stEnvValues->nStandalone == 1) {
+                if (m_nRank == MALONE_MASTER)
+                    printf("<%d> malone_initialize - Standalone!!\n", m_nRank);
+
+                nTCs = readTestSuite();
+                if (nTCs > 0) {
+                    nRet = 1;
+                    printf("<%d> malone_initialize - Test suite (%d tcs) readed sucessfully!!\n", m_nRank, nTCs);
+                } else
+                    printf("<%d> malone_initialize - Error reading the test suite\n", m_nRank);
+
+                //Barrier
+                //MPI_Barrier(MPI_COMM_WORLD);
+
+                if (m_nRank == MALONE_MASTER) {
+                    printf("<%d> malone_initialize - Final barrier completed! Lets get ready\n", m_nRank);
+                }
+            } else
+                nRet = 1;
+        } else
+            printf("<%d> malone_initialize - There exist some problem related with the configuration!!\n", m_nRank);
+    }
 }

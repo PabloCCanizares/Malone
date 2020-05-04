@@ -11,7 +11,7 @@
 #include "executionMode.h"
 #include "debugMode.h"
 
-#define MAIN_DEBUG 0
+#define MAIN_DEBUG 1
 
 //-----------------------------------
 static void mySignalCatcher(int n);
@@ -22,7 +22,9 @@ static
 void mySignalCatcher(int n) {
     fprintf(stderr, "<%d> Control-C or similar caught, quitting.\n", m_nRank);
 
-    malone_free();
+    printf("<%d>  SIGNAL (%d) catched during the execution of the program", m_nRank, n);
+    MPI_Abort(MPI_COMM_WORLD,33);
+    malone_free();    
 }
 
 
@@ -46,13 +48,14 @@ int parseArguments(int argc, char** argv) {
 
     if (MAIN_DEBUG) printf("parseArguments - Parsing arguments ...\n");
 
-    while ((nOpt = getopt(argc, argv, "a:e:cdr")) != -1) {
+    while ((nOpt = getopt(argc, argv, "a:e:cdrz")) != -1) {
         switch (nOpt) {
             case 'a':
                 m_nSelAlgorithm = atoi(optarg);
                 break;
             case 'd':
                 m_nDebugMode = 1;
+                nRet =1;
                 break;
             case 'c':
                 m_nCompilationEnabled = 1;
@@ -76,7 +79,7 @@ int parseArguments(int argc, char** argv) {
                     nRet = file_exist(m_strEnvironment);
                             
                     if(nRet == 0)
-                        printf("<%d> parseArguments - ERROR!! The selected environment file not exists!\n", m_nRank);
+                        printf("<%d> parseArguments - ERROR!! The selected environment file (.ini) does not exists!\n", m_nRank);
 
                 } else {
                     printf("<%d> Malone environment variable is empty! Please insert $MALONE_HOME in your system\n", m_nRank);
@@ -98,26 +101,39 @@ int main(int argc, char** argv) {
     signal(SIGINT, mySignalCatcher);
     signal(SIGTERM, mySignalCatcher);
     signal(SIGHUP, mySignalCatcher);
+    signal(SIGSEGV, mySignalCatcher);
     
-    
+    showDebugOptions();
+            
     if (parseArguments(argc, argv)) {
+        
+        //If autotest
+        if(m_nDebugMode == 0)
+        {
+            //Initialise Malone
+            if (malone_initialize()) {
 
-        //Initialise Malone
-        if (malone_initialize()) {
-            if (m_nDebugMode == 0) {
                 if (m_nRank == MALONE_MASTER)
                     printf("MALONE - Executing in normal mode\n");
 
-                launchExecutionMode();
-            } else {
+                launchExecutionMode();           
+            } else
+                printf("MALONE - Problem whilst initializing in normal mode\n");                        
+        }
+        else
+        {            
+            //Initialise Malone in debug mode
+            if (malone_initialize_debug_mode()) {
+                
                 if (m_nRank == MALONE_MASTER)
                     printf("MALONE - Executing in DEBUG mode\n");
 
                 launchDebugMode();
-            }
-        } else
-            printf("MALONE - Problem whilst initializing\n");
 
+            } else
+                printf("MALONE - Problem whilst initializing in debug mode\n");
+        }
+            
         malone_free();
     } else {
         printf("MALONE - Invalid arguments!\n");
@@ -125,7 +141,13 @@ int main(int argc, char** argv) {
         printf("%d\n", argc);
         for (int i = 1; i < argc; i++) {
             printf("%s", argv[i]);
+            
+            //TODO: Hacer un menu que te enseñe las opciones
         }
+        printf("-d      Debug mode\n");
+        printf("-e <Environment_file>           Launches an specific environment\n");
+        printf("-a <Distribution algorithm>     Uses an specific distirbution algorithm\n");
+        printf("--autotest                      Automatically tests all the features of MALONE (future)\n");
     }
 
     return (EXIT_SUCCESS);

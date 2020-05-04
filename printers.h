@@ -28,6 +28,8 @@ void printResultsPartial();
 void printDeployArray(int pIndex[], int nSize);
 void printDeployStruct(T_stExecutionStructure* pDeploy);
 void printEnvFile(T_stIniValues* pValues);
+void printEquivInfo();
+void printMutantEquiv(int nIndex);
 int isEnabledPrinterLog();
 #ifdef __cplusplus
 extern "C" {

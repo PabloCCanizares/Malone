@@ -3,7 +3,7 @@
 #define AUXILIARS_H
 
 #ifdef DISABLELOGS
-#define DEBUG_AUX 0
+#define DEBUG_AUX 1
 #define MALONE_MAIN_COMMAND 0
 #else
 #define DEBUG_AUX isEnabledAuxLog()
@@ -33,6 +33,7 @@ void initializeExecutionMap(int nMutants,int nTests);
 void initialize_auxiliars();
 int addResult(T_stTestList *pTestList,const char *t,double dTime,int nKill);
 T_stTestInfo *createTest(int nIndexTest,char *strResult,double dTime,int nKill);
+struct TestInfo* createTestST(int nIndexTest, char* strResult, double dTime, int nKill);
 char *buildExeLine(int nIndexMutant,int nIndexTest, int nOriginalMode);
 char* buildEquivLine(int nIndexMutant, int nOriginalMode);
 char* generateCompilationLine(int nIndexMutant, int nOriginalMode);
@@ -43,6 +44,12 @@ int generateResFolder();
 void saveConfigAndEnvironmentFiles();
 MutantList* generateCleanMutantList(int nMutants);
 void freeMutantList(MutantList* pList);
+
+void createHeuristicStructures();
+void createTestRefP(int nIndexTest, char* strResult, double dTime, int nKill, T_stTestInfo** pTest);
+char* getMarkerToken();
+double getOriginalTimeout();
+double getMutantsTimeout(double dOriginalTime);
 
 //Common
 long int getTick();

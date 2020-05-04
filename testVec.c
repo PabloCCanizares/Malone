@@ -63,12 +63,12 @@ int test_vector() {
         
         free(array);
     }
-    printf("sizeof(T_stExecutionStructure): %d\n", sizeof (T_stExecutionStructure));
-    printf("sizeof(T_stMutant): %d\n", sizeof (T_stMutant));
-    printf("sizeof(T_stTestList): %d\n", sizeof (T_stTestList));
-    printf("sizeof(T_stTestInfo): %d\n", sizeof (T_stTestInfo));
+    printf("sizeof(T_stExecutionStructure): %d\n", (int) sizeof (T_stExecutionStructure));
+    printf("sizeof(T_stMutant): %d\n", (int) sizeof (T_stMutant));
+    printf("sizeof(T_stTestList): %d\n", (int) sizeof (T_stTestList));
+    printf("sizeof(T_stTestInfo): %d\n", (int) sizeof (T_stTestInfo));
     printf("\n");
-    printf("sizeof(T_stExecutionMap): %d\n", sizeof (T_stExecutionMap));
+    printf("sizeof(T_stExecutionMap): %d\n", (int) sizeof (T_stExecutionMap));
     
     printf("C array with T_stExecutionStructure, preallocated: %.3f sec\n", (float) (clock() - t) / CLOCKS_PER_SEC);
 

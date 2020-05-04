@@ -1,10 +1,5 @@
 
-#include "Options.h"
-#include "Auxiliars.h"
-#include "Malone.h"
-
-#define EQUIVALENCE_PRINT 0
-#define EQUIVALENCE_PRINT_DEBUG 0
+#include "EquivalenceChecking.h"
 
 void createClusters()
 {
@@ -189,7 +184,7 @@ void sequentialEquivalenceChecking()
     
     //Md5Hash Original
     strMutantFile = buildEquivLine(i,BUILD_LINE_ORIGINAL_MODE);        
-    sprintf (exeLine, "openssl md5 -r %s | cut -f 1 -d \" \"", strMutantFile);        
+    sprintf (exeLine, "openssl md5 -r %s | cut -f 1 -d ' '", strMutantFile);        
     strMd5 = (char*) execCommandLine("%s", exeLine);
 
     if(strMd5 != NULL)
@@ -210,7 +205,7 @@ void sequentialEquivalenceChecking()
     {
         strMutantFile = buildEquivLine(i,BUILD_LINE_MUTANT_MODE);        
         
-        sprintf (exeLine, "openssl md5 -r %s | cut -f 1 -d \" \"", strMutantFile);        
+        sprintf (exeLine, "openssl md5 -r %s | cut -f 1 -d ' '", strMutantFile);        
         strMd5 = (char*) execCommandLine("%s", exeLine);
         
         if(strMd5 != NULL)

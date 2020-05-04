@@ -1,5 +1,5 @@
-#include "Options.h"
 #include "ExecutionMapSaver.h"
+
 #define SAVING_PRINT 1
 void saveExecutionMap()
 {
@@ -275,7 +275,7 @@ void saveMutationTestingTickMap()
             }
             else
             {
-                fprintf(file, "[#%d|-1|-1,-1|]\n");
+                fprintf(file, "[#%d|-1|-1,-1|]\n", j);
             }            
         }
         

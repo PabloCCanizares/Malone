@@ -287,7 +287,7 @@ int doMonteCarlo ()
   {
     printf ( "\n" );
     printf ( "MONTE_CARLO - Master process:\n" );
-    printf ( "  Normal end of execution.\n" );
+    printf ( " TEST OK  Normal end of execution.\n" );
     printf ( "\n" );
     timestamp ( );
   }

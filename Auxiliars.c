@@ -6,6 +6,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <sys/wait.h> 
+#include <sys/stat.h>
 #include "popen_noshell.h"
 #define SLEEP_FOR_DEBUG 0
 
@@ -294,7 +295,6 @@ char* buildExeLine_StandAlone(int nIndexMutant, int nIndexTest, int nOriginalMod
         nIndexTestAliasLen = strlen(INDEX_TEST_ALIAS);
         nOriginalAliasLen = strlen(PATH_ORIGINAL_ALIAS);
 
-
         strPathMutantAlias = malloc(sizeof (char)*nPathMutantAliasLen + 1);
         strIndexMutantAlias = malloc(sizeof (char)*nIndexMutantAliasLen + 1);
         strIndexTestAlias = malloc(sizeof (char)*nIndexTestAliasLen + 1);
@@ -338,6 +338,23 @@ char* buildExeLine_StandAlone(int nIndexMutant, int nIndexTest, int nOriginalMod
         free(strIndexMutantAlias);
         free(strIndexTestAlias);
         free(strTest);
+    }
+    else
+    {
+        printf("buildExeLine_StandAlone - Error creating line %d, there exist some problem in the TESTSUITE\n", nIndexTest);
+        
+        if(m_pTestList == NULL)
+        {
+            printf("buildExeLine_StandAlone - ERROR, The test suite is NULL\n");
+        }
+        else if(nIndexTest >= m_pTestList->nElems)
+        {
+            printf("buildExeLine_StandAlone - ERROR, the requested index is greater or equal than the maximum [%d >= %d]", nIndexTest, m_pTestList->nElems);
+        }
+        else
+        {
+            printf("buildExeLine_StandAlone - ERROR, pero ni idea de cual \n");
+        }
     }
 
     return strAux2;
@@ -867,17 +884,25 @@ T_stTestInfo* createTest(int nIndexTest, char* strResult, double dTime, int nKil
     pTest->nTest = nIndexTest;
     bzero(pTest->res, MAX_RESULT_SIZE);
 
-    if (strResult == NULL) {
-        /*if(DEBUG_AUX) printf("createTest - 0.1\n");
-        strResult = (char*)malloc(4*sizeof(char));
-        if(DEBUG_AUX) printf("createTest - 0.2\n");
-        strcpy(strResult, "N!L");
-        if(DEBUG_AUX) printf("createTest - 0.3\n");*/
-        //strcpy(pTest->res, "(null)");
-    } else {
-        //strcpy(pTest->res, strResult);
-    }
+    if (strResult != NULL)
+        strcpy(pTest->res, strResult);
+    
+    return pTest;
+}
 
+struct TestInfo* createTestST(int nIndexTest, char* strResult, double dTime, int nKill) {
+    struct TestInfo* pTest;
+    if (DEBUG_AUX) printf("createTest - Init\n");
+
+    pTest = (struct TestInfo*) malloc(sizeof (struct TestInfo));
+    pTest->dTime = dTime;
+    pTest->nKill = nKill;
+    pTest->nTest = nIndexTest;
+    bzero(pTest->res, MAX_RESULT_SIZE);
+
+    if (strResult != NULL)
+        strcpy(pTest->res, strResult);
+    
     return pTest;
 }
 
@@ -939,10 +964,10 @@ int dir_exist(const char *d) {
         if ((dirptr = opendir(d)) != NULL) {
             closedir(dirptr);
         } else {
-            nRet = 0; /* d exists, but not dir */
+            nRet = 0; // d exists, but not dir 
         }
     } else {
-        nRet = 0; /* d does not exist */
+        nRet = 0; // d does not exist 
     }
 
     return nRet;
@@ -1314,7 +1339,8 @@ void freeMutantList(MutantList* pList) {
 int isEnabledDebugMainCommandLog() {
     return m_stConfigValues != NULL ? m_stConfigValues->nDebugMainCommand : 0;
 }
-
+/* CUARENTENA DE USO (borrar si esto sigue funcionando durante un tiempo)
+ * //No se de donde sale esto. 03/05/20 
 #define READ   0
 #define WRITE  1
 
@@ -1328,7 +1354,7 @@ FILE * popen2(char* command, char* type, int * pid) {
         exit(1);
     }
 
-    /* child process */
+    // child process//
     if (child_pid == 0) {
         if (type == "r") {
             close(fd[READ]); //Close the READ end of the pipe since the child's fd is write-only
@@ -1349,7 +1375,7 @@ FILE * popen2(char* command, char* type, int * pid) {
         }
     }
 
-    pid = child_pid;
+    pid = (int) child_pid;
 
     if (type == "r") {
         return fdopen(fd[READ], "r");
@@ -1357,7 +1383,7 @@ FILE * popen2(char* command, char* type, int * pid) {
 
     return fdopen(fd[WRITE], "w");
 }
-
+*/
 int pclose2(FILE * fp, pid_t pid) {
     int stat;
 
@@ -1370,4 +1396,86 @@ int pclose2(FILE * fp, pid_t pid) {
     }
 
     return stat;
+}
+
+void createTestRefP(int nIndexTest, char* strResult, double dTime, int nKill, T_stTestInfo** pTest) {
+    
+
+    *pTest = (T_stTestInfo*) malloc(sizeof (T_stTestInfo));
+    (*pTest)->dTime = dTime;
+    (*pTest)->nKill = nKill;
+    (*pTest)->nTest = nIndexTest;
+    bzero((*pTest)->res, MAX_RESULT_SIZE);
+
+    if (strResult != NULL)
+        strcpy((*pTest)->res, strResult);    
+}
+
+T_stTestInfo* createTestTrap2(int nIndexTest, char* strResult, double dTime, int nKill) {
+    T_stTestInfo* pTest;
+
+    pTest = (T_stTestInfo*) malloc(sizeof (T_stTestInfo));
+    pTest->dTime = dTime;
+    pTest->nKill = nKill;
+    pTest->nTest = nIndexTest;
+    bzero(pTest->res, MAX_RESULT_SIZE);
+
+    if (strResult != NULL)
+        strcpy(pTest->res, strResult);
+
+    return pTest;
+}
+
+double getOriginalTimeout() {
+    double dRet;
+
+    if (m_stEnvValues != NULL && m_stEnvValues->nDebugMaxOriginalTimeout >= 0) {
+        dRet = m_stEnvValues->nDebugMaxOriginalTimeout;
+    } else
+        dRet = MAX_ORIGINAL_TIMEOUT;
+
+    return dRet;
+}
+
+double getMutantsTimeout(double dOriginalTime) {
+    double dRet;
+
+    if (m_stEnvValues != NULL && m_stEnvValues->nDebugMaxMutantsTimeout >= 0) {
+        dRet = dOriginalTime * m_stEnvValues->nDebugMaxMutantsTimeout;
+        if (dRet < 1 && m_stEnvValues->nDebugMutantsMinimumTimeout >= 0)
+            dRet = m_stEnvValues->nDebugMutantsMinimumTimeout;
+    } else
+        dRet = MINIMUM_WORKER_TIME_MARGIN;
+
+    return dRet;
+}
+
+char* getMarkerToken() {
+    char* strRet;
+
+    if (m_stEnvValues != NULL && m_stEnvValues->strMarkerToken != NULL) {
+        strRet = m_stEnvValues->strMarkerToken;
+    } else
+        strRet = DEFAULT_MARKER_TOKEN;
+
+    return strRet;
+}
+
+/**
+ * Initialises the structures necessaries to carry out the different heuristics and optimisations
+ */
+void createHeuristicStructures() 
+{
+    int nMutants, nTests;
+
+    //Initialize some information related with execution map and equivalent mutants
+    if (m_stEnvValues != NULL) {
+        printf("<%d> distribution_full_dynamic_scatter - Updating structures\n", m_nRank);
+        nMutants = m_stEnvValues->nTotalMutants;
+        nTests = m_stEnvValues->nTotalTests;
+        printf("<%d> distribution_full_dynamic_scatter - Mutants: %d Tests :%d \n", m_nRank, nMutants, nTests);
+        initializeExecutionMap(nMutants, nTests);
+        if (m_stEnvValues->nClusterMutants != 0)
+            initializeEquivalentMap(nMutants, nTests);
+    }
 }

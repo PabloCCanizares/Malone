@@ -1,0 +1,10021 @@
+<0> Duration of mutation phases -  [Init: 106 | Gen:0 | Comp: 0 | Equiv: 27763 | Sort: 0 | Orig: 28 | Mut: 385022 | Total: 412920]
+<0> Total worker processes: 2
+<0> Check if the res folder [/Results/] exists
+----------------
+MALONE says: 
+Initialization time: 106
+Generation time: 0
+Compilation time: 0
+Original time: 28
+Mutants time: 385022
+Total time: 412920
+----------------
+Total mutants: 10000
+Total tests: 2
+Alive mutants: 9152
+Dead mutants: 848
+Equivalent mutants: 0
+Dupped mutants: 3358
+Mutation score: 0.127672
+----------------
+>s[1] Alive! (CH)
+>s[2] Alive!
+>s[3] Alive!
+>s[4] Alive! (CH)
+>s[5] Alive!
+>s[6] Alive!
+>s[7] Alive! (CH)
+>s[8] Alive!
+>s[9] Alive!
+>s[10] Alive! (CH)
+>s[11] Alive!
+>s[12] Alive!
+>s[13] Alive! (CH)
+>s[14] Alive!
+>s[15] Alive!
+>s[16] Alive! (CH)
+>s[17] Alive!
+>s[18] Alive!
+>s[19] Alive! (CH)
+>s[20] Alive!
+>s[21] Alive!
+>s[22] Alive! (CH)
+>s[23] Alive!
+>s[24] Alive!
+>s[25] Alive! (CH)
+>s[26] Alive!
+>s[27] Alive!
+>s[28] Alive! (CH)
+>s[29] Alive!
+>s[30] Alive!
+>s[31] Alive! (CH)
+>s[32] Alive!
+>s[33] Alive!
+>s[34] Alive! (CH)
+>s[35] Alive!
+>s[36] Alive!
+>s[37] Alive! (CH)
+>s[38] Alive!
+>s[39] Alive!
+>s[40] Alive! (CH)
+>s[41] Alive!
+>s[42] Alive!
+>s[43] Alive! (CH)
+>s[44] Alive!
+>s[45] Alive!
+>s[46] Alive! (CH)
+>s[47] Alive!
+>s[48] Alive!
+>s[49] Alive! (CH)
+>s[50] Alive!
+>s[51] Alive!
+>s[52] Alive! (CH)
+>s[53] Alive!
+>s[54] Alive!
+>s[55] Alive! (CH)
+>s[56] Alive!
+>s[57] Alive!
+>s[58] Alive! (CH)
+>s[59] Alive!
+>s[60] Alive!
+>s[61] Alive! (CH)
+>s[62] Alive!
+>s[63] Alive!
+>s[64] Alive! (CH)
+>s[65] Alive!
+>s[66] Alive!
+>s[67] Alive! (CH)
+>s[68] Alive!
+>s[69] Alive!
+>s[70] Alive! (CH)
+>s[71] Alive!
+>s[72] Alive!
+>s[73] Alive! (CH)
+>s[74] Alive!
+>s[75] Alive!
+>s[76] Alive! (CH)
+>s[77] Alive!
+>s[78] Alive!
+>s[79] Alive! (CH)
+>s[80] Alive!
+>s[81] Alive!
+>s[82] Alive! (CH)
+>s[83] Alive!
+>s[84] Alive!
+>s[85] Alive! (CH)
+>s[86] Alive!
+>s[87] Alive!
+>s[88] Alive! (CH)
+>s[89] Alive!
+>s[90] Alive!
+>s[91] Alive! (CH)
+>s[92] Alive!
+>s[93] Alive!
+>s[94] Alive! (CH)
+>s[95] Alive!
+>s[96] Alive!
+>s[97] Alive! (CH)
+>s[98] Alive!
+>s[99] Alive!
+>s[100] Alive! (CH)
+>s[101] Alive!
+>s[102] Alive!
+>s[103] Alive! (CH)
+>s[104] Alive!
+>s[105] Alive!
+>s[106] Alive! (CH)
+>s[107] Alive!
+>s[108] Alive!
+>s[109] Alive! (CH)
+>s[110] Alive!
+>s[111] Alive!
+>s[112] Alive! (CH)
+>s[113] Alive!
+>s[114] Alive!
+>s[115] Alive! (CH)
+>s[116] Alive!
+>s[117] Alive!
+>s[118] Alive! (CH)
+>s[119] Alive!
+>s[120] Alive!
+>s[121] Alive! (CH)
+>s[122] Alive!
+>s[123] Alive!
+>s[124] Alive! (CH)
+>s[125] Alive!
+>s[126] Alive!
+>s[127] Alive! (CH)
+>s[128] Alive!
+>s[129] Alive!
+>s[130] Alive! (CH)
+>s[131] Alive!
+>s[132] Alive!
+>s[133] Alive! (CH)
+>s[134] Alive!
+>s[135] Alive!
+>s[136] Alive! (CH)
+>s[137] Alive!
+>s[138] Alive!
+>s[139] Alive! (CH)
+>s[140] Alive!
+>s[141] Alive!
+>s[142] Alive! (CH)
+>s[143] Alive!
+>s[144] Alive!
+>s[145] Alive! (CH)
+>s[146] Alive!
+>s[147] Alive!
+>s[148] Alive! (CH)
+>s[149] Alive!
+>s[150] Alive!
+>s[151] Alive! (CH)
+>s[152] Alive!
+>s[153] Alive!
+>s[154] Alive! (CH)
+>s[155] Alive!
+>s[156] Alive!
+>s[157] Alive! (CH)
+>s[158] Alive!
+>s[159] Alive!
+>s[160] Alive! (CH)
+>s[161] Alive!
+>s[162] Alive!
+>s[163] Alive! (CH)
+>s[164] Alive!
+>s[165] Alive!
+>s[166] Alive! (CH)
+>s[167] Alive!
+>s[168] Alive!
+>s[169] Alive! (CH)
+>s[170] Alive!
+>s[171] Alive!
+>s[172] Alive! (CH)
+>s[173] Alive!
+>s[174] Alive!
+>s[175] Alive! (CH)
+>s[176] Alive!
+>s[177] Alive!
+>s[178] Alive! (CH)
+>s[179] Alive!
+>s[180] Alive!
+>s[181] Alive! (CH)
+>s[182] Alive!
+>s[183] Alive!
+>s[184] Alive! (CH)
+>s[185] Alive!
+>s[186] Alive!
+>s[187] Alive! (CH)
+>s[188] Alive!
+>s[189] Alive!
+>s[190] Alive! (CH)
+>s[191] Alive!
+>s[192] Alive!
+>s[193] Alive! (CH)
+>s[194] Alive!
+>s[195] Alive!
+>s[196] Alive! (CH)
+>s[197] Alive!
+>s[198] Alive!
+>s[199] Alive! (CH)
+>s[200] Alive!
+>s[201] Alive!
+>s[202] Alive! (CH)
+>s[203] Alive!
+>s[204] Alive!
+>s[205] Alive! (CH)
+>s[206] Alive!
+>s[207] Alive!
+>s[208] Alive! (CH)
+>s[209] Alive!
+>s[210] Alive!
+>s[211] Alive! (CH)
+>s[212] Alive!
+>s[213] Alive!
+>s[214] Alive! (CH)
+>s[215] Alive!
+>s[216] Alive!
+>s[217] Alive! (CH)
+>s[218] Alive!
+>s[219] Alive!
+>s[220] Alive! (CH)
+>s[221] Alive!
+>s[222] Alive!
+>s[223] Alive! (CH)
+>s[224] Alive!
+>s[225] Alive!
+>s[226] Alive! (CH)
+>s[227] Alive!
+>s[228] Alive!
+>s[229] Alive! (CH)
+>s[230] Alive!
+>s[231] Dead! killed by test 0
+>s[232] Dead! killed by test 0
+>s[233] Dead! killed by test 0
+>s[234] Dead! killed by test 0
+>s[235] Dead! killed by test 0
+>s[236] Dead! killed by test 0
+>s[237] Alive!
+>s[238] Alive! (CH)
+>s[239] Alive!
+>s[240] Alive!
+>s[241] Alive! (CH)
+>s[242] Alive!
+>s[243] Alive!
+>s[244] Alive! (CH)
+>s[245] Alive!
+>s[246] Alive!
+>s[247] Alive! (CH)
+>s[248] Alive!
+>s[249] Alive!
+>s[250] Alive! (CH)
+>s[251] Alive!
+>s[252] Alive!
+>s[253] Alive! (CH)
+>s[254] Alive!
+>s[255] Alive!
+>s[256] Alive! (CH)
+>s[257] Alive!
+>s[258] Alive!
+>s[259] Alive! (CH)
+>s[260] Alive!
+>s[261] Alive!
+>s[262] Alive! (CH)
+>s[263] Alive!
+>s[264] Alive!
+>s[265] Alive! (CH)
+>s[266] Alive!
+>s[267] Alive!
+>s[268] Alive! (CH)
+>s[269] Alive!
+>s[270] Alive!
+>s[271] Alive! (CH)
+>s[272] Alive!
+>s[273] Alive!
+>s[274] Alive! (CH)
+>s[275] Alive!
+>s[276] Alive!
+>s[277] Alive! (CH)
+>s[278] Alive!
+>s[279] Alive!
+>s[280] Alive! (CH)
+>s[281] Alive!
+>s[282] Alive!
+>s[283] Alive! (CH)
+>s[284] Alive!
+>s[285] Alive!
+>s[286] Alive! (CH)
+>s[287] Alive!
+>s[288] Alive!
+>s[289] Alive! (CH)
+>s[290] Alive!
+>s[291] Alive!
+>s[292] Alive! (CH)
+>s[293] Alive!
+>s[294] Alive!
+>s[295] Alive! (CH)
+>s[296] Alive!
+>s[297] Alive!
+>s[298] Alive! (CH)
+>s[299] Alive!
+>s[300] Alive!
+>s[301] Alive! (CH)
+>s[302] Alive!
+>s[303] Alive!
+>s[304] Alive! (CH)
+>s[305] Alive!
+>s[306] Alive!
+>s[307] Alive! (CH)
+>s[308] Alive!
+>s[309] Alive!
+>s[310] Alive! (CH)
+>s[311] Alive!
+>s[312] Alive!
+>s[313] Alive! (CH)
+>s[314] Alive!
+>s[315] Alive!
+>s[316] Alive! (CH)
+>s[317] Alive!
+>s[318] Alive!
+>s[319] Alive! (CH)
+>s[320] Alive!
+>s[321] Alive!
+>s[322] Alive! (CH)
+>s[323] Alive!
+>s[324] Alive!
+>s[325] Alive! (CH)
+>s[326] Alive!
+>s[327] Alive!
+>s[328] Alive! (CH)
+>s[329] Alive!
+>s[330] Alive!
+>s[331] Alive! (CH)
+>s[332] Alive!
+>s[333] Alive!
+>s[334] Alive! (CH)
+>s[335] Alive!
+>s[336] Alive!
+>s[337] Alive! (CH)
+>s[338] Alive!
+>s[339] Alive!
+>s[340] Alive! (CH)
+>s[341] Alive!
+>s[342] Alive!
+>s[343] Alive! (CH)
+>s[344] Alive!
+>s[345] Alive!
+>s[346] Alive! (CH)
+>s[347] Alive!
+>s[348] Alive!
+>s[349] Alive! (CH)
+>s[350] Alive!
+>s[351] Alive!
+>s[352] Alive! (CH)
+>s[353] Alive!
+>s[354] Alive!
+>s[355] Alive! (CH)
+>s[356] Alive!
+>s[357] Alive!
+>s[358] Alive! (CH)
+>s[359] Alive!
+>s[360] Alive!
+>s[361] Alive! (CH)
+>s[362] Alive!
+>s[363] Alive!
+>s[364] Alive! (CH)
+>s[365] Alive!
+>s[366] Alive!
+>s[367] Alive! (CH)
+>s[368] Alive!
+>s[369] Alive!
+>s[370] Alive! (CH)
+>s[371] Alive!
+>s[372] Alive!
+>s[373] Alive! (CH)
+>s[374] Alive!
+>s[375] Alive!
+>s[376] Alive! (CH)
+>s[377] Alive!
+>s[378] Alive!
+>s[379] Alive! (CH)
+>s[380] Alive!
+>s[381] Alive!
+>s[382] Alive! (CH)
+>s[383] Alive!
+>s[384] Alive!
+>s[385] Alive! (CH)
+>s[386] Alive!
+>s[387] Alive!
+>s[388] Alive! (CH)
+>s[389] Alive!
+>s[390] Alive!
+>s[391] Alive! (CH)
+>s[392] Alive!
+>s[393] Alive!
+>s[394] Alive! (CH)
+>s[395] Alive!
+>s[396] Alive!
+>s[397] Alive! (CH)
+>s[398] Alive!
+>s[399] Alive!
+>s[400] Alive! (CH)
+>s[401] Alive!
+>s[402] Alive!
+>s[403] Alive! (CH)
+>s[404] Alive!
+>s[405] Alive!
+>s[406] Alive! (CH)
+>s[407] Alive!
+>s[408] Alive!
+>s[409] Alive! (CH)
+>s[410] Alive!
+>s[411] Alive!
+>s[412] Alive! (CH)
+>s[413] Alive!
+>s[414] Alive!
+>s[415] Alive! (CH)
+>s[416] Alive!
+>s[417] Alive!
+>s[418] Alive! (CH)
+>s[419] Alive!
+>s[420] Alive!
+>s[421] Alive! (CH)
+>s[422] Alive!
+>s[423] Alive!
+>s[424] Alive! (CH)
+>s[425] Alive!
+>s[426] Alive!
+>s[427] Alive! (CH)
+>s[428] Alive!
+>s[429] Alive!
+>s[430] Alive! (CH)
+>s[431] Alive!
+>s[432] Alive!
+>s[433] Alive! (CH)
+>s[434] Alive!
+>s[435] Alive!
+>s[436] Alive! (CH)
+>s[437] Alive!
+>s[438] Alive!
+>s[439] Alive! (CH)
+>s[440] Alive!
+>s[441] Alive!
+>s[442] Alive! (CH)
+>s[443] Alive!
+>s[444] Alive!
+>s[445] Alive! (CH)
+>s[446] Alive!
+>s[447] Alive!
+>s[448] Alive! (CH)
+>s[449] Alive!
+>s[450] Alive!
+>s[451] Alive! (CH)
+>s[452] Alive!
+>s[453] Alive!
+>s[454] Alive! (CH)
+>s[455] Alive!
+>s[456] Alive!
+>s[457] Alive! (CH)
+>s[458] Alive!
+>s[459] Alive!
+>s[460] Alive! (CH)
+>s[461] Alive!
+>s[462] Alive!
+>s[463] Alive! (CH)
+>s[464] Alive!
+>s[465] Alive!
+>s[466] Alive! (CH)
+>s[467] Alive!
+>s[468] Alive! (CH)
+>s[469] Alive! (CH)
+>s[470] Alive! (CH)
+>s[471] Alive!
+>s[472] Alive!
+>s[473] Alive!
+>s[474] Alive!
+>s[475] Alive!
+>s[476] Alive!
+>s[477] Alive! (CH)
+>s[478] Alive!
+>s[479] Alive! (CH)
+>s[480] Alive!
+>s[481] Alive!
+>s[482] Alive!
+>s[483] Alive!
+>s[484] Alive!
+>s[485] Alive!
+>s[486] Alive!
+>s[487] Alive!
+>s[488] Alive! (CH)
+>s[489] Alive!
+>s[490] Alive!
+>s[491] Alive!
+>s[492] Alive!
+>s[493] Alive!
+>s[494] Alive!
+>s[495] Alive! (CH)
+>s[496] Alive!
+>s[497] Alive!
+>s[498] Alive!
+>s[499] Alive!
+>s[500] Alive!
+>s[501] Alive!
+>s[502] Alive!
+>s[503] Alive!
+>s[504] Alive!
+>s[505] Alive! (CH)
+>s[506] Dead! killed by test 0
+>s[507] Dead! killed by test 0
+>s[508] Alive!
+>s[509] Alive!
+>s[510] Alive!
+>s[511] Alive!
+>s[512] Alive!
+>s[513] Alive!
+>s[514] Dead! killed by test 0
+>s[515] Dead! killed by test 0
+>s[516] Dead! killed by test 0
+>s[517] Dead! killed by test 0
+>s[518] Dead! killed by test 0
+>s[519] Dead! killed by test 0
+>s[520] Alive!
+>s[521] Alive!
+>s[522] Dead! killed by test 0
+>s[523] Dead! killed by test 0
+>s[524] Alive!
+>s[525] Alive!
+>s[526] Alive!
+>s[527] Alive!
+>s[528] Alive! (CH)
+>s[529] Dead! killed by test 0
+>s[530] Dead! killed by test 0
+>s[531] Alive!
+>s[532] Alive!
+>s[533] Alive!
+>s[534] Alive! (CH)
+>s[535] Alive!
+>s[536] Alive!
+>s[537] Alive!
+>s[538] Dead! killed by test 0
+>s[539] Dead! killed by test 0
+>s[540] Dead! killed by test 0
+>s[541] Dead! killed by test 0
+>s[542] Dead! killed by test 0
+>s[543] Dead! killed by test 0
+>s[544] Alive!
+>s[545] Alive!
+>s[546] Alive! (CH)
+>s[547] Alive!
+>s[548] Alive!
+>s[549] Alive!
+>s[550] Alive!
+>s[551] Alive!
+>s[552] Alive!
+>s[553] Alive! (CH)
+>s[554] Alive!
+>s[555] Alive!
+>s[556] Alive!
+>s[557] Alive!
+>s[558] Alive!
+>s[559] Alive!
+>s[560] Alive!
+>s[561] Alive!
+>s[562] Alive! (CH)
+>s[563] Alive!
+>s[564] Alive! (CH)
+>s[565] Alive!
+>s[566] Alive!
+>s[567] Alive!
+>s[568] Alive!
+>s[569] Alive!
+>s[570] Alive!
+>s[571] Alive!
+>s[572] Alive! (CH)
+>s[573] Alive! (CH)
+>s[574] Alive!
+>s[575] Alive!
+>s[576] Alive! (CH)
+>s[577] Alive!
+>s[578] Alive!
+>s[579] Alive! (CH)
+>s[580] Alive! (CH)
+>s[581] Alive!
+>s[582] Alive!
+>s[583] Alive!
+>s[584] Alive!
+>s[585] Alive!
+>s[586] Alive!
+>s[587] Alive! (CH)
+>s[588] Alive!
+>s[589] Alive!
+>s[590] Alive!
+>s[591] Alive!
+>s[592] Alive!
+>s[593] Alive!
+>s[594] Alive! (CH)
+>s[595] Alive!
+>s[596] Alive!
+>s[597] Alive!
+>s[598] Alive!
+>s[599] Alive!
+>s[600] Alive!
+>s[601] Alive!
+>s[602] Alive!
+>s[603] Alive!
+>s[604] Alive!
+>s[605] Alive! (CH)
+>s[606] Alive! (CH)
+>s[607] Alive!
+>s[608] Alive! (CH)
+>s[609] Alive!
+>s[610] Alive!
+>s[611] Alive!
+>s[612] Alive! (CH)
+>s[613] Dead! killed by test 0
+>s[614] Dead! killed by test 0
+>s[615] Alive!
+>s[616] Alive!
+>s[617] Alive!
+>s[618] Alive!
+>s[619] Alive! (CH)
+>s[620] Alive! (CH)
+>s[621] Alive!
+>s[622] Alive!
+>s[623] Alive! (CH)
+>s[624] Alive!
+>s[625] Alive!
+>s[626] Alive!
+>s[627] Alive!
+>s[628] Dead! killed by test 0
+>s[629] Dead! killed by test 0
+>s[630] Dead! killed by test 0
+>s[631] Dead! killed by test 0
+>s[632] Dead! killed by test 0
+>s[633] Dead! killed by test 0
+>s[634] Alive!
+>s[635] Alive! (CH)
+>s[636] Alive! (CH)
+>s[637] Alive!
+>s[638] Alive!
+>s[639] Alive! (CH)
+>s[640] Alive!
+>s[641] Alive!
+>s[642] Alive! (CH)
+>s[643] Dead! killed by test 0
+>s[644] Dead! killed by test 0
+>s[645] Alive!
+>s[646] Alive!
+>s[647] Alive!
+>s[648] Alive!
+>s[649] Alive!
+>s[650] Alive!
+>s[651] Dead! killed by test 0
+>s[652] Dead! killed by test 0
+>s[653] Dead! killed by test 0
+>s[654] Dead! killed by test 0
+>s[655] Dead! killed by test 0
+>s[656] Dead! killed by test 0
+>s[657] Alive!
+>s[658] Alive!
+>s[659] Alive! (CH)
+>s[660] Alive!
+>s[661] Alive!
+>s[662] Alive!
+>s[663] Alive!
+>s[664] Alive!
+>s[665] Alive!
+>s[666] Alive! (CH)
+>s[667] Alive!
+>s[668] Alive!
+>s[669] Alive!
+>s[670] Alive!
+>s[671] Alive!
+>s[672] Alive!
+>s[673] Alive!
+>s[674] Alive!
+>s[675] Alive!
+>s[676] Alive!
+>s[677] Alive! (CH)
+>s[678] Alive!
+>s[679] Alive!
+>s[680] Alive!
+>s[681] Alive!
+>s[682] Alive!
+>s[683] Alive!
+>s[684] Alive! (CH)
+>s[685] Alive!
+>s[686] Alive! (CH)
+>s[687] Alive!
+>s[688] Alive!
+>s[689] Alive!
+>s[690] Alive!
+>s[691] Alive!
+>s[692] Alive!
+>s[693] Alive!
+>s[694] Alive!
+>s[695] Alive! (CH)
+>s[696] Alive!
+>s[697] Alive!
+>s[698] Alive!
+>s[699] Alive!
+>s[700] Alive!
+>s[701] Alive!
+>s[702] Alive! (CH)
+>s[703] Alive!
+>s[704] Alive!
+>s[705] Alive!
+>s[706] Alive!
+>s[707] Alive!
+>s[708] Alive!
+>s[709] Alive!
+>s[710] Alive!
+>s[711] Alive!
+>s[712] Alive! (CH)
+>s[713] Dead! killed by test 0
+>s[714] Dead! killed by test 0
+>s[715] Alive!
+>s[716] Alive!
+>s[717] Alive!
+>s[718] Alive!
+>s[719] Alive!
+>s[720] Alive!
+>s[721] Dead! killed by test 0
+>s[722] Dead! killed by test 0
+>s[723] Dead! killed by test 0
+>s[724] Dead! killed by test 0
+>s[725] Dead! killed by test 0
+>s[726] Dead! killed by test 0
+>s[727] Alive!
+>s[728] Alive!
+>s[729] Alive! (CH)
+>s[730] Alive!
+>s[731] Alive!
+>s[732] Alive!
+>s[733] Alive!
+>s[734] Alive!
+>s[735] Alive!
+>s[736] Alive!
+>s[737] Alive!
+>s[738] Alive!
+>s[739] Alive!
+>s[740] Alive! (CH)
+>s[741] Alive!
+>s[742] Alive!
+>s[743] Alive!
+>s[744] Alive!
+>s[745] Alive!
+>s[746] Alive! (CH)
+>s[747] Alive! (CH)
+>s[748] Alive!
+>s[749] Alive!
+>s[750] Alive! (CH)
+>s[751] Alive!
+>s[752] Alive!
+>s[753] Alive! (CH)
+>s[754] Dead! killed by test 0
+>s[755] Dead! killed by test 0
+>s[756] Alive!
+>s[757] Alive!
+>s[758] Alive!
+>s[759] Alive!
+>s[760] Alive! (CH)
+>s[761] Alive! (CH)
+>s[762] Alive!
+>s[763] Alive! (CH)
+>s[764] Alive!
+>s[765] Alive!
+>s[766] Alive!
+>s[767] Alive!
+>s[768] Alive!
+>s[769] Dead! killed by test 0
+>s[770] Dead! killed by test 0
+>s[771] Dead! killed by test 0
+>s[772] Dead! killed by test 0
+>s[773] Dead! killed by test 0
+>s[774] Dead! killed by test 0
+>s[775] Alive!
+>s[776] Alive! (CH)
+>s[777] Alive! (CH)
+>s[778] Alive!
+>s[779] Alive! (CH)
+>s[780] Alive!
+>s[781] Alive!
+>s[782] Alive!
+>s[783] Alive! (CH)
+>s[784] Alive! (CH)
+>s[785] Alive!
+>s[786] Alive!
+>s[787] Alive! (CH)
+>s[788] Alive!
+>s[789] Alive! (CH)
+>s[790] Alive!
+>s[791] Alive! (CH)
+>s[792] Alive!
+>s[793] Alive!
+>s[794] Alive!
+>s[795] Alive!
+>s[796] Alive!
+>s[797] Alive!
+>s[798] Alive!
+>s[799] Alive! (CH)
+>s[800] Alive! (CH)
+>s[801] Alive!
+>s[802] Alive!
+>s[803] Alive! (CH)
+>s[804] Alive!
+>s[805] Alive!
+>s[806] Alive! (CH)
+>s[807] Alive! (CH)
+>s[808] Alive!
+>s[809] Alive!
+>s[810] Alive!
+>s[811] Alive!
+>s[812] Alive!
+>s[813] Alive!
+>s[814] Alive! (CH)
+>s[815] Alive!
+>s[816] Alive!
+>s[817] Alive!
+>s[818] Alive!
+>s[819] Alive!
+>s[820] Alive!
+>s[821] Alive! (CH)
+>s[822] Alive!
+>s[823] Alive!
+>s[824] Alive!
+>s[825] Alive!
+>s[826] Alive!
+>s[827] Alive!
+>s[828] Alive!
+>s[829] Alive!
+>s[830] Alive!
+>s[831] Alive!
+>s[832] Alive! (CH)
+>s[833] Alive! (CH)
+>s[834] Alive!
+>s[835] Alive! (CH)
+>s[836] Alive!
+>s[837] Alive!
+>s[838] Alive!
+>s[839] Alive! (CH)
+>s[840] Dead! killed by test 0
+>s[841] Dead! killed by test 0
+>s[842] Alive!
+>s[843] Alive!
+>s[844] Alive!
+>s[845] Alive!
+>s[846] Alive! (CH)
+>s[847] Alive! (CH)
+>s[848] Alive!
+>s[849] Alive!
+>s[850] Alive! (CH)
+>s[851] Alive!
+>s[852] Alive! (CH)
+>s[853] Alive!
+>s[854] Alive!
+>s[855] Alive!
+>s[856] Dead! killed by test 0
+>s[857] Dead! killed by test 0
+>s[858] Dead! killed by test 0
+>s[859] Dead! killed by test 0
+>s[860] Dead! killed by test 0
+>s[861] Dead! killed by test 0
+>s[862] Alive!
+>s[863] Alive! (CH)
+>s[864] Alive! (CH)
+>s[865] Alive!
+>s[866] Alive!
+>s[867] Alive! (CH)
+>s[868] Alive!
+>s[869] Alive!
+>s[870] Alive! (CH)
+>s[871] Dead! killed by test 0
+>s[872] Dead! killed by test 0
+>s[873] Alive!
+>s[874] Alive!
+>s[875] Alive!
+>s[876] Alive! (CH)
+>s[877] Alive!
+>s[878] Alive!
+>s[879] Alive!
+>s[880] Dead! killed by test 0
+>s[881] Dead! killed by test 0
+>s[882] Dead! killed by test 0
+>s[883] Dead! killed by test 0
+>s[884] Dead! killed by test 0
+>s[885] Dead! killed by test 0
+>s[886] Alive!
+>s[887] Alive!
+>s[888] Alive! (CH)
+>s[889] Alive!
+>s[890] Alive!
+>s[891] Alive!
+>s[892] Alive!
+>s[893] Alive!
+>s[894] Alive!
+>s[895] Alive! (CH)
+>s[896] Alive!
+>s[897] Alive!
+>s[898] Alive!
+>s[899] Alive!
+>s[900] Alive!
+>s[901] Alive!
+>s[902] Alive!
+>s[903] Alive!
+>s[904] Alive!
+>s[905] Alive!
+>s[906] Alive! (CH)
+>s[907] Alive!
+>s[908] Alive!
+>s[909] Alive!
+>s[910] Alive!
+>s[911] Alive!
+>s[912] Alive!
+>s[913] Alive! (CH)
+>s[914] Alive!
+>s[915] Alive! (CH)
+>s[916] Alive!
+>s[917] Alive!
+>s[918] Alive!
+>s[919] Alive!
+>s[920] Alive!
+>s[921] Alive!
+>s[922] Alive!
+>s[923] Alive!
+>s[924] Alive! (CH)
+>s[925] Alive!
+>s[926] Alive!
+>s[927] Alive!
+>s[928] Alive!
+>s[929] Alive!
+>s[930] Alive!
+>s[931] Alive! (CH)
+>s[932] Alive!
+>s[933] Alive!
+>s[934] Alive!
+>s[935] Alive!
+>s[936] Alive!
+>s[937] Alive!
+>s[938] Alive!
+>s[939] Alive!
+>s[940] Alive!
+>s[941] Alive! (CH)
+>s[942] Dead! killed by test 0
+>s[943] Dead! killed by test 0
+>s[944] Alive!
+>s[945] Alive!
+>s[946] Alive!
+>s[947] Alive!
+>s[948] Alive!
+>s[949] Alive!
+>s[950] Dead! killed by test 0
+>s[951] Dead! killed by test 0
+>s[952] Dead! killed by test 0
+>s[953] Dead! killed by test 0
+>s[954] Dead! killed by test 0
+>s[955] Dead! killed by test 0
+>s[956] Alive!
+>s[957] Alive!
+>s[958] Alive! (CH)
+>s[959] Alive!
+>s[960] Alive!
+>s[961] Alive!
+>s[962] Alive!
+>s[963] Alive!
+>s[964] Alive!
+>s[965] Alive!
+>s[966] Alive!
+>s[967] Alive!
+>s[968] Alive!
+>s[969] Alive! (CH)
+>s[970] Alive!
+>s[971] Alive!
+>s[972] Alive!
+>s[973] Alive!
+>s[974] Alive!
+>s[975] Alive! (CH)
+>s[976] Alive! (CH)
+>s[977] Alive!
+>s[978] Alive!
+>s[979] Alive! (CH)
+>s[980] Alive!
+>s[981] Alive!
+>s[982] Alive! (CH)
+>s[983] Dead! killed by test 0
+>s[984] Dead! killed by test 0
+>s[985] Alive!
+>s[986] Alive!
+>s[987] Alive!
+>s[988] Alive!
+>s[989] Alive! (CH)
+>s[990] Alive! (CH)
+>s[991] Alive!
+>s[992] Alive! (CH)
+>s[993] Alive!
+>s[994] Alive!
+>s[995] Alive! (CH)
+>s[996] Alive!
+>s[997] Alive!
+>s[998] Alive!
+>s[999] Dead! killed by test 0
+>s[1000] Dead! killed by test 0
+>s[1001] Dead! killed by test 0
+>s[1002] Dead! killed by test 0
+>s[1003] Dead! killed by test 0
+>s[1004] Dead! killed by test 0
+>s[1005] Alive!
+>s[1006] Alive! (CH)
+>s[1007] Alive! (CH)
+>s[1008] Alive!
+>s[1009] Alive! (CH)
+>s[1010] Alive!
+>s[1011] Alive!
+>s[1012] Alive!
+>s[1013] Alive! (CH)
+>s[1014] Alive! (CH)
+>s[1015] Alive!
+>s[1016] Alive!
+>s[1017] Alive! (CH)
+>s[1018] Alive!
+>s[1019] Alive!
+>s[1020] Alive!
+>s[1021] Alive!
+>s[1022] Alive! (CH)
+>s[1023] Alive!
+>s[1024] Alive!
+>s[1025] Alive!
+>s[1026] Alive!
+>s[1027] Alive!
+>s[1028] Alive!
+>s[1029] Alive!
+>s[1030] Alive! (CH)
+>s[1031] Alive! (CH)
+>s[1032] Alive!
+>s[1033] Alive!
+>s[1034] Alive!
+>s[1035] Alive!
+>s[1036] Alive!
+>s[1037] Alive! (CH)
+>s[1038] Dead! killed by test 0
+>s[1039] Dead! killed by test 0
+>s[1040] Alive!
+>s[1041] Alive!
+>s[1042] Alive!
+>s[1043] Alive! (CH)
+>s[1044] Alive!
+>s[1045] Alive!
+>s[1046] Alive!
+>s[1047] Dead! killed by test 0
+>s[1048] Dead! killed by test 0
+>s[1049] Dead! killed by test 0
+>s[1050] Dead! killed by test 0
+>s[1051] Dead! killed by test 0
+>s[1052] Dead! killed by test 0
+>s[1053] Alive!
+>s[1054] Alive!
+>s[1055] Alive! (CH)
+>s[1056] Alive!
+>s[1057] Alive!
+>s[1058] Alive!
+>s[1059] Alive!
+>s[1060] Alive!
+>s[1061] Alive!
+>s[1062] Alive! (CH)
+>s[1063] Alive! (CH)
+>s[1064] Alive!
+>s[1065] Alive!
+>s[1066] Alive!
+>s[1067] Alive!
+>s[1068] Alive!
+>s[1069] Alive!
+>s[1070] Alive!
+>s[1071] Alive!
+>s[1072] Alive!
+>s[1073] Alive! (CH)
+>s[1074] Dead! killed by test 0
+>s[1075] Dead! killed by test 0
+>s[1076] Alive!
+>s[1077] Alive!
+>s[1078] Alive!
+>s[1079] Alive!
+>s[1080] Alive!
+>s[1081] Alive!
+>s[1082] Dead! killed by test 0
+>s[1083] Dead! killed by test 0
+>s[1084] Dead! killed by test 0
+>s[1085] Dead! killed by test 0
+>s[1086] Dead! killed by test 0
+>s[1087] Dead! killed by test 0
+>s[1088] Alive! (CH)
+>s[1089] Alive!
+>s[1090] Alive!
+>s[1091] Alive!
+>s[1092] Alive!
+>s[1093] Alive!
+>s[1094] Alive!
+>s[1095] Alive!
+>s[1096] Alive!
+>s[1097] Alive!
+>s[1098] Alive! (CH)
+>s[1099] Alive! (CH)
+>s[1100] Alive!
+>s[1101] Alive!
+>s[1102] Alive!
+>s[1103] Alive!
+>s[1104] Alive!
+>s[1105] Alive! (CH)
+>s[1106] Alive! (CH)
+>s[1107] Alive!
+>s[1108] Alive!
+>s[1109] Alive!
+>s[1110] Alive!
+>s[1111] Alive!
+>s[1112] Alive! (CH)
+>s[1113] Alive! (CH)
+>s[1114] Alive!
+>s[1115] Alive!
+>s[1116] Alive!
+>s[1117] Alive!
+>s[1118] Alive!
+>s[1119] Alive! (CH)
+>s[1120] Alive! (CH)
+>s[1121] Alive!
+>s[1122] Alive!
+>s[1123] Alive!
+>s[1124] Alive!
+>s[1125] Alive!
+>s[1126] Alive! (CH)
+>s[1127] Alive! (CH)
+>s[1128] Alive!
+>s[1129] Alive!
+>s[1130] Alive!
+>s[1131] Alive!
+>s[1132] Alive!
+>s[1133] Alive! (CH)
+>s[1134] Dead! killed by test 0
+>s[1135] Dead! killed by test 0
+>s[1136] Alive!
+>s[1137] Alive!
+>s[1138] Alive!
+>s[1139] Alive!
+>s[1140] Alive! (CH)
+>s[1141] Dead! killed by test 0
+>s[1142] Dead! killed by test 0
+>s[1143] Alive!
+>s[1144] Alive!
+>s[1145] Alive!
+>s[1146] Alive!
+>s[1147] Alive! (CH)
+>s[1148] Alive! (CH)
+>s[1149] Alive!
+>s[1150] Alive!
+>s[1151] Alive!
+>s[1152] Alive!
+>s[1153] Alive!
+>s[1154] Alive! (CH)
+>s[1155] Alive! (CH)
+>s[1156] Alive!
+>s[1157] Alive!
+>s[1158] Alive!
+>s[1159] Alive!
+>s[1160] Alive!
+>s[1161] Alive! (CH)
+>s[1162] Dead! killed by test 0
+>s[1163] Dead! killed by test 0
+>s[1164] Alive!
+>s[1165] Alive!
+>s[1166] Alive!
+>s[1167] Alive!
+>s[1168] Alive! (CH)
+>s[1169] Dead! killed by test 0
+>s[1170] Dead! killed by test 0
+>s[1171] Alive!
+>s[1172] Alive!
+>s[1173] Alive!
+>s[1174] Alive!
+>s[1175] Alive!
+>s[1176] Alive! (CH)
+>s[1177] Alive!
+>s[1178] Alive!
+>s[1179] Alive!
+>s[1180] Alive!
+>s[1181] Alive!
+>s[1182] Alive!
+>s[1183] Alive!
+>s[1184] Alive!
+>s[1185] Alive!
+>s[1186] Alive! (CH)
+>s[1187] Alive!
+>s[1188] Alive!
+>s[1189] Alive!
+>s[1190] Alive!
+>s[1191] Alive!
+>s[1192] Alive!
+>s[1193] Alive!
+>s[1194] Alive! (CH)
+>s[1195] Alive! (CH)
+>s[1196] Alive!
+>s[1197] Alive!
+>s[1198] Alive!
+>s[1199] Alive!
+>s[1200] Alive!
+>s[1201] Alive! (CH)
+>s[1202] Dead! killed by test 0
+>s[1203] Dead! killed by test 0
+>s[1204] Alive!
+>s[1205] Alive!
+>s[1206] Alive!
+>s[1207] Alive!
+>s[1208] Alive!
+>s[1209] Alive!
+>s[1210] Dead! killed by test 0
+>s[1211] Dead! killed by test 0
+>s[1212] Dead! killed by test 0
+>s[1213] Dead! killed by test 0
+>s[1214] Dead! killed by test 0
+>s[1215] Dead! killed by test 0
+>s[1216] Alive!
+>s[1217] Alive!
+>s[1218] Alive! (CH)
+>s[1219] Alive!
+>s[1220] Alive!
+>s[1221] Alive!
+>s[1222] Alive!
+>s[1223] Alive!
+>s[1224] Alive!
+>s[1225] Alive! (CH)
+>s[1226] Alive! (CH)
+>s[1227] Alive!
+>s[1228] Alive!
+>s[1229] Alive!
+>s[1230] Alive!
+>s[1231] Alive!
+>s[1232] Alive!
+>s[1233] Alive!
+>s[1234] Alive!
+>s[1235] Alive! (CH)
+>s[1236] Alive!
+>s[1237] Alive!
+>s[1238] Alive!
+>s[1239] Alive!
+>s[1240] Alive!
+>s[1241] Alive!
+>s[1242] Alive!
+>s[1243] Alive!
+>s[1244] Alive!
+>s[1245] Alive! (CH)
+>s[1246] Alive! (CH)
+>s[1247] Alive!
+>s[1248] Alive!
+>s[1249] Alive!
+>s[1250] Alive!
+>s[1251] Alive!
+>s[1252] Alive! (CH)
+>s[1253] Alive! (CH)
+>s[1254] Alive!
+>s[1255] Alive!
+>s[1256] Alive!
+>s[1257] Alive!
+>s[1258] Alive!
+>s[1259] Alive! (CH)
+>s[1260] Alive! (CH)
+>s[1261] Alive!
+>s[1262] Alive!
+>s[1263] Alive!
+>s[1264] Alive!
+>s[1265] Alive!
+>s[1266] Alive! (CH)
+>s[1267] Alive! (CH)
+>s[1268] Alive!
+>s[1269] Alive!
+>s[1270] Alive!
+>s[1271] Alive!
+>s[1272] Alive!
+>s[1273] Alive! (CH)
+>s[1274] Alive! (CH)
+>s[1275] Alive!
+>s[1276] Alive!
+>s[1277] Alive!
+>s[1278] Alive!
+>s[1279] Alive!
+>s[1280] Alive! (CH)
+>s[1281] Dead! killed by test 0
+>s[1282] Dead! killed by test 0
+>s[1283] Alive!
+>s[1284] Alive!
+>s[1285] Alive!
+>s[1286] Alive!
+>s[1287] Alive! (CH)
+>s[1288] Dead! killed by test 0
+>s[1289] Dead! killed by test 0
+>s[1290] Alive!
+>s[1291] Alive!
+>s[1292] Alive!
+>s[1293] Alive!
+>s[1294] Alive! (CH)
+>s[1295] Alive! (CH)
+>s[1296] Alive!
+>s[1297] Alive!
+>s[1298] Alive!
+>s[1299] Alive!
+>s[1300] Alive!
+>s[1301] Alive! (CH)
+>s[1302] Alive! (CH)
+>s[1303] Alive!
+>s[1304] Alive!
+>s[1305] Alive!
+>s[1306] Alive!
+>s[1307] Alive!
+>s[1308] Alive!
+>s[1309] Alive! (CH)
+>s[1310] Alive!
+>s[1311] Alive!
+>s[1312] Alive!
+>s[1313] Alive!
+>s[1314] Alive!
+>s[1315] Alive!
+>s[1316] Alive!
+>s[1317] Alive!
+>s[1318] Alive! (CH)
+>s[1319] Alive!
+>s[1320] Alive!
+>s[1321] Alive!
+>s[1322] Alive!
+>s[1323] Alive!
+>s[1324] Alive!
+>s[1325] Alive! (CH)
+>s[1326] Alive!
+>s[1327] Alive!
+>s[1328] Alive!
+>s[1329] Alive!
+>s[1330] Alive!
+>s[1331] Alive!
+>s[1332] Alive!
+>s[1333] Alive!
+>s[1334] Alive! (CH)
+>s[1335] Alive!
+>s[1336] Alive!
+>s[1337] Alive!
+>s[1338] Dupped (506)!
+>s[1339] Alive!
+>s[1340] Alive!
+>s[1341] Alive!
+>s[1342] Alive!
+>s[1343] Alive! (CH)
+>s[1344] Alive!
+>s[1345] Alive!
+>s[1346] Alive!
+>s[1347] Alive!
+>s[1348] Alive!
+>s[1349] Alive!
+>s[1350] Alive!
+>s[1351] Alive!
+>s[1352] Alive! (CH)
+>s[1353] Alive!
+>s[1354] Alive!
+>s[1355] Alive!
+>s[1356] Alive!
+>s[1357] Alive!
+>s[1358] Alive!
+>s[1359] Alive!
+>s[1360] Alive!
+>s[1361] Alive! (CH)
+>s[1362] Alive!
+>s[1363] Alive! (CH)
+>s[1364] Alive!
+>s[1365] Alive!
+>s[1366] Alive!
+>s[1367] Alive!
+>s[1368] Alive!
+>s[1369] Alive!
+>s[1370] Alive! (CH)
+>s[1371] Alive!
+>s[1372] Alive! (CH)
+>s[1373] Alive!
+>s[1374] Alive!
+>s[1375] Alive!
+>s[1376] Alive!
+>s[1377] Alive!
+>s[1378] Alive!
+>s[1379] Alive!
+>s[1380] Alive!
+>s[1381] Alive! (CH)
+>s[1382] Alive!
+>s[1383] Alive!
+>s[1384] Alive!
+>s[1385] Alive!
+>s[1386] Alive!
+>s[1387] Alive!
+>s[1388] Alive! (CH)
+>s[1389] Alive!
+>s[1390] Alive!
+>s[1391] Alive!
+>s[1392] Alive!
+>s[1393] Alive!
+>s[1394] Alive!
+>s[1395] Alive!
+>s[1396] Alive!
+>s[1397] Alive! (CH)
+>s[1398] Alive!
+>s[1399] Alive!
+>s[1400] Alive!
+>s[1401] Alive!
+>s[1402] Alive!
+>s[1403] Alive!
+>s[1404] Alive!
+>s[1405] Alive!
+>s[1406] Alive! (CH)
+>s[1407] Alive!
+>s[1408] Alive!
+>s[1409] Alive!
+>s[1410] Alive!
+>s[1411] Alive!
+>s[1412] Alive!
+>s[1413] Alive!
+>s[1414] Alive!
+>s[1415] Alive! (CH)
+>s[1416] Alive!
+>s[1417] Alive!
+>s[1418] Alive!
+>s[1419] Alive!
+>s[1420] Alive!
+>s[1421] Alive!
+>s[1422] Alive!
+>s[1423] Alive!
+>s[1424] Alive! (CH)
+>s[1425] Alive!
+>s[1426] Alive! (CH)
+>s[1427] Alive!
+>s[1428] Alive!
+>s[1429] Alive!
+>s[1430] Alive!
+>s[1431] Alive!
+>s[1432] Alive!
+>s[1433] Alive! (CH)
+>s[1434] Alive!
+>s[1435] Alive! (CH)
+>s[1436] Alive!
+>s[1437] Alive!
+>s[1438] Alive!
+>s[1439] Alive!
+>s[1440] Alive!
+>s[1441] Alive!
+>s[1442] Alive!
+>s[1443] Alive!
+>s[1444] Alive!
+>s[1445] Alive! (CH)
+>s[1446] Alive!
+>s[1447] Alive!
+>s[1448] Alive!
+>s[1449] Alive!
+>s[1450] Alive!
+>s[1451] Alive!
+>s[1452] Alive! (CH)
+>s[1453] Alive!
+>s[1454] Alive!
+>s[1455] Alive!
+>s[1456] Alive!
+>s[1457] Alive!
+>s[1458] Alive!
+>s[1459] Alive!
+>s[1460] Alive!
+>s[1461] Alive!
+>s[1462] Alive! (CH)
+>s[1463] Alive!
+>s[1464] Alive! (CH)
+>s[1465] Alive!
+>s[1466] Alive!
+>s[1467] Alive! (CH)
+>s[1468] Alive!
+>s[1469] Alive!
+>s[1470] Alive!
+>s[1471] Alive!
+>s[1472] Alive!
+>s[1473] Alive! (CH)
+>s[1474] Alive!
+>s[1475] Alive! (CH)
+>s[1476] Alive!
+>s[1477] Alive!
+>s[1478] Alive!
+>s[1479] Alive!
+>s[1480] Alive!
+>s[1481] Alive!
+>s[1482] Alive!
+>s[1483] Alive!
+>s[1484] Alive! (CH)
+>s[1485] Alive!
+>s[1486] Alive!
+>s[1487] Alive!
+>s[1488] Alive!
+>s[1489] Alive!
+>s[1490] Alive!
+>s[1491] Alive! (CH)
+>s[1492] Alive!
+>s[1493] Alive!
+>s[1494] Alive!
+>s[1495] Alive!
+>s[1496] Alive!
+>s[1497] Alive!
+>s[1498] Alive!
+>s[1499] Alive!
+>s[1500] Alive!
+>s[1501] Alive! (CH)
+>s[1502] Alive! (CH)
+>s[1503] Alive!
+>s[1504] Alive!
+>s[1505] Alive!
+>s[1506] Alive!
+>s[1507] Alive!
+>s[1508] Alive!
+>s[1509] Alive!
+>s[1510] Alive! (CH)
+>s[1511] Alive! (CH)
+>s[1512] Alive!
+>s[1513] Alive!
+>s[1514] Alive!
+>s[1515] Alive!
+>s[1516] Alive!
+>s[1517] Alive!
+>s[1518] Alive!
+>s[1519] Alive!
+>s[1520] Alive!
+>s[1521] Alive!
+>s[1522] Alive!
+>s[1523] Alive!
+>s[1524] Alive!
+>s[1525] Alive!
+>s[1526] Alive! (CH)
+>s[1527] Alive! (CH)
+>s[1528] Alive!
+>s[1529] Alive! (CH)
+>s[1530] Alive!
+>s[1531] Alive!
+>s[1532] Alive!
+>s[1533] Alive! (CH)
+>s[1534] Alive! (CH)
+>s[1535] Alive!
+>s[1536] Alive! (CH)
+>s[1537] Alive!
+>s[1538] Alive!
+>s[1539] Alive!
+>s[1540] Alive! (CH)
+>s[1541] Alive! (CH)
+>s[1542] Alive!
+>s[1543] Alive! (CH)
+>s[1544] Alive!
+>s[1545] Alive!
+>s[1546] Alive!
+>s[1547] Alive! (CH)
+>s[1548] Alive! (CH)
+>s[1549] Alive!
+>s[1550] Alive! (CH)
+>s[1551] Alive!
+>s[1552] Alive!
+>s[1553] Alive!
+>s[1554] Alive! (CH)
+>s[1555] Alive! (CH)
+>s[1556] Alive!
+>s[1557] Alive!
+>s[1558] Alive!
+>s[1559] Alive!
+>s[1560] Alive!
+>s[1561] Alive! (CH)
+>s[1562] Alive! (CH)
+>s[1563] Alive!
+>s[1564] Alive!
+>s[1565] Alive!
+>s[1566] Alive!
+>s[1567] Alive!
+>s[1568] Alive!
+>s[1569] Alive! (CH)
+>s[1570] Alive!
+>s[1571] Alive!
+>s[1572] Alive!
+>s[1573] Alive!
+>s[1574] Alive!
+>s[1575] Alive! (CH)
+>s[1576] Alive! (CH)
+>s[1577] Alive!
+>s[1578] Alive! (CH)
+>s[1579] Alive!
+>s[1580] Alive!
+>s[1581] Alive!
+>s[1582] Alive! (CH)
+>s[1583] Alive! (CH)
+>s[1584] Alive!
+>s[1585] Alive! (CH)
+>s[1586] Alive!
+>s[1587] Alive!
+>s[1588] Alive!
+>s[1589] Alive! (CH)
+>s[1590] Alive! (CH)
+>s[1591] Alive!
+>s[1592] Alive! (CH)
+>s[1593] Alive!
+>s[1594] Alive!
+>s[1595] Alive!
+>s[1596] Alive! (CH)
+>s[1597] Alive! (CH)
+>s[1598] Alive!
+>s[1599] Alive! (CH)
+>s[1600] Alive!
+>s[1601] Alive!
+>s[1602] Alive!
+>s[1603] Alive!
+>s[1604] Alive!
+>s[1605] Alive!
+>s[1606] Alive!
+>s[1607] Alive!
+>s[1608] Alive!
+>s[1609] Alive!
+>s[1610] Alive!
+>s[1611] Alive! (CH)
+>s[1612] Alive!
+>s[1613] Alive!
+>s[1614] Alive!
+>s[1615] Alive!
+>s[1616] Alive!
+>s[1617] Alive!
+>s[1618] Alive!
+>s[1619] Alive!
+>s[1620] Alive!
+>s[1621] Alive!
+>s[1622] Alive! (CH)
+>s[1623] Alive! (CH)
+>s[1624] Alive!
+>s[1625] Alive! (CH)
+>s[1626] Alive!
+>s[1627] Alive!
+>s[1628] Alive!
+>s[1629] Alive! (CH)
+>s[1630] Alive! (CH)
+>s[1631] Alive!
+>s[1632] Alive! (CH)
+>s[1633] Alive!
+>s[1634] Alive!
+>s[1635] Alive!
+>s[1636] Alive! (CH)
+>s[1637] Alive! (CH)
+>s[1638] Alive!
+>s[1639] Alive! (CH)
+>s[1640] Alive!
+>s[1641] Alive!
+>s[1642] Alive!
+>s[1643] Alive! (CH)
+>s[1644] Alive! (CH)
+>s[1645] Alive!
+>s[1646] Alive! (CH)
+>s[1647] Alive!
+>s[1648] Alive!
+>s[1649] Alive!
+>s[1650] Alive!
+>s[1651] Alive!
+>s[1652] Alive!
+>s[1653] Alive!
+>s[1654] Alive!
+>s[1655] Alive!
+>s[1656] Alive!
+>s[1657] Alive!
+>s[1658] Alive!
+>s[1659] Alive!
+>s[1660] Alive!
+>s[1661] Alive!
+>s[1662] Alive!
+>s[1663] Alive!
+>s[1664] Alive!
+>s[1665] Alive!
+>s[1666] Alive!
+>s[1667] Alive! (CH)
+>s[1668] Alive!
+>s[1669] Alive! (CH)
+>s[1670] Alive!
+>s[1671] Alive!
+>s[1672] Alive!
+>s[1673] Alive!
+>s[1674] Alive!
+>s[1675] Alive! (CH)
+>s[1676] Alive! (CH)
+>s[1677] Alive!
+>s[1678] Alive! (CH)
+>s[1679] Alive!
+>s[1680] Alive!
+>s[1681] Alive!
+>s[1682] Alive! (CH)
+>s[1683] Alive! (CH)
+>s[1684] Alive!
+>s[1685] Alive! (CH)
+>s[1686] Alive!
+>s[1687] Alive!
+>s[1688] Alive!
+>s[1689] Alive! (CH)
+>s[1690] Alive! (CH)
+>s[1691] Alive!
+>s[1692] Alive! (CH)
+>s[1693] Alive!
+>s[1694] Alive!
+>s[1695] Alive!
+>s[1696] Alive! (CH)
+>s[1697] Alive! (CH)
+>s[1698] Alive!
+>s[1699] Alive! (CH)
+>s[1700] Alive!
+>s[1701] Alive!
+>s[1702] Alive!
+>s[1703] Alive!
+>s[1704] Alive!
+>s[1705] Alive!
+>s[1706] Alive!
+>s[1707] Dupped (506)!
+>s[1708] Alive!
+>s[1709] Alive!
+>s[1710] Alive!
+>s[1711] Alive!
+>s[1712] Alive!
+>s[1713] Alive!
+>s[1714] Alive!
+>s[1715] Alive!
+>s[1716] Alive!
+>s[1717] Alive!
+>s[1718] Alive!
+>s[1719] Alive!
+>s[1720] Alive!
+>s[1721] Alive! (CH)
+>s[1722] Alive! (CH)
+>s[1723] Alive!
+>s[1724] Alive! (CH)
+>s[1725] Alive!
+>s[1726] Alive!
+>s[1727] Alive!
+>s[1728] Alive! (CH)
+>s[1729] Alive! (CH)
+>s[1730] Alive!
+>s[1731] Alive! (CH)
+>s[1732] Alive!
+>s[1733] Alive!
+>s[1734] Alive!
+>s[1735] Alive! (CH)
+>s[1736] Alive! (CH)
+>s[1737] Alive!
+>s[1738] Alive! (CH)
+>s[1739] Alive!
+>s[1740] Alive!
+>s[1741] Alive!
+>s[1742] Alive! (CH)
+>s[1743] Alive! (CH)
+>s[1744] Alive!
+>s[1745] Alive! (CH)
+>s[1746] Alive!
+>s[1747] Alive!
+>s[1748] Alive! (CH)
+>s[1749] Alive!
+>s[1750] Alive!
+>s[1751] Alive!
+>s[1752] Alive!
+>s[1753] Alive!
+>s[1754] Alive!
+>s[1755] Alive!
+>s[1756] Alive!
+>s[1757] Alive!
+>s[1758] Alive! (CH)
+>s[1759] Alive!
+>s[1760] Alive!
+>s[1761] Alive!
+>s[1762] Alive!
+>s[1763] Alive!
+>s[1764] Alive!
+>s[1765] Alive!
+>s[1766] Alive!
+>s[1767] Alive!
+>s[1768] Alive! (CH)
+>s[1769] Alive!
+>s[1770] Alive! (CH)
+>s[1771] Alive!
+>s[1772] Alive!
+>s[1773] Alive!
+>s[1774] Alive!
+>s[1775] Alive!
+>s[1776] Alive! (CH)
+>s[1777] Alive! (CH)
+>s[1778] Alive!
+>s[1779] Alive! (CH)
+>s[1780] Alive!
+>s[1781] Alive!
+>s[1782] Alive!
+>s[1783] Alive! (CH)
+>s[1784] Alive! (CH)
+>s[1785] Alive!
+>s[1786] Alive! (CH)
+>s[1787] Alive!
+>s[1788] Alive!
+>s[1789] Alive!
+>s[1790] Alive! (CH)
+>s[1791] Alive! (CH)
+>s[1792] Alive!
+>s[1793] Alive! (CH)
+>s[1794] Alive!
+>s[1795] Alive!
+>s[1796] Alive!
+>s[1797] Alive! (CH)
+>s[1798] Alive! (CH)
+>s[1799] Alive!
+>s[1800] Alive! (CH)
+>s[1801] Alive!
+>s[1802] Alive!
+>s[1803] Alive! (CH)
+>s[1804] Alive!
+>s[1805] Alive!
+>s[1806] Alive!
+>s[1807] Alive!
+>s[1808] Alive!
+>s[1809] Alive!
+>s[1810] Alive!
+>s[1811] Alive!
+>s[1812] Alive!
+>s[1813] Alive!
+>s[1814] Alive!
+>s[1815] Alive!
+>s[1816] Alive!
+>s[1817] Alive!
+>s[1818] Alive!
+>s[1819] Alive!
+>s[1820] Alive!
+>s[1821] Alive!
+>s[1822] Alive!
+>s[1823] Alive! (CH)
+>s[1824] Alive! (CH)
+>s[1825] Alive!
+>s[1826] Alive! (CH)
+>s[1827] Alive!
+>s[1828] Alive!
+>s[1829] Alive!
+>s[1830] Alive! (CH)
+>s[1831] Alive! (CH)
+>s[1832] Alive!
+>s[1833] Alive! (CH)
+>s[1834] Alive!
+>s[1835] Alive!
+>s[1836] Alive!
+>s[1837] Alive! (CH)
+>s[1838] Alive! (CH)
+>s[1839] Alive!
+>s[1840] Alive! (CH)
+>s[1841] Alive!
+>s[1842] Alive!
+>s[1843] Alive!
+>s[1844] Alive! (CH)
+>s[1845] Alive! (CH)
+>s[1846] Alive!
+>s[1847] Alive! (CH)
+>s[1848] Alive!
+>s[1849] Alive!
+>s[1850] Alive! (CH)
+>s[1851] Alive!
+>s[1852] Alive!
+>s[1853] Alive!
+>s[1854] Alive!
+>s[1855] Alive!
+>s[1856] Alive!
+>s[1857] Alive!
+>s[1858] Alive!
+>s[1859] Alive!
+>s[1860] Alive! (CH)
+>s[1861] Alive!
+>s[1862] Alive!
+>s[1863] Alive!
+>s[1864] Alive!
+>s[1865] Alive!
+>s[1866] Alive!
+>s[1867] Alive!
+>s[1868] Alive!
+>s[1869] Alive!
+>s[1870] Alive! (CH)
+>s[1871] Alive!
+>s[1872] Alive! (CH)
+>s[1873] Alive!
+>s[1874] Alive!
+>s[1875] Alive!
+>s[1876] Alive!
+>s[1877] Alive!
+>s[1878] Alive! (CH)
+>s[1879] Alive! (CH)
+>s[1880] Alive!
+>s[1881] Alive! (CH)
+>s[1882] Alive!
+>s[1883] Alive!
+>s[1884] Alive!
+>s[1885] Alive! (CH)
+>s[1886] Alive! (CH)
+>s[1887] Alive!
+>s[1888] Alive! (CH)
+>s[1889] Alive!
+>s[1890] Alive!
+>s[1891] Alive!
+>s[1892] Alive! (CH)
+>s[1893] Alive! (CH)
+>s[1894] Alive!
+>s[1895] Alive! (CH)
+>s[1896] Alive!
+>s[1897] Alive!
+>s[1898] Alive!
+>s[1899] Alive! (CH)
+>s[1900] Alive! (CH)
+>s[1901] Alive!
+>s[1902] Alive! (CH)
+>s[1903] Alive!
+>s[1904] Alive!
+>s[1905] Alive!
+>s[1906] Alive!
+>s[1907] Alive!
+>s[1908] Alive!
+>s[1909] Alive!
+>s[1910] Alive!
+>s[1911] Alive!
+>s[1912] Alive!
+>s[1913] Alive!
+>s[1914] Alive!
+>s[1915] Alive!
+>s[1916] Alive!
+>s[1917] Alive!
+>s[1918] Alive!
+>s[1919] Alive!
+>s[1920] Alive!
+>s[1921] Alive!
+>s[1922] Alive!
+>s[1923] Alive!
+>s[1924] Alive! (CH)
+>s[1925] Alive! (CH)
+>s[1926] Alive!
+>s[1927] Alive! (CH)
+>s[1928] Alive!
+>s[1929] Alive!
+>s[1930] Alive!
+>s[1931] Alive! (CH)
+>s[1932] Alive! (CH)
+>s[1933] Alive!
+>s[1934] Alive! (CH)
+>s[1935] Alive!
+>s[1936] Alive!
+>s[1937] Alive!
+>s[1938] Alive! (CH)
+>s[1939] Alive! (CH)
+>s[1940] Alive!
+>s[1941] Alive! (CH)
+>s[1942] Alive!
+>s[1943] Alive!
+>s[1944] Alive!
+>s[1945] Alive! (CH)
+>s[1946] Alive! (CH)
+>s[1947] Alive!
+>s[1948] Alive! (CH)
+>s[1949] Alive!
+>s[1950] Alive!
+>s[1951] Alive!
+>s[1952] Alive!
+>s[1953] Alive!
+>s[1954] Alive!
+>s[1955] Alive!
+>s[1956] Dupped (506)!
+>s[1957] Alive!
+>s[1958] Alive!
+>s[1959] Alive!
+>s[1960] Alive!
+>s[1961] Alive!
+>s[1962] Alive!
+>s[1963] Alive!
+>s[1964] Alive!
+>s[1965] Alive!
+>s[1966] Alive!
+>s[1967] Alive!
+>s[1968] Alive!
+>s[1969] Alive! (CH)
+>s[1970] Alive!
+>s[1971] Alive! (CH)
+>s[1972] Alive!
+>s[1973] Alive!
+>s[1974] Alive!
+>s[1975] Alive!
+>s[1976] Alive!
+>s[1977] Alive! (CH)
+>s[1978] Alive! (CH)
+>s[1979] Alive!
+>s[1980] Alive! (CH)
+>s[1981] Alive!
+>s[1982] Alive!
+>s[1983] Alive!
+>s[1984] Alive! (CH)
+>s[1985] Alive! (CH)
+>s[1986] Alive!
+>s[1987] Alive! (CH)
+>s[1988] Alive!
+>s[1989] Alive!
+>s[1990] Alive!
+>s[1991] Alive! (CH)
+>s[1992] Alive! (CH)
+>s[1993] Alive!
+>s[1994] Alive! (CH)
+>s[1995] Alive!
+>s[1996] Alive!
+>s[1997] Alive!
+>s[1998] Alive! (CH)
+>s[1999] Alive! (CH)
+>s[2000] Alive!
+>s[2001] Alive! (CH)
+>s[2002] Alive!
+>s[2003] Alive!
+>s[2004] Alive!
+>s[2005] Alive!
+>s[2006] Alive!
+>s[2007] Alive!
+>s[2008] Alive!
+>s[2009] Alive!
+>s[2010] Alive!
+>s[2011] Alive!
+>s[2012] Alive!
+>s[2013] Alive! (CH)
+>s[2014] Alive!
+>s[2015] Alive!
+>s[2016] Alive!
+>s[2017] Alive!
+>s[2018] Alive!
+>s[2019] Alive!
+>s[2020] Alive!
+>s[2021] Alive!
+>s[2022] Alive!
+>s[2023] Alive!
+>s[2024] Alive! (CH)
+>s[2025] Alive! (CH)
+>s[2026] Alive!
+>s[2027] Alive! (CH)
+>s[2028] Alive!
+>s[2029] Alive!
+>s[2030] Alive!
+>s[2031] Alive! (CH)
+>s[2032] Alive! (CH)
+>s[2033] Alive!
+>s[2034] Alive! (CH)
+>s[2035] Alive!
+>s[2036] Alive!
+>s[2037] Alive!
+>s[2038] Alive! (CH)
+>s[2039] Alive! (CH)
+>s[2040] Alive!
+>s[2041] Alive! (CH)
+>s[2042] Alive!
+>s[2043] Alive!
+>s[2044] Alive!
+>s[2045] Alive! (CH)
+>s[2046] Alive! (CH)
+>s[2047] Alive!
+>s[2048] Alive! (CH)
+>s[2049] Alive!
+>s[2050] Alive!
+>s[2051] Alive!
+>s[2052] Alive!
+>s[2053] Alive!
+>s[2054] Alive!
+>s[2055] Alive!
+>s[2056] Alive!
+>s[2057] Alive!
+>s[2058] Alive!
+>s[2059] Alive!
+>s[2060] Alive!
+>s[2061] Alive!
+>s[2062] Alive!
+>s[2063] Alive!
+>s[2064] Alive!
+>s[2065] Alive!
+>s[2066] Alive!
+>s[2067] Alive!
+>s[2068] Alive!
+>s[2069] Alive! (CH)
+>s[2070] Alive!
+>s[2071] Alive! (CH)
+>s[2072] Alive!
+>s[2073] Alive!
+>s[2074] Alive!
+>s[2075] Alive!
+>s[2076] Alive!
+>s[2077] Alive! (CH)
+>s[2078] Alive! (CH)
+>s[2079] Alive!
+>s[2080] Alive! (CH)
+>s[2081] Alive!
+>s[2082] Alive!
+>s[2083] Alive!
+>s[2084] Alive! (CH)
+>s[2085] Alive! (CH)
+>s[2086] Alive!
+>s[2087] Alive! (CH)
+>s[2088] Alive!
+>s[2089] Alive!
+>s[2090] Alive!
+>s[2091] Alive! (CH)
+>s[2092] Alive! (CH)
+>s[2093] Alive!
+>s[2094] Alive! (CH)
+>s[2095] Alive!
+>s[2096] Alive!
+>s[2097] Alive!
+>s[2098] Alive! (CH)
+>s[2099] Alive! (CH)
+>s[2100] Alive!
+>s[2101] Alive! (CH)
+>s[2102] Alive!
+>s[2103] Alive!
+>s[2104] Alive! (CH)
+>s[2105] Alive!
+>s[2106] Alive!
+>s[2107] Alive!
+>s[2108] Alive!
+>s[2109] Alive!
+>s[2110] Alive!
+>s[2111] Alive!
+>s[2112] Alive!
+>s[2113] Alive!
+>s[2114] Alive! (CH)
+>s[2115] Alive!
+>s[2116] Alive!
+>s[2117] Alive!
+>s[2118] Alive!
+>s[2119] Alive!
+>s[2120] Alive!
+>s[2121] Alive!
+>s[2122] Alive!
+>s[2123] Alive!
+>s[2124] Alive!
+>s[2125] Alive! (CH)
+>s[2126] Alive! (CH)
+>s[2127] Alive!
+>s[2128] Alive! (CH)
+>s[2129] Alive!
+>s[2130] Alive!
+>s[2131] Alive!
+>s[2132] Alive! (CH)
+>s[2133] Alive! (CH)
+>s[2134] Alive!
+>s[2135] Alive! (CH)
+>s[2136] Alive!
+>s[2137] Alive!
+>s[2138] Alive!
+>s[2139] Alive! (CH)
+>s[2140] Alive! (CH)
+>s[2141] Alive!
+>s[2142] Alive! (CH)
+>s[2143] Alive!
+>s[2144] Alive!
+>s[2145] Alive!
+>s[2146] Alive! (CH)
+>s[2147] Alive! (CH)
+>s[2148] Alive!
+>s[2149] Alive! (CH)
+>s[2150] Alive!
+>s[2151] Alive!
+>s[2152] Alive! (CH)
+>s[2153] Alive!
+>s[2154] Alive!
+>s[2155] Alive!
+>s[2156] Alive!
+>s[2157] Alive!
+>s[2158] Alive!
+>s[2159] Alive!
+>s[2160] Alive!
+>s[2161] Alive!
+>s[2162] Alive! (CH)
+>s[2163] Alive!
+>s[2164] Alive!
+>s[2165] Alive!
+>s[2166] Alive!
+>s[2167] Alive!
+>s[2168] Alive!
+>s[2169] Alive!
+>s[2170] Alive!
+>s[2171] Alive!
+>s[2172] Alive! (CH)
+>s[2173] Alive!
+>s[2174] Alive! (CH)
+>s[2175] Alive!
+>s[2176] Alive!
+>s[2177] Alive!
+>s[2178] Alive!
+>s[2179] Alive!
+>s[2180] Alive! (CH)
+>s[2181] Alive! (CH)
+>s[2182] Alive!
+>s[2183] Alive! (CH)
+>s[2184] Alive!
+>s[2185] Alive!
+>s[2186] Alive!
+>s[2187] Alive! (CH)
+>s[2188] Alive! (CH)
+>s[2189] Alive!
+>s[2190] Alive! (CH)
+>s[2191] Alive!
+>s[2192] Alive!
+>s[2193] Alive!
+>s[2194] Alive! (CH)
+>s[2195] Alive! (CH)
+>s[2196] Alive!
+>s[2197] Alive! (CH)
+>s[2198] Alive!
+>s[2199] Alive!
+>s[2200] Alive!
+>s[2201] Alive! (CH)
+>s[2202] Alive! (CH)
+>s[2203] Alive!
+>s[2204] Alive! (CH)
+>s[2205] Alive!
+>s[2206] Alive!
+>s[2207] Alive! (CH)
+>s[2208] Alive!
+>s[2209] Alive!
+>s[2210] Alive!
+>s[2211] Alive!
+>s[2212] Alive!
+>s[2213] Alive!
+>s[2214] Alive!
+>s[2215] Alive!
+>s[2216] Alive!
+>s[2217] Alive!
+>s[2218] Alive!
+>s[2219] Alive!
+>s[2220] Alive!
+>s[2221] Alive!
+>s[2222] Alive!
+>s[2223] Alive!
+>s[2224] Alive!
+>s[2225] Alive!
+>s[2226] Alive!
+>s[2227] Alive! (CH)
+>s[2228] Alive! (CH)
+>s[2229] Alive!
+>s[2230] Alive! (CH)
+>s[2231] Alive!
+>s[2232] Alive!
+>s[2233] Alive!
+>s[2234] Alive! (CH)
+>s[2235] Alive! (CH)
+>s[2236] Alive!
+>s[2237] Alive! (CH)
+>s[2238] Alive!
+>s[2239] Alive!
+>s[2240] Alive!
+>s[2241] Alive! (CH)
+>s[2242] Alive! (CH)
+>s[2243] Alive!
+>s[2244] Alive! (CH)
+>s[2245] Alive!
+>s[2246] Alive!
+>s[2247] Alive!
+>s[2248] Alive! (CH)
+>s[2249] Alive! (CH)
+>s[2250] Alive!
+>s[2251] Alive! (CH)
+>s[2252] Alive!
+>s[2253] Alive!
+>s[2254] Alive! (CH)
+>s[2255] Alive!
+>s[2256] Alive!
+>s[2257] Alive!
+>s[2258] Alive!
+>s[2259] Alive!
+>s[2260] Alive!
+>s[2261] Alive!
+>s[2262] Alive!
+>s[2263] Alive!
+>s[2264] Alive! (CH)
+>s[2265] Alive!
+>s[2266] Alive!
+>s[2267] Alive!
+>s[2268] Alive!
+>s[2269] Alive!
+>s[2270] Alive!
+>s[2271] Alive!
+>s[2272] Alive!
+>s[2273] Alive!
+>s[2274] Alive! (CH)
+>s[2275] Alive!
+>s[2276] Alive! (CH)
+>s[2277] Alive!
+>s[2278] Alive!
+>s[2279] Alive!
+>s[2280] Alive!
+>s[2281] Alive!
+>s[2282] Alive! (CH)
+>s[2283] Alive! (CH)
+>s[2284] Alive!
+>s[2285] Alive! (CH)
+>s[2286] Alive!
+>s[2287] Alive!
+>s[2288] Alive!
+>s[2289] Alive! (CH)
+>s[2290] Alive! (CH)
+>s[2291] Alive!
+>s[2292] Alive! (CH)
+>s[2293] Alive!
+>s[2294] Alive!
+>s[2295] Alive!
+>s[2296] Alive! (CH)
+>s[2297] Alive! (CH)
+>s[2298] Alive!
+>s[2299] Alive! (CH)
+>s[2300] Alive!
+>s[2301] Alive!
+>s[2302] Alive!
+>s[2303] Alive! (CH)
+>s[2304] Alive! (CH)
+>s[2305] Alive!
+>s[2306] Alive! (CH)
+>s[2307] Alive!
+>s[2308] Alive!
+>s[2309] Alive!
+>s[2310] Alive!
+>s[2311] Alive!
+>s[2312] Alive! (CH)
+>s[2313] Alive!
+>s[2314] Alive!
+>s[2315] Alive!
+>s[2316] Alive!
+>s[2317] Alive!
+>s[2318] Alive!
+>s[2319] Alive! (CH)
+>s[2320] Alive!
+>s[2321] Alive!
+>s[2322] Alive!
+>s[2323] Alive!
+>s[2324] Alive!
+>s[2325] Alive!
+>s[2326] Alive!
+>s[2327] Alive!
+>s[2328] Alive!
+>s[2329] Alive! (CH)
+>s[2330] Alive!
+>s[2331] Alive! (CH)
+>s[2332] Alive!
+>s[2333] Alive!
+>s[2334] Alive!
+>s[2335] Alive!
+>s[2336] Alive!
+>s[2337] Alive!
+>s[2338] Alive!
+>s[2339] Alive!
+>s[2340] Alive! (CH)
+>s[2341] Alive! (CH)
+>s[2342] Alive!
+>s[2343] Alive!
+>s[2344] Alive!
+>s[2345] Alive!
+>s[2346] Alive!
+>s[2347] Alive! (CH)
+>s[2348] Alive! (CH)
+>s[2349] Alive!
+>s[2350] Alive!
+>s[2351] Alive!
+>s[2352] Alive!
+>s[2353] Alive!
+>s[2354] Alive!
+>s[2355] Alive!
+>s[2356] Alive!
+>s[2357] Alive!
+>s[2358] Alive!
+>s[2359] Alive!
+>s[2360] Alive!
+>s[2361] Alive!
+>s[2362] Alive!
+>s[2363] Alive! (CH)
+>s[2364] Alive! (CH)
+>s[2365] Alive!
+>s[2366] Alive! (CH)
+>s[2367] Alive!
+>s[2368] Alive!
+>s[2369] Alive!
+>s[2370] Alive! (CH)
+>s[2371] Alive! (CH)
+>s[2372] Alive!
+>s[2373] Alive! (CH)
+>s[2374] Alive!
+>s[2375] Alive!
+>s[2376] Alive!
+>s[2377] Alive! (CH)
+>s[2378] Alive! (CH)
+>s[2379] Alive!
+>s[2380] Alive! (CH)
+>s[2381] Alive!
+>s[2382] Alive!
+>s[2383] Alive!
+>s[2384] Alive! (CH)
+>s[2385] Alive! (CH)
+>s[2386] Alive!
+>s[2387] Alive! (CH)
+>s[2388] Alive!
+>s[2389] Alive!
+>s[2390] Alive!
+>s[2391] Alive!
+>s[2392] Alive!
+>s[2393] Alive!
+>s[2394] Alive!
+>s[2395] Alive!
+>s[2396] Alive!
+>s[2397] Alive!
+>s[2398] Alive!
+>s[2399] Alive!
+>s[2400] Alive!
+>s[2401] Alive!
+>s[2402] Alive!
+>s[2403] Alive!
+>s[2404] Alive!
+>s[2405] Alive!
+>s[2406] Alive!
+>s[2407] Alive!
+>s[2408] Alive! (CH)
+>s[2409] Alive!
+>s[2410] Alive! (CH)
+>s[2411] Alive!
+>s[2412] Alive!
+>s[2413] Alive!
+>s[2414] Alive!
+>s[2415] Alive!
+>s[2416] Alive! (CH)
+>s[2417] Alive! (CH)
+>s[2418] Alive!
+>s[2419] Alive! (CH)
+>s[2420] Alive!
+>s[2421] Alive!
+>s[2422] Alive!
+>s[2423] Alive! (CH)
+>s[2424] Alive! (CH)
+>s[2425] Alive!
+>s[2426] Alive! (CH)
+>s[2427] Alive!
+>s[2428] Alive!
+>s[2429] Alive!
+>s[2430] Alive! (CH)
+>s[2431] Alive! (CH)
+>s[2432] Alive!
+>s[2433] Alive! (CH)
+>s[2434] Alive!
+>s[2435] Alive!
+>s[2436] Alive!
+>s[2437] Alive! (CH)
+>s[2438] Alive! (CH)
+>s[2439] Alive!
+>s[2440] Alive! (CH)
+>s[2441] Alive!
+>s[2442] Alive!
+>s[2443] Alive!
+>s[2444] Alive!
+>s[2445] Alive!
+>s[2446] Alive!
+>s[2447] Alive!
+>s[2448] Alive!
+>s[2449] Alive!
+>s[2450] Alive!
+>s[2451] Alive!
+>s[2452] Alive! (CH)
+>s[2453] Alive!
+>s[2454] Alive!
+>s[2455] Alive!
+>s[2456] Alive!
+>s[2457] Alive!
+>s[2458] Alive!
+>s[2459] Alive!
+>s[2460] Alive!
+>s[2461] Alive!
+>s[2462] Alive!
+>s[2463] Alive! (CH)
+>s[2464] Alive! (CH)
+>s[2465] Alive!
+>s[2466] Alive! (CH)
+>s[2467] Alive!
+>s[2468] Alive!
+>s[2469] Alive!
+>s[2470] Alive! (CH)
+>s[2471] Alive! (CH)
+>s[2472] Alive!
+>s[2473] Alive! (CH)
+>s[2474] Alive!
+>s[2475] Alive!
+>s[2476] Alive!
+>s[2477] Alive! (CH)
+>s[2478] Dupped (506)!
+>s[2479] Dupped (506)!
+>s[2480] Alive! (CH)
+>s[2481] Alive!
+>s[2482] Alive!
+>s[2483] Alive!
+>s[2484] Alive! (CH)
+>s[2485] Alive! (CH)
+>s[2486] Alive!
+>s[2487] Alive! (CH)
+>s[2488] Alive!
+>s[2489] Alive!
+>s[2490] Alive! (CH)
+>s[2491] Alive!
+>s[2492] Alive!
+>s[2493] Alive!
+>s[2494] Alive!
+>s[2495] Alive!
+>s[2496] Alive!
+>s[2497] Alive!
+>s[2498] Alive!
+>s[2499] Alive!
+>s[2500] Alive! (CH)
+>s[2501] Alive!
+>s[2502] Alive!
+>s[2503] Alive!
+>s[2504] Alive!
+>s[2505] Alive!
+>s[2506] Alive!
+>s[2507] Dupped (506)!
+>s[2508] Alive!
+>s[2509] Alive!
+>s[2510] Alive!
+>s[2511] Alive! (CH)
+>s[2512] Alive! (CH)
+>s[2513] Alive!
+>s[2514] Alive! (CH)
+>s[2515] Alive!
+>s[2516] Alive!
+>s[2517] Alive!
+>s[2518] Alive! (CH)
+>s[2519] Alive! (CH)
+>s[2520] Alive!
+>s[2521] Alive! (CH)
+>s[2522] Alive!
+>s[2523] Alive!
+>s[2524] Alive!
+>s[2525] Alive! (CH)
+>s[2526] Alive! (CH)
+>s[2527] Alive!
+>s[2528] Alive! (CH)
+>s[2529] Alive!
+>s[2530] Alive!
+>s[2531] Alive!
+>s[2532] Alive! (CH)
+>s[2533] Alive! (CH)
+>s[2534] Alive!
+>s[2535] Alive! (CH)
+>s[2536] Alive!
+>s[2537] Alive!
+>s[2538] Alive!
+>s[2539] Alive!
+>s[2540] Alive!
+>s[2541] Alive!
+>s[2542] Alive!
+>s[2543] Alive!
+>s[2544] Alive!
+>s[2545] Alive!
+>s[2546] Alive!
+>s[2547] Alive!
+>s[2548] Alive! (CH)
+>s[2549] Alive! (CH)
+>s[2550] Alive!
+>s[2551] Alive!
+>s[2552] Alive!
+>s[2553] Alive!
+>s[2554] Alive!
+>s[2555] Alive!
+>s[2556] Alive!
+>s[2557] Alive!
+>s[2558] Alive!
+>s[2559] Alive!
+>s[2560] Alive!
+>s[2561] Alive!
+>s[2562] Alive!
+>s[2563] Alive!
+>s[2564] Alive! (CH)
+>s[2565] Alive! (CH)
+>s[2566] Alive!
+>s[2567] Alive!
+>s[2568] Alive!
+>s[2569] Alive!
+>s[2570] Alive!
+>s[2571] Alive! (CH)
+>s[2572] Alive! (CH)
+>s[2573] Alive!
+>s[2574] Alive! (CH)
+>s[2575] Alive!
+>s[2576] Alive!
+>s[2577] Alive!
+>s[2578] Alive! (CH)
+>s[2579] Alive! (CH)
+>s[2580] Alive!
+>s[2581] Alive! (CH)
+>s[2582] Alive!
+>s[2583] Alive!
+>s[2584] Alive!
+>s[2585] Alive! (CH)
+>s[2586] Alive! (CH)
+>s[2587] Alive!
+>s[2588] Alive! (CH)
+>s[2589] Alive!
+>s[2590] Alive!
+>s[2591] Alive!
+>s[2592] Alive! (CH)
+>s[2593] Alive! (CH)
+>s[2594] Alive!
+>s[2595] Alive! (CH)
+>s[2596] Alive!
+>s[2597] Alive!
+>s[2598] Alive! (CH)
+>s[2599] Alive!
+>s[2600] Alive!
+>s[2601] Alive!
+>s[2602] Alive!
+>s[2603] Alive!
+>s[2604] Alive!
+>s[2605] Alive!
+>s[2606] Alive!
+>s[2607] Alive!
+>s[2608] Alive!
+>s[2609] Alive! (CH)
+>s[2610] Alive! (CH)
+>s[2611] Alive!
+>s[2612] Alive!
+>s[2613] Alive!
+>s[2614] Alive!
+>s[2615] Alive!
+>s[2616] Alive!
+>s[2617] Alive!
+>s[2618] Alive!
+>s[2619] Alive!
+>s[2620] Alive!
+>s[2621] Alive!
+>s[2622] Alive!
+>s[2623] Alive!
+>s[2624] Alive! (CH)
+>s[2625] Alive! (CH)
+>s[2626] Alive! (CH)
+>s[2627] Alive!
+>s[2628] Alive!
+>s[2629] Alive!
+>s[2630] Alive! (CH)
+>s[2631] Alive!
+>s[2632] Alive!
+>s[2633] Alive!
+>s[2634] Alive!
+>s[2635] Alive!
+>s[2636] Alive!
+>s[2637] Alive!
+>s[2638] Alive!
+>s[2639] Alive! (CH)
+>s[2640] Alive! (CH)
+>s[2641] Alive!
+>s[2642] Alive! (CH)
+>s[2643] Alive!
+>s[2644] Alive!
+>s[2645] Alive!
+>s[2646] Alive! (CH)
+>s[2647] Alive! (CH)
+>s[2648] Alive!
+>s[2649] Alive! (CH)
+>s[2650] Alive!
+>s[2651] Alive!
+>s[2652] Alive!
+>s[2653] Alive! (CH)
+>s[2654] Alive! (CH)
+>s[2655] Alive!
+>s[2656] Alive! (CH)
+>s[2657] Alive!
+>s[2658] Alive!
+>s[2659] Alive!
+>s[2660] Alive! (CH)
+>s[2661] Alive! (CH)
+>s[2662] Alive!
+>s[2663] Alive! (CH)
+>s[2664] Alive!
+>s[2665] Alive!
+>s[2666] Alive!
+>s[2667] Alive!
+>s[2668] Alive!
+>s[2669] Alive! (CH)
+>s[2670] Alive!
+>s[2671] Alive!
+>s[2672] Alive!
+>s[2673] Alive!
+>s[2674] Alive!
+>s[2675] Alive!
+>s[2676] Alive! (CH)
+>s[2677] Alive!
+>s[2678] Alive! (CH)
+>s[2679] Alive!
+>s[2680] Alive!
+>s[2681] Alive!
+>s[2682] Alive!
+>s[2683] Alive!
+>s[2684] Alive!
+>s[2685] Alive!
+>s[2686] Alive! (CH)
+>s[2687] Alive!
+>s[2688] Alive! (CH)
+>s[2689] Alive!
+>s[2690] Alive!
+>s[2691] Alive!
+>s[2692] Alive!
+>s[2693] Alive!
+>s[2694] Alive!
+>s[2695] Alive!
+>s[2696] Alive!
+>s[2697] Alive!
+>s[2698] Alive! (CH)
+>s[2699] Alive!
+>s[2700] Alive!
+>s[2701] Alive!
+>s[2702] Alive!
+>s[2703] Alive!
+>s[2704] Alive!
+>s[2705] Alive! (CH)
+>s[2706] Alive!
+>s[2707] Alive!
+>s[2708] Alive!
+>s[2709] Alive!
+>s[2710] Alive!
+>s[2711] Alive!
+>s[2712] Alive!
+>s[2713] Alive!
+>s[2714] Alive!
+>s[2715] Alive! (CH)
+>s[2716] Alive! (CH)
+>s[2717] Alive!
+>s[2718] Alive!
+>s[2719] Alive!
+>s[2720] Alive!
+>s[2721] Alive!
+>s[2722] Alive!
+>s[2723] Alive!
+>s[2724] Alive! (CH)
+>s[2725] Alive! (CH)
+>s[2726] Alive!
+>s[2727] Alive!
+>s[2728] Alive!
+>s[2729] Alive!
+>s[2730] Alive!
+>s[2731] Alive!
+>s[2732] Alive!
+>s[2733] Alive!
+>s[2734] Alive!
+>s[2735] Alive!
+>s[2736] Alive!
+>s[2737] Alive!
+>s[2738] Alive!
+>s[2739] Alive!
+>s[2740] Alive! (CH)
+>s[2741] Alive! (CH)
+>s[2742] Alive!
+>s[2743] Alive! (CH)
+>s[2744] Alive!
+>s[2745] Alive!
+>s[2746] Alive!
+>s[2747] Alive! (CH)
+>s[2748] Alive! (CH)
+>s[2749] Alive!
+>s[2750] Alive! (CH)
+>s[2751] Alive!
+>s[2752] Alive!
+>s[2753] Alive!
+>s[2754] Alive! (CH)
+>s[2755] Alive! (CH)
+>s[2756] Alive!
+>s[2757] Alive! (CH)
+>s[2758] Alive!
+>s[2759] Alive!
+>s[2760] Alive!
+>s[2761] Alive! (CH)
+>s[2762] Alive! (CH)
+>s[2763] Alive!
+>s[2764] Alive! (CH)
+>s[2765] Alive!
+>s[2766] Alive!
+>s[2767] Alive!
+>s[2768] Alive! (CH)
+>s[2769] Alive! (CH)
+>s[2770] Alive!
+>s[2771] Alive!
+>s[2772] Alive!
+>s[2773] Alive!
+>s[2774] Alive!
+>s[2775] Alive! (CH)
+>s[2776] Alive! (CH)
+>s[2777] Alive!
+>s[2778] Alive!
+>s[2779] Alive!
+>s[2780] Alive!
+>s[2781] Alive!
+>s[2782] Alive! (CH)
+>s[2783] Alive! (CH)
+>s[2784] Alive!
+>s[2785] Alive! (CH)
+>s[2786] Alive!
+>s[2787] Alive!
+>s[2788] Alive!
+>s[2789] Alive! (CH)
+>s[2790] Alive! (CH)
+>s[2791] Alive!
+>s[2792] Alive! (CH)
+>s[2793] Alive!
+>s[2794] Alive!
+>s[2795] Alive!
+>s[2796] Alive! (CH)
+>s[2797] Alive! (CH)
+>s[2798] Alive!
+>s[2799] Alive! (CH)
+>s[2800] Alive!
+>s[2801] Alive!
+>s[2802] Alive!
+>s[2803] Alive! (CH)
+>s[2804] Alive! (CH)
+>s[2805] Alive!
+>s[2806] Alive! (CH)
+>s[2807] Alive!
+>s[2808] Alive!
+>s[2809] Alive!
+>s[2810] Alive!
+>s[2811] Alive!
+>s[2812] Alive!
+>s[2813] Alive!
+>s[2814] Alive!
+>s[2815] Alive!
+>s[2816] Alive!
+>s[2817] Alive!
+>s[2818] Alive!
+>s[2819] Alive!
+>s[2820] Alive!
+>s[2821] Alive!
+>s[2822] Alive!
+>s[2823] Alive!
+>s[2824] Alive!
+>s[2825] Alive!
+>s[2826] Alive!
+>s[2827] Alive!
+>s[2828] Alive! (CH)
+>s[2829] Alive! (CH)
+>s[2830] Alive!
+>s[2831] Alive! (CH)
+>s[2832] Alive!
+>s[2833] Alive!
+>s[2834] Alive!
+>s[2835] Alive! (CH)
+>s[2836] Alive! (CH)
+>s[2837] Alive!
+>s[2838] Alive! (CH)
+>s[2839] Alive!
+>s[2840] Alive!
+>s[2841] Alive!
+>s[2842] Alive! (CH)
+>s[2843] Alive! (CH)
+>s[2844] Alive!
+>s[2845] Alive! (CH)
+>s[2846] Alive!
+>s[2847] Alive!
+>s[2848] Alive!
+>s[2849] Alive! (CH)
+>s[2850] Alive! (CH)
+>s[2851] Alive!
+>s[2852] Alive! (CH)
+>s[2853] Alive!
+>s[2854] Alive!
+>s[2855] Alive! (CH)
+>s[2856] Alive!
+>s[2857] Alive!
+>s[2858] Alive!
+>s[2859] Alive!
+>s[2860] Alive!
+>s[2861] Alive!
+>s[2862] Alive!
+>s[2863] Alive!
+>s[2864] Alive!
+>s[2865] Alive! (CH)
+>s[2866] Alive!
+>s[2867] Alive!
+>s[2868] Alive!
+>s[2869] Alive!
+>s[2870] Alive!
+>s[2871] Alive!
+>s[2872] Alive!
+>s[2873] Alive!
+>s[2874] Alive!
+>s[2875] Alive!
+>s[2876] Alive! (CH)
+>s[2877] Alive! (CH)
+>s[2878] Alive!
+>s[2879] Alive! (CH)
+>s[2880] Alive!
+>s[2881] Alive!
+>s[2882] Alive!
+>s[2883] Alive! (CH)
+>s[2884] Alive! (CH)
+>s[2885] Alive!
+>s[2886] Alive! (CH)
+>s[2887] Alive!
+>s[2888] Alive!
+>s[2889] Alive!
+>s[2890] Alive! (CH)
+>s[2891] Alive! (CH)
+>s[2892] Alive!
+>s[2893] Alive! (CH)
+>s[2894] Alive!
+>s[2895] Alive!
+>s[2896] Alive!
+>s[2897] Alive! (CH)
+>s[2898] Alive! (CH)
+>s[2899] Alive!
+>s[2900] Alive! (CH)
+>s[2901] Alive!
+>s[2902] Alive!
+>s[2903] Alive!
+>s[2904] Alive!
+>s[2905] Alive!
+>s[2906] Alive!
+>s[2907] Alive!
+>s[2908] Alive!
+>s[2909] Alive!
+>s[2910] Alive!
+>s[2911] Alive!
+>s[2912] Alive!
+>s[2913] Alive!
+>s[2914] Alive!
+>s[2915] Alive!
+>s[2916] Alive!
+>s[2917] Alive!
+>s[2918] Alive!
+>s[2919] Alive!
+>s[2920] Alive!
+>s[2921] Alive!
+>s[2922] Alive! (CH)
+>s[2923] Alive! (CH)
+>s[2924] Alive!
+>s[2925] Alive! (CH)
+>s[2926] Alive!
+>s[2927] Alive!
+>s[2928] Alive!
+>s[2929] Alive! (CH)
+>s[2930] Alive! (CH)
+>s[2931] Alive!
+>s[2932] Alive! (CH)
+>s[2933] Alive!
+>s[2934] Alive!
+>s[2935] Alive!
+>s[2936] Alive! (CH)
+>s[2937] Alive! (CH)
+>s[2938] Alive!
+>s[2939] Alive! (CH)
+>s[2940] Alive!
+>s[2941] Alive!
+>s[2942] Alive!
+>s[2943] Alive! (CH)
+>s[2944] Alive! (CH)
+>s[2945] Alive!
+>s[2946] Alive! (CH)
+>s[2947] Alive!
+>s[2948] Alive!
+>s[2949] Alive!
+>s[2950] Alive!
+>s[2951] Alive!
+>s[2952] Alive!
+>s[2953] Alive!
+>s[2954] Alive!
+>s[2955] Alive!
+>s[2956] Alive!
+>s[2957] Alive!
+>s[2958] Alive!
+>s[2959] Alive!
+>s[2960] Alive!
+>s[2961] Alive!
+>s[2962] Alive!
+>s[2963] Alive!
+>s[2964] Alive!
+>s[2965] Alive!
+>s[2966] Alive!
+>s[2967] Alive!
+>s[2968] Alive! (CH)
+>s[2969] Alive! (CH)
+>s[2970] Alive!
+>s[2971] Alive! (CH)
+>s[2972] Alive!
+>s[2973] Alive!
+>s[2974] Alive!
+>s[2975] Alive! (CH)
+>s[2976] Alive! (CH)
+>s[2977] Alive!
+>s[2978] Alive! (CH)
+>s[2979] Alive!
+>s[2980] Alive!
+>s[2981] Alive!
+>s[2982] Alive! (CH)
+>s[2983] Alive! (CH)
+>s[2984] Alive!
+>s[2985] Alive! (CH)
+>s[2986] Alive!
+>s[2987] Alive!
+>s[2988] Alive!
+>s[2989] Alive! (CH)
+>s[2990] Alive! (CH)
+>s[2991] Alive!
+>s[2992] Alive! (CH)
+>s[2993] Alive!
+>s[2994] Alive!
+>s[2995] Alive! (CH)
+>s[2996] Alive!
+>s[2997] Alive!
+>s[2998] Alive!
+>s[2999] Alive!
+>s[3000] Alive!
+>s[3001] Alive!
+>s[3002] Alive!
+>s[3003] Alive!
+>s[3004] Alive!
+>s[3005] Alive! (CH)
+>s[3006] Alive!
+>s[3007] Alive!
+>s[3008] Alive!
+>s[3009] Alive!
+>s[3010] Alive!
+>s[3011] Alive!
+>s[3012] Alive!
+>s[3013] Alive!
+>s[3014] Alive!
+>s[3015] Alive!
+>s[3016] Alive! (CH)
+>s[3017] Alive! (CH)
+>s[3018] Alive!
+>s[3019] Alive! (CH)
+>s[3020] Alive!
+>s[3021] Alive!
+>s[3022] Alive!
+>s[3023] Alive! (CH)
+>s[3024] Alive! (CH)
+>s[3025] Alive!
+>s[3026] Alive! (CH)
+>s[3027] Alive!
+>s[3028] Alive!
+>s[3029] Alive!
+>s[3030] Alive! (CH)
+>s[3031] Alive! (CH)
+>s[3032] Alive!
+>s[3033] Alive! (CH)
+>s[3034] Alive!
+>s[3035] Alive!
+>s[3036] Alive!
+>s[3037] Alive! (CH)
+>s[3038] Alive! (CH)
+>s[3039] Alive!
+>s[3040] Alive! (CH)
+>s[3041] Alive!
+>s[3042] Alive!
+>s[3043] Alive! (CH)
+>s[3044] Alive!
+>s[3045] Alive!
+>s[3046] Alive!
+>s[3047] Alive!
+>s[3048] Alive!
+>s[3049] Alive!
+>s[3050] Alive!
+>s[3051] Alive!
+>s[3052] Alive!
+>s[3053] Alive! (CH)
+>s[3054] Alive!
+>s[3055] Alive!
+>s[3056] Alive!
+>s[3057] Alive!
+>s[3058] Alive!
+>s[3059] Alive!
+>s[3060] Alive!
+>s[3061] Alive!
+>s[3062] Alive!
+>s[3063] Alive!
+>s[3064] Alive! (CH)
+>s[3065] Alive! (CH)
+>s[3066] Alive!
+>s[3067] Alive! (CH)
+>s[3068] Alive!
+>s[3069] Alive!
+>s[3070] Alive!
+>s[3071] Alive! (CH)
+>s[3072] Alive! (CH)
+>s[3073] Alive!
+>s[3074] Alive! (CH)
+>s[3075] Alive!
+>s[3076] Alive!
+>s[3077] Alive!
+>s[3078] Alive! (CH)
+>s[3079] Alive! (CH)
+>s[3080] Alive!
+>s[3081] Alive! (CH)
+>s[3082] Alive!
+>s[3083] Alive!
+>s[3084] Alive!
+>s[3085] Alive! (CH)
+>s[3086] Alive! (CH)
+>s[3087] Alive!
+>s[3088] Alive! (CH)
+>s[3089] Alive!
+>s[3090] Alive!
+>s[3091] Alive!
+>s[3092] Alive!
+>s[3093] Alive!
+>s[3094] Alive! (CH)
+>s[3095] Alive!
+>s[3096] Alive!
+>s[3097] Alive!
+>s[3098] Alive!
+>s[3099] Alive!
+>s[3100] Alive!
+>s[3101] Alive! (CH)
+>s[3102] Alive!
+>s[3103] Alive!
+>s[3104] Alive!
+>s[3105] Alive!
+>s[3106] Alive!
+>s[3107] Alive!
+>s[3108] Alive!
+>s[3109] Alive!
+>s[3110] Alive!
+>s[3111] Alive! (CH)
+>s[3112] Alive!
+>s[3113] Alive! (CH)
+>s[3114] Alive!
+>s[3115] Alive!
+>s[3116] Alive!
+>s[3117] Alive!
+>s[3118] Alive!
+>s[3119] Alive!
+>s[3120] Alive!
+>s[3121] Alive!
+>s[3122] Alive! (CH)
+>s[3123] Alive! (CH)
+>s[3124] Alive!
+>s[3125] Alive!
+>s[3126] Alive!
+>s[3127] Alive!
+>s[3128] Alive!
+>s[3129] Alive! (CH)
+>s[3130] Alive! (CH)
+>s[3131] Alive!
+>s[3132] Alive!
+>s[3133] Alive!
+>s[3134] Alive!
+>s[3135] Alive!
+>s[3136] Alive!
+>s[3137] Alive!
+>s[3138] Alive!
+>s[3139] Alive!
+>s[3140] Alive!
+>s[3141] Alive!
+>s[3142] Alive!
+>s[3143] Alive!
+>s[3144] Alive!
+>s[3145] Alive! (CH)
+>s[3146] Alive! (CH)
+>s[3147] Alive!
+>s[3148] Alive! (CH)
+>s[3149] Alive!
+>s[3150] Alive!
+>s[3151] Alive!
+>s[3152] Alive! (CH)
+>s[3153] Alive! (CH)
+>s[3154] Alive!
+>s[3155] Alive! (CH)
+>s[3156] Alive!
+>s[3157] Alive!
+>s[3158] Alive!
+>s[3159] Alive! (CH)
+>s[3160] Alive! (CH)
+>s[3161] Alive!
+>s[3162] Alive! (CH)
+>s[3163] Alive!
+>s[3164] Alive!
+>s[3165] Alive!
+>s[3166] Alive! (CH)
+>s[3167] Alive! (CH)
+>s[3168] Alive!
+>s[3169] Alive! (CH)
+>s[3170] Alive!
+>s[3171] Alive!
+>s[3172] Alive!
+>s[3173] Alive!
+>s[3174] Alive!
+>s[3175] Alive!
+>s[3176] Alive!
+>s[3177] Alive!
+>s[3178] Alive!
+>s[3179] Alive!
+>s[3180] Alive!
+>s[3181] Alive!
+>s[3182] Alive!
+>s[3183] Alive!
+>s[3184] Alive!
+>s[3185] Alive!
+>s[3186] Alive!
+>s[3187] Alive!
+>s[3188] Alive!
+>s[3189] Alive!
+>s[3190] Alive!
+>s[3191] Alive! (CH)
+>s[3192] Alive! (CH)
+>s[3193] Alive!
+>s[3194] Alive! (CH)
+>s[3195] Alive!
+>s[3196] Alive!
+>s[3197] Alive!
+>s[3198] Alive! (CH)
+>s[3199] Alive! (CH)
+>s[3200] Alive!
+>s[3201] Alive! (CH)
+>s[3202] Alive!
+>s[3203] Alive!
+>s[3204] Alive!
+>s[3205] Alive! (CH)
+>s[3206] Alive! (CH)
+>s[3207] Alive!
+>s[3208] Alive! (CH)
+>s[3209] Alive!
+>s[3210] Alive!
+>s[3211] Alive!
+>s[3212] Alive! (CH)
+>s[3213] Alive! (CH)
+>s[3214] Alive!
+>s[3215] Alive! (CH)
+>s[3216] Alive!
+>s[3217] Alive!
+>s[3218] Alive!
+>s[3219] Alive!
+>s[3220] Alive!
+>s[3221] Alive! (CH)
+>s[3222] Alive!
+>s[3223] Alive!
+>s[3224] Alive!
+>s[3225] Alive!
+>s[3226] Alive!
+>s[3227] Alive!
+>s[3228] Alive! (CH)
+>s[3229] Alive!
+>s[3230] Alive! (CH)
+>s[3231] Alive!
+>s[3232] Alive!
+>s[3233] Alive!
+>s[3234] Alive!
+>s[3235] Alive!
+>s[3236] Alive!
+>s[3237] Alive!
+>s[3238] Alive! (CH)
+>s[3239] Alive!
+>s[3240] Alive! (CH)
+>s[3241] Alive!
+>s[3242] Alive!
+>s[3243] Alive!
+>s[3244] Alive!
+>s[3245] Alive!
+>s[3246] Alive!
+>s[3247] Alive!
+>s[3248] Alive!
+>s[3249] Alive!
+>s[3250] Alive!
+>s[3251] Alive! (CH)
+>s[3252] Alive!
+>s[3253] Alive!
+>s[3254] Alive!
+>s[3255] Alive!
+>s[3256] Alive!
+>s[3257] Alive!
+>s[3258] Alive! (CH)
+>s[3259] Alive!
+>s[3260] Alive!
+>s[3261] Alive!
+>s[3262] Alive!
+>s[3263] Alive!
+>s[3264] Alive!
+>s[3265] Alive!
+>s[3266] Alive!
+>s[3267] Alive!
+>s[3268] Alive! (CH)
+>s[3269] Alive!
+>s[3270] Alive! (CH)
+>s[3271] Alive!
+>s[3272] Alive!
+>s[3273] Alive! (CH)
+>s[3274] Alive!
+>s[3275] Alive!
+>s[3276] Alive!
+>s[3277] Alive!
+>s[3278] Alive!
+>s[3279] Alive! (CH)
+>s[3280] Alive!
+>s[3281] Alive! (CH)
+>s[3282] Alive!
+>s[3283] Alive!
+>s[3284] Alive!
+>s[3285] Alive!
+>s[3286] Alive!
+>s[3287] Alive!
+>s[3288] Alive!
+>s[3289] Alive!
+>s[3290] Alive! (CH)
+>s[3291] Alive!
+>s[3292] Alive!
+>s[3293] Alive!
+>s[3294] Alive!
+>s[3295] Alive!
+>s[3296] Alive!
+>s[3297] Alive! (CH)
+>s[3298] Alive!
+>s[3299] Alive!
+>s[3300] Alive!
+>s[3301] Alive!
+>s[3302] Alive!
+>s[3303] Alive!
+>s[3304] Alive!
+>s[3305] Alive!
+>s[3306] Alive!
+>s[3307] Alive! (CH)
+>s[3308] Alive! (CH)
+>s[3309] Alive!
+>s[3310] Alive!
+>s[3311] Alive!
+>s[3312] Alive!
+>s[3313] Alive!
+>s[3314] Alive!
+>s[3315] Alive!
+>s[3316] Alive! (CH)
+>s[3317] Alive! (CH)
+>s[3318] Alive!
+>s[3319] Alive!
+>s[3320] Alive!
+>s[3321] Alive!
+>s[3322] Alive!
+>s[3323] Alive!
+>s[3324] Alive!
+>s[3325] Alive!
+>s[3326] Alive!
+>s[3327] Alive!
+>s[3328] Alive!
+>s[3329] Alive!
+>s[3330] Alive!
+>s[3331] Alive!
+>s[3332] Alive! (CH)
+>s[3333] Alive! (CH)
+>s[3334] Alive!
+>s[3335] Alive! (CH)
+>s[3336] Alive!
+>s[3337] Alive!
+>s[3338] Alive!
+>s[3339] Alive! (CH)
+>s[3340] Alive! (CH)
+>s[3341] Alive!
+>s[3342] Alive! (CH)
+>s[3343] Alive!
+>s[3344] Alive!
+>s[3345] Alive!
+>s[3346] Alive! (CH)
+>s[3347] Alive! (CH)
+>s[3348] Alive!
+>s[3349] Alive! (CH)
+>s[3350] Alive!
+>s[3351] Alive!
+>s[3352] Alive!
+>s[3353] Alive! (CH)
+>s[3354] Alive! (CH)
+>s[3355] Alive!
+>s[3356] Alive! (CH)
+>s[3357] Alive!
+>s[3358] Alive!
+>s[3359] Alive!
+>s[3360] Alive! (CH)
+>s[3361] Alive! (CH)
+>s[3362] Alive!
+>s[3363] Alive!
+>s[3364] Alive!
+>s[3365] Alive!
+>s[3366] Alive!
+>s[3367] Alive! (CH)
+>s[3368] Alive! (CH)
+>s[3369] Alive!
+>s[3370] Alive!
+>s[3371] Alive!
+>s[3372] Alive!
+>s[3373] Alive!
+>s[3374] Alive!
+>s[3375] Alive! (CH)
+>s[3376] Alive!
+>s[3377] Alive!
+>s[3378] Alive!
+>s[3379] Alive!
+>s[3380] Alive!
+>s[3381] Alive! (CH)
+>s[3382] Alive! (CH)
+>s[3383] Alive!
+>s[3384] Alive! (CH)
+>s[3385] Alive!
+>s[3386] Alive!
+>s[3387] Alive!
+>s[3388] Alive! (CH)
+>s[3389] Alive! (CH)
+>s[3390] Alive!
+>s[3391] Alive! (CH)
+>s[3392] Alive!
+>s[3393] Alive!
+>s[3394] Alive!
+>s[3395] Alive! (CH)
+>s[3396] Alive! (CH)
+>s[3397] Alive!
+>s[3398] Alive! (CH)
+>s[3399] Alive!
+>s[3400] Alive!
+>s[3401] Alive!
+>s[3402] Alive! (CH)
+>s[3403] Alive! (CH)
+>s[3404] Alive!
+>s[3405] Alive! (CH)
+>s[3406] Alive!
+>s[3407] Alive!
+>s[3408] Alive!
+>s[3409] Alive!
+>s[3410] Alive!
+>s[3411] Alive!
+>s[3412] Alive!
+>s[3413] Alive!
+>s[3414] Alive!
+>s[3415] Alive!
+>s[3416] Alive!
+>s[3417] Alive! (CH)
+>s[3418] Alive!
+>s[3419] Alive!
+>s[3420] Alive!
+>s[3421] Alive!
+>s[3422] Alive!
+>s[3423] Alive!
+>s[3424] Alive!
+>s[3425] Alive!
+>s[3426] Alive!
+>s[3427] Alive!
+>s[3428] Alive! (CH)
+>s[3429] Alive! (CH)
+>s[3430] Alive!
+>s[3431] Alive! (CH)
+>s[3432] Alive!
+>s[3433] Alive!
+>s[3434] Alive!
+>s[3435] Alive! (CH)
+>s[3436] Alive! (CH)
+>s[3437] Alive!
+>s[3438] Alive! (CH)
+>s[3439] Alive!
+>s[3440] Alive!
+>s[3441] Alive!
+>s[3442] Alive! (CH)
+>s[3443] Alive! (CH)
+>s[3444] Alive!
+>s[3445] Alive! (CH)
+>s[3446] Alive!
+>s[3447] Alive!
+>s[3448] Alive!
+>s[3449] Alive! (CH)
+>s[3450] Alive! (CH)
+>s[3451] Alive!
+>s[3452] Alive! (CH)
+>s[3453] Alive!
+>s[3454] Alive!
+>s[3455] Alive!
+>s[3456] Alive!
+>s[3457] Alive!
+>s[3458] Alive!
+>s[3459] Alive!
+>s[3460] Alive!
+>s[3461] Alive!
+>s[3462] Alive!
+>s[3463] Alive!
+>s[3464] Alive!
+>s[3465] Alive!
+>s[3466] Alive!
+>s[3467] Alive!
+>s[3468] Alive!
+>s[3469] Alive!
+>s[3470] Alive!
+>s[3471] Alive!
+>s[3472] Alive!
+>s[3473] Alive! (CH)
+>s[3474] Alive!
+>s[3475] Alive! (CH)
+>s[3476] Alive!
+>s[3477] Alive!
+>s[3478] Alive!
+>s[3479] Alive!
+>s[3480] Alive!
+>s[3481] Alive! (CH)
+>s[3482] Alive! (CH)
+>s[3483] Alive!
+>s[3484] Alive! (CH)
+>s[3485] Alive!
+>s[3486] Alive!
+>s[3487] Alive!
+>s[3488] Alive! (CH)
+>s[3489] Alive! (CH)
+>s[3490] Alive!
+>s[3491] Alive! (CH)
+>s[3492] Alive!
+>s[3493] Alive!
+>s[3494] Alive!
+>s[3495] Alive! (CH)
+>s[3496] Alive! (CH)
+>s[3497] Alive!
+>s[3498] Alive! (CH)
+>s[3499] Alive!
+>s[3500] Alive!
+>s[3501] Alive!
+>s[3502] Alive! (CH)
+>s[3503] Alive! (CH)
+>s[3504] Alive!
+>s[3505] Alive! (CH)
+>s[3506] Alive!
+>s[3507] Alive!
+>s[3508] Alive!
+>s[3509] Alive!
+>s[3510] Alive!
+>s[3511] Alive!
+>s[3512] Alive!
+>s[3513] Alive!
+>s[3514] Alive!
+>s[3515] Alive!
+>s[3516] Alive!
+>s[3517] Alive!
+>s[3518] Alive!
+>s[3519] Alive!
+>s[3520] Alive!
+>s[3521] Alive!
+>s[3522] Alive!
+>s[3523] Alive!
+>s[3524] Alive!
+>s[3525] Alive!
+>s[3526] Alive!
+>s[3527] Alive! (CH)
+>s[3528] Alive! (CH)
+>s[3529] Alive!
+>s[3530] Alive! (CH)
+>s[3531] Alive!
+>s[3532] Alive!
+>s[3533] Alive!
+>s[3534] Alive! (CH)
+>s[3535] Alive! (CH)
+>s[3536] Alive!
+>s[3537] Alive! (CH)
+>s[3538] Alive!
+>s[3539] Alive!
+>s[3540] Alive!
+>s[3541] Alive! (CH)
+>s[3542] Alive! (CH)
+>s[3543] Alive!
+>s[3544] Alive! (CH)
+>s[3545] Alive!
+>s[3546] Alive!
+>s[3547] Alive!
+>s[3548] Alive! (CH)
+>s[3549] Alive! (CH)
+>s[3550] Alive!
+>s[3551] Alive! (CH)
+>s[3552] Alive!
+>s[3553] Alive!
+>s[3554] Alive! (CH)
+>s[3555] Alive!
+>s[3556] Alive!
+>s[3557] Alive!
+>s[3558] Alive!
+>s[3559] Alive!
+>s[3560] Alive!
+>s[3561] Alive!
+>s[3562] Alive!
+>s[3563] Alive!
+>s[3564] Alive! (CH)
+>s[3565] Alive!
+>s[3566] Alive!
+>s[3567] Alive!
+>s[3568] Alive!
+>s[3569] Alive!
+>s[3570] Alive!
+>s[3571] Alive!
+>s[3572] Alive!
+>s[3573] Alive!
+>s[3574] Alive! (CH)
+>s[3575] Alive!
+>s[3576] Alive! (CH)
+>s[3577] Alive!
+>s[3578] Alive!
+>s[3579] Alive!
+>s[3580] Alive!
+>s[3581] Alive!
+>s[3582] Alive! (CH)
+>s[3583] Alive! (CH)
+>s[3584] Alive!
+>s[3585] Alive! (CH)
+>s[3586] Alive!
+>s[3587] Alive!
+>s[3588] Alive!
+>s[3589] Alive! (CH)
+>s[3590] Alive! (CH)
+>s[3591] Alive!
+>s[3592] Alive! (CH)
+>s[3593] Alive!
+>s[3594] Alive!
+>s[3595] Alive!
+>s[3596] Alive! (CH)
+>s[3597] Alive! (CH)
+>s[3598] Alive!
+>s[3599] Alive! (CH)
+>s[3600] Alive!
+>s[3601] Alive!
+>s[3602] Alive!
+>s[3603] Alive! (CH)
+>s[3604] Alive! (CH)
+>s[3605] Alive!
+>s[3606] Alive! (CH)
+>s[3607] Alive!
+>s[3608] Alive!
+>s[3609] Alive! (CH)
+>s[3610] Alive!
+>s[3611] Alive!
+>s[3612] Alive!
+>s[3613] Alive!
+>s[3614] Alive!
+>s[3615] Alive!
+>s[3616] Alive!
+>s[3617] Alive!
+>s[3618] Alive!
+>s[3619] Alive!
+>s[3620] Alive!
+>s[3621] Alive!
+>s[3622] Alive!
+>s[3623] Alive!
+>s[3624] Alive!
+>s[3625] Alive!
+>s[3626] Alive!
+>s[3627] Alive!
+>s[3628] Alive!
+>s[3629] Alive! (CH)
+>s[3630] Alive! (CH)
+>s[3631] Alive!
+>s[3632] Alive! (CH)
+>s[3633] Alive!
+>s[3634] Alive!
+>s[3635] Alive!
+>s[3636] Alive! (CH)
+>s[3637] Alive! (CH)
+>s[3638] Alive!
+>s[3639] Alive! (CH)
+>s[3640] Alive!
+>s[3641] Alive!
+>s[3642] Alive!
+>s[3643] Alive! (CH)
+>s[3644] Alive! (CH)
+>s[3645] Alive!
+>s[3646] Alive! (CH)
+>s[3647] Alive!
+>s[3648] Alive!
+>s[3649] Alive!
+>s[3650] Alive! (CH)
+>s[3651] Alive! (CH)
+>s[3652] Alive!
+>s[3653] Alive! (CH)
+>s[3654] Alive!
+>s[3655] Alive!
+>s[3656] Alive! (CH)
+>s[3657] Alive!
+>s[3658] Alive!
+>s[3659] Alive!
+>s[3660] Alive!
+>s[3661] Alive!
+>s[3662] Alive!
+>s[3663] Alive!
+>s[3664] Alive!
+>s[3665] Alive!
+>s[3666] Alive! (CH)
+>s[3667] Alive!
+>s[3668] Alive!
+>s[3669] Alive!
+>s[3670] Alive!
+>s[3671] Alive!
+>s[3672] Alive!
+>s[3673] Alive!
+>s[3674] Alive!
+>s[3675] Alive!
+>s[3676] Alive! (CH)
+>s[3677] Alive!
+>s[3678] Alive! (CH)
+>s[3679] Alive!
+>s[3680] Alive!
+>s[3681] Alive!
+>s[3682] Alive!
+>s[3683] Alive!
+>s[3684] Alive! (CH)
+>s[3685] Alive! (CH)
+>s[3686] Alive!
+>s[3687] Alive! (CH)
+>s[3688] Alive!
+>s[3689] Alive!
+>s[3690] Alive!
+>s[3691] Alive! (CH)
+>s[3692] Alive! (CH)
+>s[3693] Alive!
+>s[3694] Alive! (CH)
+>s[3695] Alive!
+>s[3696] Alive!
+>s[3697] Alive!
+>s[3698] Alive! (CH)
+>s[3699] Alive! (CH)
+>s[3700] Alive!
+>s[3701] Alive! (CH)
+>s[3702] Alive!
+>s[3703] Alive!
+>s[3704] Alive!
+>s[3705] Alive! (CH)
+>s[3706] Alive! (CH)
+>s[3707] Alive!
+>s[3708] Alive! (CH)
+>s[3709] Alive!
+>s[3710] Alive!
+>s[3711] Alive!
+>s[3712] Alive!
+>s[3713] Alive!
+>s[3714] Alive!
+>s[3715] Alive!
+>s[3716] Alive!
+>s[3717] Alive!
+>s[3718] Alive!
+>s[3719] Alive!
+>s[3720] Alive!
+>s[3721] Alive!
+>s[3722] Alive!
+>s[3723] Alive!
+>s[3724] Alive!
+>s[3725] Alive!
+>s[3726] Alive!
+>s[3727] Alive!
+>s[3728] Alive!
+>s[3729] Alive!
+>s[3730] Alive! (CH)
+>s[3731] Alive! (CH)
+>s[3732] Alive!
+>s[3733] Alive! (CH)
+>s[3734] Alive!
+>s[3735] Alive!
+>s[3736] Alive!
+>s[3737] Alive! (CH)
+>s[3738] Alive! (CH)
+>s[3739] Alive!
+>s[3740] Alive! (CH)
+>s[3741] Alive!
+>s[3742] Alive!
+>s[3743] Alive!
+>s[3744] Alive! (CH)
+>s[3745] Alive! (CH)
+>s[3746] Alive!
+>s[3747] Alive! (CH)
+>s[3748] Alive!
+>s[3749] Alive!
+>s[3750] Alive!
+>s[3751] Alive! (CH)
+>s[3752] Alive! (CH)
+>s[3753] Alive!
+>s[3754] Alive! (CH)
+>s[3755] Alive!
+>s[3756] Alive!
+>s[3757] Alive!
+>s[3758] Alive!
+>s[3759] Alive!
+>s[3760] Alive!
+>s[3761] Alive!
+>s[3762] Alive!
+>s[3763] Alive!
+>s[3764] Alive!
+>s[3765] Alive!
+>s[3766] Alive!
+>s[3767] Alive!
+>s[3768] Alive!
+>s[3769] Alive!
+>s[3770] Alive!
+>s[3771] Alive!
+>s[3772] Alive!
+>s[3773] Alive!
+>s[3774] Alive!
+>s[3775] Alive! (CH)
+>s[3776] Alive!
+>s[3777] Alive! (CH)
+>s[3778] Alive!
+>s[3779] Alive!
+>s[3780] Alive!
+>s[3781] Alive!
+>s[3782] Alive!
+>s[3783] Alive! (CH)
+>s[3784] Alive! (CH)
+>s[3785] Alive!
+>s[3786] Alive! (CH)
+>s[3787] Alive!
+>s[3788] Alive!
+>s[3789] Alive!
+>s[3790] Alive! (CH)
+>s[3791] Alive! (CH)
+>s[3792] Alive!
+>s[3793] Alive! (CH)
+>s[3794] Alive!
+>s[3795] Alive!
+>s[3796] Alive!
+>s[3797] Alive! (CH)
+>s[3798] Alive! (CH)
+>s[3799] Alive!
+>s[3800] Alive! (CH)
+>s[3801] Alive!
+>s[3802] Alive!
+>s[3803] Alive!
+>s[3804] Alive! (CH)
+>s[3805] Alive! (CH)
+>s[3806] Alive!
+>s[3807] Alive! (CH)
+>s[3808] Alive!
+>s[3809] Alive!
+>s[3810] Alive!
+>s[3811] Alive!
+>s[3812] Alive!
+>s[3813] Alive!
+>s[3814] Alive!
+>s[3815] Alive!
+>s[3816] Alive!
+>s[3817] Alive!
+>s[3818] Alive!
+>s[3819] Alive! (CH)
+>s[3820] Alive!
+>s[3821] Alive!
+>s[3822] Alive!
+>s[3823] Alive!
+>s[3824] Alive!
+>s[3825] Alive!
+>s[3826] Alive!
+>s[3827] Alive!
+>s[3828] Alive!
+>s[3829] Alive!
+>s[3830] Alive! (CH)
+>s[3831] Alive! (CH)
+>s[3832] Alive!
+>s[3833] Alive! (CH)
+>s[3834] Alive!
+>s[3835] Alive!
+>s[3836] Alive!
+>s[3837] Alive! (CH)
+>s[3838] Alive! (CH)
+>s[3839] Alive!
+>s[3840] Alive! (CH)
+>s[3841] Alive!
+>s[3842] Alive!
+>s[3843] Alive!
+>s[3844] Alive! (CH)
+>s[3845] Alive! (CH)
+>s[3846] Alive!
+>s[3847] Alive! (CH)
+>s[3848] Alive!
+>s[3849] Alive!
+>s[3850] Alive!
+>s[3851] Alive! (CH)
+>s[3852] Alive! (CH)
+>s[3853] Alive!
+>s[3854] Alive! (CH)
+>s[3855] Alive!
+>s[3856] Alive!
+>s[3857] Alive!
+>s[3858] Alive!
+>s[3859] Alive!
+>s[3860] Alive!
+>s[3861] Alive!
+>s[3862] Alive!
+>s[3863] Alive!
+>s[3864] Alive!
+>s[3865] Alive!
+>s[3866] Alive!
+>s[3867] Alive!
+>s[3868] Alive!
+>s[3869] Alive!
+>s[3870] Alive!
+>s[3871] Alive!
+>s[3872] Alive!
+>s[3873] Alive!
+>s[3874] Alive!
+>s[3875] Alive! (CH)
+>s[3876] Alive!
+>s[3877] Alive! (CH)
+>s[3878] Alive!
+>s[3879] Alive!
+>s[3880] Alive!
+>s[3881] Alive!
+>s[3882] Alive!
+>s[3883] Alive! (CH)
+>s[3884] Alive! (CH)
+>s[3885] Alive!
+>s[3886] Alive! (CH)
+>s[3887] Alive!
+>s[3888] Alive!
+>s[3889] Alive!
+>s[3890] Alive! (CH)
+>s[3891] Alive! (CH)
+>s[3892] Alive!
+>s[3893] Alive! (CH)
+>s[3894] Alive!
+>s[3895] Alive!
+>s[3896] Alive!
+>s[3897] Alive! (CH)
+>s[3898] Alive! (CH)
+>s[3899] Alive!
+>s[3900] Alive! (CH)
+>s[3901] Alive!
+>s[3902] Alive!
+>s[3903] Alive!
+>s[3904] Alive! (CH)
+>s[3905] Alive! (CH)
+>s[3906] Alive!
+>s[3907] Alive! (CH)
+>s[3908] Alive!
+>s[3909] Alive!
+>s[3910] Alive! (CH)
+>s[3911] Alive!
+>s[3912] Alive!
+>s[3913] Alive!
+>s[3914] Alive!
+>s[3915] Alive!
+>s[3916] Alive!
+>s[3917] Alive!
+>s[3918] Alive!
+>s[3919] Alive!
+>s[3920] Alive! (CH)
+>s[3921] Alive!
+>s[3922] Alive!
+>s[3923] Alive!
+>s[3924] Alive!
+>s[3925] Alive!
+>s[3926] Alive!
+>s[3927] Alive!
+>s[3928] Alive!
+>s[3929] Alive!
+>s[3930] Alive!
+>s[3931] Alive! (CH)
+>s[3932] Alive! (CH)
+>s[3933] Alive!
+>s[3934] Alive! (CH)
+>s[3935] Alive!
+>s[3936] Alive!
+>s[3937] Alive!
+>s[3938] Alive! (CH)
+>s[3939] Alive! (CH)
+>s[3940] Alive!
+>s[3941] Alive! (CH)
+>s[3942] Alive!
+>s[3943] Alive!
+>s[3944] Alive!
+>s[3945] Alive! (CH)
+>s[3946] Alive! (CH)
+>s[3947] Alive!
+>s[3948] Alive! (CH)
+>s[3949] Alive!
+>s[3950] Alive!
+>s[3951] Alive!
+>s[3952] Alive! (CH)
+>s[3953] Alive! (CH)
+>s[3954] Alive!
+>s[3955] Alive! (CH)
+>s[3956] Alive!
+>s[3957] Alive!
+>s[3958] Alive! (CH)
+>s[3959] Alive!
+>s[3960] Alive!
+>s[3961] Alive!
+>s[3962] Alive!
+>s[3963] Alive!
+>s[3964] Alive!
+>s[3965] Alive!
+>s[3966] Alive!
+>s[3967] Alive!
+>s[3968] Alive! (CH)
+>s[3969] Alive!
+>s[3970] Alive!
+>s[3971] Alive!
+>s[3972] Alive!
+>s[3973] Alive!
+>s[3974] Alive!
+>s[3975] Alive!
+>s[3976] Alive!
+>s[3977] Alive!
+>s[3978] Alive! (CH)
+>s[3979] Alive!
+>s[3980] Alive! (CH)
+>s[3981] Alive!
+>s[3982] Alive!
+>s[3983] Alive!
+>s[3984] Alive!
+>s[3985] Alive!
+>s[3986] Alive! (CH)
+>s[3987] Alive! (CH)
+>s[3988] Alive!
+>s[3989] Alive! (CH)
+>s[3990] Alive!
+>s[3991] Alive!
+>s[3992] Alive!
+>s[3993] Alive! (CH)
+>s[3994] Alive! (CH)
+>s[3995] Alive!
+>s[3996] Alive! (CH)
+>s[3997] Alive!
+>s[3998] Alive!
+>s[3999] Alive!
+>s[4000] Alive! (CH)
+>s[4001] Alive! (CH)
+>s[4002] Alive!
+>s[4003] Alive! (CH)
+>s[4004] Alive!
+>s[4005] Alive!
+>s[4006] Alive!
+>s[4007] Alive! (CH)
+>s[4008] Alive! (CH)
+>s[4009] Alive!
+>s[4010] Alive! (CH)
+>s[4011] Alive!
+>s[4012] Alive!
+>s[4013] Alive! (CH)
+>s[4014] Alive!
+>s[4015] Alive!
+>s[4016] Alive!
+>s[4017] Alive!
+>s[4018] Alive!
+>s[4019] Alive!
+>s[4020] Alive!
+>s[4021] Alive!
+>s[4022] Alive!
+>s[4023] Alive!
+>s[4024] Alive!
+>s[4025] Alive!
+>s[4026] Alive!
+>s[4027] Alive!
+>s[4028] Alive!
+>s[4029] Alive!
+>s[4030] Alive!
+>s[4031] Alive!
+>s[4032] Alive!
+>s[4033] Alive! (CH)
+>s[4034] Alive! (CH)
+>s[4035] Alive!
+>s[4036] Alive! (CH)
+>s[4037] Alive!
+>s[4038] Alive!
+>s[4039] Alive!
+>s[4040] Alive! (CH)
+>s[4041] Alive! (CH)
+>s[4042] Alive!
+>s[4043] Alive! (CH)
+>s[4044] Alive!
+>s[4045] Alive!
+>s[4046] Alive!
+>s[4047] Alive! (CH)
+>s[4048] Alive! (CH)
+>s[4049] Alive!
+>s[4050] Alive! (CH)
+>s[4051] Alive!
+>s[4052] Alive!
+>s[4053] Alive!
+>s[4054] Alive! (CH)
+>s[4055] Alive! (CH)
+>s[4056] Alive!
+>s[4057] Alive! (CH)
+>s[4058] Alive!
+>s[4059] Alive!
+>s[4060] Alive! (CH)
+>s[4061] Alive!
+>s[4062] Alive!
+>s[4063] Alive!
+>s[4064] Alive!
+>s[4065] Alive!
+>s[4066] Alive!
+>s[4067] Alive!
+>s[4068] Alive!
+>s[4069] Alive!
+>s[4070] Alive! (CH)
+>s[4071] Alive!
+>s[4072] Alive!
+>s[4073] Alive!
+>s[4074] Alive!
+>s[4075] Alive!
+>s[4076] Alive!
+>s[4077] Alive!
+>s[4078] Alive!
+>s[4079] Alive!
+>s[4080] Alive! (CH)
+>s[4081] Alive!
+>s[4082] Alive! (CH)
+>s[4083] Alive!
+>s[4084] Alive!
+>s[4085] Alive!
+>s[4086] Alive!
+>s[4087] Alive!
+>s[4088] Alive! (CH)
+>s[4089] Alive! (CH)
+>s[4090] Alive!
+>s[4091] Alive! (CH)
+>s[4092] Alive!
+>s[4093] Alive!
+>s[4094] Alive!
+>s[4095] Alive! (CH)
+>s[4096] Alive! (CH)
+>s[4097] Alive!
+>s[4098] Alive! (CH)
+>s[4099] Alive!
+>s[4100] Alive!
+>s[4101] Alive!
+>s[4102] Alive! (CH)
+>s[4103] Alive! (CH)
+>s[4104] Alive!
+>s[4105] Alive! (CH)
+>s[4106] Alive!
+>s[4107] Alive!
+>s[4108] Alive!
+>s[4109] Alive! (CH)
+>s[4110] Alive! (CH)
+>s[4111] Alive!
+>s[4112] Alive! (CH)
+>s[4113] Alive!
+>s[4114] Alive!
+>s[4115] Alive!
+>s[4116] Alive!
+>s[4117] Alive!
+>s[4118] Alive! (CH)
+>s[4119] Alive!
+>s[4120] Alive!
+>s[4121] Alive!
+>s[4122] Alive!
+>s[4123] Alive!
+>s[4124] Alive!
+>s[4125] Alive! (CH)
+>s[4126] Alive!
+>s[4127] Alive!
+>s[4128] Alive!
+>s[4129] Alive!
+>s[4130] Alive!
+>s[4131] Alive!
+>s[4132] Alive!
+>s[4133] Alive!
+>s[4134] Alive!
+>s[4135] Alive! (CH)
+>s[4136] Alive!
+>s[4137] Alive! (CH)
+>s[4138] Alive!
+>s[4139] Alive!
+>s[4140] Alive!
+>s[4141] Alive!
+>s[4142] Alive!
+>s[4143] Alive!
+>s[4144] Alive!
+>s[4145] Alive!
+>s[4146] Alive! (CH)
+>s[4147] Alive! (CH)
+>s[4148] Alive!
+>s[4149] Alive!
+>s[4150] Alive!
+>s[4151] Alive!
+>s[4152] Alive!
+>s[4153] Alive! (CH)
+>s[4154] Alive! (CH)
+>s[4155] Alive!
+>s[4156] Alive!
+>s[4157] Alive!
+>s[4158] Alive!
+>s[4159] Alive!
+>s[4160] Alive!
+>s[4161] Alive!
+>s[4162] Alive!
+>s[4163] Alive!
+>s[4164] Alive!
+>s[4165] Alive!
+>s[4166] Alive!
+>s[4167] Alive!
+>s[4168] Alive!
+>s[4169] Alive! (CH)
+>s[4170] Alive! (CH)
+>s[4171] Alive!
+>s[4172] Alive!
+>s[4173] Alive! (CH)
+>s[4174] Alive!
+>s[4175] Alive!
+>s[4176] Alive! (CH)
+>s[4177] Alive! (CH)
+>s[4178] Alive!
+>s[4179] Alive!
+>s[4180] Alive! (CH)
+>s[4181] Alive!
+>s[4182] Alive!
+>s[4183] Alive! (CH)
+>s[4184] Alive! (CH)
+>s[4185] Alive!
+>s[4186] Alive! (CH)
+>s[4187] Alive!
+>s[4188] Alive!
+>s[4189] Alive!
+>s[4190] Alive! (CH)
+>s[4191] Alive! (CH)
+>s[4192] Alive!
+>s[4193] Alive! (CH)
+>s[4194] Alive!
+>s[4195] Alive!
+>s[4196] Alive!
+>s[4197] Alive! (CH)
+>s[4198] Alive! (CH)
+>s[4199] Alive!
+>s[4200] Alive! (CH)
+>s[4201] Alive!
+>s[4202] Alive!
+>s[4203] Alive!
+>s[4204] Alive! (CH)
+>s[4205] Alive! (CH)
+>s[4206] Alive!
+>s[4207] Alive! (CH)
+>s[4208] Alive!
+>s[4209] Alive!
+>s[4210] Alive!
+>s[4211] Alive! (CH)
+>s[4212] Alive! (CH)
+>s[4213] Alive!
+>s[4214] Alive!
+>s[4215] Alive!
+>s[4216] Alive!
+>s[4217] Alive!
+>s[4218] Alive! (CH)
+>s[4219] Alive! (CH)
+>s[4220] Alive!
+>s[4221] Alive!
+>s[4222] Alive!
+>s[4223] Alive!
+>s[4224] Alive!
+>s[4225] Alive!
+>s[4226] Alive!
+>s[4227] Alive!
+>s[4228] Alive!
+>s[4229] Alive!
+>s[4230] Alive!
+>s[4231] Alive!
+>s[4232] Alive!
+>s[4233] Alive!
+>s[4234] Alive!
+>s[4235] Alive!
+>s[4236] Alive!
+>s[4237] Alive!
+>s[4238] Alive!
+>s[4239] Alive!
+>s[4240] Alive!
+>s[4241] Alive!
+>s[4242] Alive! (CH)
+>s[4243] Alive!
+>s[4244] Alive! (CH)
+>s[4245] Alive!
+>s[4246] Alive!
+>s[4247] Alive!
+>s[4248] Alive!
+>s[4249] Alive!
+>s[4250] Alive! (CH)
+>s[4251] Alive! (CH)
+>s[4252] Alive!
+>s[4253] Alive! (CH)
+>s[4254] Alive!
+>s[4255] Alive!
+>s[4256] Alive!
+>s[4257] Alive! (CH)
+>s[4258] Alive! (CH)
+>s[4259] Alive!
+>s[4260] Alive! (CH)
+>s[4261] Alive!
+>s[4262] Alive!
+>s[4263] Alive!
+>s[4264] Alive! (CH)
+>s[4265] Alive! (CH)
+>s[4266] Alive!
+>s[4267] Alive! (CH)
+>s[4268] Alive!
+>s[4269] Alive!
+>s[4270] Alive!
+>s[4271] Alive! (CH)
+>s[4272] Alive! (CH)
+>s[4273] Alive!
+>s[4274] Alive! (CH)
+>s[4275] Alive!
+>s[4276] Alive!
+>s[4277] Alive!
+>s[4278] Alive!
+>s[4279] Alive!
+>s[4280] Alive!
+>s[4281] Alive!
+>s[4282] Alive!
+>s[4283] Alive!
+>s[4284] Alive!
+>s[4285] Alive!
+>s[4286] Alive! (CH)
+>s[4287] Alive!
+>s[4288] Alive!
+>s[4289] Alive!
+>s[4290] Alive!
+>s[4291] Alive!
+>s[4292] Alive!
+>s[4293] Alive!
+>s[4294] Alive!
+>s[4295] Alive!
+>s[4296] Alive!
+>s[4297] Alive! (CH)
+>s[4298] Alive! (CH)
+>s[4299] Alive!
+>s[4300] Alive! (CH)
+>s[4301] Alive!
+>s[4302] Alive!
+>s[4303] Alive!
+>s[4304] Alive! (CH)
+>s[4305] Alive! (CH)
+>s[4306] Alive!
+>s[4307] Alive! (CH)
+>s[4308] Alive!
+>s[4309] Alive!
+>s[4310] Alive!
+>s[4311] Alive! (CH)
+>s[4312] Alive! (CH)
+>s[4313] Alive!
+>s[4314] Alive! (CH)
+>s[4315] Alive!
+>s[4316] Alive!
+>s[4317] Alive!
+>s[4318] Alive! (CH)
+>s[4319] Alive! (CH)
+>s[4320] Alive!
+>s[4321] Alive! (CH)
+>s[4322] Alive!
+>s[4323] Alive!
+>s[4324] Alive! (CH)
+>s[4325] Alive!
+>s[4326] Alive!
+>s[4327] Alive!
+>s[4328] Alive!
+>s[4329] Alive!
+>s[4330] Alive!
+>s[4331] Alive!
+>s[4332] Alive!
+>s[4333] Alive!
+>s[4334] Alive! (CH)
+>s[4335] Alive!
+>s[4336] Alive!
+>s[4337] Alive!
+>s[4338] Alive!
+>s[4339] Alive!
+>s[4340] Alive!
+>s[4341] Alive!
+>s[4342] Alive!
+>s[4343] Alive!
+>s[4344] Alive!
+>s[4345] Alive! (CH)
+>s[4346] Alive! (CH)
+>s[4347] Alive!
+>s[4348] Alive! (CH)
+>s[4349] Alive!
+>s[4350] Alive!
+>s[4351] Alive!
+>s[4352] Alive! (CH)
+>s[4353] Alive! (CH)
+>s[4354] Alive!
+>s[4355] Alive! (CH)
+>s[4356] Alive!
+>s[4357] Alive!
+>s[4358] Alive!
+>s[4359] Alive! (CH)
+>s[4360] Alive! (CH)
+>s[4361] Alive!
+>s[4362] Alive! (CH)
+>s[4363] Alive!
+>s[4364] Alive!
+>s[4365] Alive!
+>s[4366] Alive! (CH)
+>s[4367] Alive! (CH)
+>s[4368] Alive!
+>s[4369] Alive! (CH)
+>s[4370] Alive!
+>s[4371] Alive!
+>s[4372] Alive!
+>s[4373] Alive!
+>s[4374] Alive!
+>s[4375] Alive!
+>s[4376] Alive!
+>s[4377] Alive!
+>s[4378] Alive!
+>s[4379] Alive!
+>s[4380] Alive!
+>s[4381] Alive!
+>s[4382] Alive! (CH)
+>s[4383] Alive! (CH)
+>s[4384] Alive!
+>s[4385] Alive!
+>s[4386] Alive!
+>s[4387] Alive!
+>s[4388] Alive!
+>s[4389] Alive!
+>s[4390] Alive!
+>s[4391] Alive!
+>s[4392] Alive!
+>s[4393] Alive!
+>s[4394] Alive!
+>s[4395] Alive!
+>s[4396] Alive!
+>s[4397] Alive!
+>s[4398] Alive! (CH)
+>s[4399] Alive! (CH)
+>s[4400] Alive!
+>s[4401] Alive!
+>s[4402] Alive!
+>s[4403] Alive!
+>s[4404] Alive!
+>s[4405] Alive! (CH)
+>s[4406] Alive! (CH)
+>s[4407] Alive!
+>s[4408] Alive! (CH)
+>s[4409] Alive!
+>s[4410] Alive!
+>s[4411] Alive!
+>s[4412] Alive! (CH)
+>s[4413] Alive! (CH)
+>s[4414] Alive!
+>s[4415] Alive! (CH)
+>s[4416] Alive!
+>s[4417] Alive!
+>s[4418] Alive!
+>s[4419] Alive! (CH)
+>s[4420] Alive! (CH)
+>s[4421] Alive!
+>s[4422] Alive! (CH)
+>s[4423] Alive!
+>s[4424] Alive!
+>s[4425] Alive!
+>s[4426] Alive! (CH)
+>s[4427] Alive! (CH)
+>s[4428] Alive!
+>s[4429] Alive! (CH)
+>s[4430] Alive!
+>s[4431] Alive!
+>s[4432] Alive! (CH)
+>s[4433] Alive!
+>s[4434] Alive!
+>s[4435] Alive!
+>s[4436] Alive!
+>s[4437] Alive!
+>s[4438] Alive!
+>s[4439] Alive!
+>s[4440] Alive!
+>s[4441] Alive!
+>s[4442] Alive!
+>s[4443] Alive! (CH)
+>s[4444] Alive! (CH)
+>s[4445] Alive!
+>s[4446] Alive!
+>s[4447] Alive!
+>s[4448] Alive!
+>s[4449] Alive!
+>s[4450] Alive!
+>s[4451] Alive!
+>s[4452] Alive!
+>s[4453] Alive!
+>s[4454] Alive!
+>s[4455] Alive!
+>s[4456] Alive!
+>s[4457] Alive!
+>s[4458] Alive! (CH)
+>s[4459] Alive! (CH)
+>s[4460] Alive! (CH)
+>s[4461] Alive!
+>s[4462] Alive!
+>s[4463] Alive!
+>s[4464] Alive! (CH)
+>s[4465] Alive!
+>s[4466] Alive!
+>s[4467] Alive!
+>s[4468] Alive!
+>s[4469] Alive!
+>s[4470] Alive!
+>s[4471] Alive!
+>s[4472] Dupped (506)!
+>s[4473] Alive! (CH)
+>s[4474] Alive! (CH)
+>s[4475] Alive!
+>s[4476] Alive!
+>s[4477] Alive! (CH)
+>s[4478] Alive!
+>s[4479] Alive!
+>s[4480] Alive! (CH)
+>s[4481] Alive! (CH)
+>s[4482] Alive!
+>s[4483] Alive!
+>s[4484] Alive! (CH)
+>s[4485] Alive!
+>s[4486] Alive!
+>s[4487] Alive! (CH)
+>s[4488] Alive! (CH)
+>s[4489] Alive!
+>s[4490] Alive! (CH)
+>s[4491] Alive!
+>s[4492] Alive!
+>s[4493] Alive!
+>s[4494] Alive! (CH)
+>s[4495] Alive! (CH)
+>s[4496] Alive!
+>s[4497] Alive! (CH)
+>s[4498] Alive!
+>s[4499] Alive!
+>s[4500] Alive!
+>s[4501] Alive! (CH)
+>s[4502] Alive! (CH)
+>s[4503] Alive!
+>s[4504] Alive! (CH)
+>s[4505] Alive!
+>s[4506] Alive!
+>s[4507] Alive!
+>s[4508] Alive! (CH)
+>s[4509] Alive! (CH)
+>s[4510] Alive!
+>s[4511] Alive! (CH)
+>s[4512] Alive!
+>s[4513] Alive!
+>s[4514] Alive!
+>s[4515] Alive! (CH)
+>s[4516] Alive! (CH)
+>s[4517] Alive!
+>s[4518] Alive!
+>s[4519] Alive!
+>s[4520] Alive!
+>s[4521] Alive!
+>s[4522] Alive! (CH)
+>s[4523] Alive! (CH)
+>s[4524] Alive!
+>s[4525] Alive!
+>s[4526] Alive!
+>s[4527] Alive!
+>s[4528] Alive!
+>s[4529] Alive!
+>s[4530] Alive!
+>s[4531] Alive! (CH)
+>s[4532] Alive!
+>s[4533] Alive!
+>s[4534] Alive!
+>s[4535] Alive!
+>s[4536] Alive!
+>s[4537] Alive!
+>s[4538] Alive! (CH)
+>s[4539] Alive!
+>s[4540] Alive! (CH)
+>s[4541] Alive!
+>s[4542] Alive!
+>s[4543] Alive!
+>s[4544] Alive!
+>s[4545] Alive!
+>s[4546] Alive!
+>s[4547] Alive!
+>s[4548] Alive! (CH)
+>s[4549] Alive!
+>s[4550] Alive! (CH)
+>s[4551] Alive!
+>s[4552] Alive!
+>s[4553] Alive!
+>s[4554] Alive!
+>s[4555] Alive!
+>s[4556] Alive!
+>s[4557] Alive!
+>s[4558] Alive!
+>s[4559] Alive!
+>s[4560] Alive! (CH)
+>s[4561] Alive!
+>s[4562] Alive!
+>s[4563] Alive!
+>s[4564] Alive!
+>s[4565] Alive!
+>s[4566] Alive!
+>s[4567] Alive! (CH)
+>s[4568] Alive!
+>s[4569] Alive!
+>s[4570] Alive!
+>s[4571] Alive!
+>s[4572] Alive!
+>s[4573] Alive!
+>s[4574] Alive!
+>s[4575] Alive!
+>s[4576] Alive!
+>s[4577] Alive! (CH)
+>s[4578] Alive! (CH)
+>s[4579] Alive!
+>s[4580] Alive!
+>s[4581] Alive!
+>s[4582] Alive!
+>s[4583] Alive!
+>s[4584] Alive!
+>s[4585] Alive!
+>s[4586] Alive! (CH)
+>s[4587] Alive! (CH)
+>s[4588] Alive!
+>s[4589] Alive!
+>s[4590] Alive!
+>s[4591] Alive!
+>s[4592] Alive!
+>s[4593] Alive!
+>s[4594] Alive!
+>s[4595] Alive!
+>s[4596] Alive!
+>s[4597] Alive!
+>s[4598] Alive!
+>s[4599] Alive!
+>s[4600] Alive!
+>s[4601] Alive!
+>s[4602] Alive! (CH)
+>s[4603] Alive! (CH)
+>s[4604] Alive!
+>s[4605] Alive! (CH)
+>s[4606] Alive!
+>s[4607] Alive!
+>s[4608] Alive!
+>s[4609] Alive! (CH)
+>s[4610] Alive! (CH)
+>s[4611] Alive!
+>s[4612] Alive! (CH)
+>s[4613] Alive!
+>s[4614] Alive!
+>s[4615] Alive!
+>s[4616] Alive! (CH)
+>s[4617] Alive! (CH)
+>s[4618] Alive!
+>s[4619] Alive! (CH)
+>s[4620] Alive!
+>s[4621] Alive!
+>s[4622] Alive!
+>s[4623] Alive! (CH)
+>s[4624] Alive! (CH)
+>s[4625] Alive!
+>s[4626] Alive! (CH)
+>s[4627] Alive!
+>s[4628] Alive!
+>s[4629] Alive!
+>s[4630] Alive! (CH)
+>s[4631] Alive! (CH)
+>s[4632] Alive!
+>s[4633] Alive!
+>s[4634] Alive!
+>s[4635] Alive!
+>s[4636] Alive!
+>s[4637] Alive! (CH)
+>s[4638] Alive! (CH)
+>s[4639] Alive!
+>s[4640] Alive!
+>s[4641] Alive!
+>s[4642] Alive!
+>s[4643] Alive!
+>s[4644] Alive! (CH)
+>s[4645] Alive! (CH)
+>s[4646] Alive!
+>s[4647] Alive! (CH)
+>s[4648] Alive!
+>s[4649] Alive!
+>s[4650] Alive!
+>s[4651] Alive! (CH)
+>s[4652] Alive! (CH)
+>s[4653] Alive!
+>s[4654] Alive! (CH)
+>s[4655] Alive!
+>s[4656] Alive!
+>s[4657] Alive!
+>s[4658] Alive! (CH)
+>s[4659] Alive! (CH)
+>s[4660] Alive!
+>s[4661] Alive! (CH)
+>s[4662] Alive!
+>s[4663] Alive!
+>s[4664] Alive!
+>s[4665] Alive! (CH)
+>s[4666] Alive! (CH)
+>s[4667] Alive!
+>s[4668] Alive! (CH)
+>s[4669] Alive!
+>s[4670] Alive!
+>s[4671] Alive!
+>s[4672] Alive!
+>s[4673] Alive!
+>s[4674] Alive!
+>s[4675] Alive!
+>s[4676] Alive!
+>s[4677] Alive!
+>s[4678] Alive!
+>s[4679] Alive!
+>s[4680] Alive!
+>s[4681] Alive!
+>s[4682] Alive!
+>s[4683] Alive!
+>s[4684] Alive!
+>s[4685] Alive!
+>s[4686] Alive!
+>s[4687] Alive!
+>s[4688] Alive!
+>s[4689] Alive!
+>s[4690] Alive! (CH)
+>s[4691] Alive! (CH)
+>s[4692] Alive!
+>s[4693] Alive! (CH)
+>s[4694] Alive!
+>s[4695] Alive!
+>s[4696] Alive!
+>s[4697] Alive! (CH)
+>s[4698] Alive! (CH)
+>s[4699] Alive!
+>s[4700] Alive! (CH)
+>s[4701] Alive!
+>s[4702] Alive!
+>s[4703] Alive!
+>s[4704] Alive! (CH)
+>s[4705] Alive! (CH)
+>s[4706] Alive!
+>s[4707] Alive! (CH)
+>s[4708] Alive!
+>s[4709] Alive!
+>s[4710] Alive!
+>s[4711] Alive! (CH)
+>s[4712] Alive! (CH)
+>s[4713] Alive!
+>s[4714] Alive! (CH)
+>s[4715] Alive!
+>s[4716] Alive!
+>s[4717] Alive! (CH)
+>s[4718] Alive!
+>s[4719] Alive!
+>s[4720] Alive!
+>s[4721] Alive!
+>s[4722] Alive!
+>s[4723] Alive!
+>s[4724] Alive!
+>s[4725] Alive!
+>s[4726] Alive!
+>s[4727] Alive! (CH)
+>s[4728] Alive!
+>s[4729] Alive!
+>s[4730] Alive!
+>s[4731] Alive!
+>s[4732] Alive!
+>s[4733] Alive!
+>s[4734] Alive!
+>s[4735] Alive!
+>s[4736] Alive!
+>s[4737] Alive!
+>s[4738] Alive! (CH)
+>s[4739] Alive! (CH)
+>s[4740] Alive!
+>s[4741] Alive! (CH)
+>s[4742] Alive!
+>s[4743] Alive!
+>s[4744] Alive!
+>s[4745] Alive! (CH)
+>s[4746] Alive! (CH)
+>s[4747] Alive!
+>s[4748] Alive! (CH)
+>s[4749] Alive!
+>s[4750] Alive!
+>s[4751] Alive!
+>s[4752] Alive! (CH)
+>s[4753] Alive! (CH)
+>s[4754] Alive!
+>s[4755] Alive! (CH)
+>s[4756] Alive!
+>s[4757] Alive!
+>s[4758] Alive!
+>s[4759] Alive! (CH)
+>s[4760] Alive! (CH)
+>s[4761] Alive!
+>s[4762] Alive! (CH)
+>s[4763] Alive!
+>s[4764] Alive!
+>s[4765] Alive!
+>s[4766] Alive!
+>s[4767] Alive!
+>s[4768] Alive!
+>s[4769] Alive!
+>s[4770] Alive!
+>s[4771] Alive!
+>s[4772] Alive!
+>s[4773] Alive!
+>s[4774] Alive!
+>s[4775] Alive!
+>s[4776] Alive!
+>s[4777] Alive!
+>s[4778] Alive!
+>s[4779] Alive!
+>s[4780] Alive!
+>s[4781] Alive!
+>s[4782] Alive!
+>s[4783] Alive!
+>s[4784] Alive! (CH)
+>s[4785] Alive! (CH)
+>s[4786] Alive!
+>s[4787] Alive! (CH)
+>s[4788] Alive!
+>s[4789] Alive!
+>s[4790] Alive!
+>s[4791] Alive! (CH)
+>s[4792] Alive! (CH)
+>s[4793] Alive!
+>s[4794] Alive! (CH)
+>s[4795] Alive!
+>s[4796] Alive!
+>s[4797] Alive!
+>s[4798] Alive! (CH)
+>s[4799] Alive! (CH)
+>s[4800] Alive!
+>s[4801] Alive! (CH)
+>s[4802] Alive!
+>s[4803] Alive!
+>s[4804] Alive!
+>s[4805] Alive! (CH)
+>s[4806] Alive! (CH)
+>s[4807] Alive!
+>s[4808] Alive! (CH)
+>s[4809] Alive!
+>s[4810] Alive!
+>s[4811] Alive!
+>s[4812] Alive!
+>s[4813] Alive!
+>s[4814] Alive!
+>s[4815] Alive!
+>s[4816] Alive!
+>s[4817] Alive!
+>s[4818] Alive!
+>s[4819] Alive!
+>s[4820] Alive!
+>s[4821] Alive!
+>s[4822] Alive!
+>s[4823] Alive!
+>s[4824] Alive!
+>s[4825] Alive!
+>s[4826] Alive!
+>s[4827] Alive!
+>s[4828] Alive!
+>s[4829] Alive!
+>s[4830] Dupped (506)!
+>s[4831] Alive! (CH)
+>s[4832] Alive!
+>s[4833] Alive! (CH)
+>s[4834] Dupped (506)!
+>s[4835] Alive!
+>s[4836] Alive!
+>s[4837] Alive! (CH)
+>s[4838] Alive! (CH)
+>s[4839] Alive!
+>s[4840] Alive! (CH)
+>s[4841] Alive!
+>s[4842] Alive!
+>s[4843] Alive!
+>s[4844] Alive! (CH)
+>s[4845] Alive! (CH)
+>s[4846] Alive!
+>s[4847] Alive! (CH)
+>s[4848] Alive!
+>s[4849] Alive!
+>s[4850] Alive!
+>s[4851] Alive! (CH)
+>s[4852] Alive! (CH)
+>s[4853] Alive!
+>s[4854] Alive! (CH)
+>s[4855] Alive!
+>s[4856] Alive!
+>s[4857] Alive! (CH)
+>s[4858] Alive!
+>s[4859] Alive!
+>s[4860] Alive!
+>s[4861] Alive!
+>s[4862] Alive!
+>s[4863] Alive!
+>s[4864] Alive!
+>s[4865] Alive!
+>s[4866] Alive!
+>s[4867] Alive! (CH)
+>s[4868] Alive!
+>s[4869] Alive!
+>s[4870] Alive!
+>s[4871] Alive!
+>s[4872] Alive!
+>s[4873] Alive!
+>s[4874] Alive!
+>s[4875] Alive!
+>s[4876] Alive!
+>s[4877] Alive!
+>s[4878] Alive! (CH)
+>s[4879] Alive! (CH)
+>s[4880] Alive!
+>s[4881] Alive! (CH)
+>s[4882] Alive!
+>s[4883] Alive!
+>s[4884] Alive!
+>s[4885] Alive! (CH)
+>s[4886] Alive! (CH)
+>s[4887] Alive!
+>s[4888] Alive! (CH)
+>s[4889] Alive!
+>s[4890] Alive!
+>s[4891] Alive!
+>s[4892] Alive! (CH)
+>s[4893] Alive! (CH)
+>s[4894] Alive!
+>s[4895] Alive! (CH)
+>s[4896] Alive!
+>s[4897] Alive!
+>s[4898] Alive!
+>s[4899] Alive! (CH)
+>s[4900] Alive! (CH)
+>s[4901] Alive!
+>s[4902] Alive! (CH)
+>s[4903] Alive!
+>s[4904] Alive!
+>s[4905] Alive! (CH)
+>s[4906] Alive!
+>s[4907] Alive!
+>s[4908] Alive!
+>s[4909] Alive!
+>s[4910] Alive!
+>s[4911] Alive!
+>s[4912] Alive!
+>s[4913] Alive!
+>s[4914] Alive!
+>s[4915] Alive! (CH)
+>s[4916] Alive!
+>s[4917] Alive!
+>s[4918] Alive!
+>s[4919] Alive!
+>s[4920] Alive!
+>s[4921] Alive!
+>s[4922] Alive!
+>s[4923] Alive!
+>s[4924] Dupped (506)!
+>s[4925] Alive!
+>s[4926] Alive! (CH)
+>s[4927] Alive! (CH)
+>s[4928] Alive!
+>s[4929] Alive! (CH)
+>s[4930] Alive!
+>s[4931] Alive!
+>s[4932] Alive!
+>s[4933] Alive! (CH)
+>s[4934] Alive! (CH)
+>s[4935] Alive!
+>s[4936] Alive! (CH)
+>s[4937] Alive!
+>s[4938] Alive!
+>s[4939] Alive!
+>s[4940] Alive! (CH)
+>s[4941] Alive! (CH)
+>s[4942] Alive!
+>s[4943] Alive! (CH)
+>s[4944] Alive!
+>s[4945] Alive!
+>s[4946] Alive!
+>s[4947] Alive! (CH)
+>s[4948] Alive! (CH)
+>s[4949] Alive!
+>s[4950] Alive! (CH)
+>s[4951] Alive!
+>s[4952] Alive!
+>s[4953] Alive!
+>s[4954] Alive!
+>s[4955] Alive!
+>s[4956] Alive! (CH)
+>s[4957] Alive!
+>s[4958] Alive!
+>s[4959] Alive!
+>s[4960] Alive!
+>s[4961] Alive!
+>s[4962] Alive!
+>s[4963] Alive! (CH)
+>s[4964] Alive!
+>s[4965] Alive!
+>s[4966] Alive!
+>s[4967] Alive!
+>s[4968] Alive!
+>s[4969] Alive!
+>s[4970] Alive!
+>s[4971] Alive!
+>s[4972] Alive!
+>s[4973] Alive! (CH)
+>s[4974] Alive!
+>s[4975] Alive! (CH)
+>s[4976] Alive!
+>s[4977] Alive!
+>s[4978] Alive!
+>s[4979] Alive!
+>s[4980] Alive!
+>s[4981] Alive!
+>s[4982] Alive!
+>s[4983] Alive!
+>s[4984] Alive! (CH)
+>s[4985] Alive! (CH)
+>s[4986] Alive!
+>s[4987] Alive!
+>s[4988] Alive!
+>s[4989] Alive!
+>s[4990] Alive!
+>s[4991] Alive! (CH)
+>s[4992] Alive! (CH)
+>s[4993] Alive!
+>s[4994] Alive!
+>s[4995] Alive!
+>s[4996] Alive!
+>s[4997] Alive!
+>s[4998] Alive!
+>s[4999] Alive!
+>s[5000] Alive!
+>s[5001] Alive!
+>s[5002] Alive!
+>s[5003] Alive!
+>s[5004] Alive!
+>s[5005] Alive!
+>s[5006] Alive!
+>s[5007] Alive! (CH)
+>s[5008] Alive! (CH)
+>s[5009] Alive!
+>s[5010] Alive!
+>s[5011] Alive! (CH)
+>s[5012] Alive!
+>s[5013] Alive!
+>s[5014] Alive! (CH)
+>s[5015] Alive! (CH)
+>s[5016] Alive!
+>s[5017] Alive!
+>s[5018] Alive! (CH)
+>s[5019] Alive!
+>s[5020] Alive!
+>s[5021] Alive! (CH)
+>s[5022] Alive! (CH)
+>s[5023] Alive!
+>s[5024] Alive! (CH)
+>s[5025] Alive!
+>s[5026] Alive!
+>s[5027] Alive!
+>s[5028] Alive! (CH)
+>s[5029] Alive! (CH)
+>s[5030] Alive!
+>s[5031] Alive! (CH)
+>s[5032] Alive!
+>s[5033] Alive!
+>s[5034] Alive!
+>s[5035] Alive! (CH)
+>s[5036] Alive! (CH)
+>s[5037] Alive!
+>s[5038] Alive! (CH)
+>s[5039] Alive!
+>s[5040] Alive!
+>s[5041] Alive!
+>s[5042] Alive! (CH)
+>s[5043] Alive! (CH)
+>s[5044] Alive!
+>s[5045] Alive! (CH)
+>s[5046] Alive!
+>s[5047] Alive!
+>s[5048] Alive!
+>s[5049] Alive! (CH)
+>s[5050] Alive! (CH)
+>s[5051] Alive!
+>s[5052] Alive!
+>s[5053] Alive!
+>s[5054] Alive!
+>s[5055] Alive!
+>s[5056] Alive! (CH)
+>s[5057] Alive! (CH)
+>s[5058] Alive!
+>s[5059] Alive!
+>s[5060] Alive!
+>s[5061] Alive!
+>s[5062] Alive!
+>s[5063] Dupped (506)!
+>s[5064] Alive!
+>s[5065] Alive!
+>s[5066] Alive!
+>s[5067] Alive!
+>s[5068] Alive!
+>s[5069] Alive!
+>s[5070] Alive!
+>s[5071] Alive!
+>s[5072] Alive!
+>s[5073] Alive!
+>s[5074] Alive!
+>s[5075] Alive!
+>s[5076] Alive!
+>s[5077] Alive!
+>s[5078] Alive!
+>s[5079] Alive!
+>s[5080] Alive!
+>s[5081] Alive! (CH)
+>s[5082] Alive! (CH)
+>s[5083] Alive!
+>s[5084] Alive!
+>s[5085] Alive! (CH)
+>s[5086] Alive!
+>s[5087] Alive!
+>s[5088] Alive! (CH)
+>s[5089] Alive! (CH)
+>s[5090] Alive!
+>s[5091] Alive!
+>s[5092] Alive! (CH)
+>s[5093] Alive!
+>s[5094] Alive!
+>s[5095] Alive! (CH)
+>s[5096] Alive! (CH)
+>s[5097] Alive!
+>s[5098] Alive! (CH)
+>s[5099] Alive!
+>s[5100] Alive!
+>s[5101] Alive!
+>s[5102] Alive! (CH)
+>s[5103] Alive! (CH)
+>s[5104] Alive!
+>s[5105] Alive! (CH)
+>s[5106] Alive!
+>s[5107] Alive!
+>s[5108] Alive!
+>s[5109] Alive! (CH)
+>s[5110] Alive! (CH)
+>s[5111] Alive!
+>s[5112] Alive! (CH)
+>s[5113] Alive!
+>s[5114] Alive!
+>s[5115] Alive!
+>s[5116] Alive! (CH)
+>s[5117] Alive! (CH)
+>s[5118] Alive!
+>s[5119] Alive! (CH)
+>s[5120] Alive!
+>s[5121] Alive!
+>s[5122] Alive!
+>s[5123] Alive! (CH)
+>s[5124] Alive! (CH)
+>s[5125] Alive!
+>s[5126] Alive!
+>s[5127] Alive!
+>s[5128] Alive!
+>s[5129] Alive!
+>s[5130] Alive! (CH)
+>s[5131] Alive! (CH)
+>s[5132] Alive!
+>s[5133] Alive!
+>s[5134] Alive!
+>s[5135] Alive!
+>s[5136] Alive!
+>s[5137] Alive!
+>s[5138] Alive!
+>s[5139] Alive! (CH)
+>s[5140] Alive!
+>s[5141] Alive!
+>s[5142] Alive!
+>s[5143] Alive!
+>s[5144] Alive!
+>s[5145] Alive!
+>s[5146] Alive! (CH)
+>s[5147] Alive!
+>s[5148] Alive! (CH)
+>s[5149] Alive!
+>s[5150] Alive!
+>s[5151] Alive!
+>s[5152] Alive!
+>s[5153] Alive!
+>s[5154] Alive!
+>s[5155] Alive!
+>s[5156] Alive! (CH)
+>s[5157] Alive!
+>s[5158] Alive! (CH)
+>s[5159] Alive!
+>s[5160] Alive!
+>s[5161] Alive!
+>s[5162] Alive!
+>s[5163] Alive!
+>s[5164] Alive!
+>s[5165] Alive!
+>s[5166] Alive!
+>s[5167] Alive!
+>s[5168] Alive!
+>s[5169] Alive!
+>s[5170] Alive! (CH)
+>s[5171] Alive!
+>s[5172] Alive!
+>s[5173] Alive!
+>s[5174] Alive!
+>s[5175] Alive!
+>s[5176] Alive!
+>s[5177] Alive! (CH)
+>s[5178] Alive!
+>s[5179] Alive!
+>s[5180] Alive!
+>s[5181] Alive!
+>s[5182] Alive!
+>s[5183] Alive!
+>s[5184] Alive!
+>s[5185] Alive!
+>s[5186] Alive!
+>s[5187] Alive! (CH)
+>s[5188] Alive!
+>s[5189] Alive! (CH)
+>s[5190] Alive!
+>s[5191] Alive!
+>s[5192] Alive! (CH)
+>s[5193] Alive!
+>s[5194] Alive!
+>s[5195] Alive!
+>s[5196] Alive!
+>s[5197] Alive! (CH)
+>s[5198] Alive!
+>s[5199] Alive! (CH)
+>s[5200] Alive!
+>s[5201] Alive!
+>s[5202] Alive!
+>s[5203] Alive!
+>s[5204] Alive!
+>s[5205] Alive!
+>s[5206] Alive!
+>s[5207] Alive! (CH)
+>s[5208] Alive! (CH)
+>s[5209] Alive!
+>s[5210] Alive! (CH)
+>s[5211] Alive!
+>s[5212] Alive!
+>s[5213] Alive!
+>s[5214] Alive! (CH)
+>s[5215] Alive! (CH)
+>s[5216] Alive!
+>s[5217] Alive!
+>s[5218] Alive!
+>s[5219] Alive!
+>s[5220] Alive!
+>s[5221] Alive!
+>s[5222] Alive! (CH)
+>s[5223] Alive!
+>s[5224] Alive!
+>s[5225] Alive!
+>s[5226] Alive!
+>s[5227] Alive!
+>s[5228] Alive!
+>s[5229] Alive!
+>s[5230] Alive!
+>s[5231] Alive!
+>s[5232] Alive! (CH)
+>s[5233] Alive! (CH)
+>s[5234] Alive!
+>s[5235] Alive!
+>s[5236] Alive!
+>s[5237] Alive!
+>s[5238] Alive!
+>s[5239] Alive! (CH)
+>s[5240] Alive!
+>s[5241] Alive!
+>s[5242] Alive!
+>s[5243] Alive!
+>s[5244] Alive!
+>s[5245] Alive!
+>s[5246] Alive!
+>s[5247] Alive!
+>s[5248] Alive! (CH)
+>s[5249] Alive!
+>s[5250] Alive! (CH)
+>s[5251] Alive!
+>s[5252] Alive!
+>s[5253] Alive!
+>s[5254] Alive!
+>s[5255] Alive!
+>s[5256] Alive!
+>s[5257] Alive!
+>s[5258] Alive! (CH)
+>s[5259] Alive!
+>s[5260] Alive! (CH)
+>s[5261] Alive!
+>s[5262] Alive!
+>s[5263] Alive!
+>s[5264] Alive!
+>s[5265] Alive!
+>s[5266] Alive!
+>s[5267] Alive!
+>s[5268] Alive!
+>s[5269] Alive! (CH)
+>s[5270] Alive! (CH)
+>s[5271] Alive!
+>s[5272] Alive!
+>s[5273] Alive!
+>s[5274] Alive!
+>s[5275] Alive!
+>s[5276] Alive!
+>s[5277] Alive!
+>s[5278] Alive! (CH)
+>s[5279] Alive! (CH)
+>s[5280] Alive!
+>s[5281] Alive!
+>s[5282] Alive!
+>s[5283] Alive!
+>s[5284] Alive!
+>s[5285] Alive!
+>s[5286] Alive!
+>s[5287] Alive!
+>s[5288] Alive!
+>s[5289] Alive!
+>s[5290] Alive!
+>s[5291] Alive!
+>s[5292] Alive!
+>s[5293] Alive!
+>s[5294] Alive! (CH)
+>s[5295] Alive! (CH)
+>s[5296] Alive!
+>s[5297] Alive!
+>s[5298] Alive!
+>s[5299] Alive!
+>s[5300] Alive!
+>s[5301] Alive! (CH)
+>s[5302] Alive! (CH)
+>s[5303] Alive!
+>s[5304] Alive!
+>s[5305] Alive!
+>s[5306] Alive!
+>s[5307] Alive!
+>s[5308] Alive!
+>s[5309] Alive!
+>s[5310] Alive!
+>s[5311] Alive!
+>s[5312] Alive!
+>s[5313] Alive!
+>s[5314] Alive!
+>s[5315] Alive!
+>s[5316] Alive! (CH)
+>s[5317] Alive!
+>s[5318] Alive!
+>s[5319] Alive!
+>s[5320] Alive!
+>s[5321] Alive!
+>s[5322] Alive!
+>s[5323] Alive!
+>s[5324] Alive!
+>s[5325] Alive!
+>s[5326] Alive! (CH)
+>s[5327] Alive!
+>s[5328] Alive!
+>s[5329] Alive!
+>s[5330] Alive!
+>s[5331] Alive!
+>s[5332] Alive!
+>s[5333] Alive!
+>s[5334] Alive!
+>s[5335] Alive!
+>s[5336] Alive!
+>s[5337] Alive!
+>s[5338] Alive!
+>s[5339] Alive!
+>s[5340] Alive!
+>s[5341] Alive!
+>s[5342] Alive!
+>s[5343] Alive!
+>s[5344] Alive!
+>s[5345] Alive!
+>s[5346] Alive!
+>s[5347] Alive!
+>s[5348] Alive!
+>s[5349] Alive!
+>s[5350] Alive!
+>s[5351] Alive!
+>s[5352] Alive!
+>s[5353] Alive!
+>s[5354] Alive!
+>s[5355] Alive!
+>s[5356] Alive!
+>s[5357] Alive!
+>s[5358] Alive!
+>s[5359] Alive!
+>s[5360] Alive!
+>s[5361] Alive!
+>s[5362] Alive!
+>s[5363] Alive! (CH)
+>s[5364] Alive!
+>s[5365] Alive!
+>s[5366] Alive!
+>s[5367] Alive!
+>s[5368] Alive!
+>s[5369] Alive!
+>s[5370] Alive!
+>s[5371] Alive!
+>s[5372] Alive!
+>s[5373] Alive! (CH)
+>s[5374] Alive!
+>s[5375] Alive!
+>s[5376] Alive!
+>s[5377] Alive!
+>s[5378] Alive!
+>s[5379] Alive!
+>s[5380] Alive!
+>s[5381] Alive!
+>s[5382] Alive!
+>s[5383] Alive! (CH)
+>s[5384] Alive!
+>s[5385] Alive!
+>s[5386] Alive!
+>s[5387] Alive!
+>s[5388] Alive!
+>s[5389] Alive!
+>s[5390] Alive!
+>s[5391] Alive!
+>s[5392] Alive!
+>s[5393] Alive!
+>s[5394] Alive! (CH)
+>s[5395] Alive!
+>s[5396] Alive!
+>s[5397] Alive!
+>s[5398] Alive!
+>s[5399] Alive!
+>s[5400] Alive!
+>s[5401] Alive!
+>s[5402] Alive!
+>s[5403] Alive! (CH)
+>s[5404] Alive!
+>s[5405] Alive!
+>s[5406] Alive!
+>s[5407] Dupped (506)!
+>s[5408] Alive!
+>s[5409] Alive!
+>s[5410] Alive!
+>s[5411] Alive!
+>s[5412] Alive!
+>s[5413] Alive! (CH)
+>s[5414] Alive!
+>s[5415] Alive! (CH)
+>s[5416] Alive!
+>s[5417] Alive!
+>s[5418] Alive!
+>s[5419] Alive!
+>s[5420] Alive!
+>s[5421] Alive!
+>s[5422] Alive!
+>s[5423] Alive!
+>s[5424] Alive! (CH)
+>s[5425] Alive! (CH)
+>s[5426] Alive!
+>s[5427] Alive!
+>s[5428] Alive!
+>s[5429] Alive!
+>s[5430] Alive!
+>s[5431] Alive! (CH)
+>s[5432] Alive! (CH)
+>s[5433] Alive!
+>s[5434] Alive! (CH)
+>s[5435] Alive!
+>s[5436] Alive!
+>s[5437] Alive!
+>s[5438] Alive!
+>s[5439] Alive!
+>s[5440] Alive!
+>s[5441] Alive!
+>s[5442] Alive!
+>s[5443] Alive!
+>s[5444] Alive!
+>s[5445] Alive!
+>s[5446] Alive!
+>s[5447] Alive!
+>s[5448] Alive!
+>s[5449] Alive!
+>s[5450] Alive!
+>s[5451] Alive!
+>s[5452] Alive!
+>s[5453] Alive!
+>s[5454] Alive!
+>s[5455] Alive!
+>s[5456] Alive!
+>s[5457] Alive!
+>s[5458] Alive!
+>s[5459] Alive!
+>s[5460] Alive!
+>s[5461] Alive!
+>s[5462] Alive!
+>s[5463] Alive!
+>s[5464] Alive!
+>s[5465] Alive!
+>s[5466] Alive! (CH)
+>s[5467] Alive!
+>s[5468] Alive!
+>s[5469] Alive!
+>s[5470] Alive!
+>s[5471] Alive!
+>s[5472] Alive!
+>s[5473] Alive!
+>s[5474] Alive!
+>s[5475] Alive!
+>s[5476] Alive! (CH)
+>s[5477] Alive! (CH)
+>s[5478] Alive!
+>s[5479] Alive!
+>s[5480] Alive!
+>s[5481] Alive!
+>s[5482] Alive!
+>s[5483] Alive! (CH)
+>s[5484] Alive!
+>s[5485] Alive!
+>s[5486] Alive!
+>s[5487] Alive!
+>s[5488] Alive!
+>s[5489] Alive!
+>s[5490] Alive!
+>s[5491] Alive!
+>s[5492] Alive! (CH)
+>s[5493] Alive!
+>s[5494] Alive! (CH)
+>s[5495] Alive!
+>s[5496] Alive!
+>s[5497] Alive!
+>s[5498] Alive!
+>s[5499] Alive!
+>s[5500] Alive!
+>s[5501] Alive!
+>s[5502] Alive! (CH)
+>s[5503] Alive!
+>s[5504] Alive! (CH)
+>s[5505] Alive!
+>s[5506] Alive!
+>s[5507] Alive!
+>s[5508] Alive!
+>s[5509] Alive!
+>s[5510] Alive!
+>s[5511] Alive!
+>s[5512] Alive!
+>s[5513] Alive! (CH)
+>s[5514] Alive! (CH)
+>s[5515] Alive!
+>s[5516] Alive!
+>s[5517] Alive!
+>s[5518] Alive!
+>s[5519] Alive!
+>s[5520] Alive!
+>s[5521] Alive!
+>s[5522] Alive! (CH)
+>s[5523] Alive! (CH)
+>s[5524] Alive!
+>s[5525] Alive!
+>s[5526] Alive!
+>s[5527] Alive!
+>s[5528] Alive!
+>s[5529] Alive!
+>s[5530] Alive!
+>s[5531] Alive!
+>s[5532] Alive!
+>s[5533] Alive!
+>s[5534] Alive!
+>s[5535] Alive!
+>s[5536] Alive!
+>s[5537] Alive!
+>s[5538] Alive! (CH)
+>s[5539] Alive! (CH)
+>s[5540] Alive!
+>s[5541] Alive!
+>s[5542] Alive!
+>s[5543] Alive!
+>s[5544] Alive!
+>s[5545] Alive! (CH)
+>s[5546] Alive! (CH)
+>s[5547] Alive!
+>s[5548] Alive! (CH)
+>s[5549] Alive!
+>s[5550] Alive!
+>s[5551] Alive!
+>s[5552] Alive!
+>s[5553] Alive!
+>s[5554] Alive!
+>s[5555] Alive!
+>s[5556] Alive!
+>s[5557] Alive!
+>s[5558] Alive!
+>s[5559] Alive!
+>s[5560] Alive! (CH)
+>s[5561] Alive!
+>s[5562] Alive!
+>s[5563] Alive!
+>s[5564] Alive!
+>s[5565] Alive!
+>s[5566] Alive!
+>s[5567] Alive!
+>s[5568] Alive!
+>s[5569] Alive!
+>s[5570] Alive!
+>s[5571] Alive! (CH)
+>s[5572] Alive!
+>s[5573] Alive!
+>s[5574] Alive!
+>s[5575] Alive!
+>s[5576] Alive!
+>s[5577] Alive!
+>s[5578] Alive!
+>s[5579] Alive!
+>s[5580] Alive! (CH)
+>s[5581] Alive!
+>s[5582] Alive!
+>s[5583] Alive!
+>s[5584] Alive!
+>s[5585] Alive!
+>s[5586] Alive!
+>s[5587] Alive!
+>s[5588] Alive!
+>s[5589] Alive!
+>s[5590] Alive! (CH)
+>s[5591] Alive!
+>s[5592] Alive! (CH)
+>s[5593] Alive!
+>s[5594] Alive!
+>s[5595] Alive!
+>s[5596] Alive!
+>s[5597] Alive!
+>s[5598] Alive!
+>s[5599] Alive!
+>s[5600] Alive!
+>s[5601] Alive! (CH)
+>s[5602] Alive! (CH)
+>s[5603] Alive!
+>s[5604] Alive!
+>s[5605] Alive!
+>s[5606] Alive!
+>s[5607] Alive!
+>s[5608] Alive! (CH)
+>s[5609] Alive! (CH)
+>s[5610] Alive!
+>s[5611] Alive! (CH)
+>s[5612] Alive!
+>s[5613] Alive!
+>s[5614] Alive!
+>s[5615] Alive!
+>s[5616] Alive!
+>s[5617] Alive!
+>s[5618] Alive!
+>s[5619] Alive!
+>s[5620] Alive!
+>s[5621] Alive!
+>s[5622] Alive!
+>s[5623] Alive!
+>s[5624] Alive! (CH)
+>s[5625] Alive!
+>s[5626] Alive! (CH)
+>s[5627] Alive!
+>s[5628] Alive!
+>s[5629] Alive!
+>s[5630] Alive!
+>s[5631] Alive! (CH)
+>s[5632] Alive!
+>s[5633] Alive! (CH)
+>s[5634] Alive!
+>s[5635] Alive!
+>s[5636] Alive!
+>s[5637] Alive!
+>s[5638] Alive!
+>s[5639] Alive! (CH)
+>s[5640] Alive! (CH)
+>s[5641] Alive!
+>s[5642] Alive!
+>s[5643] Alive!
+>s[5644] Alive!
+>s[5645] Alive!
+>s[5646] Alive! (CH)
+>s[5647] Dead! killed by test 0
+>s[5648] Dead! killed by test 0
+>s[5649] Alive!
+>s[5650] Alive!
+>s[5651] Alive!
+>s[5652] Alive!
+>s[5653] Alive! (CH)
+>s[5654] Dead! killed by test 0
+>s[5655] Dead! killed by test 0
+>s[5656] Alive!
+>s[5657] Alive!
+>s[5658] Alive!
+>s[5659] Alive!
+>s[5660] Alive! (CH)
+>s[5661] Alive! (CH)
+>s[5662] Alive!
+>s[5663] Alive! (CH)
+>s[5664] Alive!
+>s[5665] Alive!
+>s[5666] Alive!
+>s[5667] Alive! (CH)
+>s[5668] Dead! killed by test 0
+>s[5669] Dead! killed by test 0
+>s[5670] Alive!
+>s[5671] Alive!
+>s[5672] Alive!
+>s[5673] Alive!
+>s[5674] Alive! (CH)
+>s[5675] Dead! killed by test 0
+>s[5676] Dead! killed by test 0
+>s[5677] Alive!
+>s[5678] Alive!
+>s[5679] Alive!
+>s[5680] Alive!
+>s[5681] Alive! (CH)
+>s[5682] Alive! (CH)
+>s[5683] Alive!
+>s[5684] Alive! (CH)
+>s[5685] Alive!
+>s[5686] Alive!
+>s[5687] Alive!
+>s[5688] Alive! (CH)
+>s[5689] Dead! killed by test 0
+>s[5690] Dead! killed by test 0
+>s[5691] Alive!
+>s[5692] Alive!
+>s[5693] Alive!
+>s[5694] Alive!
+>s[5695] Alive! (CH)
+>s[5696] Dead! killed by test 0
+>s[5697] Dead! killed by test 0
+>s[5698] Alive!
+>s[5699] Alive!
+>s[5700] Alive!
+>s[5701] Alive!
+>s[5702] Alive! (CH)
+>s[5703] Alive! (CH)
+>s[5704] Alive!
+>s[5705] Alive! (CH)
+>s[5706] Alive!
+>s[5707] Alive!
+>s[5708] Alive!
+>s[5709] Alive! (CH)
+>s[5710] Alive! (CH)
+>s[5711] Alive!
+>s[5712] Alive! (CH)
+>s[5713] Alive!
+>s[5714] Alive!
+>s[5715] Alive!
+>s[5716] Alive! (CH)
+>s[5717] Dead! killed by test 0
+>s[5718] Dead! killed by test 0
+>s[5719] Alive!
+>s[5720] Alive!
+>s[5721] Alive!
+>s[5722] Alive!
+>s[5723] Alive! (CH)
+>s[5724] Dead! killed by test 0
+>s[5725] Dead! killed by test 0
+>s[5726] Alive!
+>s[5727] Alive!
+>s[5728] Alive!
+>s[5729] Alive!
+>s[5730] Alive! (CH)
+>s[5731] Alive! (CH)
+>s[5732] Alive!
+>s[5733] Alive! (CH)
+>s[5734] Alive!
+>s[5735] Alive!
+>s[5736] Alive!
+>s[5737] Alive! (CH)
+>s[5738] Alive! (CH)
+>s[5739] Alive!
+>s[5740] Alive! (CH)
+>s[5741] Alive!
+>s[5742] Alive!
+>s[5743] Alive!
+>s[5744] Alive! (CH)
+>s[5745] Dead! killed by test 0
+>s[5746] Dead! killed by test 0
+>s[5747] Alive!
+>s[5748] Alive!
+>s[5749] Alive!
+>s[5750] Alive!
+>s[5751] Alive! (CH)
+>s[5752] Dead! killed by test 0
+>s[5753] Dead! killed by test 0
+>s[5754] Alive!
+>s[5755] Alive!
+>s[5756] Alive!
+>s[5757] Alive!
+>s[5758] Alive! (CH)
+>s[5759] Dead! killed by test 0
+>s[5760] Dead! killed by test 0
+>s[5761] Alive!
+>s[5762] Alive!
+>s[5763] Alive!
+>s[5764] Alive!
+>s[5765] Alive! (CH)
+>s[5766] Alive! (CH)
+>s[5767] Alive!
+>s[5768] Alive! (CH)
+>s[5769] Alive!
+>s[5770] Alive!
+>s[5771] Alive!
+>s[5772] Alive! (CH)
+>s[5773] Dead! killed by test 0
+>s[5774] Dead! killed by test 0
+>s[5775] Alive!
+>s[5776] Alive!
+>s[5777] Alive!
+>s[5778] Alive!
+>s[5779] Alive! (CH)
+>s[5780] Dead! killed by test 0
+>s[5781] Dead! killed by test 0
+>s[5782] Alive!
+>s[5783] Alive!
+>s[5784] Alive!
+>s[5785] Alive!
+>s[5786] Alive! (CH)
+>s[5787] Alive! (CH)
+>s[5788] Alive!
+>s[5789] Alive! (CH)
+>s[5790] Alive!
+>s[5791] Alive!
+>s[5792] Alive!
+>s[5793] Alive! (CH)
+>s[5794] Dead! killed by test 0
+>s[5795] Dead! killed by test 0
+>s[5796] Alive!
+>s[5797] Alive!
+>s[5798] Alive!
+>s[5799] Alive!
+>s[5800] Alive! (CH)
+>s[5801] Dead! killed by test 0
+>s[5802] Dead! killed by test 0
+>s[5803] Alive!
+>s[5804] Alive!
+>s[5805] Alive!
+>s[5806] Alive!
+>s[5807] Alive! (CH)
+>s[5808] Alive! (CH)
+>s[5809] Alive!
+>s[5810] Alive! (CH)
+>s[5811] Alive!
+>s[5812] Alive!
+>s[5813] Alive!
+>s[5814] Alive! (CH)
+>s[5815] Dead! killed by test 0
+>s[5816] Dead! killed by test 0
+>s[5817] Alive!
+>s[5818] Alive!
+>s[5819] Alive!
+>s[5820] Alive!
+>s[5821] Alive!
+>s[5822] Dead! killed by test 0
+>s[5823] Dead! killed by test 0
+>s[5824] Alive!
+>s[5825] Alive!
+>s[5826] Alive!
+>s[5827] Alive!
+>s[5828] Alive!
+>s[5829] Alive! (CH)
+>s[5830] Alive!
+>s[5831] Alive!
+>s[5832] Alive!
+>s[5833] Alive!
+>s[5834] Alive!
+>s[5835] Alive!
+>s[5836] Alive! (CH)
+>s[5837] Alive!
+>s[5838] Alive!
+>s[5839] Alive!
+>s[5840] Alive!
+>s[5841] Alive!
+>s[5842] Alive!
+>s[5843] Alive! (CH)
+>s[5844] Alive!
+>s[5845] Alive!
+>s[5846] Alive!
+>s[5847] Alive!
+>s[5848] Alive! (CH)
+>s[5849] Alive!
+>s[5850] Alive! (CH)
+>s[5851] Alive!
+>s[5852] Alive!
+>s[5853] Alive!
+>s[5854] Alive!
+>s[5855] Alive!
+>s[5856] Alive!
+>s[5857] Alive!
+>s[5858] Alive!
+>s[5859] Alive!
+>s[5860] Alive!
+>s[5861] Alive!
+>s[5862] Alive!
+>s[5863] Alive! (CH)
+>s[5864] Dead! killed by test 0
+>s[5865] Dead! killed by test 0
+>s[5866] Alive!
+>s[5867] Alive!
+>s[5868] Alive!
+>s[5869] Alive!
+>s[5870] Alive!
+>s[5871] Dead! killed by test 0
+>s[5872] Dead! killed by test 0
+>s[5873] Alive!
+>s[5874] Alive!
+>s[5875] Alive!
+>s[5876] Alive!
+>s[5877] Alive! (CH)
+>s[5878] Dead! killed by test 0
+>s[5879] Dead! killed by test 0
+>s[5880] Alive!
+>s[5881] Alive!
+>s[5882] Alive!
+>s[5883] Alive!
+>s[5884] Alive!
+>s[5885] Dead! killed by test 0
+>s[5886] Dead! killed by test 0
+>s[5887] Alive!
+>s[5888] Dupped (506)!
+>s[5889] Alive!
+>s[5890] Alive!
+>s[5891] Alive!
+>s[5892] Alive! (CH)
+>s[5893] Alive!
+>s[5894] Alive!
+>s[5895] Alive!
+>s[5896] Alive!
+>s[5897] Alive!
+>s[5898] Alive! (CH)
+>s[5899] Alive! (CH)
+>s[5900] Alive!
+>s[5901] Alive!
+>s[5902] Alive!
+>s[5903] Alive!
+>s[5904] Alive!
+>s[5905] Alive!
+>s[5906] Alive! (CH)
+>s[5907] Alive!
+>s[5908] Alive!
+>s[5909] Alive!
+>s[5910] Alive!
+>s[5911] Alive!
+>s[5912] Alive! (CH)
+>s[5913] Alive! (CH)
+>s[5914] Alive!
+>s[5915] Alive!
+>s[5916] Alive!
+>s[5917] Alive!
+>s[5918] Alive!
+>s[5919] Alive!
+>s[5920] Alive!
+>s[5921] Alive! (CH)
+>s[5922] Alive! (CH)
+>s[5923] Alive!
+>s[5924] Alive!
+>s[5925] Alive!
+>s[5926] Alive!
+>s[5927] Alive!
+>s[5928] Alive! (CH)
+>s[5929] Alive! (CH)
+>s[5930] Alive!
+>s[5931] Alive!
+>s[5932] Alive!
+>s[5933] Alive!
+>s[5934] Alive!
+>s[5935] Alive! (CH)
+>s[5936] Alive! (CH)
+>s[5937] Alive!
+>s[5938] Alive!
+>s[5939] Alive!
+>s[5940] Alive!
+>s[5941] Alive!
+>s[5942] Alive!
+>s[5943] Alive! (CH)
+>s[5944] Alive!
+>s[5945] Alive!
+>s[5946] Alive!
+>s[5947] Alive!
+>s[5948] Alive!
+>s[5949] Alive!
+>s[5950] Alive!
+>s[5951] Alive!
+>s[5952] Alive!
+>s[5953] Alive!
+>s[5954] Alive!
+>s[5955] Alive!
+>s[5956] Alive!
+>s[5957] Alive!
+>s[5958] Alive!
+>s[5959] Alive! (CH)
+>s[5960] Alive!
+>s[5961] Alive!
+>s[5962] Alive!
+>s[5963] Dead! killed by test 0
+>s[5964] Dead! killed by test 0
+>s[5965] Dead! killed by test 0
+>s[5966] Dead! killed by test 0
+>s[5967] Dead! killed by test 0
+>s[5968] Dead! killed by test 0
+>s[5969] Alive!
+>s[5970] Alive!
+>s[5971] Dead! killed by test 0
+>s[5972] Dead! killed by test 0
+>s[5973] Alive!
+>s[5974] Alive!
+>s[5975] Alive!
+>s[5976] Alive!
+>s[5977] Alive!
+>s[5978] Alive!
+>s[5979] Dead! killed by test 0
+>s[5980] Dead! killed by test 0
+>s[5981] Dead! killed by test 0
+>s[5982] Dead! killed by test 0
+>s[5983] Dead! killed by test 0
+>s[5984] Dead! killed by test 0
+>s[5985] Alive!
+>s[5986] Alive!
+>s[5987] Dead! killed by test 0
+>s[5988] Dead! killed by test 0
+>s[5989] Alive!
+>s[5990] Alive!
+>s[5991] Alive!
+>s[5992] Alive! (CH)
+>s[5993] Alive!
+>s[5994] Alive!
+>s[5995] Alive!
+>s[5996] Dead! killed by test 0
+>s[5997] Dead! killed by test 0
+>s[5998] Dead! killed by test 0
+>s[5999] Dead! killed by test 0
+>s[6000] Dead! killed by test 0
+>s[6001] Dead! killed by test 0
+>s[6002] Alive!
+>s[6003] Alive!
+>s[6004] Dead! killed by test 0
+>s[6005] Dead! killed by test 0
+>s[6006] Alive!
+>s[6007] Alive!
+>s[6008] Alive!
+>s[6009] Alive!
+>s[6010] Alive!
+>s[6011] Alive!
+>s[6012] Dead! killed by test 0
+>s[6013] Dead! killed by test 0
+>s[6014] Dead! killed by test 0
+>s[6015] Dead! killed by test 0
+>s[6016] Dead! killed by test 0
+>s[6017] Dead! killed by test 0
+>s[6018] Alive!
+>s[6019] Alive!
+>s[6020] Dead! killed by test 0
+>s[6021] Dead! killed by test 0
+>s[6022] Alive!
+>s[6023] Alive!
+>s[6024] Alive!
+>s[6025] Alive!
+>s[6026] Alive! (CH)
+>s[6027] Alive! (CH)
+>s[6028] Alive!
+>s[6029] Alive!
+>s[6030] Alive!
+>s[6031] Alive!
+>s[6032] Alive!
+>s[6033] Alive! (CH)
+>s[6034] Alive! (CH)
+>s[6035] Alive!
+>s[6036] Alive!
+>s[6037] Alive!
+>s[6038] Alive!
+>s[6039] Alive!
+>s[6040] Alive! (CH)
+>s[6041] Alive! (CH)
+>s[6042] Alive!
+>s[6043] Alive!
+>s[6044] Alive!
+>s[6045] Alive!
+>s[6046] Alive!
+>s[6047] Alive! (CH)
+>s[6048] Dead! killed by test 0
+>s[6049] Dead! killed by test 0
+>s[6050] Alive!
+>s[6051] Alive!
+>s[6052] Alive!
+>s[6053] Alive!
+>s[6054] Alive! (CH)
+>s[6055] Dead! killed by test 0
+>s[6056] Dead! killed by test 0
+>s[6057] Alive!
+>s[6058] Alive!
+>s[6059] Alive!
+>s[6060] Alive!
+>s[6061] Alive! (CH)
+>s[6062] Alive! (CH)
+>s[6063] Alive!
+>s[6064] Alive! (CH)
+>s[6065] Alive!
+>s[6066] Alive!
+>s[6067] Alive!
+>s[6068] Alive! (CH)
+>s[6069] Alive! (CH)
+>s[6070] Alive!
+>s[6071] Alive! (CH)
+>s[6072] Alive!
+>s[6073] Alive!
+>s[6074] Alive!
+>s[6075] Alive! (CH)
+>s[6076] Dead! killed by test 0
+>s[6077] Dead! killed by test 0
+>s[6078] Alive!
+>s[6079] Alive!
+>s[6080] Alive!
+>s[6081] Alive!
+>s[6082] Alive! (CH)
+>s[6083] Dead! killed by test 0
+>s[6084] Dead! killed by test 0
+>s[6085] Alive!
+>s[6086] Alive!
+>s[6087] Alive!
+>s[6088] Alive!
+>s[6089] Alive! (CH)
+>s[6090] Alive! (CH)
+>s[6091] Alive!
+>s[6092] Alive! (CH)
+>s[6093] Alive!
+>s[6094] Alive!
+>s[6095] Alive!
+>s[6096] Alive! (CH)
+>s[6097] Alive! (CH)
+>s[6098] Alive!
+>s[6099] Alive! (CH)
+>s[6100] Alive!
+>s[6101] Alive!
+>s[6102] Alive!
+>s[6103] Alive! (CH)
+>s[6104] Dead! killed by test 0
+>s[6105] Dead! killed by test 0
+>s[6106] Alive!
+>s[6107] Alive!
+>s[6108] Alive!
+>s[6109] Alive!
+>s[6110] Alive! (CH)
+>s[6111] Dead! killed by test 0
+>s[6112] Dead! killed by test 0
+>s[6113] Alive!
+>s[6114] Alive!
+>s[6115] Alive!
+>s[6116] Alive!
+>s[6117] Alive! (CH)
+>s[6118] Alive! (CH)
+>s[6119] Alive!
+>s[6120] Alive! (CH)
+>s[6121] Alive!
+>s[6122] Alive!
+>s[6123] Alive!
+>s[6124] Alive! (CH)
+>s[6125] Alive! (CH)
+>s[6126] Alive!
+>s[6127] Alive! (CH)
+>s[6128] Alive!
+>s[6129] Alive!
+>s[6130] Alive!
+>s[6131] Alive! (CH)
+>s[6132] Dead! killed by test 0
+>s[6133] Dead! killed by test 0
+>s[6134] Alive!
+>s[6135] Alive!
+>s[6136] Alive!
+>s[6137] Alive!
+>s[6138] Alive! (CH)
+>s[6139] Dead! killed by test 0
+>s[6140] Dead! killed by test 0
+>s[6141] Alive!
+>s[6142] Alive!
+>s[6143] Alive!
+>s[6144] Alive!
+>s[6145] Alive! (CH)
+>s[6146] Alive! (CH)
+>s[6147] Alive!
+>s[6148] Alive! (CH)
+>s[6149] Alive!
+>s[6150] Alive!
+>s[6151] Alive!
+>s[6152] Alive! (CH)
+>s[6153] Alive! (CH)
+>s[6154] Alive!
+>s[6155] Alive! (CH)
+>s[6156] Alive!
+>s[6157] Alive!
+>s[6158] Alive!
+>s[6159] Alive! (CH)
+>s[6160] Dead! killed by test 0
+>s[6161] Dead! killed by test 0
+>s[6162] Alive!
+>s[6163] Alive!
+>s[6164] Alive!
+>s[6165] Alive!
+>s[6166] Alive! (CH)
+>s[6167] Alive! (CH)
+>s[6168] Alive!
+>s[6169] Alive! (CH)
+>s[6170] Alive!
+>s[6171] Alive!
+>s[6172] Alive!
+>s[6173] Alive! (CH)
+>s[6174] Dead! killed by test 0
+>s[6175] Dead! killed by test 0
+>s[6176] Alive!
+>s[6177] Alive!
+>s[6178] Alive!
+>s[6179] Alive!
+>s[6180] Alive! (CH)
+>s[6181] Dead! killed by test 0
+>s[6182] Dead! killed by test 0
+>s[6183] Alive!
+>s[6184] Alive!
+>s[6185] Alive!
+>s[6186] Alive!
+>s[6187] Alive! (CH)
+>s[6188] Alive! (CH)
+>s[6189] Alive!
+>s[6190] Alive! (CH)
+>s[6191] Alive!
+>s[6192] Alive!
+>s[6193] Dupped (506)!
+>s[6194] Alive! (CH)
+>s[6195] Dead! killed by test 0
+>s[6196] Dead! killed by test 0
+>s[6197] Alive!
+>s[6198] Alive!
+>s[6199] Alive!
+>s[6200] Alive!
+>s[6201] Alive! (CH)
+>s[6202] Dead! killed by test 0
+>s[6203] Dead! killed by test 0
+>s[6204] Alive!
+>s[6205] Alive!
+>s[6206] Alive!
+>s[6207] Alive!
+>s[6208] Alive! (CH)
+>s[6209] Dead! killed by test 0
+>s[6210] Dead! killed by test 0
+>s[6211] Alive!
+>s[6212] Alive!
+>s[6213] Alive!
+>s[6214] Alive! (CH)
+>s[6215] Alive! (CH)
+>s[6216] Dead! killed by test 0
+>s[6217] Dead! killed by test 0
+>s[6218] Alive!
+>s[6219] Alive!
+>s[6220] Alive!
+>s[6221] Alive!
+>s[6222] Alive!
+>s[6223] Dead! killed by test 0
+>s[6224] Dead! killed by test 0
+>s[6225] Alive!
+>s[6226] Alive!
+>s[6227] Alive!
+>s[6228] Alive!
+>s[6229] Alive!
+>s[6230] Dead! killed by test 0
+>s[6231] Dead! killed by test 0
+>s[6232] Alive!
+>s[6233] Alive!
+>s[6234] Alive!
+>s[6235] Alive!
+>s[6236] Alive! (CH)
+>s[6237] Alive! (CH)
+>s[6238] Alive!
+>s[6239] Alive! (CH)
+>s[6240] Alive!
+>s[6241] Alive!
+>s[6242] Alive! (CH)
+>s[6243] Alive! (CH)
+>s[6244] Dead! killed by test 0
+>s[6245] Dead! killed by test 0
+>s[6246] Alive!
+>s[6247] Alive!
+>s[6248] Alive!
+>s[6249] Alive!
+>s[6250] Alive!
+>s[6251] Dead! killed by test 0
+>s[6252] Dead! killed by test 0
+>s[6253] Alive!
+>s[6254] Alive!
+>s[6255] Alive!
+>s[6256] Alive!
+>s[6257] Alive!
+>s[6258] Dead! killed by test 0
+>s[6259] Dead! killed by test 0
+>s[6260] Alive!
+>s[6261] Alive!
+>s[6262] Alive!
+>s[6263] Alive!
+>s[6264] Alive! (CH)
+>s[6265] Dead! killed by test 0
+>s[6266] Dead! killed by test 0
+>s[6267] Alive!
+>s[6268] Alive!
+>s[6269] Alive!
+>s[6270] Alive!
+>s[6271] Alive! (CH)
+>s[6272] Dead! killed by test 0
+>s[6273] Dead! killed by test 0
+>s[6274] Alive!
+>s[6275] Alive!
+>s[6276] Alive!
+>s[6277] Alive! (CH)
+>s[6278] Alive! (CH)
+>s[6279] Dead! killed by test 0
+>s[6280] Dead! killed by test 0
+>s[6281] Alive!
+>s[6282] Alive!
+>s[6283] Alive!
+>s[6284] Alive!
+>s[6285] Alive!
+>s[6286] Dead! killed by test 0
+>s[6287] Dead! killed by test 0
+>s[6288] Alive!
+>s[6289] Alive!
+>s[6290] Alive!
+>s[6291] Alive!
+>s[6292] Alive!
+>s[6293] Dead! killed by test 0
+>s[6294] Dead! killed by test 0
+>s[6295] Alive!
+>s[6296] Alive!
+>s[6297] Alive!
+>s[6298] Alive!
+>s[6299] Alive! (CH)
+>s[6300] Alive! (CH)
+>s[6301] Alive!
+>s[6302] Alive! (CH)
+>s[6303] Alive!
+>s[6304] Alive!
+>s[6305] Alive! (CH)
+>s[6306] Alive! (CH)
+>s[6307] Dead! killed by test 0
+>s[6308] Dead! killed by test 0
+>s[6309] Alive!
+>s[6310] Alive!
+>s[6311] Alive!
+>s[6312] Alive!
+>s[6313] Alive!
+>s[6314] Dead! killed by test 0
+>s[6315] Dead! killed by test 0
+>s[6316] Alive!
+>s[6317] Alive!
+>s[6318] Alive!
+>s[6319] Alive!
+>s[6320] Alive!
+>s[6321] Dead! killed by test 0
+>s[6322] Dead! killed by test 0
+>s[6323] Alive!
+>s[6324] Alive!
+>s[6325] Alive!
+>s[6326] Alive!
+>s[6327] Alive! (CH)
+>s[6328] Dead! killed by test 0
+>s[6329] Dead! killed by test 0
+>s[6330] Alive!
+>s[6331] Alive!
+>s[6332] Alive!
+>s[6333] Alive!
+>s[6334] Alive! (CH)
+>s[6335] Alive! (CH)
+>s[6336] Alive!
+>s[6337] Alive!
+>s[6338] Alive!
+>s[6339] Alive!
+>s[6340] Alive!
+>s[6341] Alive! (CH)
+>s[6342] Alive! (CH)
+>s[6343] Alive!
+>s[6344] Alive!
+>s[6345] Alive!
+>s[6346] Alive!
+>s[6347] Alive!
+>s[6348] Alive! (CH)
+>s[6349] Dead! killed by test 0
+>s[6350] Dead! killed by test 0
+>s[6351] Alive!
+>s[6352] Alive!
+>s[6353] Alive!
+>s[6354] Alive!
+>s[6355] Alive! (CH)
+>s[6356] Alive! (CH)
+>s[6357] Alive!
+>s[6358] Alive!
+>s[6359] Alive!
+>s[6360] Alive!
+>s[6361] Alive!
+>s[6362] Alive! (CH)
+>s[6363] Alive! (CH)
+>s[6364] Alive!
+>s[6365] Alive!
+>s[6366] Alive!
+>s[6367] Alive!
+>s[6368] Alive!
+>s[6369] Alive! (CH)
+>s[6370] Dead! killed by test 0
+>s[6371] Dead! killed by test 0
+>s[6372] Alive!
+>s[6373] Alive!
+>s[6374] Alive!
+>s[6375] Alive!
+>s[6376] Alive! (CH)
+>s[6377] Alive! (CH)
+>s[6378] Alive!
+>s[6379] Alive!
+>s[6380] Alive!
+>s[6381] Alive!
+>s[6382] Alive!
+>s[6383] Alive! (CH)
+>s[6384] Alive! (CH)
+>s[6385] Alive!
+>s[6386] Alive!
+>s[6387] Alive!
+>s[6388] Alive!
+>s[6389] Alive!
+>s[6390] Alive! (CH)
+>s[6391] Dead! killed by test 0
+>s[6392] Dead! killed by test 0
+>s[6393] Alive!
+>s[6394] Alive!
+>s[6395] Alive!
+>s[6396] Alive!
+>s[6397] Alive! (CH)
+>s[6398] Alive! (CH)
+>s[6399] Alive!
+>s[6400] Alive!
+>s[6401] Alive!
+>s[6402] Alive!
+>s[6403] Alive!
+>s[6404] Alive! (CH)
+>s[6405] Alive! (CH)
+>s[6406] Alive!
+>s[6407] Alive!
+>s[6408] Alive!
+>s[6409] Alive!
+>s[6410] Alive!
+>s[6411] Alive! (CH)
+>s[6412] Dead! killed by test 0
+>s[6413] Dead! killed by test 0
+>s[6414] Alive!
+>s[6415] Alive!
+>s[6416] Alive!
+>s[6417] Alive!
+>s[6418] Alive! (CH)
+>s[6419] Alive! (CH)
+>s[6420] Alive!
+>s[6421] Alive!
+>s[6422] Alive!
+>s[6423] Alive!
+>s[6424] Alive!
+>s[6425] Alive! (CH)
+>s[6426] Alive! (CH)
+>s[6427] Alive!
+>s[6428] Alive!
+>s[6429] Alive!
+>s[6430] Alive!
+>s[6431] Alive!
+>s[6432] Alive! (CH)
+>s[6433] Dead! killed by test 0
+>s[6434] Dead! killed by test 0
+>s[6435] Alive!
+>s[6436] Alive!
+>s[6437] Alive!
+>s[6438] Alive!
+>s[6439] Alive! (CH)
+>s[6440] Alive! (CH)
+>s[6441] Alive!
+>s[6442] Alive!
+>s[6443] Alive!
+>s[6444] Alive!
+>s[6445] Alive!
+>s[6446] Alive! (CH)
+>s[6447] Alive! (CH)
+>s[6448] Alive!
+>s[6449] Alive!
+>s[6450] Alive!
+>s[6451] Alive!
+>s[6452] Alive!
+>s[6453] Alive! (CH)
+>s[6454] Dead! killed by test 0
+>s[6455] Dead! killed by test 0
+>s[6456] Alive!
+>s[6457] Alive!
+>s[6458] Alive!
+>s[6459] Alive!
+>s[6460] Alive! (CH)
+>s[6461] Alive! (CH)
+>s[6462] Alive!
+>s[6463] Alive!
+>s[6464] Alive!
+>s[6465] Alive!
+>s[6466] Alive!
+>s[6467] Dupped (506)!
+>s[6468] Alive! (CH)
+>s[6469] Alive!
+>s[6470] Alive!
+>s[6471] Dupped (506)!
+>s[6472] Alive!
+>s[6473] Alive!
+>s[6474] Alive! (CH)
+>s[6475] Dead! killed by test 0
+>s[6476] Dead! killed by test 0
+>s[6477] Alive!
+>s[6478] Alive!
+>s[6479] Alive!
+>s[6480] Alive!
+>s[6481] Alive! (CH)
+>s[6482] Alive! (CH)
+>s[6483] Alive!
+>s[6484] Alive!
+>s[6485] Alive!
+>s[6486] Alive!
+>s[6487] Alive!
+>s[6488] Alive! (CH)
+>s[6489] Alive! (CH)
+>s[6490] Alive!
+>s[6491] Alive!
+>s[6492] Alive!
+>s[6493] Alive!
+>s[6494] Alive!
+>s[6495] Alive! (CH)
+>s[6496] Alive! (CH)
+>s[6497] Alive!
+>s[6498] Alive!
+>s[6499] Alive!
+>s[6500] Alive!
+>s[6501] Alive!
+>s[6502] Alive! (CH)
+>s[6503] Dead! killed by test 0
+>s[6504] Dead! killed by test 0
+>s[6505] Alive!
+>s[6506] Alive!
+>s[6507] Alive!
+>s[6508] Alive!
+>s[6509] Alive! (CH)
+>s[6510] Alive! (CH)
+>s[6511] Alive!
+>s[6512] Alive!
+>s[6513] Alive!
+>s[6514] Alive!
+>s[6515] Alive!
+>s[6516] Alive! (CH)
+>s[6517] Dead! killed by test 0
+>s[6518] Dead! killed by test 0
+>s[6519] Alive!
+>s[6520] Alive!
+>s[6521] Alive!
+>s[6522] Alive!
+>s[6523] Alive! (CH)
+>s[6524] Alive! (CH)
+>s[6525] Alive!
+>s[6526] Alive!
+>s[6527] Alive!
+>s[6528] Alive!
+>s[6529] Alive!
+>s[6530] Alive! (CH)
+>s[6531] Dead! killed by test 0
+>s[6532] Dead! killed by test 0
+>s[6533] Alive!
+>s[6534] Alive!
+>s[6535] Alive!
+>s[6536] Alive!
+>s[6537] Alive! (CH)
+>s[6538] Alive! (CH)
+>s[6539] Alive!
+>s[6540] Alive!
+>s[6541] Alive!
+>s[6542] Alive!
+>s[6543] Alive!
+>s[6544] Alive! (CH)
+>s[6545] Dead! killed by test 0
+>s[6546] Dead! killed by test 0
+>s[6547] Alive!
+>s[6548] Alive!
+>s[6549] Alive!
+>s[6550] Alive!
+>s[6551] Alive! (CH)
+>s[6552] Dead! killed by test 0
+>s[6553] Dead! killed by test 0
+>s[6554] Alive!
+>s[6555] Alive!
+>s[6556] Alive!
+>s[6557] Alive!
+>s[6558] Alive! (CH)
+>s[6559] Dead! killed by test 0
+>s[6560] Dead! killed by test 0
+>s[6561] Alive!
+>s[6562] Alive!
+>s[6563] Alive!
+>s[6564] Alive!
+>s[6565] Alive! (CH)
+>s[6566] Alive! (CH)
+>s[6567] Alive!
+>s[6568] Alive!
+>s[6569] Alive!
+>s[6570] Alive!
+>s[6571] Alive! (CH)
+>s[6572] Alive! (CH)
+>s[6573] Dead! killed by test 0
+>s[6574] Dead! killed by test 0
+>s[6575] Alive!
+>s[6576] Alive!
+>s[6577] Alive!
+>s[6578] Alive!
+>s[6579] Alive!
+>s[6580] Dead! killed by test 0
+>s[6581] Dead! killed by test 0
+>s[6582] Alive!
+>s[6583] Alive!
+>s[6584] Alive!
+>s[6585] Alive!
+>s[6586] Alive!
+>s[6587] Dead! killed by test 0
+>s[6588] Dead! killed by test 0
+>s[6589] Alive!
+>s[6590] Alive!
+>s[6591] Alive!
+>s[6592] Alive!
+>s[6593] Alive! (CH)
+>s[6594] Alive! (CH)
+>s[6595] Alive!
+>s[6596] Alive!
+>s[6597] Alive!
+>s[6598] Alive!
+>s[6599] Alive! (CH)
+>s[6600] Alive! (CH)
+>s[6601] Dead! killed by test 0
+>s[6602] Dead! killed by test 0
+>s[6603] Alive!
+>s[6604] Alive!
+>s[6605] Alive!
+>s[6606] Alive!
+>s[6607] Alive!
+>s[6608] Dead! killed by test 0
+>s[6609] Dead! killed by test 0
+>s[6610] Alive!
+>s[6611] Alive!
+>s[6612] Alive!
+>s[6613] Alive!
+>s[6614] Alive!
+>s[6615] Dead! killed by test 0
+>s[6616] Dead! killed by test 0
+>s[6617] Alive!
+>s[6618] Alive!
+>s[6619] Alive!
+>s[6620] Alive!
+>s[6621] Alive! (CH)
+>s[6622] Dead! killed by test 0
+>s[6623] Dead! killed by test 0
+>s[6624] Alive!
+>s[6625] Alive!
+>s[6626] Alive!
+>s[6627] Alive!
+>s[6628] Alive! (CH)
+>s[6629] Dead! killed by test 0
+>s[6630] Dead! killed by test 0
+>s[6631] Alive!
+>s[6632] Alive!
+>s[6633] Alive!
+>s[6634] Alive!
+>s[6635] Alive! (CH)
+>s[6636] Alive! (CH)
+>s[6637] Alive!
+>s[6638] Alive!
+>s[6639] Alive!
+>s[6640] Alive!
+>s[6641] Alive! (CH)
+>s[6642] Alive! (CH)
+>s[6643] Dead! killed by test 0
+>s[6644] Dead! killed by test 0
+>s[6645] Alive!
+>s[6646] Alive!
+>s[6647] Alive!
+>s[6648] Alive!
+>s[6649] Alive!
+>s[6650] Dead! killed by test 0
+>s[6651] Dead! killed by test 0
+>s[6652] Alive!
+>s[6653] Alive!
+>s[6654] Alive!
+>s[6655] Alive!
+>s[6656] Alive!
+>s[6657] Dead! killed by test 0
+>s[6658] Dead! killed by test 0
+>s[6659] Alive!
+>s[6660] Alive!
+>s[6661] Alive!
+>s[6662] Alive!
+>s[6663] Alive! (CH)
+>s[6664] Alive! (CH)
+>s[6665] Alive!
+>s[6666] Alive!
+>s[6667] Alive!
+>s[6668] Alive!
+>s[6669] Alive! (CH)
+>s[6670] Alive! (CH)
+>s[6671] Dead! killed by test 0
+>s[6672] Dead! killed by test 0
+>s[6673] Alive!
+>s[6674] Alive!
+>s[6675] Alive!
+>s[6676] Alive!
+>s[6677] Alive!
+>s[6678] Dead! killed by test 0
+>s[6679] Dead! killed by test 0
+>s[6680] Alive!
+>s[6681] Alive!
+>s[6682] Alive!
+>s[6683] Alive!
+>s[6684] Alive!
+>s[6685] Dead! killed by test 0
+>s[6686] Dead! killed by test 0
+>s[6687] Alive!
+>s[6688] Alive!
+>s[6689] Alive!
+>s[6690] Alive!
+>s[6691] Alive! (CH)
+>s[6692] Alive! (CH)
+>s[6693] Alive!
+>s[6694] Alive!
+>s[6695] Alive!
+>s[6696] Alive!
+>s[6697] Alive!
+>s[6698] Alive! (CH)
+>s[6699] Alive! (CH)
+>s[6700] Alive!
+>s[6701] Alive!
+>s[6702] Alive!
+>s[6703] Alive!
+>s[6704] Alive!
+>s[6705] Alive! (CH)
+>s[6706] Alive! (CH)
+>s[6707] Alive!
+>s[6708] Alive!
+>s[6709] Alive!
+>s[6710] Alive!
+>s[6711] Alive!
+>s[6712] Alive! (CH)
+>s[6713] Alive! (CH)
+>s[6714] Alive!
+>s[6715] Alive!
+>s[6716] Alive!
+>s[6717] Alive!
+>s[6718] Alive!
+>s[6719] Alive! (CH)
+>s[6720] Dead! killed by test 0
+>s[6721] Dead! killed by test 0
+>s[6722] Alive!
+>s[6723] Alive!
+>s[6724] Alive!
+>s[6725] Alive!
+>s[6726] Alive! (CH)
+>s[6727] Dead! killed by test 0
+>s[6728] Dead! killed by test 0
+>s[6729] Alive!
+>s[6730] Alive!
+>s[6731] Alive!
+>s[6732] Alive!
+>s[6733] Alive! (CH)
+>s[6734] Alive! (CH)
+>s[6735] Alive!
+>s[6736] Alive! (CH)
+>s[6737] Alive!
+>s[6738] Alive!
+>s[6739] Alive!
+>s[6740] Alive! (CH)
+>s[6741] Alive! (CH)
+>s[6742] Alive!
+>s[6743] Alive! (CH)
+>s[6744] Alive!
+>s[6745] Alive!
+>s[6746] Alive!
+>s[6747] Alive! (CH)
+>s[6748] Dead! killed by test 0
+>s[6749] Dead! killed by test 0
+>s[6750] Alive!
+>s[6751] Alive!
+>s[6752] Alive!
+>s[6753] Alive!
+>s[6754] Alive! (CH)
+>s[6755] Dead! killed by test 0
+>s[6756] Dead! killed by test 0
+>s[6757] Alive!
+>s[6758] Alive!
+>s[6759] Alive!
+>s[6760] Alive!
+>s[6761] Alive! (CH)
+>s[6762] Alive! (CH)
+>s[6763] Alive!
+>s[6764] Alive! (CH)
+>s[6765] Alive!
+>s[6766] Alive!
+>s[6767] Alive!
+>s[6768] Alive! (CH)
+>s[6769] Alive! (CH)
+>s[6770] Alive!
+>s[6771] Alive! (CH)
+>s[6772] Alive!
+>s[6773] Alive!
+>s[6774] Alive!
+>s[6775] Alive! (CH)
+>s[6776] Dead! killed by test 0
+>s[6777] Dead! killed by test 0
+>s[6778] Alive!
+>s[6779] Alive!
+>s[6780] Alive!
+>s[6781] Alive!
+>s[6782] Alive! (CH)
+>s[6783] Dead! killed by test 0
+>s[6784] Dead! killed by test 0
+>s[6785] Alive!
+>s[6786] Alive!
+>s[6787] Alive!
+>s[6788] Alive!
+>s[6789] Alive! (CH)
+>s[6790] Alive! (CH)
+>s[6791] Alive!
+>s[6792] Alive! (CH)
+>s[6793] Alive!
+>s[6794] Alive!
+>s[6795] Alive!
+>s[6796] Alive! (CH)
+>s[6797] Alive! (CH)
+>s[6798] Alive!
+>s[6799] Alive! (CH)
+>s[6800] Alive!
+>s[6801] Alive!
+>s[6802] Alive!
+>s[6803] Alive! (CH)
+>s[6804] Dead! killed by test 0
+>s[6805] Dead! killed by test 0
+>s[6806] Alive!
+>s[6807] Alive!
+>s[6808] Alive!
+>s[6809] Alive!
+>s[6810] Alive! (CH)
+>s[6811] Dead! killed by test 0
+>s[6812] Dead! killed by test 0
+>s[6813] Alive!
+>s[6814] Alive!
+>s[6815] Alive!
+>s[6816] Alive!
+>s[6817] Alive! (CH)
+>s[6818] Alive! (CH)
+>s[6819] Alive!
+>s[6820] Alive! (CH)
+>s[6821] Alive!
+>s[6822] Alive!
+>s[6823] Alive!
+>s[6824] Alive! (CH)
+>s[6825] Alive! (CH)
+>s[6826] Alive!
+>s[6827] Alive! (CH)
+>s[6828] Alive!
+>s[6829] Alive!
+>s[6830] Alive!
+>s[6831] Alive! (CH)
+>s[6832] Dead! killed by test 0
+>s[6833] Dead! killed by test 0
+>s[6834] Alive!
+>s[6835] Alive!
+>s[6836] Alive!
+>s[6837] Alive!
+>s[6838] Alive! (CH)
+>s[6839] Alive! (CH)
+>s[6840] Alive!
+>s[6841] Alive! (CH)
+>s[6842] Alive!
+>s[6843] Alive!
+>s[6844] Alive!
+>s[6845] Alive! (CH)
+>s[6846] Dead! killed by test 0
+>s[6847] Dead! killed by test 0
+>s[6848] Alive!
+>s[6849] Alive!
+>s[6850] Alive!
+>s[6851] Alive!
+>s[6852] Alive! (CH)
+>s[6853] Dead! killed by test 0
+>s[6854] Dead! killed by test 0
+>s[6855] Alive!
+>s[6856] Alive!
+>s[6857] Alive!
+>s[6858] Alive!
+>s[6859] Alive! (CH)
+>s[6860] Alive! (CH)
+>s[6861] Alive!
+>s[6862] Alive! (CH)
+>s[6863] Alive!
+>s[6864] Alive!
+>s[6865] Alive!
+>s[6866] Alive! (CH)
+>s[6867] Dead! killed by test 0
+>s[6868] Dead! killed by test 0
+>s[6869] Alive!
+>s[6870] Alive!
+>s[6871] Alive!
+>s[6872] Alive!
+>s[6873] Alive! (CH)
+>s[6874] Dead! killed by test 0
+>s[6875] Dead! killed by test 0
+>s[6876] Alive!
+>s[6877] Alive!
+>s[6878] Alive!
+>s[6879] Alive!
+>s[6880] Alive! (CH)
+>s[6881] Dead! killed by test 0
+>s[6882] Dead! killed by test 0
+>s[6883] Alive!
+>s[6884] Alive!
+>s[6885] Alive!
+>s[6886] Alive! (CH)
+>s[6887] Alive! (CH)
+>s[6888] Dead! killed by test 0
+>s[6889] Dead! killed by test 0
+>s[6890] Alive!
+>s[6891] Alive!
+>s[6892] Alive!
+>s[6893] Alive!
+>s[6894] Alive!
+>s[6895] Dead! killed by test 0
+>s[6896] Dead! killed by test 0
+>s[6897] Alive!
+>s[6898] Alive!
+>s[6899] Alive!
+>s[6900] Alive!
+>s[6901] Alive!
+>s[6902] Dead! killed by test 0
+>s[6903] Dead! killed by test 0
+>s[6904] Alive!
+>s[6905] Alive!
+>s[6906] Alive!
+>s[6907] Alive!
+>s[6908] Alive! (CH)
+>s[6909] Alive! (CH)
+>s[6910] Alive!
+>s[6911] Alive! (CH)
+>s[6912] Alive!
+>s[6913] Alive!
+>s[6914] Alive! (CH)
+>s[6915] Alive! (CH)
+>s[6916] Dead! killed by test 0
+>s[6917] Dead! killed by test 0
+>s[6918] Alive!
+>s[6919] Alive!
+>s[6920] Alive!
+>s[6921] Alive!
+>s[6922] Alive!
+>s[6923] Dead! killed by test 0
+>s[6924] Dead! killed by test 0
+>s[6925] Alive!
+>s[6926] Alive!
+>s[6927] Alive!
+>s[6928] Alive!
+>s[6929] Alive!
+>s[6930] Dead! killed by test 0
+>s[6931] Dead! killed by test 0
+>s[6932] Alive!
+>s[6933] Alive!
+>s[6934] Alive!
+>s[6935] Alive!
+>s[6936] Alive! (CH)
+>s[6937] Dead! killed by test 0
+>s[6938] Dead! killed by test 0
+>s[6939] Alive!
+>s[6940] Alive!
+>s[6941] Alive!
+>s[6942] Alive!
+>s[6943] Alive! (CH)
+>s[6944] Dead! killed by test 0
+>s[6945] Dead! killed by test 0
+>s[6946] Alive!
+>s[6947] Alive!
+>s[6948] Alive!
+>s[6949] Alive! (CH)
+>s[6950] Alive! (CH)
+>s[6951] Dead! killed by test 0
+>s[6952] Dead! killed by test 0
+>s[6953] Alive!
+>s[6954] Alive!
+>s[6955] Alive!
+>s[6956] Alive!
+>s[6957] Alive!
+>s[6958] Dead! killed by test 0
+>s[6959] Dead! killed by test 0
+>s[6960] Alive!
+>s[6961] Alive!
+>s[6962] Alive!
+>s[6963] Alive!
+>s[6964] Alive!
+>s[6965] Dead! killed by test 0
+>s[6966] Dead! killed by test 0
+>s[6967] Alive!
+>s[6968] Alive!
+>s[6969] Alive!
+>s[6970] Alive!
+>s[6971] Alive! (CH)
+>s[6972] Alive! (CH)
+>s[6973] Alive!
+>s[6974] Alive! (CH)
+>s[6975] Alive!
+>s[6976] Alive!
+>s[6977] Alive! (CH)
+>s[6978] Alive! (CH)
+>s[6979] Dead! killed by test 0
+>s[6980] Dead! killed by test 0
+>s[6981] Alive!
+>s[6982] Alive!
+>s[6983] Alive!
+>s[6984] Alive!
+>s[6985] Alive!
+>s[6986] Dead! killed by test 0
+>s[6987] Dead! killed by test 0
+>s[6988] Alive!
+>s[6989] Alive!
+>s[6990] Alive!
+>s[6991] Alive!
+>s[6992] Alive!
+>s[6993] Dead! killed by test 0
+>s[6994] Dead! killed by test 0
+>s[6995] Alive!
+>s[6996] Alive!
+>s[6997] Alive!
+>s[6998] Alive!
+>s[6999] Alive! (CH)
+>s[7000] Dead! killed by test 0
+>s[7001] Dead! killed by test 0
+>s[7002] Alive!
+>s[7003] Alive!
+>s[7004] Alive!
+>s[7005] Alive!
+>s[7006] Alive! (CH)
+>s[7007] Alive! (CH)
+>s[7008] Alive!
+>s[7009] Alive!
+>s[7010] Alive!
+>s[7011] Alive!
+>s[7012] Alive!
+>s[7013] Alive! (CH)
+>s[7014] Alive! (CH)
+>s[7015] Alive!
+>s[7016] Alive!
+>s[7017] Alive!
+>s[7018] Alive!
+>s[7019] Alive!
+>s[7020] Alive! (CH)
+>s[7021] Dead! killed by test 0
+>s[7022] Dead! killed by test 0
+>s[7023] Alive!
+>s[7024] Alive!
+>s[7025] Alive!
+>s[7026] Alive!
+>s[7027] Alive! (CH)
+>s[7028] Alive! (CH)
+>s[7029] Alive!
+>s[7030] Alive!
+>s[7031] Alive! (CH)
+>s[7032] Alive!
+>s[7033] Alive!
+>s[7034] Alive! (CH)
+>s[7035] Alive! (CH)
+>s[7036] Alive!
+>s[7037] Alive!
+>s[7038] Alive! (CH)
+>s[7039] Alive!
+>s[7040] Alive!
+>s[7041] Alive! (CH)
+>s[7042] Dead! killed by test 0
+>s[7043] Dead! killed by test 0
+>s[7044] Alive!
+>s[7045] Alive!
+>s[7046] Alive!
+>s[7047] Alive!
+>s[7048] Alive! (CH)
+>s[7049] Alive! (CH)
+>s[7050] Alive!
+>s[7051] Alive!
+>s[7052] Alive!
+>s[7053] Alive!
+>s[7054] Alive!
+>s[7055] Alive! (CH)
+>s[7056] Alive! (CH)
+>s[7057] Alive!
+>s[7058] Alive!
+>s[7059] Alive!
+>s[7060] Alive!
+>s[7061] Alive!
+>s[7062] Alive! (CH)
+>s[7063] Dead! killed by test 0
+>s[7064] Dead! killed by test 0
+>s[7065] Alive!
+>s[7066] Alive!
+>s[7067] Alive!
+>s[7068] Alive!
+>s[7069] Alive! (CH)
+>s[7070] Alive! (CH)
+>s[7071] Alive!
+>s[7072] Alive!
+>s[7073] Alive! (CH)
+>s[7074] Alive!
+>s[7075] Alive!
+>s[7076] Alive! (CH)
+>s[7077] Alive! (CH)
+>s[7078] Alive!
+>s[7079] Alive!
+>s[7080] Alive! (CH)
+>s[7081] Alive!
+>s[7082] Alive!
+>s[7083] Alive! (CH)
+>s[7084] Dead! killed by test 0
+>s[7085] Dead! killed by test 0
+>s[7086] Alive!
+>s[7087] Alive!
+>s[7088] Alive!
+>s[7089] Alive!
+>s[7090] Alive! (CH)
+>s[7091] Alive! (CH)
+>s[7092] Alive!
+>s[7093] Alive!
+>s[7094] Alive!
+>s[7095] Alive!
+>s[7096] Alive!
+>s[7097] Alive! (CH)
+>s[7098] Alive! (CH)
+>s[7099] Alive!
+>s[7100] Alive!
+>s[7101] Alive!
+>s[7102] Alive!
+>s[7103] Alive!
+>s[7104] Alive! (CH)
+>s[7105] Dead! killed by test 0
+>s[7106] Dead! killed by test 0
+>s[7107] Alive!
+>s[7108] Alive!
+>s[7109] Alive!
+>s[7110] Alive!
+>s[7111] Alive! (CH)
+>s[7112] Alive! (CH)
+>s[7113] Alive!
+>s[7114] Alive!
+>s[7115] Alive! (CH)
+>s[7116] Alive!
+>s[7117] Alive!
+>s[7118] Alive! (CH)
+>s[7119] Alive! (CH)
+>s[7120] Alive!
+>s[7121] Alive!
+>s[7122] Alive! (CH)
+>s[7123] Alive!
+>s[7124] Alive!
+>s[7125] Alive! (CH)
+>s[7126] Dead! killed by test 0
+>s[7127] Dead! killed by test 0
+>s[7128] Alive!
+>s[7129] Alive!
+>s[7130] Alive!
+>s[7131] Alive!
+>s[7132] Alive! (CH)
+>s[7133] Alive! (CH)
+>s[7134] Alive!
+>s[7135] Alive!
+>s[7136] Alive!
+>s[7137] Alive!
+>s[7138] Alive!
+>s[7139] Alive! (CH)
+>s[7140] Alive! (CH)
+>s[7141] Alive!
+>s[7142] Alive!
+>s[7143] Alive!
+>s[7144] Alive!
+>s[7145] Alive!
+>s[7146] Alive! (CH)
+>s[7147] Dead! killed by test 0
+>s[7148] Dead! killed by test 0
+>s[7149] Alive!
+>s[7150] Alive!
+>s[7151] Alive!
+>s[7152] Alive!
+>s[7153] Alive! (CH)
+>s[7154] Alive! (CH)
+>s[7155] Alive!
+>s[7156] Alive!
+>s[7157] Alive! (CH)
+>s[7158] Alive!
+>s[7159] Alive!
+>s[7160] Alive! (CH)
+>s[7161] Alive! (CH)
+>s[7162] Alive!
+>s[7163] Alive!
+>s[7164] Alive! (CH)
+>s[7165] Alive!
+>s[7166] Alive!
+>s[7167] Alive! (CH)
+>s[7168] Alive! (CH)
+>s[7169] Alive!
+>s[7170] Alive!
+>s[7171] Alive!
+>s[7172] Alive!
+>s[7173] Alive!
+>s[7174] Alive! (CH)
+>s[7175] Dead! killed by test 0
+>s[7176] Dead! killed by test 0
+>s[7177] Alive!
+>s[7178] Alive!
+>s[7179] Alive!
+>s[7180] Alive!
+>s[7181] Alive! (CH)
+>s[7182] Alive! (CH)
+>s[7183] Alive!
+>s[7184] Alive!
+>s[7185] Alive! (CH)
+>s[7186] Alive!
+>s[7187] Alive!
+>s[7188] Alive! (CH)
+>s[7189] Dead! killed by test 0
+>s[7190] Dead! killed by test 0
+>s[7191] Alive!
+>s[7192] Alive!
+>s[7193] Alive!
+>s[7194] Alive!
+>s[7195] Alive! (CH)
+>s[7196] Alive! (CH)
+>s[7197] Alive!
+>s[7198] Alive!
+>s[7199] Alive!
+>s[7200] Alive!
+>s[7201] Alive!
+>s[7202] Alive! (CH)
+>s[7203] Dead! killed by test 0
+>s[7204] Dead! killed by test 0
+>s[7205] Alive!
+>s[7206] Alive!
+>s[7207] Alive!
+>s[7208] Alive!
+>s[7209] Alive! (CH)
+>s[7210] Alive! (CH)
+>s[7211] Alive!
+>s[7212] Alive!
+>s[7213] Alive! (CH)
+>s[7214] Alive!
+>s[7215] Alive!
+>s[7216] Alive! (CH)
+>s[7217] Dead! killed by test 0
+>s[7218] Dead! killed by test 0
+>s[7219] Alive!
+>s[7220] Alive!
+>s[7221] Alive!
+>s[7222] Alive!
+>s[7223] Alive! (CH)
+>s[7224] Dead! killed by test 0
+>s[7225] Dead! killed by test 0
+>s[7226] Alive!
+>s[7227] Alive!
+>s[7228] Alive!
+>s[7229] Alive!
+>s[7230] Alive! (CH)
+>s[7231] Dead! killed by test 0
+>s[7232] Dead! killed by test 0
+>s[7233] Alive!
+>s[7234] Alive!
+>s[7235] Alive!
+>s[7236] Alive!
+>s[7237] Alive! (CH)
+>s[7238] Alive! (CH)
+>s[7239] Alive!
+>s[7240] Alive!
+>s[7241] Alive!
+>s[7242] Alive!
+>s[7243] Alive! (CH)
+>s[7244] Alive! (CH)
+>s[7245] Dead! killed by test 0
+>s[7246] Dead! killed by test 0
+>s[7247] Alive!
+>s[7248] Alive!
+>s[7249] Alive!
+>s[7250] Alive!
+>s[7251] Alive!
+>s[7252] Dead! killed by test 0
+>s[7253] Dead! killed by test 0
+>s[7254] Alive!
+>s[7255] Alive!
+>s[7256] Alive!
+>s[7257] Alive!
+>s[7258] Alive!
+>s[7259] Dead! killed by test 0
+>s[7260] Dead! killed by test 0
+>s[7261] Alive!
+>s[7262] Alive!
+>s[7263] Alive!
+>s[7264] Alive!
+>s[7265] Alive! (CH)
+>s[7266] Alive! (CH)
+>s[7267] Alive!
+>s[7268] Alive!
+>s[7269] Alive! (CH)
+>s[7270] Alive!
+>s[7271] Alive! (CH)
+>s[7272] Alive! (CH)
+>s[7273] Dead! killed by test 0
+>s[7274] Dead! killed by test 0
+>s[7275] Alive!
+>s[7276] Alive!
+>s[7277] Alive!
+>s[7278] Alive!
+>s[7279] Alive!
+>s[7280] Dead! killed by test 0
+>s[7281] Dead! killed by test 0
+>s[7282] Alive!
+>s[7283] Alive!
+>s[7284] Alive!
+>s[7285] Alive!
+>s[7286] Alive!
+>s[7287] Dead! killed by test 0
+>s[7288] Dead! killed by test 0
+>s[7289] Alive!
+>s[7290] Alive!
+>s[7291] Alive!
+>s[7292] Alive!
+>s[7293] Alive! (CH)
+>s[7294] Dead! killed by test 0
+>s[7295] Dead! killed by test 0
+>s[7296] Alive!
+>s[7297] Alive!
+>s[7298] Alive!
+>s[7299] Alive!
+>s[7300] Alive! (CH)
+>s[7301] Dead! killed by test 0
+>s[7302] Dead! killed by test 0
+>s[7303] Alive!
+>s[7304] Alive!
+>s[7305] Alive!
+>s[7306] Alive!
+>s[7307] Alive! (CH)
+>s[7308] Alive! (CH)
+>s[7309] Alive!
+>s[7310] Alive!
+>s[7311] Alive!
+>s[7312] Alive!
+>s[7313] Alive! (CH)
+>s[7314] Alive! (CH)
+>s[7315] Dead! killed by test 0
+>s[7316] Dead! killed by test 0
+>s[7317] Alive!
+>s[7318] Alive!
+>s[7319] Alive!
+>s[7320] Alive!
+>s[7321] Alive!
+>s[7322] Dead! killed by test 0
+>s[7323] Dead! killed by test 0
+>s[7324] Alive!
+>s[7325] Alive!
+>s[7326] Alive!
+>s[7327] Alive!
+>s[7328] Alive!
+>s[7329] Dead! killed by test 0
+>s[7330] Dead! killed by test 0
+>s[7331] Alive!
+>s[7332] Alive!
+>s[7333] Alive!
+>s[7334] Alive!
+>s[7335] Alive! (CH)
+>s[7336] Alive! (CH)
+>s[7337] Alive!
+>s[7338] Alive!
+>s[7339] Alive! (CH)
+>s[7340] Alive!
+>s[7341] Alive! (CH)
+>s[7342] Alive! (CH)
+>s[7343] Dead! killed by test 0
+>s[7344] Dead! killed by test 0
+>s[7345] Alive!
+>s[7346] Alive!
+>s[7347] Alive!
+>s[7348] Alive!
+>s[7349] Alive!
+>s[7350] Dead! killed by test 0
+>s[7351] Dead! killed by test 0
+>s[7352] Alive!
+>s[7353] Alive!
+>s[7354] Alive!
+>s[7355] Alive!
+>s[7356] Alive!
+>s[7357] Dead! killed by test 0
+>s[7358] Dead! killed by test 0
+>s[7359] Alive!
+>s[7360] Alive!
+>s[7361] Alive!
+>s[7362] Alive! (CH)
+>s[7363] Alive!
+>s[7364] Alive!
+>s[7365] Alive!
+>s[7366] Dead! killed by test 0
+>s[7367] Dead! killed by test 0
+>s[7368] Dead! killed by test 0
+>s[7369] Dead! killed by test 0
+>s[7370] Dead! killed by test 0
+>s[7371] Dead! killed by test 0
+>s[7372] Alive!
+>s[7373] Alive!
+>s[7374] Dead! killed by test 0
+>s[7375] Dead! killed by test 0
+>s[7376] Alive!
+>s[7377] Alive!
+>s[7378] Alive!
+>s[7379] Alive!
+>s[7380] Alive!
+>s[7381] Alive!
+>s[7382] Dead! killed by test 0
+>s[7383] Dead! killed by test 0
+>s[7384] Dead! killed by test 0
+>s[7385] Dead! killed by test 0
+>s[7386] Dead! killed by test 0
+>s[7387] Dead! killed by test 0
+>s[7388] Alive!
+>s[7389] Alive!
+>s[7390] Dead! killed by test 0
+>s[7391] Dead! killed by test 0
+>s[7392] Alive!
+>s[7393] Alive!
+>s[7394] Alive!
+>s[7395] Alive! (CH)
+>s[7396] Alive!
+>s[7397] Alive!
+>s[7398] Alive!
+>s[7399] Dead! killed by test 0
+>s[7400] Dead! killed by test 0
+>s[7401] Dead! killed by test 0
+>s[7402] Dead! killed by test 0
+>s[7403] Dead! killed by test 0
+>s[7404] Dead! killed by test 0
+>s[7405] Alive!
+>s[7406] Alive!
+>s[7407] Dead! killed by test 0
+>s[7408] Dead! killed by test 0
+>s[7409] Alive!
+>s[7410] Alive!
+>s[7411] Alive!
+>s[7412] Alive!
+>s[7413] Alive!
+>s[7414] Alive!
+>s[7415] Dead! killed by test 0
+>s[7416] Dead! killed by test 0
+>s[7417] Dead! killed by test 0
+>s[7418] Dead! killed by test 0
+>s[7419] Dead! killed by test 0
+>s[7420] Dead! killed by test 0
+>s[7421] Alive!
+>s[7422] Alive!
+>s[7423] Dead! killed by test 0
+>s[7424] Dead! killed by test 0
+>s[7425] Alive!
+>s[7426] Alive!
+>s[7427] Alive!
+>s[7428] Alive!
+>s[7429] Alive! (CH)
+>s[7430] Alive! (CH)
+>s[7431] Alive!
+>s[7432] Dupped (506)!
+>s[7433] Alive!
+>s[7434] Alive!
+>s[7435] Alive!
+>s[7436] Alive!
+>s[7437] Alive!
+>s[7438] Alive! (CH)
+>s[7439] Alive! (CH)
+>s[7440] Alive!
+>s[7441] Alive!
+>s[7442] Alive!
+>s[7443] Alive!
+>s[7444] Alive!
+>s[7445] Alive!
+>s[7446] Dead! killed by test 0
+>s[7447] Dead! killed by test 0
+>s[7448] Alive!
+>s[7449] Alive!
+>s[7450] Alive!
+>s[7451] Alive!
+>s[7452] Alive!
+>s[7453] Dead! killed by test 0
+>s[7454] Dead! killed by test 0
+>s[7455] Alive!
+>s[7456] Alive!
+>s[7457] Alive!
+>s[7458] Alive! (CH)
+>s[7459] Alive!
+>s[7460] Alive! (CH)
+>s[7461] Alive!
+>s[7462] Alive!
+>s[7463] Alive!
+>s[7464] Alive!
+>s[7465] Alive!
+>s[7466] Alive!
+>s[7467] Alive!
+>s[7468] Alive!
+>s[7469] Alive!
+>s[7470] Alive!
+>s[7471] Alive!
+>s[7472] Alive!
+>s[7473] Alive! (CH)
+>s[7474] Dead! killed by test 0
+>s[7475] Dead! killed by test 0
+>s[7476] Alive!
+>s[7477] Alive!
+>s[7478] Alive!
+>s[7479] Alive!
+>s[7480] Alive!
+>s[7481] Dead! killed by test 0
+>s[7482] Dead! killed by test 0
+>s[7483] Alive!
+>s[7484] Alive!
+>s[7485] Alive!
+>s[7486] Alive!
+>s[7487] Alive! (CH)
+>s[7488] Dead! killed by test 0
+>s[7489] Dead! killed by test 0
+>s[7490] Alive!
+>s[7491] Alive!
+>s[7492] Alive!
+>s[7493] Alive!
+>s[7494] Alive!
+>s[7495] Dead! killed by test 0
+>s[7496] Dead! killed by test 0
+>s[7497] Alive!
+>s[7498] Alive!
+>s[7499] Alive!
+>s[7500] Alive! (CH)
+>s[7501] Alive! (CH)
+>s[7502] Dead! killed by test 0
+>s[7503] Dead! killed by test 0
+>s[7504] Alive!
+>s[7505] Alive!
+>s[7506] Alive!
+>s[7507] Alive!
+>s[7508] Alive!
+>s[7509] Dead! killed by test 0
+>s[7510] Dead! killed by test 0
+>s[7511] Alive!
+>s[7512] Alive!
+>s[7513] Alive!
+>s[7514] Alive!
+>s[7515] Alive!
+>s[7516] Dead! killed by test 0
+>s[7517] Dead! killed by test 0
+>s[7518] Alive!
+>s[7519] Alive!
+>s[7520] Alive!
+>s[7521] Alive! (CH)
+>s[7522] Alive! (CH)
+>s[7523] Dead! killed by test 0
+>s[7524] Dead! killed by test 0
+>s[7525] Alive!
+>s[7526] Alive!
+>s[7527] Alive!
+>s[7528] Alive!
+>s[7529] Alive!
+>s[7530] Dead! killed by test 0
+>s[7531] Dead! killed by test 0
+>s[7532] Alive!
+>s[7533] Alive!
+>s[7534] Alive!
+>s[7535] Alive!
+>s[7536] Alive!
+>s[7537] Dead! killed by test 0
+>s[7538] Dead! killed by test 0
+>s[7539] Alive!
+>s[7540] Alive!
+>s[7541] Alive!
+>s[7542] Alive! (CH)
+>s[7543] Alive!
+>s[7544] Alive! (CH)
+>s[7545] Alive!
+>s[7546] Alive!
+>s[7547] Alive!
+>s[7548] Alive!
+>s[7549] Alive!
+>s[7550] Alive!
+>s[7551] Alive!
+>s[7552] Alive!
+>s[7553] Alive!
+>s[7554] Alive!
+>s[7555] Alive!
+>s[7556] Alive!
+>s[7557] Alive! (CH)
+>s[7558] Dead! killed by test 0
+>s[7559] Dead! killed by test 0
+>s[7560] Alive!
+>s[7561] Alive!
+>s[7562] Alive!
+>s[7563] Alive!
+>s[7564] Alive!
+>s[7565] Dead! killed by test 0
+>s[7566] Dead! killed by test 0
+>s[7567] Alive!
+>s[7568] Alive!
+>s[7569] Alive!
+>s[7570] Alive!
+>s[7571] Alive! (CH)
+>s[7572] Dead! killed by test 0
+>s[7573] Dead! killed by test 0
+>s[7574] Alive!
+>s[7575] Alive!
+>s[7576] Alive!
+>s[7577] Alive!
+>s[7578] Alive!
+>s[7579] Dead! killed by test 0
+>s[7580] Dead! killed by test 0
+>s[7581] Alive!
+>s[7582] Alive!
+>s[7583] Alive!
+>s[7584] Alive!
+>s[7585] Alive! (CH)
+>s[7586] Alive! (CH)
+>s[7587] Alive!
+>s[7588] Alive!
+>s[7589] Alive!
+>s[7590] Alive!
+>s[7591] Alive!
+>s[7592] Alive! (CH)
+>s[7593] Alive! (CH)
+>s[7594] Alive!
+>s[7595] Alive!
+>s[7596] Alive!
+>s[7597] Alive!
+>s[7598] Alive!
+>s[7599] Alive! (CH)
+>s[7600] Alive! (CH)
+>s[7601] Alive!
+>s[7602] Alive!
+>s[7603] Alive!
+>s[7604] Alive!
+>s[7605] Alive!
+>s[7606] Alive! (CH)
+>s[7607] Dead! killed by test 0
+>s[7608] Dead! killed by test 0
+>s[7609] Alive!
+>s[7610] Alive!
+>s[7611] Alive!
+>s[7612] Alive!
+>s[7613] Alive! (CH)
+>s[7614] Alive! (CH)
+>s[7615] Alive!
+>s[7616] Alive!
+>s[7617] Alive!
+>s[7618] Alive!
+>s[7619] Alive!
+>s[7620] Alive! (CH)
+>s[7621] Alive! (CH)
+>s[7622] Alive!
+>s[7623] Alive!
+>s[7624] Alive!
+>s[7625] Alive!
+>s[7626] Alive!
+>s[7627] Alive! (CH)
+>s[7628] Dead! killed by test 0
+>s[7629] Dead! killed by test 0
+>s[7630] Alive!
+>s[7631] Alive!
+>s[7632] Alive!
+>s[7633] Alive!
+>s[7634] Alive! (CH)
+>s[7635] Alive! (CH)
+>s[7636] Alive!
+>s[7637] Alive!
+>s[7638] Alive! (CH)
+>s[7639] Alive!
+>s[7640] Alive!
+>s[7641] Alive! (CH)
+>s[7642] Alive! (CH)
+>s[7643] Alive!
+>s[7644] Alive!
+>s[7645] Alive! (CH)
+>s[7646] Alive!
+>s[7647] Alive!
+>s[7648] Alive! (CH)
+>s[7649] Dead! killed by test 0
+>s[7650] Dead! killed by test 0
+>s[7651] Alive!
+>s[7652] Alive!
+>s[7653] Alive!
+>s[7654] Alive!
+>s[7655] Alive! (CH)
+>s[7656] Alive! (CH)
+>s[7657] Alive!
+>s[7658] Alive!
+>s[7659] Alive!
+>s[7660] Alive!
+>s[7661] Alive!
+>s[7662] Alive! (CH)
+>s[7663] Alive! (CH)
+>s[7664] Alive!
+>s[7665] Alive!
+>s[7666] Alive!
+>s[7667] Alive!
+>s[7668] Alive!
+>s[7669] Alive! (CH)
+>s[7670] Dead! killed by test 0
+>s[7671] Dead! killed by test 0
+>s[7672] Alive!
+>s[7673] Alive!
+>s[7674] Alive!
+>s[7675] Alive!
+>s[7676] Alive! (CH)
+>s[7677] Alive! (CH)
+>s[7678] Alive!
+>s[7679] Alive!
+>s[7680] Alive! (CH)
+>s[7681] Alive!
+>s[7682] Alive!
+>s[7683] Alive! (CH)
+>s[7684] Alive! (CH)
+>s[7685] Alive!
+>s[7686] Alive!
+>s[7687] Alive! (CH)
+>s[7688] Alive!
+>s[7689] Alive!
+>s[7690] Alive! (CH)
+>s[7691] Dead! killed by test 0
+>s[7692] Dead! killed by test 0
+>s[7693] Alive!
+>s[7694] Alive!
+>s[7695] Alive!
+>s[7696] Alive!
+>s[7697] Alive! (CH)
+>s[7698] Alive! (CH)
+>s[7699] Alive!
+>s[7700] Alive!
+>s[7701] Alive!
+>s[7702] Alive!
+>s[7703] Alive!
+>s[7704] Alive! (CH)
+>s[7705] Alive! (CH)
+>s[7706] Alive!
+>s[7707] Alive!
+>s[7708] Alive!
+>s[7709] Alive!
+>s[7710] Alive!
+>s[7711] Alive! (CH)
+>s[7712] Dead! killed by test 0
+>s[7713] Dead! killed by test 0
+>s[7714] Alive!
+>s[7715] Alive!
+>s[7716] Alive!
+>s[7717] Alive!
+>s[7718] Alive! (CH)
+>s[7719] Alive! (CH)
+>s[7720] Alive!
+>s[7721] Alive!
+>s[7722] Alive! (CH)
+>s[7723] Alive!
+>s[7724] Alive!
+>s[7725] Alive! (CH)
+>s[7726] Alive! (CH)
+>s[7727] Alive!
+>s[7728] Alive!
+>s[7729] Alive! (CH)
+>s[7730] Alive!
+>s[7731] Alive!
+>s[7732] Alive! (CH)
+>s[7733] Dead! killed by test 0
+>s[7734] Dead! killed by test 0
+>s[7735] Alive!
+>s[7736] Alive!
+>s[7737] Alive!
+>s[7738] Alive!
+>s[7739] Alive! (CH)
+>s[7740] Alive! (CH)
+>s[7741] Alive!
+>s[7742] Alive!
+>s[7743] Alive!
+>s[7744] Alive!
+>s[7745] Alive!
+>s[7746] Alive! (CH)
+>s[7747] Alive! (CH)
+>s[7748] Alive!
+>s[7749] Alive!
+>s[7750] Alive!
+>s[7751] Alive!
+>s[7752] Alive!
+>s[7753] Alive! (CH)
+>s[7754] Dead! killed by test 0
+>s[7755] Dead! killed by test 0
+>s[7756] Alive!
+>s[7757] Alive!
+>s[7758] Alive!
+>s[7759] Alive!
+>s[7760] Alive! (CH)
+>s[7761] Alive! (CH)
+>s[7762] Alive!
+>s[7763] Alive!
+>s[7764] Alive! (CH)
+>s[7765] Alive!
+>s[7766] Alive!
+>s[7767] Alive! (CH)
+>s[7768] Alive! (CH)
+>s[7769] Alive!
+>s[7770] Alive!
+>s[7771] Alive! (CH)
+>s[7772] Alive!
+>s[7773] Alive!
+>s[7774] Alive! (CH)
+>s[7775] Alive! (CH)
+>s[7776] Alive!
+>s[7777] Alive!
+>s[7778] Alive!
+>s[7779] Alive!
+>s[7780] Alive!
+>s[7781] Alive! (CH)
+>s[7782] Dead! killed by test 0
+>s[7783] Dead! killed by test 0
+>s[7784] Alive!
+>s[7785] Alive!
+>s[7786] Alive!
+>s[7787] Alive!
+>s[7788] Alive! (CH)
+>s[7789] Alive! (CH)
+>s[7790] Alive!
+>s[7791] Alive!
+>s[7792] Alive! (CH)
+>s[7793] Alive!
+>s[7794] Alive!
+>s[7795] Alive! (CH)
+>s[7796] Dead! killed by test 0
+>s[7797] Dead! killed by test 0
+>s[7798] Alive!
+>s[7799] Alive!
+>s[7800] Alive!
+>s[7801] Alive!
+>s[7802] Alive! (CH)
+>s[7803] Alive! (CH)
+>s[7804] Alive!
+>s[7805] Alive!
+>s[7806] Alive!
+>s[7807] Alive!
+>s[7808] Alive!
+>s[7809] Alive! (CH)
+>s[7810] Dead! killed by test 0
+>s[7811] Dead! killed by test 0
+>s[7812] Alive!
+>s[7813] Alive!
+>s[7814] Alive!
+>s[7815] Alive!
+>s[7816] Alive! (CH)
+>s[7817] Alive! (CH)
+>s[7818] Alive!
+>s[7819] Alive!
+>s[7820] Alive! (CH)
+>s[7821] Alive!
+>s[7822] Alive!
+>s[7823] Alive! (CH)
+>s[7824] Dead! killed by test 0
+>s[7825] Dead! killed by test 0
+>s[7826] Alive!
+>s[7827] Alive!
+>s[7828] Alive!
+>s[7829] Alive!
+>s[7830] Alive! (CH)
+>s[7831] Dead! killed by test 0
+>s[7832] Dead! killed by test 0
+>s[7833] Alive!
+>s[7834] Alive!
+>s[7835] Alive!
+>s[7836] Alive!
+>s[7837] Alive! (CH)
+>s[7838] Dead! killed by test 0
+>s[7839] Dead! killed by test 0
+>s[7840] Alive!
+>s[7841] Alive!
+>s[7842] Alive!
+>s[7843] Alive!
+>s[7844] Alive! (CH)
+>s[7845] Alive! (CH)
+>s[7846] Alive!
+>s[7847] Alive!
+>s[7848] Alive!
+>s[7849] Alive!
+>s[7850] Alive! (CH)
+>s[7851] Alive! (CH)
+>s[7852] Dead! killed by test 0
+>s[7853] Dead! killed by test 0
+>s[7854] Alive!
+>s[7855] Alive!
+>s[7856] Alive!
+>s[7857] Alive!
+>s[7858] Alive!
+>s[7859] Dead! killed by test 0
+>s[7860] Dead! killed by test 0
+>s[7861] Alive!
+>s[7862] Alive!
+>s[7863] Alive!
+>s[7864] Alive!
+>s[7865] Alive!
+>s[7866] Dead! killed by test 0
+>s[7867] Dead! killed by test 0
+>s[7868] Alive!
+>s[7869] Alive!
+>s[7870] Alive!
+>s[7871] Alive!
+>s[7872] Alive! (CH)
+>s[7873] Alive! (CH)
+>s[7874] Alive!
+>s[7875] Alive!
+>s[7876] Alive! (CH)
+>s[7877] Alive!
+>s[7878] Alive! (CH)
+>s[7879] Alive! (CH)
+>s[7880] Dead! killed by test 0
+>s[7881] Dead! killed by test 0
+>s[7882] Alive!
+>s[7883] Alive!
+>s[7884] Alive!
+>s[7885] Alive!
+>s[7886] Alive!
+>s[7887] Dead! killed by test 0
+>s[7888] Dead! killed by test 0
+>s[7889] Alive!
+>s[7890] Alive!
+>s[7891] Alive!
+>s[7892] Alive!
+>s[7893] Alive!
+>s[7894] Dead! killed by test 0
+>s[7895] Dead! killed by test 0
+>s[7896] Alive!
+>s[7897] Alive!
+>s[7898] Alive!
+>s[7899] Alive!
+>s[7900] Alive! (CH)
+>s[7901] Dead! killed by test 0
+>s[7902] Dead! killed by test 0
+>s[7903] Alive!
+>s[7904] Alive!
+>s[7905] Alive!
+>s[7906] Alive!
+>s[7907] Alive! (CH)
+>s[7908] Dead! killed by test 0
+>s[7909] Dead! killed by test 0
+>s[7910] Alive!
+>s[7911] Alive!
+>s[7912] Alive!
+>s[7913] Alive!
+>s[7914] Alive! (CH)
+>s[7915] Alive! (CH)
+>s[7916] Alive!
+>s[7917] Alive!
+>s[7918] Alive!
+>s[7919] Alive!
+>s[7920] Alive! (CH)
+>s[7921] Alive! (CH)
+>s[7922] Dead! killed by test 0
+>s[7923] Dead! killed by test 0
+>s[7924] Alive!
+>s[7925] Alive!
+>s[7926] Alive!
+>s[7927] Alive!
+>s[7928] Alive!
+>s[7929] Dead! killed by test 0
+>s[7930] Dead! killed by test 0
+>s[7931] Alive!
+>s[7932] Alive!
+>s[7933] Alive!
+>s[7934] Alive!
+>s[7935] Alive!
+>s[7936] Dead! killed by test 0
+>s[7937] Dead! killed by test 0
+>s[7938] Alive!
+>s[7939] Alive!
+>s[7940] Alive!
+>s[7941] Alive!
+>s[7942] Alive! (CH)
+>s[7943] Alive! (CH)
+>s[7944] Alive!
+>s[7945] Alive!
+>s[7946] Alive! (CH)
+>s[7947] Alive!
+>s[7948] Alive! (CH)
+>s[7949] Alive! (CH)
+>s[7950] Dead! killed by test 0
+>s[7951] Dead! killed by test 0
+>s[7952] Alive!
+>s[7953] Alive!
+>s[7954] Alive!
+>s[7955] Alive!
+>s[7956] Alive!
+>s[7957] Dead! killed by test 0
+>s[7958] Dead! killed by test 0
+>s[7959] Alive!
+>s[7960] Alive!
+>s[7961] Alive!
+>s[7962] Alive!
+>s[7963] Alive!
+>s[7964] Dead! killed by test 0
+>s[7965] Dead! killed by test 0
+>s[7966] Alive!
+>s[7967] Alive!
+>s[7968] Alive!
+>s[7969] Alive!
+>s[7970] Alive! (CH)
+>s[7971] Dead! killed by test 0
+>s[7972] Dead! killed by test 0
+>s[7973] Alive!
+>s[7974] Alive!
+>s[7975] Alive!
+>s[7976] Alive!
+>s[7977] Alive! (CH)
+>s[7978] Dead! killed by test 0
+>s[7979] Dead! killed by test 0
+>s[7980] Alive!
+>s[7981] Alive!
+>s[7982] Alive!
+>s[7983] Alive!
+>s[7984] Alive! (CH)
+>s[7985] Alive! (CH)
+>s[7986] Alive!
+>s[7987] Alive! (CH)
+>s[7988] Alive!
+>s[7989] Alive!
+>s[7990] Alive!
+>s[7991] Alive! (CH)
+>s[7992] Alive! (CH)
+>s[7993] Alive!
+>s[7994] Alive! (CH)
+>s[7995] Alive!
+>s[7996] Alive!
+>s[7997] Alive!
+>s[7998] Alive! (CH)
+>s[7999] Dead! killed by test 0
+>s[8000] Dead! killed by test 0
+>s[8001] Alive!
+>s[8002] Alive!
+>s[8003] Alive!
+>s[8004] Alive!
+>s[8005] Alive! (CH)
+>s[8006] Dead! killed by test 0
+>s[8007] Dead! killed by test 0
+>s[8008] Alive!
+>s[8009] Alive!
+>s[8010] Alive!
+>s[8011] Alive!
+>s[8012] Alive! (CH)
+>s[8013] Alive! (CH)
+>s[8014] Alive!
+>s[8015] Alive! (CH)
+>s[8016] Alive!
+>s[8017] Alive!
+>s[8018] Alive!
+>s[8019] Alive! (CH)
+>s[8020] Alive! (CH)
+>s[8021] Alive!
+>s[8022] Alive! (CH)
+>s[8023] Alive!
+>s[8024] Alive!
+>s[8025] Alive!
+>s[8026] Alive! (CH)
+>s[8027] Dead! killed by test 0
+>s[8028] Dead! killed by test 0
+>s[8029] Alive!
+>s[8030] Alive!
+>s[8031] Alive!
+>s[8032] Alive!
+>s[8033] Alive! (CH)
+>s[8034] Dead! killed by test 0
+>s[8035] Dead! killed by test 0
+>s[8036] Alive!
+>s[8037] Alive!
+>s[8038] Alive!
+>s[8039] Alive!
+>s[8040] Alive! (CH)
+>s[8041] Alive! (CH)
+>s[8042] Alive!
+>s[8043] Alive! (CH)
+>s[8044] Alive!
+>s[8045] Alive!
+>s[8046] Alive!
+>s[8047] Alive! (CH)
+>s[8048] Alive! (CH)
+>s[8049] Alive!
+>s[8050] Alive! (CH)
+>s[8051] Alive!
+>s[8052] Alive!
+>s[8053] Alive!
+>s[8054] Alive! (CH)
+>s[8055] Dead! killed by test 0
+>s[8056] Dead! killed by test 0
+>s[8057] Alive!
+>s[8058] Alive!
+>s[8059] Alive!
+>s[8060] Alive!
+>s[8061] Alive! (CH)
+>s[8062] Dead! killed by test 0
+>s[8063] Dead! killed by test 0
+>s[8064] Alive!
+>s[8065] Alive!
+>s[8066] Alive!
+>s[8067] Alive!
+>s[8068] Alive! (CH)
+>s[8069] Alive! (CH)
+>s[8070] Alive!
+>s[8071] Alive! (CH)
+>s[8072] Alive!
+>s[8073] Alive!
+>s[8074] Alive!
+>s[8075] Alive! (CH)
+>s[8076] Alive! (CH)
+>s[8077] Alive!
+>s[8078] Alive! (CH)
+>s[8079] Alive!
+>s[8080] Alive!
+>s[8081] Alive!
+>s[8082] Alive! (CH)
+>s[8083] Dead! killed by test 0
+>s[8084] Dead! killed by test 0
+>s[8085] Alive!
+>s[8086] Alive!
+>s[8087] Alive!
+>s[8088] Alive!
+>s[8089] Alive! (CH)
+>s[8090] Alive! (CH)
+>s[8091] Alive!
+>s[8092] Alive! (CH)
+>s[8093] Alive!
+>s[8094] Alive!
+>s[8095] Alive!
+>s[8096] Alive! (CH)
+>s[8097] Dead! killed by test 0
+>s[8098] Dead! killed by test 0
+>s[8099] Alive!
+>s[8100] Alive!
+>s[8101] Alive!
+>s[8102] Alive!
+>s[8103] Alive! (CH)
+>s[8104] Dead! killed by test 0
+>s[8105] Dead! killed by test 0
+>s[8106] Alive!
+>s[8107] Alive!
+>s[8108] Alive!
+>s[8109] Alive!
+>s[8110] Alive! (CH)
+>s[8111] Alive! (CH)
+>s[8112] Alive!
+>s[8113] Alive! (CH)
+>s[8114] Alive!
+>s[8115] Alive!
+>s[8116] Alive!
+>s[8117] Alive! (CH)
+>s[8118] Dead! killed by test 0
+>s[8119] Dead! killed by test 0
+>s[8120] Alive!
+>s[8121] Alive!
+>s[8122] Alive!
+>s[8123] Alive!
+>s[8124] Alive! (CH)
+>s[8125] Dead! killed by test 0
+>s[8126] Dead! killed by test 0
+>s[8127] Alive!
+>s[8128] Alive!
+>s[8129] Alive!
+>s[8130] Alive!
+>s[8131] Alive! (CH)
+>s[8132] Dead! killed by test 0
+>s[8133] Dead! killed by test 0
+>s[8134] Alive!
+>s[8135] Alive!
+>s[8136] Alive!
+>s[8137] Alive!
+>s[8138] Alive!
+>s[8139] Dead! killed by test 0
+>s[8140] Dead! killed by test 0
+>s[8141] Alive!
+>s[8142] Alive!
+>s[8143] Alive!
+>s[8144] Alive!
+>s[8145] Alive! (CH)
+>s[8146] Dead! killed by test 0
+>s[8147] Dead! killed by test 0
+>s[8148] Alive!
+>s[8149] Alive!
+>s[8150] Alive!
+>s[8151] Alive!
+>s[8152] Alive! (CH)
+>s[8153] Alive! (CH)
+>s[8154] Alive!
+>s[8155] Alive! (CH)
+>s[8156] Alive!
+>s[8157] Alive!
+>s[8158] Alive!
+>s[8159] Alive!
+>s[8160] Dead! killed by test 0
+>s[8161] Dead! killed by test 0
+>s[8162] Alive!
+>s[8163] Alive!
+>s[8164] Alive!
+>s[8165] Alive!
+>s[8166] Alive! (CH)
+>s[8167] Dead! killed by test 0
+>s[8168] Dead! killed by test 0
+>s[8169] Alive!
+>s[8170] Alive!
+>s[8171] Alive!
+>s[8172] Alive!
+>s[8173] Alive! (CH)
+>s[8174] Dead! killed by test 0
+>s[8175] Dead! killed by test 0
+>s[8176] Alive!
+>s[8177] Alive!
+>s[8178] Alive!
+>s[8179] Alive!
+>s[8180] Alive! (CH)
+>s[8181] Dead! killed by test 0
+>s[8182] Dead! killed by test 0
+>s[8183] Alive!
+>s[8184] Alive!
+>s[8185] Alive!
+>s[8186] Alive!
+>s[8187] Alive!
+>s[8188] Dead! killed by test 0
+>s[8189] Dead! killed by test 0
+>s[8190] Alive!
+>s[8191] Alive!
+>s[8192] Alive!
+>s[8193] Alive!
+>s[8194] Alive! (CH)
+>s[8195] Dead! killed by test 0
+>s[8196] Dead! killed by test 0
+>s[8197] Alive!
+>s[8198] Alive!
+>s[8199] Alive!
+>s[8200] Alive!
+>s[8201] Alive! (CH)
+>s[8202] Alive! (CH)
+>s[8203] Alive!
+>s[8204] Alive! (CH)
+>s[8205] Alive!
+>s[8206] Alive!
+>s[8207] Alive!
+>s[8208] Alive!
+>s[8209] Dead! killed by test 0
+>s[8210] Dead! killed by test 0
+>s[8211] Alive!
+>s[8212] Alive!
+>s[8213] Alive!
+>s[8214] Alive!
+>s[8215] Alive! (CH)
+>s[8216] Dead! killed by test 0
+>s[8217] Dead! killed by test 0
+>s[8218] Alive!
+>s[8219] Alive!
+>s[8220] Alive!
+>s[8221] Alive!
+>s[8222] Alive! (CH)
+>s[8223] Dead! killed by test 0
+>s[8224] Dead! killed by test 0
+>s[8225] Alive!
+>s[8226] Alive!
+>s[8227] Alive!
+>s[8228] Alive!
+>s[8229] Alive! (CH)
+>s[8230] Alive! (CH)
+>s[8231] Alive!
+>s[8232] Alive!
+>s[8233] Alive!
+>s[8234] Alive!
+>s[8235] Alive!
+>s[8236] Alive! (CH)
+>s[8237] Alive! (CH)
+>s[8238] Alive!
+>s[8239] Alive!
+>s[8240] Alive!
+>s[8241] Alive!
+>s[8242] Alive!
+>s[8243] Alive! (CH)
+>s[8244] Dead! killed by test 0
+>s[8245] Dead! killed by test 0
+>s[8246] Alive!
+>s[8247] Alive!
+>s[8248] Alive!
+>s[8249] Dupped (506)!
+>s[8250] Alive! (CH)
+>s[8251] Alive! (CH)
+>s[8252] Alive!
+>s[8253] Alive!
+>s[8254] Alive!
+>s[8255] Alive!
+>s[8256] Alive!
+>s[8257] Alive! (CH)
+>s[8258] Alive! (CH)
+>s[8259] Alive!
+>s[8260] Alive!
+>s[8261] Alive!
+>s[8262] Alive!
+>s[8263] Alive!
+>s[8264] Alive! (CH)
+>s[8265] Dead! killed by test 0
+>s[8266] Dead! killed by test 0
+>s[8267] Alive!
+>s[8268] Alive!
+>s[8269] Alive!
+>s[8270] Alive!
+>s[8271] Alive! (CH)
+>s[8272] Alive! (CH)
+>s[8273] Alive!
+>s[8274] Alive!
+>s[8275] Alive!
+>s[8276] Alive!
+>s[8277] Alive!
+>s[8278] Alive! (CH)
+>s[8279] Alive! (CH)
+>s[8280] Alive!
+>s[8281] Alive!
+>s[8282] Alive!
+>s[8283] Alive!
+>s[8284] Alive!
+>s[8285] Alive! (CH)
+>s[8286] Dead! killed by test 0
+>s[8287] Dead! killed by test 0
+>s[8288] Alive!
+>s[8289] Alive!
+>s[8290] Alive!
+>s[8291] Alive!
+>s[8292] Alive! (CH)
+>s[8293] Alive! (CH)
+>s[8294] Alive!
+>s[8295] Alive!
+>s[8296] Alive!
+>s[8297] Alive!
+>s[8298] Alive!
+>s[8299] Alive! (CH)
+>s[8300] Alive! (CH)
+>s[8301] Alive!
+>s[8302] Alive!
+>s[8303] Alive!
+>s[8304] Alive!
+>s[8305] Alive!
+>s[8306] Alive! (CH)
+>s[8307] Dead! killed by test 0
+>s[8308] Dead! killed by test 0
+>s[8309] Alive!
+>s[8310] Alive!
+>s[8311] Alive!
+>s[8312] Alive!
+>s[8313] Alive! (CH)
+>s[8314] Alive! (CH)
+>s[8315] Alive!
+>s[8316] Alive!
+>s[8317] Alive!
+>s[8318] Alive!
+>s[8319] Alive!
+>s[8320] Alive! (CH)
+>s[8321] Alive! (CH)
+>s[8322] Alive!
+>s[8323] Alive!
+>s[8324] Alive!
+>s[8325] Alive!
+>s[8326] Alive!
+>s[8327] Alive! (CH)
+>s[8328] Dead! killed by test 0
+>s[8329] Dead! killed by test 0
+>s[8330] Alive!
+>s[8331] Alive!
+>s[8332] Alive!
+>s[8333] Alive!
+>s[8334] Alive! (CH)
+>s[8335] Alive! (CH)
+>s[8336] Alive!
+>s[8337] Alive!
+>s[8338] Alive!
+>s[8339] Alive!
+>s[8340] Alive!
+>s[8341] Alive! (CH)
+>s[8342] Alive! (CH)
+>s[8343] Alive!
+>s[8344] Alive!
+>s[8345] Alive!
+>s[8346] Alive!
+>s[8347] Alive!
+>s[8348] Alive! (CH)
+>s[8349] Dead! killed by test 0
+>s[8350] Dead! killed by test 0
+>s[8351] Alive!
+>s[8352] Alive!
+>s[8353] Alive!
+>s[8354] Alive!
+>s[8355] Alive! (CH)
+>s[8356] Alive! (CH)
+>s[8357] Alive!
+>s[8358] Alive!
+>s[8359] Alive!
+>s[8360] Alive!
+>s[8361] Alive!
+>s[8362] Alive! (CH)
+>s[8363] Alive! (CH)
+>s[8364] Alive!
+>s[8365] Alive!
+>s[8366] Alive!
+>s[8367] Alive!
+>s[8368] Alive!
+>s[8369] Alive! (CH)
+>s[8370] Dead! killed by test 0
+>s[8371] Dead! killed by test 0
+>s[8372] Alive!
+>s[8373] Alive!
+>s[8374] Alive!
+>s[8375] Alive!
+>s[8376] Alive! (CH)
+>s[8377] Alive! (CH)
+>s[8378] Alive!
+>s[8379] Alive!
+>s[8380] Alive!
+>s[8381] Alive!
+>s[8382] Alive!
+>s[8383] Alive! (CH)
+>s[8384] Alive! (CH)
+>s[8385] Alive!
+>s[8386] Alive!
+>s[8387] Alive!
+>s[8388] Alive!
+>s[8389] Alive!
+>s[8390] Alive! (CH)
+>s[8391] Alive! (CH)
+>s[8392] Alive!
+>s[8393] Alive!
+>s[8394] Alive!
+>s[8395] Alive!
+>s[8396] Alive!
+>s[8397] Alive! (CH)
+>s[8398] Dead! killed by test 0
+>s[8399] Dead! killed by test 0
+>s[8400] Alive!
+>s[8401] Alive!
+>s[8402] Alive!
+>s[8403] Alive!
+>s[8404] Alive! (CH)
+>s[8405] Alive! (CH)
+>s[8406] Alive!
+>s[8407] Alive!
+>s[8408] Alive!
+>s[8409] Alive!
+>s[8410] Alive!
+>s[8411] Alive! (CH)
+>s[8412] Dead! killed by test 0
+>s[8413] Dead! killed by test 0
+>s[8414] Alive!
+>s[8415] Alive!
+>s[8416] Alive!
+>s[8417] Alive!
+>s[8418] Alive! (CH)
+>s[8419] Alive! (CH)
+>s[8420] Alive!
+>s[8421] Alive!
+>s[8422] Alive!
+>s[8423] Alive!
+>s[8424] Alive!
+>s[8425] Alive! (CH)
+>s[8426] Dead! killed by test 0
+>s[8427] Dead! killed by test 0
+>s[8428] Alive!
+>s[8429] Alive!
+>s[8430] Alive!
+>s[8431] Alive!
+>s[8432] Alive! (CH)
+>s[8433] Alive! (CH)
+>s[8434] Alive!
+>s[8435] Alive!
+>s[8436] Alive!
+>s[8437] Alive!
+>s[8438] Alive!
+>s[8439] Alive! (CH)
+>s[8440] Dead! killed by test 0
+>s[8441] Dead! killed by test 0
+>s[8442] Alive!
+>s[8443] Alive!
+>s[8444] Alive!
+>s[8445] Alive!
+>s[8446] Alive! (CH)
+>s[8447] Dead! killed by test 0
+>s[8448] Dead! killed by test 0
+>s[8449] Alive!
+>s[8450] Alive!
+>s[8451] Alive!
+>s[8452] Alive!
+>s[8453] Alive! (CH)
+>s[8454] Dead! killed by test 0
+>s[8455] Dead! killed by test 0
+>s[8456] Alive!
+>s[8457] Alive!
+>s[8458] Alive!
+>s[8459] Alive!
+>s[8460] Alive! (CH)
+>s[8461] Alive! (CH)
+>s[8462] Alive!
+>s[8463] Alive!
+>s[8464] Alive!
+>s[8465] Alive!
+>s[8466] Alive! (CH)
+>s[8467] Alive! (CH)
+>s[8468] Dead! killed by test 0
+>s[8469] Dead! killed by test 0
+>s[8470] Alive!
+>s[8471] Alive!
+>s[8472] Alive!
+>s[8473] Alive!
+>s[8474] Alive!
+>s[8475] Dead! killed by test 0
+>s[8476] Dead! killed by test 0
+>s[8477] Alive!
+>s[8478] Alive!
+>s[8479] Alive!
+>s[8480] Alive!
+>s[8481] Alive!
+>s[8482] Dead! killed by test 0
+>s[8483] Dead! killed by test 0
+>s[8484] Alive!
+>s[8485] Alive!
+>s[8486] Alive!
+>s[8487] Alive!
+>s[8488] Alive! (CH)
+>s[8489] Alive! (CH)
+>s[8490] Alive!
+>s[8491] Alive!
+>s[8492] Alive!
+>s[8493] Alive!
+>s[8494] Alive! (CH)
+>s[8495] Alive! (CH)
+>s[8496] Dead! killed by test 0
+>s[8497] Dead! killed by test 0
+>s[8498] Alive!
+>s[8499] Alive!
+>s[8500] Alive!
+>s[8501] Alive!
+>s[8502] Alive!
+>s[8503] Dead! killed by test 0
+>s[8504] Dead! killed by test 0
+>s[8505] Alive!
+>s[8506] Alive!
+>s[8507] Alive!
+>s[8508] Alive!
+>s[8509] Alive!
+>s[8510] Dead! killed by test 0
+>s[8511] Dead! killed by test 0
+>s[8512] Alive!
+>s[8513] Alive!
+>s[8514] Alive!
+>s[8515] Alive!
+>s[8516] Alive! (CH)
+>s[8517] Dead! killed by test 0
+>s[8518] Dead! killed by test 0
+>s[8519] Alive!
+>s[8520] Alive!
+>s[8521] Alive!
+>s[8522] Alive!
+>s[8523] Alive! (CH)
+>s[8524] Dead! killed by test 0
+>s[8525] Dead! killed by test 0
+>s[8526] Alive!
+>s[8527] Alive!
+>s[8528] Alive!
+>s[8529] Alive!
+>s[8530] Alive! (CH)
+>s[8531] Alive! (CH)
+>s[8532] Alive!
+>s[8533] Alive!
+>s[8534] Alive!
+>s[8535] Alive!
+>s[8536] Alive! (CH)
+>s[8537] Alive! (CH)
+>s[8538] Dead! killed by test 0
+>s[8539] Dead! killed by test 0
+>s[8540] Alive!
+>s[8541] Alive!
+>s[8542] Alive!
+>s[8543] Alive!
+>s[8544] Alive!
+>s[8545] Dead! killed by test 0
+>s[8546] Dead! killed by test 0
+>s[8547] Alive!
+>s[8548] Alive!
+>s[8549] Alive!
+>s[8550] Alive!
+>s[8551] Alive!
+>s[8552] Dead! killed by test 0
+>s[8553] Dead! killed by test 0
+>s[8554] Alive!
+>s[8555] Alive!
+>s[8556] Alive!
+>s[8557] Alive!
+>s[8558] Alive! (CH)
+>s[8559] Alive! (CH)
+>s[8560] Alive!
+>s[8561] Alive!
+>s[8562] Alive!
+>s[8563] Alive!
+>s[8564] Alive! (CH)
+>s[8565] Alive! (CH)
+>s[8566] Dead! killed by test 0
+>s[8567] Dead! killed by test 0
+>s[8568] Alive!
+>s[8569] Alive!
+>s[8570] Alive!
+>s[8571] Alive!
+>s[8572] Alive!
+>s[8573] Dead! killed by test 0
+>s[8574] Dead! killed by test 0
+>s[8575] Alive!
+>s[8576] Alive!
+>s[8577] Alive!
+>s[8578] Alive!
+>s[8579] Alive!
+>s[8580] Dead! killed by test 0
+>s[8581] Dead! killed by test 0
+>s[8582] Alive!
+>s[8583] Alive!
+>s[8584] Alive!
+>s[8585] Alive!
+>s[8586] Alive!
+>s[8587] Alive! (CH)
+>s[8588] Alive!
+>s[8589] Alive!
+>s[8590] Alive!
+>s[8591] Alive!
+>s[8592] Alive!
+>s[8593] Alive!
+>s[8594] Alive! (CH)
+>s[8595] Alive!
+>s[8596] Alive!
+>s[8597] Alive!
+>s[8598] Alive!
+>s[8599] Alive!
+>s[8600] Alive!
+>s[8601] Alive!
+>s[8602] Alive!
+>s[8603] Alive!
+>s[8604] Alive!
+>s[8605] Alive! (CH)
+>s[8606] Alive! (CH)
+>s[8607] Alive!
+>s[8608] Alive!
+>s[8609] Alive!
+>s[8610] Alive!
+>s[8611] Alive!
+>s[8612] Alive! (CH)
+>s[8613] Alive! (CH)
+>s[8614] Alive!
+>s[8615] Alive!
+>s[8616] Alive!
+>s[8617] Alive!
+>s[8618] Alive!
+>s[8619] Alive! (CH)
+>s[8620] Alive! (CH)
+>s[8621] Alive!
+>s[8622] Alive!
+>s[8623] Alive!
+>s[8624] Alive!
+>s[8625] Alive! (CH)
+>s[8626] Alive!
+>s[8627] Alive! (CH)
+>s[8628] Alive!
+>s[8629] Alive!
+>s[8630] Alive!
+>s[8631] Alive!
+>s[8632] Alive!
+>s[8633] Alive!
+>s[8634] Alive! (CH)
+>s[8635] Alive!
+>s[8636] Alive!
+>s[8637] Alive!
+>s[8638] Alive!
+>s[8639] Alive!
+>s[8640] Alive!
+>s[8641] Alive!
+>s[8642] Alive!
+>s[8643] Alive!
+>s[8644] Alive!
+>s[8645] Alive! (CH)
+>s[8646] Alive! (CH)
+>s[8647] Alive!
+>s[8648] Alive!
+>s[8649] Alive!
+>s[8650] Alive!
+>s[8651] Alive!
+>s[8652] Alive! (CH)
+>s[8653] Alive! (CH)
+>s[8654] Alive!
+>s[8655] Alive!
+>s[8656] Alive!
+>s[8657] Alive!
+>s[8658] Alive!
+>s[8659] Alive!
+>s[8660] Alive!
+>s[8661] Alive!
+>s[8662] Alive!
+>s[8663] Alive!
+>s[8664] Alive!
+>s[8665] Alive!
+>s[8666] Alive!
+>s[8667] Alive!
+>s[8668] Alive!
+>s[8669] Alive!
+>s[8670] Alive!
+>s[8671] Alive!
+>s[8672] Alive! (CH)
+>s[8673] Alive! (CH)
+>s[8674] Alive!
+>s[8675] Alive!
+>s[8676] Alive!
+>s[8677] Alive!
+>s[8678] Alive!
+>s[8679] Alive! (CH)
+>s[8680] Alive! (CH)
+>s[8681] Alive!
+>s[8682] Alive!
+>s[8683] Alive!
+>s[8684] Alive!
+>s[8685] Alive!
+>s[8686] Alive!
+>s[8687] Alive! (CH)
+>s[8688] Alive!
+>s[8689] Alive! (CH)
+>s[8690] Alive! (CH)
+>s[8691] Alive!
+>s[8692] Alive!
+>s[8693] Alive!
+>s[8694] Alive!
+>s[8695] Alive!
+>s[8696] Alive!
+>s[8697] Alive!
+>s[8698] Alive!
+>s[8699] Alive! (CH)
+>s[8700] Alive!
+>s[8701] Alive!
+>s[8702] Alive!
+>s[8703] Alive!
+>s[8704] Alive!
+>s[8705] Alive!
+>s[8706] Alive!
+>s[8707] Alive!
+>s[8708] Alive!
+>s[8709] Alive! (CH)
+>s[8710] Alive!
+>s[8711] Alive!
+>s[8712] Alive!
+>s[8713] Alive!
+>s[8714] Alive! (CH)
+>s[8715] Alive!
+>s[8716] Alive!
+>s[8717] Alive!
+>s[8718] Alive!
+>s[8719] Alive!
+>s[8720] Alive!
+>s[8721] Alive!
+>s[8722] Alive!
+>s[8723] Alive!
+>s[8724] Alive!
+>s[8725] Alive!
+>s[8726] Alive!
+>s[8727] Alive!
+>s[8728] Alive!
+>s[8729] Alive!
+>s[8730] Alive!
+>s[8731] Alive! (CH)
+>s[8732] Alive!
+>s[8733] Alive!
+>s[8734] Alive!
+>s[8735] Alive!
+>s[8736] Alive!
+>s[8737] Alive!
+>s[8738] Alive!
+>s[8739] Alive! (CH)
+>s[8740] Alive! (CH)
+>s[8741] Alive!
+>s[8742] Alive!
+>s[8743] Alive!
+>s[8744] Alive!
+>s[8745] Alive! (CH)
+>s[8746] Alive!
+>s[8747] Alive!
+>s[8748] Alive!
+>s[8749] Alive!
+>s[8750] Alive!
+>s[8751] Alive!
+>s[8752] Alive!
+>s[8753] Alive!
+>s[8754] Alive!
+>s[8755] Alive!
+>s[8756] Alive!
+>s[8757] Alive! (CH)
+>s[8758] Alive!
+>s[8759] Alive!
+>s[8760] Alive!
+>s[8761] Alive!
+>s[8762] Alive!
+>s[8763] Alive!
+>s[8764] Alive!
+>s[8765] Alive! (CH)
+>s[8766] Alive! (CH)
+>s[8767] Alive!
+>s[8768] Alive!
+>s[8769] Alive!
+>s[8770] Alive!
+>s[8771] Alive! (CH)
+>s[8772] Alive!
+>s[8773] Alive!
+>s[8774] Alive!
+>s[8775] Alive!
+>s[8776] Alive!
+>s[8777] Alive!
+>s[8778] Alive!
+>s[8779] Alive!
+>s[8780] Alive!
+>s[8781] Alive! (CH)
+>s[8782] Alive!
+>s[8783] Alive! (CH)
+>s[8784] Alive!
+>s[8785] Alive!
+>s[8786] Alive!
+>s[8787] Alive!
+>s[8788] Alive!
+>s[8789] Alive!
+>s[8790] Alive!
+>s[8791] Alive!
+>s[8792] Alive!
+>s[8793] Alive!
+>s[8794] Alive!
+>s[8795] Alive!
+>s[8796] Alive!
+>s[8797] Alive!
+>s[8798] Alive!
+>s[8799] Alive!
+>s[8800] Alive!
+>s[8801] Alive! (CH)
+>s[8802] Alive!
+>s[8803] Alive! (CH)
+>s[8804] Alive!
+>s[8805] Alive!
+>s[8806] Alive!
+>s[8807] Alive!
+>s[8808] Alive! (CH)
+>s[8809] Alive!
+>s[8810] Alive! (CH)
+>s[8811] Alive!
+>s[8812] Alive!
+>s[8813] Alive!
+>s[8814] Alive!
+>s[8815] Alive!
+>s[8816] Alive! (CH)
+>s[8817] Alive! (CH)
+>s[8818] Alive!
+>s[8819] Alive!
+>s[8820] Alive!
+>s[8821] Alive!
+>s[8822] Alive!
+>s[8823] Alive! (CH)
+>s[8824] Dead! killed by test 0
+>s[8825] Dead! killed by test 0
+>s[8826] Alive!
+>s[8827] Alive!
+>s[8828] Alive!
+>s[8829] Alive!
+>s[8830] Alive! (CH)
+>s[8831] Dead! killed by test 0
+>s[8832] Dead! killed by test 0
+>s[8833] Alive!
+>s[8834] Alive!
+>s[8835] Alive!
+>s[8836] Alive!
+>s[8837] Alive! (CH)
+>s[8838] Alive! (CH)
+>s[8839] Alive!
+>s[8840] Alive! (CH)
+>s[8841] Alive!
+>s[8842] Alive!
+>s[8843] Alive!
+>s[8844] Alive! (CH)
+>s[8845] Dead! killed by test 0
+>s[8846] Dead! killed by test 0
+>s[8847] Alive!
+>s[8848] Alive!
+>s[8849] Alive!
+>s[8850] Alive!
+>s[8851] Alive! (CH)
+>s[8852] Dead! killed by test 0
+>s[8853] Dead! killed by test 0
+>s[8854] Alive!
+>s[8855] Alive!
+>s[8856] Alive!
+>s[8857] Alive!
+>s[8858] Alive! (CH)
+>s[8859] Alive! (CH)
+>s[8860] Alive!
+>s[8861] Alive! (CH)
+>s[8862] Alive!
+>s[8863] Alive!
+>s[8864] Alive!
+>s[8865] Alive! (CH)
+>s[8866] Dead! killed by test 0
+>s[8867] Dead! killed by test 0
+>s[8868] Alive!
+>s[8869] Alive!
+>s[8870] Alive!
+>s[8871] Alive!
+>s[8872] Alive! (CH)
+>s[8873] Dead! killed by test 0
+>s[8874] Dead! killed by test 0
+>s[8875] Alive!
+>s[8876] Alive!
+>s[8877] Alive!
+>s[8878] Alive!
+>s[8879] Alive! (CH)
+>s[8880] Alive! (CH)
+>s[8881] Alive!
+>s[8882] Alive! (CH)
+>s[8883] Alive!
+>s[8884] Alive!
+>s[8885] Alive!
+>s[8886] Alive! (CH)
+>s[8887] Alive! (CH)
+>s[8888] Alive!
+>s[8889] Alive! (CH)
+>s[8890] Alive!
+>s[8891] Alive!
+>s[8892] Alive!
+>s[8893] Alive! (CH)
+>s[8894] Dead! killed by test 0
+>s[8895] Dead! killed by test 0
+>s[8896] Alive!
+>s[8897] Alive!
+>s[8898] Alive!
+>s[8899] Alive!
+>s[8900] Alive! (CH)
+>s[8901] Dead! killed by test 0
+>s[8902] Dead! killed by test 0
+>s[8903] Alive!
+>s[8904] Alive!
+>s[8905] Alive!
+>s[8906] Alive!
+>s[8907] Alive! (CH)
+>s[8908] Alive! (CH)
+>s[8909] Alive!
+>s[8910] Alive! (CH)
+>s[8911] Alive!
+>s[8912] Alive!
+>s[8913] Alive!
+>s[8914] Alive! (CH)
+>s[8915] Alive! (CH)
+>s[8916] Alive!
+>s[8917] Alive! (CH)
+>s[8918] Alive!
+>s[8919] Alive!
+>s[8920] Alive!
+>s[8921] Alive! (CH)
+>s[8922] Dead! killed by test 0
+>s[8923] Dead! killed by test 0
+>s[8924] Alive!
+>s[8925] Alive!
+>s[8926] Alive!
+>s[8927] Alive!
+>s[8928] Alive! (CH)
+>s[8929] Dead! killed by test 0
+>s[8930] Dead! killed by test 0
+>s[8931] Alive!
+>s[8932] Alive!
+>s[8933] Alive!
+>s[8934] Alive!
+>s[8935] Alive! (CH)
+>s[8936] Dead! killed by test 0
+>s[8937] Dead! killed by test 0
+>s[8938] Alive!
+>s[8939] Alive!
+>s[8940] Alive!
+>s[8941] Alive!
+>s[8942] Alive! (CH)
+>s[8943] Alive! (CH)
+>s[8944] Alive!
+>s[8945] Alive! (CH)
+>s[8946] Alive!
+>s[8947] Alive!
+>s[8948] Alive!
+>s[8949] Alive! (CH)
+>s[8950] Dead! killed by test 0
+>s[8951] Dead! killed by test 0
+>s[8952] Alive!
+>s[8953] Alive!
+>s[8954] Alive!
+>s[8955] Alive!
+>s[8956] Alive! (CH)
+>s[8957] Dead! killed by test 0
+>s[8958] Dead! killed by test 0
+>s[8959] Alive!
+>s[8960] Alive!
+>s[8961] Alive!
+>s[8962] Alive!
+>s[8963] Alive! (CH)
+>s[8964] Alive! (CH)
+>s[8965] Alive!
+>s[8966] Alive! (CH)
+>s[8967] Alive!
+>s[8968] Alive!
+>s[8969] Alive!
+>s[8970] Alive! (CH)
+>s[8971] Dead! killed by test 0
+>s[8972] Dead! killed by test 0
+>s[8973] Alive!
+>s[8974] Alive!
+>s[8975] Alive!
+>s[8976] Alive!
+>s[8977] Alive! (CH)
+>s[8978] Dead! killed by test 0
+>s[8979] Dead! killed by test 0
+>s[8980] Alive!
+>s[8981] Alive!
+>s[8982] Alive!
+>s[8983] Alive!
+>s[8984] Alive! (CH)
+>s[8985] Alive! (CH)
+>s[8986] Alive!
+>s[8987] Alive! (CH)
+>s[8988] Alive!
+>s[8989] Alive!
+>s[8990] Alive!
+>s[8991] Alive! (CH)
+>s[8992] Dead! killed by test 0
+>s[8993] Dead! killed by test 0
+>s[8994] Alive!
+>s[8995] Alive!
+>s[8996] Alive!
+>s[8997] Alive!
+>s[8998] Alive!
+>s[8999] Dead! killed by test 0
+>s[9000] Dead! killed by test 0
+>s[9001] Alive!
+>s[9002] Alive!
+>s[9003] Alive!
+>s[9004] Alive!
+>s[9005] Alive!
+>s[9006] Alive! (CH)
+>s[9007] Alive!
+>s[9008] Alive!
+>s[9009] Alive!
+>s[9010] Alive!
+>s[9011] Alive!
+>s[9012] Alive!
+>s[9013] Alive! (CH)
+>s[9014] Alive!
+>s[9015] Alive!
+>s[9016] Alive!
+>s[9017] Alive!
+>s[9018] Alive!
+>s[9019] Alive!
+>s[9020] Alive! (CH)
+>s[9021] Alive!
+>s[9022] Alive!
+>s[9023] Alive!
+>s[9024] Alive!
+>s[9025] Alive! (CH)
+>s[9026] Alive!
+>s[9027] Alive! (CH)
+>s[9028] Alive!
+>s[9029] Alive!
+>s[9030] Alive!
+>s[9031] Alive!
+>s[9032] Alive!
+>s[9033] Dupped (506)!
+>s[9034] Alive!
+>s[9035] Alive!
+>s[9036] Alive!
+>s[9037] Alive!
+>s[9038] Alive!
+>s[9039] Alive!
+>s[9040] Alive! (CH)
+>s[9041] Dead! killed by test 0
+>s[9042] Dead! killed by test 0
+>s[9043] Alive!
+>s[9044] Alive!
+>s[9045] Alive!
+>s[9046] Alive!
+>s[9047] Alive!
+>s[9048] Dead! killed by test 0
+>s[9049] Dead! killed by test 0
+>s[9050] Alive!
+>s[9051] Alive!
+>s[9052] Alive!
+>s[9053] Alive!
+>s[9054] Alive! (CH)
+>s[9055] Dead! killed by test 0
+>s[9056] Dead! killed by test 0
+>s[9057] Alive!
+>s[9058] Alive!
+>s[9059] Alive!
+>s[9060] Alive!
+>s[9061] Alive!
+>s[9062] Dead! killed by test 0
+>s[9063] Dead! killed by test 0
+>s[9064] Alive!
+>s[9065] Alive!
+>s[9066] Alive!
+>s[9067] Alive!
+>s[9068] Alive!
+>s[9069] Alive! (CH)
+>s[9070] Alive!
+>s[9071] Alive!
+>s[9072] Alive!
+>s[9073] Alive!
+>s[9074] Alive!
+>s[9075] Alive! (CH)
+>s[9076] Alive! (CH)
+>s[9077] Alive!
+>s[9078] Alive!
+>s[9079] Alive!
+>s[9080] Alive!
+>s[9081] Alive!
+>s[9082] Alive!
+>s[9083] Alive! (CH)
+>s[9084] Alive!
+>s[9085] Alive!
+>s[9086] Alive!
+>s[9087] Alive!
+>s[9088] Alive!
+>s[9089] Alive! (CH)
+>s[9090] Alive! (CH)
+>s[9091] Alive!
+>s[9092] Alive!
+>s[9093] Alive!
+>s[9094] Alive!
+>s[9095] Alive!
+>s[9096] Alive!
+>s[9097] Alive!
+>s[9098] Alive! (CH)
+>s[9099] Alive! (CH)
+>s[9100] Alive!
+>s[9101] Alive!
+>s[9102] Alive!
+>s[9103] Alive!
+>s[9104] Alive!
+>s[9105] Alive! (CH)
+>s[9106] Alive! (CH)
+>s[9107] Alive!
+>s[9108] Alive!
+>s[9109] Alive!
+>s[9110] Alive!
+>s[9111] Alive!
+>s[9112] Alive! (CH)
+>s[9113] Alive! (CH)
+>s[9114] Alive!
+>s[9115] Alive!
+>s[9116] Alive!
+>s[9117] Alive!
+>s[9118] Alive!
+>s[9119] Alive!
+>s[9120] Alive! (CH)
+>s[9121] Alive!
+>s[9122] Alive!
+>s[9123] Alive!
+>s[9124] Alive!
+>s[9125] Alive!
+>s[9126] Alive!
+>s[9127] Alive!
+>s[9128] Alive!
+>s[9129] Alive!
+>s[9130] Alive!
+>s[9131] Alive!
+>s[9132] Alive!
+>s[9133] Alive!
+>s[9134] Alive!
+>s[9135] Alive!
+>s[9136] Alive! (CH)
+>s[9137] Alive!
+>s[9138] Alive!
+>s[9139] Alive!
+>s[9140] Dead! killed by test 0
+>s[9141] Dead! killed by test 0
+>s[9142] Dead! killed by test 0
+>s[9143] Dead! killed by test 0
+>s[9144] Dead! killed by test 0
+>s[9145] Dead! killed by test 0
+>s[9146] Alive!
+>s[9147] Alive!
+>s[9148] Dead! killed by test 0
+>s[9149] Dead! killed by test 0
+>s[9150] Alive!
+>s[9151] Alive!
+>s[9152] Alive!
+>s[9153] Alive!
+>s[9154] Alive! (CH)
+>s[9155] Alive!
+>s[9156] Dead! killed by test 0
+>s[9157] Dead! killed by test 0
+>s[9158] Dead! killed by test 0
+>s[9159] Dead! killed by test 0
+>s[9160] Dead! killed by test 0
+>s[9161] Dead! killed by test 0
+>s[9162] Alive!
+>s[9163] Alive!
+>s[9164] Dead! killed by test 0
+>s[9165] Dead! killed by test 0
+>s[9166] Alive!
+>s[9167] Alive!
+>s[9168] Alive!
+>s[9169] Alive! (CH)
+>s[9170] Alive!
+>s[9171] Alive!
+>s[9172] Alive!
+>s[9173] Dead! killed by test 0
+>s[9174] Dead! killed by test 0
+>s[9175] Dead! killed by test 0
+>s[9176] Dead! killed by test 0
+>s[9177] Dead! killed by test 0
+>s[9178] Dead! killed by test 0
+>s[9179] Alive!
+>s[9180] Alive!
+>s[9181] Dead! killed by test 0
+>s[9182] Dead! killed by test 0
+>s[9183] Alive!
+>s[9184] Alive!
+>s[9185] Alive!
+>s[9186] Alive!
+>s[9187] Alive! (CH)
+>s[9188] Alive!
+>s[9189] Dead! killed by test 0
+>s[9190] Dead! killed by test 0
+>s[9191] Dead! killed by test 0
+>s[9192] Dead! killed by test 0
+>s[9193] Dead! killed by test 0
+>s[9194] Dead! killed by test 0
+>s[9195] Alive!
+>s[9196] Alive!
+>s[9197] Dead! killed by test 0
+>s[9198] Dead! killed by test 0
+>s[9199] Alive!
+>s[9200] Alive!
+>s[9201] Alive!
+>s[9202] Alive!
+>s[9203] Alive! (CH)
+>s[9204] Alive! (CH)
+>s[9205] Alive!
+>s[9206] Alive!
+>s[9207] Alive!
+>s[9208] Alive!
+>s[9209] Alive!
+>s[9210] Alive! (CH)
+>s[9211] Alive! (CH)
+>s[9212] Alive!
+>s[9213] Alive!
+>s[9214] Alive!
+>s[9215] Alive!
+>s[9216] Alive!
+>s[9217] Alive! (CH)
+>s[9218] Alive! (CH)
+>s[9219] Alive!
+>s[9220] Alive!
+>s[9221] Alive!
+>s[9222] Alive!
+>s[9223] Alive!
+>s[9224] Alive! (CH)
+>s[9225] Dead! killed by test 0
+>s[9226] Dead! killed by test 0
+>s[9227] Alive!
+>s[9228] Alive!
+>s[9229] Alive!
+>s[9230] Alive!
+>s[9231] Alive! (CH)
+>s[9232] Dead! killed by test 0
+>s[9233] Dead! killed by test 0
+>s[9234] Alive!
+>s[9235] Alive!
+>s[9236] Alive!
+>s[9237] Alive!
+>s[9238] Alive! (CH)
+>s[9239] Alive! (CH)
+>s[9240] Alive!
+>s[9241] Alive! (CH)
+>s[9242] Alive!
+>s[9243] Alive!
+>s[9244] Alive!
+>s[9245] Alive! (CH)
+>s[9246] Alive! (CH)
+>s[9247] Alive!
+>s[9248] Alive! (CH)
+>s[9249] Alive!
+>s[9250] Alive!
+>s[9251] Alive!
+>s[9252] Alive! (CH)
+>s[9253] Dead! killed by test 0
+>s[9254] Dead! killed by test 0
+>s[9255] Alive!
+>s[9256] Alive!
+>s[9257] Alive!
+>s[9258] Alive!
+>s[9259] Alive! (CH)
+>s[9260] Dead! killed by test 0
+>s[9261] Dead! killed by test 0
+>s[9262] Alive!
+>s[9263] Alive!
+>s[9264] Alive!
+>s[9265] Alive!
+>s[9266] Alive! (CH)
+>s[9267] Alive! (CH)
+>s[9268] Alive!
+>s[9269] Alive! (CH)
+>s[9270] Alive!
+>s[9271] Alive!
+>s[9272] Alive!
+>s[9273] Alive! (CH)
+>s[9274] Alive! (CH)
+>s[9275] Alive!
+>s[9276] Alive! (CH)
+>s[9277] Alive!
+>s[9278] Alive!
+>s[9279] Alive!
+>s[9280] Alive! (CH)
+>s[9281] Dead! killed by test 0
+>s[9282] Dead! killed by test 0
+>s[9283] Alive!
+>s[9284] Alive!
+>s[9285] Alive!
+>s[9286] Alive!
+>s[9287] Alive! (CH)
+>s[9288] Dead! killed by test 0
+>s[9289] Dead! killed by test 0
+>s[9290] Alive!
+>s[9291] Alive!
+>s[9292] Alive!
+>s[9293] Alive!
+>s[9294] Alive! (CH)
+>s[9295] Alive! (CH)
+>s[9296] Alive!
+>s[9297] Alive! (CH)
+>s[9298] Alive!
+>s[9299] Alive!
+>s[9300] Alive!
+>s[9301] Alive! (CH)
+>s[9302] Alive! (CH)
+>s[9303] Alive!
+>s[9304] Alive! (CH)
+>s[9305] Alive!
+>s[9306] Alive!
+>s[9307] Alive!
+>s[9308] Alive! (CH)
+>s[9309] Dead! killed by test 0
+>s[9310] Dead! killed by test 0
+>s[9311] Alive!
+>s[9312] Alive!
+>s[9313] Alive!
+>s[9314] Alive!
+>s[9315] Alive! (CH)
+>s[9316] Dead! killed by test 0
+>s[9317] Dead! killed by test 0
+>s[9318] Alive!
+>s[9319] Alive!
+>s[9320] Alive!
+>s[9321] Alive!
+>s[9322] Alive! (CH)
+>s[9323] Alive! (CH)
+>s[9324] Alive!
+>s[9325] Alive! (CH)
+>s[9326] Alive!
+>s[9327] Alive!
+>s[9328] Alive!
+>s[9329] Alive! (CH)
+>s[9330] Alive! (CH)
+>s[9331] Alive!
+>s[9332] Alive! (CH)
+>s[9333] Alive!
+>s[9334] Alive!
+>s[9335] Alive!
+>s[9336] Alive! (CH)
+>s[9337] Dead! killed by test 0
+>s[9338] Dead! killed by test 0
+>s[9339] Alive!
+>s[9340] Alive!
+>s[9341] Alive!
+>s[9342] Alive!
+>s[9343] Alive! (CH)
+>s[9344] Alive! (CH)
+>s[9345] Alive!
+>s[9346] Alive! (CH)
+>s[9347] Alive!
+>s[9348] Alive!
+>s[9349] Alive!
+>s[9350] Alive! (CH)
+>s[9351] Dead! killed by test 0
+>s[9352] Dead! killed by test 0
+>s[9353] Alive!
+>s[9354] Alive!
+>s[9355] Alive!
+>s[9356] Alive!
+>s[9357] Alive! (CH)
+>s[9358] Dead! killed by test 0
+>s[9359] Dead! killed by test 0
+>s[9360] Alive!
+>s[9361] Alive!
+>s[9362] Alive!
+>s[9363] Alive!
+>s[9364] Alive! (CH)
+>s[9365] Alive! (CH)
+>s[9366] Alive!
+>s[9367] Alive! (CH)
+>s[9368] Alive!
+>s[9369] Alive!
+>s[9370] Alive!
+>s[9371] Alive! (CH)
+>s[9372] Dead! killed by test 0
+>s[9373] Dead! killed by test 0
+>s[9374] Alive!
+>s[9375] Alive!
+>s[9376] Alive!
+>s[9377] Alive!
+>s[9378] Alive! (CH)
+>s[9379] Dead! killed by test 0
+>s[9380] Dead! killed by test 0
+>s[9381] Alive!
+>s[9382] Alive!
+>s[9383] Alive!
+>s[9384] Alive!
+>s[9385] Alive! (CH)
+>s[9386] Dead! killed by test 0
+>s[9387] Dead! killed by test 0
+>s[9388] Alive!
+>s[9389] Alive!
+>s[9390] Alive!
+>s[9391] Alive! (CH)
+>s[9392] Alive! (CH)
+>s[9393] Dead! killed by test 0
+>s[9394] Dead! killed by test 0
+>s[9395] Alive!
+>s[9396] Alive!
+>s[9397] Alive!
+>s[9398] Alive!
+>s[9399] Alive!
+>s[9400] Dead! killed by test 0
+>s[9401] Dead! killed by test 0
+>s[9402] Alive!
+>s[9403] Alive!
+>s[9404] Alive!
+>s[9405] Alive!
+>s[9406] Alive!
+>s[9407] Dead! killed by test 0
+>s[9408] Dead! killed by test 0
+>s[9409] Alive!
+>s[9410] Alive!
+>s[9411] Alive!
+>s[9412] Alive!
+>s[9413] Alive! (CH)
+>s[9414] Alive! (CH)
+>s[9415] Alive!
+>s[9416] Alive! (CH)
+>s[9417] Alive!
+>s[9418] Alive!
+>s[9419] Alive! (CH)
+>s[9420] Alive! (CH)
+>s[9421] Dead! killed by test 0
+>s[9422] Dead! killed by test 0
+>s[9423] Alive!
+>s[9424] Alive!
+>s[9425] Alive!
+>s[9426] Alive!
+>s[9427] Alive!
+>s[9428] Dead! killed by test 0
+>s[9429] Dead! killed by test 0
+>s[9430] Alive!
+>s[9431] Alive!
+>s[9432] Alive!
+>s[9433] Alive!
+>s[9434] Alive!
+>s[9435] Dead! killed by test 0
+>s[9436] Dead! killed by test 0
+>s[9437] Alive!
+>s[9438] Alive!
+>s[9439] Alive!
+>s[9440] Alive!
+>s[9441] Alive! (CH)
+>s[9442] Dead! killed by test 0
+>s[9443] Dead! killed by test 0
+>s[9444] Alive!
+>s[9445] Alive!
+>s[9446] Alive!
+>s[9447] Alive!
+>s[9448] Alive! (CH)
+>s[9449] Dead! killed by test 0
+>s[9450] Dead! killed by test 0
+>s[9451] Alive!
+>s[9452] Alive!
+>s[9453] Alive!
+>s[9454] Alive! (CH)
+>s[9455] Alive! (CH)
+>s[9456] Dead! killed by test 0
+>s[9457] Dead! killed by test 0
+>s[9458] Alive!
+>s[9459] Alive! (CH)
+>s[9460] Alive!
+>s[9461] Alive!
+>s[9462] Alive!
+>s[9463] Dead! killed by test 0
+>s[9464] Dead! killed by test 0
+>s[9465] Alive!
+>s[9466] Alive!
+>s[9467] Alive!
+>s[9468] Alive!
+>s[9469] Alive!
+>s[9470] Dead! killed by test 0
+>s[9471] Dead! killed by test 0
+>s[9472] Alive!
+>s[9473] Alive!
+>s[9474] Alive!
+>s[9475] Alive!
+>s[9476] Alive! (CH)
+>s[9477] Alive! (CH)
+>s[9478] Alive!
+>s[9479] Alive! (CH)
+>s[9480] Alive!
+>s[9481] Alive!
+>s[9482] Alive! (CH)
+>s[9483] Alive! (CH)
+>s[9484] Dead! killed by test 0
+>s[9485] Dead! killed by test 0
+>s[9486] Alive!
+>s[9487] Alive!
+>s[9488] Alive!
+>s[9489] Alive!
+>s[9490] Alive!
+>s[9491] Dead! killed by test 0
+>s[9492] Dead! killed by test 0
+>s[9493] Alive!
+>s[9494] Alive!
+>s[9495] Alive!
+>s[9496] Alive!
+>s[9497] Alive!
+>s[9498] Dead! killed by test 0
+>s[9499] Dead! killed by test 0
+>s[9500] Alive!
+>s[9501] Alive!
+>s[9502] Alive!
+>s[9503] Alive!
+>s[9504] Alive! (CH)
+>s[9505] Dead! killed by test 0
+>s[9506] Dead! killed by test 0
+>s[9507] Alive!
+>s[9508] Alive!
+>s[9509] Alive!
+>s[9510] Alive!
+>s[9511] Alive! (CH)
+>s[9512] Alive! (CH)
+>s[9513] Alive!
+>s[9514] Alive!
+>s[9515] Alive!
+>s[9516] Alive!
+>s[9517] Dupped (506)!
+>s[9518] Alive! (CH)
+>s[9519] Alive! (CH)
+>s[9520] Alive!
+>s[9521] Alive!
+>s[9522] Alive!
+>s[9523] Alive!
+>s[9524] Alive!
+>s[9525] Alive! (CH)
+>s[9526] Dead! killed by test 0
+>s[9527] Dead! killed by test 0
+>s[9528] Alive!
+>s[9529] Alive!
+>s[9530] Alive!
+>s[9531] Alive!
+>s[9532] Alive! (CH)
+>s[9533] Alive! (CH)
+>s[9534] Alive!
+>s[9535] Alive!
+>s[9536] Alive!
+>s[9537] Alive!
+>s[9538] Alive!
+>s[9539] Alive! (CH)
+>s[9540] Alive! (CH)
+>s[9541] Alive!
+>s[9542] Alive!
+>s[9543] Alive!
+>s[9544] Alive!
+>s[9545] Alive!
+>s[9546] Alive! (CH)
+>s[9547] Dead! killed by test 0
+>s[9548] Dead! killed by test 0
+>s[9549] Alive!
+>s[9550] Alive!
+>s[9551] Alive!
+>s[9552] Alive!
+>s[9553] Alive! (CH)
+>s[9554] Alive! (CH)
+>s[9555] Alive!
+>s[9556] Alive!
+>s[9557] Alive!
+>s[9558] Alive!
+>s[9559] Alive!
+>s[9560] Alive! (CH)
+>s[9561] Alive! (CH)
+>s[9562] Alive!
+>s[9563] Alive!
+>s[9564] Alive!
+>s[9565] Alive!
+>s[9566] Alive!
+>s[9567] Alive! (CH)
+>s[9568] Dead! killed by test 0
+>s[9569] Dead! killed by test 0
+>s[9570] Alive!
+>s[9571] Alive!
+>s[9572] Alive!
+>s[9573] Alive!
+>s[9574] Alive! (CH)
+>s[9575] Alive! (CH)
+>s[9576] Alive!
+>s[9577] Alive!
+>s[9578] Alive!
+>s[9579] Alive!
+>s[9580] Alive!
+>s[9581] Alive! (CH)
+>s[9582] Alive! (CH)
+>s[9583] Alive!
+>s[9584] Alive!
+>s[9585] Alive!
+>s[9586] Alive!
+>s[9587] Alive!
+>s[9588] Alive! (CH)
+>s[9589] Dead! killed by test 0
+>s[9590] Dead! killed by test 0
+>s[9591] Alive!
+>s[9592] Alive!
+>s[9593] Alive!
+>s[9594] Alive!
+>s[9595] Alive! (CH)
+>s[9596] Alive! (CH)
+>s[9597] Alive!
+>s[9598] Alive!
+>s[9599] Alive!
+>s[9600] Alive!
+>s[9601] Alive!
+>s[9602] Alive! (CH)
+>s[9603] Alive! (CH)
+>s[9604] Alive!
+>s[9605] Alive!
+>s[9606] Alive!
+>s[9607] Alive!
+>s[9608] Alive!
+>s[9609] Alive! (CH)
+>s[9610] Dead! killed by test 0
+>s[9611] Dead! killed by test 0
+>s[9612] Alive!
+>s[9613] Alive!
+>s[9614] Alive!
+>s[9615] Alive!
+>s[9616] Alive! (CH)
+>s[9617] Alive! (CH)
+>s[9618] Alive!
+>s[9619] Alive!
+>s[9620] Alive!
+>s[9621] Alive!
+>s[9622] Alive!
+>s[9623] Alive! (CH)
+>s[9624] Alive! (CH)
+>s[9625] Alive!
+>s[9626] Alive!
+>s[9627] Alive!
+>s[9628] Alive!
+>s[9629] Alive!
+>s[9630] Alive! (CH)
+>s[9631] Dead! killed by test 0
+>s[9632] Dead! killed by test 0
+>s[9633] Alive!
+>s[9634] Alive!
+>s[9635] Alive!
+>s[9636] Alive!
+>s[9637] Alive! (CH)
+>s[9638] Alive! (CH)
+>s[9639] Alive!
+>s[9640] Alive!
+>s[9641] Alive!
+>s[9642] Alive!
+>s[9643] Alive!
+>s[9644] Alive! (CH)
+>s[9645] Alive! (CH)
+>s[9646] Alive!
+>s[9647] Alive!
+>s[9648] Alive!
+>s[9649] Alive!
+>s[9650] Alive!
+>s[9651] Alive! (CH)
+>s[9652] Dead! killed by test 0
+>s[9653] Dead! killed by test 0
+>s[9654] Alive!
+>s[9655] Alive!
+>s[9656] Alive!
+>s[9657] Alive!
+>s[9658] Alive! (CH)
+>s[9659] Alive! (CH)
+>s[9660] Alive!
+>s[9661] Alive!
+>s[9662] Alive!
+>s[9663] Alive!
+>s[9664] Alive!
+>s[9665] Alive! (CH)
+>s[9666] Alive! (CH)
+>s[9667] Alive!
+>s[9668] Alive!
+>s[9669] Alive!
+>s[9670] Alive!
+>s[9671] Alive!
+>s[9672] Alive! (CH)
+>s[9673] Alive! (CH)
+>s[9674] Alive!
+>s[9675] Alive!
+>s[9676] Alive!
+>s[9677] Alive!
+>s[9678] Alive!
+>s[9679] Alive! (CH)
+>s[9680] Dead! killed by test 0
+>s[9681] Dead! killed by test 0
+>s[9682] Alive!
+>s[9683] Alive!
+>s[9684] Alive!
+>s[9685] Alive!
+>s[9686] Alive! (CH)
+>s[9687] Alive! (CH)
+>s[9688] Alive!
+>s[9689] Alive!
+>s[9690] Alive!
+>s[9691] Alive!
+>s[9692] Alive!
+>s[9693] Alive! (CH)
+>s[9694] Dead! killed by test 0
+>s[9695] Dead! killed by test 0
+>s[9696] Alive!
+>s[9697] Alive!
+>s[9698] Alive!
+>s[9699] Alive!
+>s[9700] Alive! (CH)
+>s[9701] Alive! (CH)
+>s[9702] Alive!
+>s[9703] Alive!
+>s[9704] Alive!
+>s[9705] Alive!
+>s[9706] Alive!
+>s[9707] Alive! (CH)
+>s[9708] Dead! killed by test 0
+>s[9709] Dead! killed by test 0
+>s[9710] Alive!
+>s[9711] Alive!
+>s[9712] Alive!
+>s[9713] Alive!
+>s[9714] Alive! (CH)
+>s[9715] Alive! (CH)
+>s[9716] Alive!
+>s[9717] Alive!
+>s[9718] Alive!
+>s[9719] Alive!
+>s[9720] Alive!
+>s[9721] Alive! (CH)
+>s[9722] Dead! killed by test 0
+>s[9723] Dead! killed by test 0
+>s[9724] Alive!
+>s[9725] Alive!
+>s[9726] Alive!
+>s[9727] Alive!
+>s[9728] Alive! (CH)
+>s[9729] Dead! killed by test 0
+>s[9730] Dead! killed by test 0
+>s[9731] Alive!
+>s[9732] Alive!
+>s[9733] Alive!
+>s[9734] Alive!
+>s[9735] Alive! (CH)
+>s[9736] Dead! killed by test 0
+>s[9737] Dead! killed by test 0
+>s[9738] Alive!
+>s[9739] Alive!
+>s[9740] Alive!
+>s[9741] Alive!
+>s[9742] Alive! (CH)
+>s[9743] Alive! (CH)
+>s[9744] Alive!
+>s[9745] Alive!
+>s[9746] Alive!
+>s[9747] Alive!
+>s[9748] Alive! (CH)
+>s[9749] Alive! (CH)
+>s[9750] Dead! killed by test 0
+>s[9751] Dead! killed by test 0
+>s[9752] Alive!
+>s[9753] Alive!
+>s[9754] Alive!
+>s[9755] Alive!
+>s[9756] Alive!
+>s[9757] Dead! killed by test 0
+>s[9758] Dead! killed by test 0
+>s[9759] Alive!
+>s[9760] Alive!
+>s[9761] Alive!
+>s[9762] Alive!
+>s[9763] Alive!
+>s[9764] Dead! killed by test 0
+>s[9765] Dead! killed by test 0
+>s[9766] Alive!
+>s[9767] Alive!
+>s[9768] Alive!
+>s[9769] Alive!
+>s[9770] Alive! (CH)
+>s[9771] Alive! (CH)
+>s[9772] Alive!
+>s[9773] Alive!
+>s[9774] Alive!
+>s[9775] Alive!
+>s[9776] Alive! (CH)
+>s[9777] Alive! (CH)
+>s[9778] Dead! killed by test 0
+>s[9779] Dead! killed by test 0
+>s[9780] Alive!
+>s[9781] Alive!
+>s[9782] Alive!
+>s[9783] Alive!
+>s[9784] Alive!
+>s[9785] Dead! killed by test 0
+>s[9786] Dead! killed by test 0
+>s[9787] Alive!
+>s[9788] Alive!
+>s[9789] Alive!
+>s[9790] Alive!
+>s[9791] Alive!
+>s[9792] Dead! killed by test 0
+>s[9793] Dead! killed by test 0
+>s[9794] Alive!
+>s[9795] Alive!
+>s[9796] Alive!
+>s[9797] Alive!
+>s[9798] Alive! (CH)
+>s[9799] Dead! killed by test 0
+>s[9800] Dead! killed by test 0
+>s[9801] Alive!
+>s[9802] Alive!
+>s[9803] Alive!
+>s[9804] Alive!
+>s[9805] Alive! (CH)
+>s[9806] Dead! killed by test 0
+>s[9807] Dead! killed by test 0
+>s[9808] Alive!
+>s[9809] Alive!
+>s[9810] Alive!
+>s[9811] Alive!
+>s[9812] Alive! (CH)
+>s[9813] Alive! (CH)
+>s[9814] Alive!
+>s[9815] Alive!
+>s[9816] Alive!
+>s[9817] Alive!
+>s[9818] Alive! (CH)
+>s[9819] Alive! (CH)
+>s[9820] Dead! killed by test 0
+>s[9821] Dead! killed by test 0
+>s[9822] Alive!
+>s[9823] Alive!
+>s[9824] Alive!
+>s[9825] Alive!
+>s[9826] Alive!
+>s[9827] Dead! killed by test 0
+>s[9828] Dead! killed by test 0
+>s[9829] Alive!
+>s[9830] Alive!
+>s[9831] Alive!
+>s[9832] Alive!
+>s[9833] Alive!
+>s[9834] Dead! killed by test 0
+>s[9835] Dead! killed by test 0
+>s[9836] Alive!
+>s[9837] Alive!
+>s[9838] Alive!
+>s[9839] Alive!
+>s[9840] Alive! (CH)
+>s[9841] Alive! (CH)
+>s[9842] Alive!
+>s[9843] Alive!
+>s[9844] Alive!
+>s[9845] Alive!
+>s[9846] Alive! (CH)
+>s[9847] Alive! (CH)
+>s[9848] Dead! killed by test 0
+>s[9849] Dead! killed by test 0
+>s[9850] Alive!
+>s[9851] Alive!
+>s[9852] Alive!
+>s[9853] Alive!
+>s[9854] Alive!
+>s[9855] Dead! killed by test 0
+>s[9856] Dead! killed by test 0
+>s[9857] Alive!
+>s[9858] Alive!
+>s[9859] Alive!
+>s[9860] Alive!
+>s[9861] Alive!
+>s[9862] Dead! killed by test 0
+>s[9863] Dead! killed by test 0
+>s[9864] Alive!
+>s[9865] Alive!
+>s[9866] Alive!
+>s[9867] Alive!
+>s[9868] Alive! (CH)
+>s[9869] Alive! (CH)
+>s[9870] Alive!
+>s[9871] Alive!
+>s[9872] Alive!
+>s[9873] Alive!
+>s[9874] Alive!
+>s[9875] Alive! (CH)
+>s[9876] Alive! (CH)
+>s[9877] Alive!
+>s[9878] Alive!
+>s[9879] Alive!
+>s[9880] Alive!
+>s[9881] Alive!
+>s[9882] Alive! (CH)
+>s[9883] Alive! (CH)
+>s[9884] Alive!
+>s[9885] Alive!
+>s[9886] Alive!
+>s[9887] Alive!
+>s[9888] Alive!
+>s[9889] Alive! (CH)
+>s[9890] Alive! (CH)
+>s[9891] Alive!
+>s[9892] Alive!
+>s[9893] Alive!
+>s[9894] Alive!
+>s[9895] Alive!
+>s[9896] Alive! (CH)
+>s[9897] Dead! killed by test 0
+>s[9898] Dead! killed by test 0
+>s[9899] Alive!
+>s[9900] Alive!
+>s[9901] Alive!
+>s[9902] Alive!
+>s[9903] Alive! (CH)
+>s[9904] Dead! killed by test 0
+>s[9905] Dead! killed by test 0
+>s[9906] Alive!
+>s[9907] Alive!
+>s[9908] Alive!
+>s[9909] Alive!
+>s[9910] Alive! (CH)
+>s[9911] Alive! (CH)
+>s[9912] Alive!
+>s[9913] Alive! (CH)
+>s[9914] Alive!
+>s[9915] Alive!
+>s[9916] Alive!
+>s[9917] Alive! (CH)
+>s[9918] Alive! (CH)
+>s[9919] Alive!
+>s[9920] Alive! (CH)
+>s[9921] Alive!
+>s[9922] Alive!
+>s[9923] Alive!
+>s[9924] Alive! (CH)
+>s[9925] Dead! killed by test 0
+>s[9926] Dead! killed by test 0
+>s[9927] Alive!
+>s[9928] Alive!
+>s[9929] Alive!
+>s[9930] Alive!
+>s[9931] Alive! (CH)
+>s[9932] Dead! killed by test 0
+>s[9933] Dead! killed by test 0
+>s[9934] Alive!
+>s[9935] Alive!
+>s[9936] Alive!
+>s[9937] Alive!
+>s[9938] Alive! (CH)
+>s[9939] Alive! (CH)
+>s[9940] Alive!
+>s[9941] Alive! (CH)
+>s[9942] Alive!
+>s[9943] Alive!
+>s[9944] Alive!
+>s[9945] Alive! (CH)
+>s[9946] Alive! (CH)
+>s[9947] Alive!
+>s[9948] Alive! (CH)
+>s[9949] Alive!
+>s[9950] Alive!
+>s[9951] Alive!
+>s[9952] Alive! (CH)
+>s[9953] Dead! killed by test 0
+>s[9954] Dead! killed by test 0
+>s[9955] Alive!
+>s[9956] Alive!
+>s[9957] Alive!
+>s[9958] Alive!
+>s[9959] Alive! (CH)
+>s[9960] Dead! killed by test 0
+>s[9961] Dead! killed by test 0
+>s[9962] Alive!
+>s[9963] Alive!
+>s[9964] Alive!
+>s[9965] Alive!
+>s[9966] Alive! (CH)
+>s[9967] Alive! (CH)
+>s[9968] Alive!
+>s[9969] Alive! (CH)
+>s[9970] Alive!
+>s[9971] Alive!
+>s[9972] Alive!
+>s[9973] Alive! (CH)
+>s[9974] Alive! (CH)
+>s[9975] Alive!
+>s[9976] Alive! (CH)
+>s[9977] Alive!
+>s[9978] Alive!
+>s[9979] Alive!
+>s[9980] Alive! (CH)
+>s[9981] Dead! killed by test 0
+>s[9982] Dead! killed by test 0
+>s[9983] Alive!
+>s[9984] Alive!
+>s[9985] Alive!
+>s[9986] Alive!
+>s[9987] Alive! (CH)
+>s[9988] Dead! killed by test 0
+>s[9989] Dead! killed by test 0
+>s[9990] Alive!
+>s[9991] Alive!
+>s[9992] Alive!
+>s[9993] Alive!
+>s[9994] Alive! (CH)
+>s[9995] Alive! (CH)
+>s[9996] Alive!
+>s[9997] Alive! (CH)
+>s[9998] Alive!
+>s[9999] Alive!
+>s[10000] Alive!
+----------------

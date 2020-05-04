@@ -65,7 +65,7 @@ void testList2redTestList(T_stTI* oTest, T_stTestList* pTestList)
 }
 void test2redTest(T_stTestInfo* pTest, T_stTI* pTestRed)
 {
-    if(DEBUG_TRANS) printf("test2redTest - Init\n");
+    if(DEBUG_TRANS) printf("<%d>test2redTest - Init\n", m_nRank);
     if(pTest && pTestRed)
     {        
         //copy the values!!
@@ -76,7 +76,7 @@ void test2redTest(T_stTestInfo* pTest, T_stTI* pTestRed)
         pTestRed->nKill = pTest->nKill;                     
         pTestRed->nTest = pTest->nTest;
     }
-    if(DEBUG_TRANS) printf("test2redTest - End\n");
+    if(DEBUG_TRANS) printf("<%d>test2redTest - End\n", m_nRank);
 }
 void redtestList2TestList(T_stTI* oTest[],  T_stTestList* pList, int nItems)
 {

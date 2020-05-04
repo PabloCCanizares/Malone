@@ -17,7 +17,7 @@ void printTestResults(T_stTestList* pList)
     if(PRINTER_ON || PRINTER_RES_INITIAL)
     {
         int i;
-        printf("printTestResults - Init\n");
+        printf("<%d>printTestResults - Init\n", m_nRank);
         if(pList != NULL)
         {
             for(i=0;i<pList->nElems;i++)
@@ -35,8 +35,9 @@ void printTestResults(T_stTestList* pList)
             }
         }
         else
-            printf("printTestResults - WARNING!! Empty list!\n");    
-        printf("printTestResults - End\n");
+            printf("<%d>printTestResults - WARNING!! Empty list!\n", m_nRank);    
+        
+        printf("<%d>printTestResults - End\n", m_nRank);
     }
 }
 void printTestResultsSort(T_stTestList* pList) 
@@ -195,10 +196,12 @@ void printTest(T_stTestInfo* pTest)
         if(pTest)
         {
             if(strlen(pTest->res) >0)
-                printf("Test - N:%d | Res:%s | Time: %lf | Killed<%d>\n",pTest->nTest, pTest->res, pTest->dTime, pTest->nKill);
+                printf("<%d>Test - N:%d | Res:%s | Time: %lf | Killed<%d>\n",m_nRank, pTest->nTest, pTest->res, pTest->dTime, pTest->nKill);
             else
-                printf("Test - N:%d | Res:%s | Time: %lf | Killed<%d>\n",pTest->nTest, "(empty)", pTest->dTime, pTest->nKill);
+                printf("<%d>Test - N:%d | Res:%s | Time: %lf | Killed<%d>\n",m_nRank, pTest->nTest, "(empty)", pTest->dTime, pTest->nKill);
         }
+        else
+            printf("WARNING! The test is null\n");
     }   
 }
 void printTestRed(T_stTI* pTest)
@@ -206,7 +209,7 @@ void printTestRed(T_stTI* pTest)
     if(PRINTER_ON)
     {
         if(pTest)
-            printf("printTestRed- <%d>Test: %s : %lf <%d>\n",pTest->nMutant,pTest->res, pTest->dTime, pTest->nKill);
+            printf("<%d>printTestRed- <%d>Test: %s : %lf <%d>\n",m_nRank, pTest->nMutant,pTest->res, pTest->dTime, pTest->nKill);
     }
 }
 void printResults(int nTotalMutants, int nDeadMutants, int nEquivalents, int nDupped, int nTotalTests, long int dCompTime, long int dOriginalTime, long int dTime)

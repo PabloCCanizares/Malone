@@ -7,3 +7,4 @@ void mutantDataType_w();
 void mutantDataType(int choice);
 void testDataType_w();
 void testDataType(int choice);
+char* createFileToSend(char* strEnvFile);

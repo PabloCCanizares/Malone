@@ -59,7 +59,10 @@ int distribution_static_mutants(T_eExecutionMode eMethod) {
         if (MALONE_DEBUG_DIST_WORKERS) printf("distribution_static_mutants - Workers mode!\n");
 
         //receive the deployment method
-        pExeRetMode = receiveDeployMode();
+        if(COMPATIBLE_MODE)
+            receiveDeployModeRefP(&pExeRetMode);
+        else
+            pExeRetMode = receiveDeployMode();
 
         if (MALONE_DEBUG_DIST_WORKERS) printf("distribution_static_mutants - Received deploy mode!\n");
         //if(DEBUG)

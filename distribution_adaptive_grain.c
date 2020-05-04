@@ -104,7 +104,7 @@ int distribution_adaptive_grain_scatter(T_eExecutionMode eMethod)
             if(nFinish == 0)
                 nSent++;
 
-            if (MALONE_DEBUG_DIST_MASTER) printf("<%d>distribution_adaptive_grain_scatter - Distributing Mutant [%d-%d].[%d-%d] to worker %d | Remaining blocks: %d | elapsed: %d\n", m_nRank, nIndexMutantInit, nIndexMutantEnd, nIndexTestInit, nIndexTestEnd, nIndex, nSent, (getTick() - m_lMutantInitTick));            
+            if (MALONE_DEBUG_DIST_MASTER) printf("<%d>distribution_adaptive_grain_scatter - Distributing Mutant [%d-%d].[%d-%d] to worker %d | Remaining blocks: %d | elapsed: %ld \n", m_nRank, nIndexMutantInit, nIndexMutantEnd, nIndexTestInit, nIndexTestEnd, nIndex, nSent, (long int) getTick() - m_lMutantInitTick);            
             sendDeployMode(&exeVector[nIndex], nIndex);
 
             //Inc worker counter
@@ -142,7 +142,7 @@ int distribution_adaptive_grain_scatter(T_eExecutionMode eMethod)
                 exeVector[nWorkerSource].nTestInit = nIndexTestInit;
                 exeVector[nWorkerSource].nTestEnd = nIndexTestEnd;
                 nRemainBlocks++;
-                if (MALONE_DEBUG_DIST_MASTER) printf("<%d>distribution_adaptive_grain_scatter - Distributing Mutant [%d-%d].[%d-%d] to worker %d | Remaining %d |elapsed: %d\n", m_nRank, nIndexMutantInit, nIndexMutantEnd, nIndexTestInit, nIndexTestEnd, nWorkerSource, nRemainBlocks, (getTick() - m_lMutantInitTick));
+                if (MALONE_DEBUG_DIST_MASTER) printf("<%d>distribution_adaptive_grain_scatter - Distributing Mutant [%d-%d].[%d-%d] to worker %d | Remaining %d |elapsed: %ld\n", m_nRank, nIndexMutantInit, nIndexMutantEnd, nIndexTestInit, nIndexTestEnd, nWorkerSource, nRemainBlocks, (long int) getTick() - m_lMutantInitTick);
                 
                 sendDeployMode(&exeVector[nWorkerSource], nWorkerSource);
 
@@ -168,7 +168,10 @@ int distribution_adaptive_grain_scatter(T_eExecutionMode eMethod)
 
         do {
             //receive the deployment method
-            pExeRetMode = receiveDeployMode();
+            if(COMPATIBLE_MODE)
+                receiveDeployModeRefP(&pExeRetMode);
+            else
+                pExeRetMode = receiveDeployMode();
 
             if (MALONE_DEBUG_DIST_WORKERS) printf("<%d>distribution_adaptive_grain_scatter - Received deploy mode!\n", m_nRank);
 

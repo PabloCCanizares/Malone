@@ -8,10 +8,11 @@
 #ifndef OPTIONS_H
 #define	OPTIONS_H
 
-#define DISABLELOGS
-#define PERFORMANCE_MODE
+//#define DISABLELOGS
+//#define PERFORMANCE_MODE
 #define EXPERIMENTAL_MEM_SAFE
 
+#define COMPATIBLE_MODE 1
 
 
 #include <stdio.h>
@@ -22,6 +23,7 @@
 #include <unistd.h>
 #include <time.h>
 #include <limits.h>
+#include <assert.h>
 
 //Server
 #include <pthread.h>
@@ -41,7 +43,7 @@
 #define MAX_MUTANTS 85000
 #define MAX_MUTANTS_RED 100
 #define MAX_TESTS 1000         //Ojo, disminuyendo esto, no van algunas funcionalidades!!!!
-#define MAX_RESULT_SIZE 2000
+#define MAX_RESULT_SIZE 1000
 #define MAX_MD5_SIZE 100
 #define MAX_EXELINE 2000
 #define MAX_WORKERS 2048
@@ -89,6 +91,8 @@
 #define NORMAL_EQUIV_METHOD 1
 #define AGGRESIVE_EQUIV_METHOD 2
 
+#define COMMAND_EXEC_HPC 1
+
 //Log levels;
 static gint MALONE_GLOBAL_LOG = 1;
 static gint MALONE_MASTER = 0;
@@ -101,8 +105,7 @@ typedef enum
 {
     eSequential=0,
     eStaticMutants=1,
-    eStaticTests=2,
-            
+    eStaticTests=2,            
     eDynamic=3,
     eFullDynamic=4,   
     eAdaptiveGrain=5,
@@ -115,18 +118,25 @@ typedef enum
     eExecuting=3,
 }T_eStatus;
 
-
-
 T_stConfigValues* m_stConfigValues;
 
-typedef struct{
-    char res[MAX_RESULT_SIZE];
-    double dTime;
-    double dInitTick;   //This time is ticked by the master
-    double dEndTick;    //This time is ticked by the master
-    int nKill;
-    int nTest;
+typedef struct T_stTestInfo{
+    char res[MAX_RESULT_SIZE];  //Result of the test case execution
+    double dTime;               //Execution time of the test
+    double dInitTick;           //This time is ticked by the master
+    double dEndTick;            //This time is ticked by the master
+    int nKill;                  //Indicates if this test kills a mutant
+    int nTest;                  //Id of the test case    
 }T_stTestInfo;
+
+struct TestInfo{
+    char res[MAX_RESULT_SIZE];  //Result of the test case execution
+    double dTime;               //Execution time of the test
+    double dInitTick;           //This time is ticked by the master
+    double dEndTick;            //This time is ticked by the master
+    int nKill;                  //Indicates if this test kills a mutant
+    int nTest;                  //Id of the test case    
+};
 
 typedef struct{
     char res[MAX_RESULT_SIZE]; 
@@ -207,11 +217,11 @@ typedef struct
     int nTestEnd;       //Test index end
     
     //These three last components are not sent to the worker!
-    //This is not a problem is intended to do it for metric calculation
+    //This is not a problem, it is intended to do it for metric calculation
     int nWorker;
     double dInitTick;
     double dEndTick;
-}T_stExecutionStructure;
+}T_stExecutionStructure;        //TODO: Dime donde se usa
 
 typedef struct {
     int nNumber;
@@ -226,13 +236,14 @@ typedef struct {
     int nMax;
     int nDead;
     double dTime;
-    T_stMutant* array[MAX_MUTANTS];
+    T_stMutant* array[MAX_MUTANTS];     //TODO: En algun momento convertir esto en T_stMutant** array;
 } MutantList;
 
 T_stExecutionMap m_oTestExecMap;
 T_stTI m_oTest[MAX_TESTS];   
 
-#ifdef EXPERIMENTAL_MEM_SAFE
+
+#ifdef EXPERIMENTAL_MEM_SAFE        //This is the reduced version of a mutant, that is used to send it with datatypes. (The full version is MutantList)
 T_stM m_oMutant[MAX_MUTANTS_RED];   //This change limits the static distribution, due to the maximum interval allowed is 100
 #else
 T_stM m_oMutant[MAX_MUTANTS];   
@@ -262,6 +273,7 @@ typedef struct {
 //Monitor char lists
 char** m_pListMonitorLines;
 char** m_pListMonitorOnceLines;
+
 MonitorLines m_oMonitorLines;
 MonitorLines m_oMonitorOnceLines;
 int m_nOnceLines;

@@ -1,0 +1,70 @@
+autotest.c: In function ‘autotest’:
+autotest.c:59:5: warning: implicit declaration of function ‘initializeMPI’ [-Wimplicit-function-declaration]
+     initializeMPI();
+     ^~~~~~~~~~~~~
+autotest.c:63:5: warning: implicit declaration of function ‘testDeploy’; did you mean ‘testVector’? [-Wimplicit-function-declaration]
+     testDeploy();
+     ^~~~~~~~~~
+     testVector
+autotest.c:66:5: warning: implicit declaration of function ‘testTestcases’; did you mean ‘g_strescape’? [-Wimplicit-function-declaration]
+     testTestcases();
+     ^~~~~~~~~~~~~
+     g_strescape
+configuration.c: In function ‘loadEnvironmentKeys’:
+configuration.c:295:34: warning: implicit declaration of function ‘str_split’; did you mean ‘g_strsplit’? [-Wimplicit-function-declaration]
+            m_pListMonitorLines = str_split(pReturn->strMonitorLines, ',');
+                                  ^~~~~~~~~
+                                  g_strsplit
+configuration.c:295:32: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+            m_pListMonitorLines = str_split(pReturn->strMonitorLines, ',');
+                                ^
+configuration.c:311:36: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+            m_pListMonitorOnceLines = str_split(pReturn->strMonitorOnceLines, ',');
+                                    ^
+Auxiliars.c: In function ‘file_exist’:
+Auxiliars.c:952:13: warning: implicit declaration of function ‘stat’; did you mean ‘sqrt’? [-Wimplicit-function-declaration]
+     return (stat(filename, &buffer) == 0);
+             ^~~~
+             sqrt
+Auxiliars.c: In function ‘recursive_mkdir’:
+Auxiliars.c:982:9: warning: implicit declaration of function ‘mkdir’; did you mean ‘rmdir’? [-Wimplicit-function-declaration]
+     if (mkdir(path, 0755) && errno != EEXIST)
+         ^~~~~
+         rmdir
+Auxiliars.c: In function ‘popen2’:
+Auxiliars.c:1376:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+     pid = child_pid;
+         ^
+Auxiliars.c:1348:5: warning: ignoring return value of ‘pipe’, declared with attribute warn_unused_result [-Wunused-result]
+     pipe(fd);
+     ^~~~~~~~
+test_envfile.c: In function ‘testEnvFile’:
+test_envfile.c:29:5: warning: implicit declaration of function ‘test_envfile_2’; did you mean ‘testEnvFile’? [-Wimplicit-function-declaration]
+     test_envfile_2();
+     ^~~~~~~~~~~~~~
+     testEnvFile
+test_envfile.c:37:5: warning: implicit declaration of function ‘test_envfile_4’; did you mean ‘testEnvFile’? [-Wimplicit-function-declaration]
+     test_envfile_4();
+     ^~~~~~~~~~~~~~
+     testEnvFile
+test_envfile.c: At top level:
+test_envfile.c:45:6: warning: conflicting types for ‘test_envfile_2’
+ void test_envfile_2()
+      ^~~~~~~~~~~~~~
+test_envfile.c:29:5: note: previous implicit declaration of ‘test_envfile_2’ was here
+     test_envfile_2();
+     ^~~~~~~~~~~~~~
+test_envfile.c:73:6: warning: conflicting types for ‘test_envfile_4’
+ void test_envfile_4()
+      ^~~~~~~~~~~~~~
+test_envfile.c:37:5: note: previous implicit declaration of ‘test_envfile_4’ was here
+     test_envfile_4();
+     ^~~~~~~~~~~~~~
+test_envfile.c: In function ‘loadEnvFile_t’:
+test_envfile.c:103:16: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+     strEnvFile = envValue;
+                ^
+test_envfile.c:116:16: warning: implicit declaration of function ‘file_exist’; did you mean ‘g_file_test’? [-Wimplicit-function-declaration]
+         nRet = file_exist(fileRet);
+                ^~~~~~~~~~
+                g_file_test

@@ -1,0 +1,121 @@
+<0> Duration of mutation phases -  [Init: 229 | Gen:0 | Comp: 0 | Equiv: 0 | Sort: 0 | Orig: 10 | Mut: 354 | Total: 593]
+<0> Total worker processes: 8
+<0> Check if the res folder [/Results/] exists
+----------------
+MALONE says: 
+Initialization time: 229
+Generation time: 0
+Compilation time: 0
+Original time: 10
+Mutants time: 354
+Total time: 593
+----------------
+Total mutants: 100
+Total tests: 2
+Alive mutants: 100
+Dead mutants: 0
+Equivalent mutants: 0
+Dupped mutants: 0
+Mutation score: 0.000000
+----------------
+>s[1] Alive!
+>s[2] Alive!
+>s[3] Alive!
+>s[4] Alive!
+>s[5] Alive!
+>s[6] Alive!
+>s[7] Alive!
+>s[8] Alive!
+>s[9] Alive!
+>s[10] Alive!
+>s[11] Alive!
+>s[12] Alive!
+>s[13] Alive!
+>s[14] Alive!
+>s[15] Alive!
+>s[16] Alive!
+>s[17] Alive!
+>s[18] Alive!
+>s[19] Alive!
+>s[20] Alive!
+>s[21] Alive!
+>s[22] Alive!
+>s[23] Alive!
+>s[24] Alive!
+>s[25] Alive!
+>s[26] Alive!
+>s[27] Alive!
+>s[28] Alive!
+>s[29] Alive!
+>s[30] Alive!
+>s[31] Alive!
+>s[32] Alive!
+>s[33] Alive!
+>s[34] Alive!
+>s[35] Alive!
+>s[36] Alive!
+>s[37] Alive!
+>s[38] Alive!
+>s[39] Alive!
+>s[40] Alive!
+>s[41] Alive!
+>s[42] Alive!
+>s[43] Alive!
+>s[44] Alive!
+>s[45] Alive!
+>s[46] Alive!
+>s[47] Alive!
+>s[48] Alive!
+>s[49] Alive!
+>s[50] Alive!
+>s[51] Alive!
+>s[52] Alive!
+>s[53] Alive!
+>s[54] Alive!
+>s[55] Alive!
+>s[56] Alive!
+>s[57] Alive!
+>s[58] Alive!
+>s[59] Alive!
+>s[60] Alive!
+>s[61] Alive!
+>s[62] Alive!
+>s[63] Alive!
+>s[64] Alive!
+>s[65] Alive!
+>s[66] Alive!
+>s[67] Alive!
+>s[68] Alive!
+>s[69] Alive!
+>s[70] Alive!
+>s[71] Alive!
+>s[72] Alive!
+>s[73] Alive!
+>s[74] Alive!
+>s[75] Alive!
+>s[76] Alive!
+>s[77] Alive!
+>s[78] Alive!
+>s[79] Alive!
+>s[80] Alive!
+>s[81] Alive!
+>s[82] Alive!
+>s[83] Alive!
+>s[84] Alive!
+>s[85] Alive!
+>s[86] Alive!
+>s[87] Alive!
+>s[88] Alive!
+>s[89] Alive!
+>s[90] Alive!
+>s[91] Alive!
+>s[92] Alive!
+>s[93] Alive!
+>s[94] Alive!
+>s[95] Alive!
+>s[96] Alive!
+>s[97] Alive!
+>s[98] Alive!
+>s[99] Alive!
+>s[100] Alive!
+----------------

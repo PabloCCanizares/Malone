@@ -1,0 +1,41 @@
+<0> Duration of mutation phases -  [Init: 108 | Gen:0 | Comp: 0 | Equiv: 81 | Sort: 0 | Orig: 23 | Mut: 287 | Total: 499]
+<0> Total worker processes: 2
+<0> Check if the res folder [/Results/] exists
+----------------
+MALONE says: 
+Initialization time: 108
+Generation time: 0
+Compilation time: 0
+Original time: 23
+Mutants time: 287
+Total time: 499
+----------------
+Total mutants: 20
+Total tests: 2
+Alive mutants: 20
+Dead mutants: 0
+Equivalent mutants: 0
+Dupped mutants: 6
+Mutation score: 0.000000
+----------------
+>s[1] Alive! (CH)
+>s[2] Dupped (1)!
+>s[3] Alive!
+>s[4] Alive! (CH)
+>s[5] Dupped (4)!
+>s[6] Alive!
+>s[7] Alive! (CH)
+>s[8] Dupped (7)!
+>s[9] Alive!
+>s[10] Alive! (CH)
+>s[11] Dupped (10)!
+>s[12] Alive!
+>s[13] Alive! (CH)
+>s[14] Dupped (13)!
+>s[15] Alive!
+>s[16] Alive! (CH)
+>s[17] Dupped (16)!
+>s[18] Alive!
+>s[19] Alive!
+>s[20] Alive!
+----------------
