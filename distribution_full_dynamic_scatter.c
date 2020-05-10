@@ -80,7 +80,7 @@ int distribution_full_dynamic_scatter(T_eExecutionMode eMethod) {
 
         //Wait for receiving values from all workers and filling final result
         do {
-            nAlive = receiveSingleTestAndCheck(&exeVector, &nWorkerSource);
+            nAlive = receiveSingleTestAndCheck(exeVector, &nWorkerSource);
             nRemainBlocks--;            
             
             if (hasRemainingWork(nIndexMutant, nIndexTest)) {
@@ -109,7 +109,7 @@ int distribution_full_dynamic_scatter(T_eExecutionMode eMethod) {
                 exeVector[nWorkerSource].nTestInit = nIndexTest;
                 exeVector[nWorkerSource].nTestEnd = nIndexTest;
                 nRemainBlocks++;
-                if (MALONE_DEBUG_DIST_MASTER) printf("<%d>distribution_full_dynamic_scatter - Distributing Mutant %d.%d to worker %d | Remaining blocks: %d | Finished: %d | elapsed: %ld\n", m_nRank, nIndexMutant, nIndexTest, nWorkerSource, nRemainBlocks, nFinish, (long int)getTick() - m_lMutantInitTick);
+                if (MALONE_DEBUG_DIST_MASTER) printf("<%d>distribution_full_dynamic_scatter - Distributing Mutant %d.%d to worker %d | Remaining blocks: %d | Finished: %d | elapsed: %ld\n", m_nRank, nIndexMutant, nIndexTest, nWorkerSource, nRemainBlocks, nFinish, (long int) getTick() - m_lMutantInitTick);
                 sendDeployMode(&exeVector[nWorkerSource], nWorkerSource);
                 
             } else {

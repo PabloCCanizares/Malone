@@ -29,14 +29,18 @@ void test_testcase_0()
     if(m_nRank == 0)
     {
         pTest = (struct TestInfo*) createTestST(0, "Test BRO!\n", 0.1,1);
-        printTest(pTest);
-        sendTest(pTest,1);
+        printTest((T_stTestInfo*)pTest);
+        
+        for(int i=1;i<m_nSize;i++)
+        {
+            sendTest((T_stTestInfo*)pTest,i);
+        }
     }
     else
     {
-        receiveTestRefP(0, &pTest);
+        receiveTestRefP(0, (T_stTestInfo**)&pTest);
         
-        printTest(pTest);
+        printTest((T_stTestInfo*) pTest);
     }
     printf("Test [test_testcase_0] - End\n");
 }
@@ -51,7 +55,12 @@ void test_testcase_1()
     {
         createTestRefP(0, "Test BRO!\n", 0.1,1, &pTest);
         printTest(pTest);
-        sendTest(pTest,1);
+        
+        for(int i=1;i<m_nSize;i++)
+        {
+            sendTest(pTest,i);
+        }
+        
     }
     else
     {
@@ -64,13 +73,13 @@ void test_testcase_1()
 
 void test_testcase_2()
 {    
-    int nAlive, nWorkerSource;
+    int nAlive, nRemainingBlocks, nWorkerSource;
     T_stExecutionStructure exeVector[MAX_WORKERS];
     
     printf("Test [test_testcase_2] - Init\n");
     if(m_nRank == 0)
     {
-        
+        nRemainingBlocks = m_nSize -1;
         for(int i=0;i<MAX_WORKERS;i++)
         {
             exeVector[i].nMutantInit = 0;
@@ -79,11 +88,18 @@ void test_testcase_2()
             exeVector[i].nTestEnd = 33;
         }
         
-                
-        sendDeployMode(&exeVector[0], 1);
+        for(int i=1;i<m_nSize;i++)
+        {
+            sendDeployMode(&exeVector[0], i);
+        }
         
-        nAlive = receiveSingleTestAndCheck(&exeVector, &nWorkerSource);
-                
+        
+        do
+        {        
+            nAlive = receiveSingleTestAndCheck(exeVector, &nWorkerSource);
+            nRemainingBlocks--;
+            printf("%d\n", nRemainingBlocks);
+        }while(nRemainingBlocks);
     }
     else
     {
@@ -95,13 +111,13 @@ void test_testcase_2()
         if(pExeRetMode != NULL)
         {
             pTest = generateRandomTest(0);
+            printTest((T_stTestInfo*) pTest);
             sendTest(pTest, MALONE_MASTER);
         }
         else
         {
             printf("Test [test_testcase_2] - ERROR receiving deploymode\n");
-        }
-        
+        }        
     }
     printf("Test [test_testcase_2] - End\n");
 }

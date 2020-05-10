@@ -37,7 +37,7 @@ void malone_check_Monitoring_Data();
 
 void  MonitorAlarmhandler(int sig);
 T_stTestInfo* createTestTrap2(int nIndexTest,char *strResult,double dTime,int nKill); //TODO: Mover a Auxiliars y cambiar nomrbe
-int isReadyToRumble();
+int malone_isReady();
 int isEnabledWorkersLog();
 int isEnabledMasterLog();
 

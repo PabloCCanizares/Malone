@@ -72,7 +72,7 @@ int distribution_full_dynamic(T_eExecutionMode eMethod) {
         if (MALONE_DEBUG_DIST_MASTER) printf("distribution_full_dynamic - Executing Mutant %d of %d | elapsed: %ld\n", nCounterAux, nMutants, getTick() - m_lMutantInitTick);
         //Wait for receiving values from all workers and filling final result
         do {
-            nAlive = receiveSingleTestAndCheck(&exeVector, &nWorkerSource);
+            nAlive = receiveSingleTestAndCheck(exeVector, &nWorkerSource);
             nRemainBlocks--;
 
             if (hasRemainingWork(nIndexMutant, nIndexTest)) {

@@ -30,13 +30,18 @@ void test_deploy_1()
     {       
         //Wait for receiving values from all workers and filling final result
         pExeVector = (T_stExecutionStructure*)  malloc(sizeof(T_stExecutionStructure));
-        pExeVector->nExecutionMode = 1;
-        pExeVector->nMutantInit = 0;
-        pExeVector->nMutantEnd = 1;
-        pExeVector->nTestInit = 0;
-        pExeVector->nTestEnd = 10;
+        
             
-        sendDeployMode(pExeVector, 1);                            
+        for(int i=1;i<m_nSize;i++)
+        {
+            pExeVector->nExecutionMode = 1;
+            pExeVector->nMutantInit = i;
+            pExeVector->nMutantEnd = i+1;
+            pExeVector->nTestInit = 0;
+            pExeVector->nTestEnd = 10;
+            sendDeployMode(pExeVector, i);                            
+        }
+        free(pExeVector);
     }
     else
     {
@@ -72,13 +77,17 @@ void test_deploy_2()
        
         //Wait for receiving values from all workers and filling final result
         pExeVector = (T_stExecutionStructure*)  malloc(sizeof(T_stExecutionStructure));
-        pExeVector->nExecutionMode = 1;
-        pExeVector->nMutantInit = 0;
-        pExeVector->nMutantEnd = 1;
-        pExeVector->nTestInit = 0;
-        pExeVector->nTestEnd = 10;
-            
-        sendDeployMode(pExeVector, 1);                            
+
+        for(int i=1;i<m_nSize;i++)
+        {
+            pExeVector->nExecutionMode = 1;
+            pExeVector->nMutantInit = i;
+            pExeVector->nMutantEnd = i+1;
+            pExeVector->nTestInit = 0;
+            pExeVector->nTestEnd = 10;
+            sendDeployMode(pExeVector, i);                            
+        }
+        free(pExeVector);
         
     }
     else
@@ -87,14 +96,12 @@ void test_deploy_2()
         T_stExecutionStructure oExeRetMode;
         receiveDeployModeRef(&oExeRetMode);
                 
-        printf("T2 DP %d, %d\n", oExeRetMode.nExecutionMode, oExeRetMode.nMutantInit);
+        printf("Test [test_deploy_2] - T2 DP %d, %d\n", oExeRetMode.nExecutionMode, oExeRetMode.nMutantInit);
     }
     printf("Test [test_deploy_2] - End\n"); 
 }
 void test_deploy_3()
-{
-    int oIndex[MAX_WORKERS];    
-    int nTotalRemaining, nRemWork, nIndex, nInit, nEnd, nNumReceives, nTotalSent;
+{    
     T_stExecutionStructure exeVector[MAX_WORKERS];
     T_stExecutionStructure* pExeRetMode;
     T_stExecutionStructure* pExeVector;    
@@ -105,13 +112,17 @@ void test_deploy_3()
     {
         //Wait for receiving values from all workers and filling final result
         pExeVector = (T_stExecutionStructure*)  malloc(sizeof(T_stExecutionStructure));
-        pExeVector->nExecutionMode = 1;
-        pExeVector->nMutantInit = 0;
-        pExeVector->nMutantEnd = 1;
-        pExeVector->nTestInit = 0;
-        pExeVector->nTestEnd = 10;
-            
-        sendDeployMode(pExeVector, 1);                
+        
+        for(int i=1;i<m_nSize;i++)
+        {
+            pExeVector->nExecutionMode = 1;
+            pExeVector->nMutantInit = i;
+            pExeVector->nMutantEnd = i+1;
+            pExeVector->nTestInit = 0;
+            pExeVector->nTestEnd = 10;
+            sendDeployMode(pExeVector, i);                            
+        }
+        free(pExeVector);               
     }
     else
     {
@@ -146,7 +157,7 @@ void test_deploy_4()
             nIndex++;
             nRemWork--;
         }
-        printDeployArray(&oIndex, m_nSize);
+        printDeployArray(oIndex, m_nSize);
         
         printf("Test [test_deploy_4] - 1\n");
         
@@ -177,15 +188,6 @@ void test_deploy_4()
             nInit = nEnd;
         }        
        printf("Test [test_deploy_4] - 2\n");
-       /* do {
-            receiveMd5Mutants(&exeVector);
-            int nMutants;
-            MPI_Status status;
-            
-             MPI_Recv(&nMutants, 1, MPI_INT, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, &status);
-            nNumReceives++;
-        } while (nNumReceives < (m_nSize - 1)); // Decreasing in 1, due to the master*/
-        
     }
     else
     {
@@ -195,7 +197,7 @@ void test_deploy_4()
 
         
         assert(pExeRetMode != NULL);
-        printf("T4 DP %d, %d\n", pExeRetMode->nExecutionMode, pExeRetMode->nMutantInit);
+        printf("Test [test_deploy_4] - T4 DP %d, %d\n", pExeRetMode->nExecutionMode, pExeRetMode->nMutantInit);
     }
     printf("Test [test_deploy_4] - End\n"); 
 }

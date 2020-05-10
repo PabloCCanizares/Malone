@@ -76,8 +76,12 @@
         <itemPath>test_conffile.c</itemPath>
         <itemPath>test_deploys.c</itemPath>
         <itemPath>test_deploys.h</itemPath>
+        <itemPath>test_dist_algorithm.c</itemPath>
+        <itemPath>test_dist_algorithm.h</itemPath>
         <itemPath>test_envfile.c</itemPath>
         <itemPath>test_envfile.h</itemPath>
+        <itemPath>test_mutants.c</itemPath>
+        <itemPath>test_mutants.h</itemPath>
         <itemPath>test_testcases.c</itemPath>
         <itemPath>test_testcases.h</itemPath>
       </logicalFolder>
@@ -240,9 +244,17 @@
       </item>
       <item path="test_deploys.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="test_dist_algorithm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="test_dist_algorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="test_envfile.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="test_envfile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="test_mutants.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="test_mutants.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="test_testcases.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -389,9 +401,17 @@
       </item>
       <item path="test_deploys.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="test_dist_algorithm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="test_dist_algorithm.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="test_envfile.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="test_envfile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="test_mutants.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="test_mutants.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="test_testcases.c" ex="false" tool="0" flavor2="0">
       </item>

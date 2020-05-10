@@ -3,7 +3,7 @@
 #define AUXILIARS_H
 
 #ifdef DISABLELOGS
-#define DEBUG_AUX 1
+#define DEBUG_AUX 0
 #define MALONE_MAIN_COMMAND 0
 #else
 #define DEBUG_AUX isEnabledAuxLog()
@@ -48,6 +48,7 @@ void freeMutantList(MutantList* pList);
 void createHeuristicStructures();
 void createTestRefP(int nIndexTest, char* strResult, double dTime, int nKill, T_stTestInfo** pTest);
 char* getMarkerToken();
+int existsMarkerToken();
 double getOriginalTimeout();
 double getMutantsTimeout(double dOriginalTime);
 

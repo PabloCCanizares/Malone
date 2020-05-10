@@ -6,7 +6,7 @@
 
 /* 
  * File:   autotest.h
- * Author: j0hn
+ * Author: Pablo C. Cañizares
  *
  * Created on April 26, 2020, 11:04 PM
  */
@@ -24,6 +24,8 @@ extern "C" {
 #include "test_conffile.h"    
 #include "test_deploys.h"    
 #include "test_testcases.h"    
+#include "test_mutants.h"    
+#include "test_dist_algorithm.h"    
 #define TEST_DEBUG 0
 
 

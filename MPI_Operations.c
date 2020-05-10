@@ -910,6 +910,21 @@ T_stMutant* receiveMutant(int nSource) {
     return pMutant;
 }
 
+T_stMutant* receiveMutantAnySource(int* pnMutant) {    
+    MPI_Status status;
+    T_stMutant* pMutant;
+    T_stM oMutant;
+    
+    MPI_Recv(&oMutant, 1, m_MutantType, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, &status);
+
+    if(pnMutant)
+        *pnMutant=status.MPI_SOURCE;
+    
+    pMutant = redMut2Mut((T_stM*) &oMutant);
+
+    return pMutant;
+}
+
 int sendOriginalTestResults(T_stTestList* pTestList) {
     int nRet, i, nTestItems;
 
@@ -978,7 +993,7 @@ T_stTestList* receiveOriginalTestResults_r() {
         MPI_Bcast(m_oTest, nTestItems, m_TestType, 0, MPI_COMM_WORLD);
 
         //transform the test list to a compatible structure
-        pTestList = (T_stTestList*) redtestList2TestList_r((T_stTI*) & m_oTest, nTestItems);
+        pTestList = (T_stTestList*) redtestList2TestList_r((T_stTI*) &m_oTest, nTestItems);
     } else
         printf("receiveOriginalTestResults_r - None elements received!!\n");
 

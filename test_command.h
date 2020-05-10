@@ -26,6 +26,8 @@ void test_command_4();
 void test_command_5();   
 void test_command_6();    
 
+void test_command_waste();
+void example_reading(int use_compat);
 
 #ifdef __cplusplus
 }

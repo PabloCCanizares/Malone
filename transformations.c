@@ -108,7 +108,7 @@ T_stTestList* redtestList2TestList_r(T_stTI* oTest,  int nItems)
         
         for(i=0;i<pTestList->nElems;i++)
         {
-            pTestList->tests[i] = testred2Test(oTest+i);
+            pTestList->tests[i] = testred2Test(oTest+i);    //TODO: \pabloSays{Por dios!!!!!!!!}
         }
     }
     if(DEBUG_TRANS) printf("redtestList2TestList_r - End\n");

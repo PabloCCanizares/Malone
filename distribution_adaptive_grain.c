@@ -114,7 +114,7 @@ int distribution_adaptive_grain_scatter(T_eExecutionMode eMethod)
         
         //Wait for receiving values from all workers and filling final result
         do {
-            pMutantList = receiveMutants_adaptive(&exeVector, &nWorkerSource);
+            pMutantList = receiveMutants_adaptive(exeVector, &nWorkerSource);
             nRemainBlocks--;            
             
             if (hasRemainingWork(nIndexMutantInit, nIndexTestInit)) {

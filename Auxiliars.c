@@ -11,7 +11,8 @@
 #define SLEEP_FOR_DEBUG 0
 
 
-
+//TODO: No me mola que archivo tenga 1400 lineas. PArtir en trozos: tests, mutantes, etc.
+//Dejar common lo que de verdad sea common.
 //#define TEMP_DEBUG_AUX 1    
 //-------------------------------------------------------
 
@@ -719,17 +720,22 @@ void insertFullMutantInfo(int nMutant, int nMutantState, T_stTestList* pList) {
 int checkTestResult(T_stTestInfo* pTest) {
     int nRet, nTest;
 
+    if (DEBUG_AUX) printf("<%d>checkTestResult - Init\n", m_nRank);
     nRet = nTest = 0;
     if (pTest) {
-        if (m_stEnvValues->nSortTestSuite != 0) {
+         if (DEBUG_AUX) printf("<%d>checkTestResult - 1\n", m_nRank);
+        if (m_stEnvValues && m_stEnvValues->nSortTestSuite != 0) {
             nTest = m_oReorderIndexTest[pTest->nTest];
             if (DEBUG_AUX) printf("Receiving test %d - Sorted in position %d\n", pTest->nTest, nTest);
         } else
             nTest = pTest->nTest;
 
+         if (DEBUG_AUX) printf("<%d>checkTestResult - 2\n", m_nRank);
         nRet = checkResult(nTest, pTest->res);
+        if (DEBUG_AUX) printf("<%d>checkTestResult - 3\n", m_nRank);
     }
 
+    if (DEBUG_AUX) printf("<%d>checkTestResult - End\n", m_nRank);
     return nRet;
 }
 
@@ -1460,7 +1466,14 @@ char* getMarkerToken() {
 
     return strRet;
 }
-
+/**
+ * Determine if exists a marker token
+ * @return 
+ */
+int existsMarkerToken()
+{
+   return m_stEnvValues != NULL && m_stEnvValues->strMarkerToken != NULL&& strlen(m_stEnvValues->strMarkerToken)>0;
+}
 /**
  * Initialises the structures necessaries to carry out the different heuristics and optimisations
  */

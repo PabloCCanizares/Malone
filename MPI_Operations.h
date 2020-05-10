@@ -28,7 +28,8 @@ void sendTests(T_stExecutionStructure *pExeRetMode,int nDest);
 void sendTest(T_stTestInfo *pTest,int nDest);
 
 //Mutant operations
-T_stMutant *receiveMutant(int nSource);
+T_stMutant* receiveMutant(int nSource);
+T_stMutant* receiveMutantAnySource(int* pnSource);
 MutantList* receiveMutants_adaptive(T_stExecutionStructure pExeMode[MAX_WORKERS],int *pnWorkerSource);
 int receiveMutants(T_stExecutionStructure pExeMode[MAX_WORKERS]);
 void sendMutants(T_stExecutionStructure *pExeMode,int nDest);

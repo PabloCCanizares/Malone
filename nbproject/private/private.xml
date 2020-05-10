@@ -7,22 +7,49 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/j0hn/NetBeansProjects/Malone/Auxiliars.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/autotest.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/particles.h</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/DistributionAlgorithms.h</file>
             <file>file:/home/j0hn/NetBeansProjects/Malone/tests.c</file>
             <file>file:/home/j0hn/NetBeansProjects/Malone/executionMode.c</file>
             <file>file:/home/j0hn/NetBeansProjects/Malone/configuration.c</file>
-            <file>file:/home/j0hn/NetBeansProjects/Malone/Options.h</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/distribution_full_dynamic_scatter.c</file>
             <file>file:/home/j0hn/NetBeansProjects/Malone/main.c</file>
             <file>file:/home/j0hn/NetBeansProjects/Malone/MPIDataTypes.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/DistributionAlgorithms.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/distribution_dynamic_mutants.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/popen_noshell.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/ExecutionMapSaver.h</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/EquivalenceChecking.h</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/popen_noshell.h</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/ExecutionMapSaver.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/debugMode.h</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/debugMode.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/testVec.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/MPI_Operations.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/EquivalenceChecking.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/test_deploys.h</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/distribution_adaptive_grain.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/MPI_Operations.h</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/particles.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/test_deploys.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/autotest.h</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/Auxiliars.h</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/test_testcases.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/randomElements.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/Auxiliars.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/Malone.h</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/md5Parallel.c</file>
             <file>file:/home/j0hn/NetBeansProjects/Malone/Malone.c</file>
             <file>file:/home/j0hn/NetBeansProjects/Malone/EnvFileSend.c</file>
             <file>file:/home/j0hn/NetBeansProjects/Malone/PiReduce.c</file>
-            <file>file:/home/j0hn/NetBeansProjects/Malone/debugMode.c</file>
-            <file>file:/home/j0hn/NetBeansProjects/Malone/testVec.c</file>
-            <file>file:/home/j0hn/NetBeansProjects/Malone/transformations.c</file>
-            <file>file:/home/j0hn/NetBeansProjects/Malone/MPI_Operations.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/distribution_full_dynamic.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/MonteCarlo.h</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/MonteCarlo.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/test_testcases.h</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/test_command.c</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/test_conffile.c</file>
             <file>file:/home/j0hn/NetBeansProjects/Malone/ToDo</file>
-            <file>file:/home/j0hn/NetBeansProjects/Malone/printers.c</file>
         </group>
     </open-files>
 </project-private>

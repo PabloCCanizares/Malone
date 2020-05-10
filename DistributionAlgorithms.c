@@ -1,5 +1,5 @@
 #include "DistributionAlgorithms.h"
-
+//TODO: Renombrar a distribution algorithms common.
 
 int hasOriginalProgramRemainingWork(int nIndexTests) {
     int nRet;
@@ -38,6 +38,7 @@ int hasRemainingWork(int nIndexMutant, int nIndexTests) {
     return nRet;
 }
 
+//TODO: Esto quitarlo de aqui, no tiene sentido, meter en equivalence checking?
 void updateKillMutant(T_stExecutionMap* exeMap, T_stExecutionStructure* exeWorker) {
     T_stMutantExecution* pMutantExec;
     T_stEquivalentInfo* pEquivInfo;
@@ -86,7 +87,7 @@ void updateKillMutant(T_stExecutionMap* exeMap, T_stExecutionStructure* exeWorke
 
     if (MALONE_DEBUG_DIST_COMMON) printf("updateKillMutant - End\n");
 }
-
+//TODO: Esto quitarlo de aqui, no tiene sentido, meter en equivalence checking?
 int checkEquivalence(T_stExecutionMap* exeMap, T_stExecutionStructure* exeWorker, int* nIndexTest, int* nIndexMutant) {
     int nNormalHandle, nEquivalent, nClusteredNotHeaderRunning, nManaged, nFinished;
     T_stMutantExecution* pMutantExec, *pMutantHeaderExec;

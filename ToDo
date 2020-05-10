@@ -24,10 +24,6 @@ dedicarse a un mutante completo, y hacer la mutación on the fly. Cuando termine
   Con TCL scripting son capaces de testear 90k lineas de codigo, que estan distribuidas en distintos objetos
   AKA, nuestro metodo vale poco. Hay que ver la forma de poder ejecutar en paralelo
   esta forma de generar test y revolucionar un pelin esta linea.
-
-* Eliminar las estructuras estaticas y tener un malone totalmente dinamico
-* Multiples coordinadores
-* Dinamico y adaptable por tramo con granos mas grandes aun. (50% - 20% - 10%, algo asi.)
 -------------------
 Manual:
 
@@ -56,10 +52,26 @@ TODO cercano:
 - Inclusion de un mini proyecto de mutation con la suma por ejemplo
     + Utilizar este proyecto para el auto test
     + Con este proyecto podemos dejar .sh que permitan ver como se utiliza el programa
-- Organizar las carpetas (Importante, porque vaya mierda comp.)
+- Organizar las carpetas (Importante, porque vaya desorden comp.)
 - Comentar algo el codigo
 - Quitar todo lo estatico posible, m_oTest[0] -> no hay necesidad
 - Comentar los tipos de Options.h
 - Tratar de eliminar los tipos que no aplican.
 - Convertir oMap de estatico a dinamico (Pruebas empezadas en malone lab)
 - Probar si los datatypes se pueden adaptar al maximo de test/mutantes para ahorrar envio por red.
+- Con un autotest_add y markertoken '-' Excepcion no controlada (Creo que está bien, pero la salida por abort es abrupta)
+- Algorithm 1 no va
+
+------------------------
+TODO futuro:
+* Incluir un nuevo macro, [[MALONE_HOME]] y [[MALONE_PROJECTS]] para permitir compatibilidad de posibles proyectos
+* Eliminar las estructuras estaticas y tener un malone totalmente dinamico
+* Multiples coordinadores
+* Dinamico y adaptable por tramo con granos mas grandes aun. (50% - 20% - 10%, algo asi.)
+* Nueva version más sencilla y directa de equivalentes.
+* Incluir en configuracion la forma de ejecutar en command line.
+* Incluir un nuevo modo que automaticamente detecte pipes y permita partir el comando en varios y ejecutarlo tal cual lo hace pipe.
+    - Mirar el malone_lab y el ejemplo 'popen_noshell_bidirectional_example', para hacernos una idea de como hilar varios | seguidos
+    - https://github.com/mirnawahab/Interprocess-Communication-with-Pipes            
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                

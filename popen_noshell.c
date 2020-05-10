@@ -57,8 +57,8 @@ extern char **environ;
 		_exit(EVAL); \
 	}
 
-int _popen_noshell_fork_mode = POPEN_NOSHELL_MODE_CLONE;
-//int _popen_noshell_fork_mode = POPEN_NOSHELL_MODE_POSIX_SPAWN; // use with glibc 2.24+; see issue #11
+//int _popen_noshell_fork_mode = POPEN_NOSHELL_MODE_CLONE;
+int _popen_noshell_fork_mode = POPEN_NOSHELL_MODE_POSIX_SPAWN; // use with glibc 2.24+; see issue #11
 
 void popen_noshell_set_fork_mode(int mode) { // see "popen_noshell.h" POPEN_NOSHELL_MODE_* constants
 	_popen_noshell_fork_mode = mode;

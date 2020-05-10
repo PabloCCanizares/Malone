@@ -35,7 +35,7 @@ int distribution_static_mutants(T_eExecutionMode eMethod) {
             nIndex++;
             nRemWork--;
         }
-        printDeployArray(&oIndex, m_nSize);
+        printDeployArray(oIndex, m_nSize);
         //exeMode.nExecutionMode = (int) eMethod;
 
         //Fill the env values to send it to workers
@@ -47,12 +47,12 @@ int distribution_static_mutants(T_eExecutionMode eMethod) {
             exeVector[i].nTestInit = 0;
             exeVector[i].nTestEnd = m_stEnvValues->nTotalTests - 1;
 
-            sendDeployMode(&exeVector[i], i);
+            sendDeployMode((T_stExecutionStructure*) &exeVector[i], i);
             nInit = nEnd;
         }
         //Wait for receiving values from all workers and filling final result
         do {
-            receiveMutants(&exeVector);
+            receiveMutants(exeVector);
             nNumReceives++;
         } while (nNumReceives < (m_nSize - 1)); // Decreasing in 1, due to the master
     } else {

@@ -51,28 +51,29 @@ void autotest()
     //testConfFile();
     
     //Testing command execution
-    //testCommand();
+    testCommand();
     
     //  - Auxiliar functions 
     
     //2 - Multiprocess
+    initialize_auxiliars();
     initializeMPI();
     loadConfig();
     
     //  - Deploys
-    //testDeploy();
+    testDeploy();
     
     // Tests 
     testTestcases();
     
     //Mutants
-    //testMutants();
-    
-    MPI_Finalize();
-    
+    testMutants();
+           
     //3 - Test full executions
     //Distribution algorithms
+    testDistributionAlgorithms();
     
+    MPI_Finalize();
     
     //Lo mas importante y donde mas flaquea el proyecto es en las estructuras estaticas
     //Algun dia habra que echarle webs

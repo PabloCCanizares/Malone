@@ -51,20 +51,20 @@ int distribution_dynamic_mutants(T_eExecutionMode eMethod) {
         nIndex = nSent;
         //Wait for receiving values from all workers and filling final result
         do {
-            nWorkerSource = receiveMutants(&exeVector);
+            nWorkerSource = receiveMutants(exeVector);
             nNumReceives++;
             if (MALONE_DEBUG_DIST_MASTER) printf("distribution_dynamic_mutants - Received mutants results, total received: %d\n", nNumReceives);
             //If there is remaining mutants to send, send it!
             if (nIndex <= nMutants) {
                 exeVector[nWorkerSource].nMutantInit = nIndex;
                 exeVector[nWorkerSource].nMutantEnd = nIndex;
-                sendDeployMode(&exeVector[nWorkerSource], nWorkerSource);
+                sendDeployMode((T_stExecutionStructure*)&exeVector[nWorkerSource], nWorkerSource);
                 nIndex++;
             } else {
                 //Mutant has finished its work.
                 if (MALONE_DEBUG_DIST_MASTER) printf("distribution_dynamic_mutants - Worker %d has finished!\n", nWorkerSource);
                 exeVector[nWorkerSource].nMutantInit = -1;
-                sendDeployMode(&exeVector[nWorkerSource], nWorkerSource);
+                sendDeployMode((T_stExecutionStructure*)&exeVector[nWorkerSource], nWorkerSource);
                 if (nNumReceives <= nMutants) {
                     if (MALONE_DEBUG_DIST_MASTER) printf("distribution_dynamic_mutants - Mutants remain: %d\n", nMutants - nNumReceives);
 

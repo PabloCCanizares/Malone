@@ -64,7 +64,9 @@ OBJECTFILES= \
 	${OBJECTDIR}/test_command.o \
 	${OBJECTDIR}/test_conffile.o \
 	${OBJECTDIR}/test_deploys.o \
+	${OBJECTDIR}/test_dist_algorithm.o \
 	${OBJECTDIR}/test_envfile.o \
+	${OBJECTDIR}/test_mutants.o \
 	${OBJECTDIR}/test_testcases.o \
 	${OBJECTDIR}/tests.o \
 	${OBJECTDIR}/transformations.o
@@ -239,10 +241,20 @@ ${OBJECTDIR}/test_deploys.o: test_deploys.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/test_deploys.o test_deploys.c
 
+${OBJECTDIR}/test_dist_algorithm.o: test_dist_algorithm.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/test_dist_algorithm.o test_dist_algorithm.c
+
 ${OBJECTDIR}/test_envfile.o: test_envfile.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/test_envfile.o test_envfile.c
+
+${OBJECTDIR}/test_mutants.o: test_mutants.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/test_mutants.o test_mutants.c
 
 ${OBJECTDIR}/test_testcases.o: test_testcases.c
 	${MKDIR} -p ${OBJECTDIR}

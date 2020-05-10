@@ -542,7 +542,11 @@ int malone_execute_Original_Program_Sequential() {
             printf("<%d> malone_execute_Original_Program_Sequential - Executing test %d of %d - ", m_nRank, nIndexTest + 1, nTotalTests);
             dInit = getTick();
             nMaxOriginalTimeout = getOriginalTimeout();
-            strResult = (char*) execCommandLine("timeout %d %s | grep '%s'", nMaxOriginalTimeout, exeLine, getMarkerToken());
+            
+            if(existsMarkerToken())
+                strResult = (char*) execCommandLine("timeout %d %s | grep '%s'", nMaxOriginalTimeout, exeLine, getMarkerToken());
+            else
+                strResult = (char*) execCommandLine("timeout %d %s", nMaxOriginalTimeout, exeLine);
 
             dTime = getTick() - dInit;
             if (strResult != NULL && !strstr(strResult, "Error") && strstr(strResult, getMarkerToken())) {
@@ -740,7 +744,11 @@ int malone_execute_mutants_by_scheme(T_stExecutionStructure* pExeMode) {
                     dOriginalTime = getMutantsTimeout(dOriginalTime);
 
                     //TODO: Think in changing this... HPCCommand
-                    strResult = (char*) execCommandLine("cd %s \n timeout %f %s | grep '%s'", m_stEnvValues->strAppPath, dOriginalTime, exeLine, getMarkerToken());
+                    if(existsMarkerToken())
+                        strResult = (char*) execCommandLine("cd %s \n timeout %f %s | grep '%s'", m_stEnvValues->strAppPath, dOriginalTime, exeLine, getMarkerToken());
+                    else
+                        strResult = (char*) execCommandLine("cd %s \n timeout %f %s", m_stEnvValues->strAppPath, dOriginalTime, exeLine);
+                    
                     dTime = getTick() - dInit;
 
                     if (strResult != NULL && !strstr(strResult, "Error") && !strstr(strResult, "ERROR") && strstr(strResult, getMarkerToken())) {
@@ -849,8 +857,7 @@ int malone_execute_originalprogram_by_scheme(T_stExecutionStructure* pExeMode) {
 
             exeLine = (char*) buildExeLine(0, nTestIndex, BUILD_LINE_ORIGINAL_MODE);
 
-            if (exeLine != NULL) {
-                //printf("LINE: cd %s \n %s | grep '%s'\n", m_stEnvValues->strAppPath, exeLine, MARKER_TOKEN);
+            if (exeLine != NULL) {                
                 if (MALONE_WORKER_LOG) printf("<%d> M.E. [OP] - Executing test %d of %d\n", m_nRank, nTestIndex, nTestEnd);
                 dInit = getTick();
 
@@ -858,7 +865,11 @@ int malone_execute_originalprogram_by_scheme(T_stExecutionStructure* pExeMode) {
                 if (MALONE_WORKER_LOG) printf("<%d> Original test <%d> execution: %f\n", m_nRank, nTestIndex, dOriginalTime);
                 dOriginalTime = getOriginalTimeout();
 
-                strResult = (char*) execCommandLine("cd %s \n timeout %f %s | grep '%s'", m_stEnvValues->strAppPath, dOriginalTime, exeLine, getMarkerToken());
+                if(existsMarkerToken())
+                    strResult = (char*) execCommandLine("cd %s \n timeout %f %s | grep '%s'", m_stEnvValues->strAppPath, dOriginalTime, exeLine, getMarkerToken());
+                else
+                    strResult = (char*) execCommandLine("cd %s \n timeout %f %s", m_stEnvValues->strAppPath, dOriginalTime, exeLine);
+                
                 dTime = getTick() - dInit;
 
                 if (strResult != NULL && !strstr(strResult, "Error") && !strstr(strResult, "ERROR") && strstr(strResult, getMarkerToken())) {
@@ -974,7 +985,10 @@ int malone_execute_mutants_single(int nMutantInit, int nMutantEnd) {
 
             dOriginalTime = getMutantsTimeout(dOriginalTime);
 
-            strResult = (char*) execCommandLine("cd %s \n timeout %f %s | grep '%s'", m_stEnvValues->strAppPath, dOriginalTime, exeLine, getMarkerToken());
+            if(existsMarkerToken())
+                strResult = (char*) execCommandLine("cd %s \n timeout %f %s | grep '%s'", m_stEnvValues->strAppPath, dOriginalTime, exeLine, getMarkerToken());
+            else
+                strResult = (char*) execCommandLine("cd %s \n timeout %f %s", m_stEnvValues->strAppPath, dOriginalTime, exeLine);
             
             dTime = getTick() - dInit;
 

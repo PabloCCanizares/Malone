@@ -6,59 +6,6 @@ In file included from MPI_Operations.c:14:0:
 transformations.h:21:6: note: expected ‘T_stTI ** {aka struct <anonymous> **}’ but argument is of type ‘T_stTI * {aka struct <anonymous> *}’
  void redtestList2TestList(T_stTI *oTest[],T_stTestList *pList,int nItems);
       ^~~~~~~~~~~~~~~~~~~~
-distribution_adaptive_grain.c: In function ‘distribution_adaptive_grain_scatter’:
-distribution_adaptive_grain.c:117:51: warning: passing argument 1 of ‘receiveMutants_adaptive’ from incompatible pointer type [-Wincompatible-pointer-types]
-             pMutantList = receiveMutants_adaptive(&exeVector, &nWorkerSource);
-                                                   ^
-In file included from DistributionAlgorithms.h:19:0,
-                 from distribution_adaptive_grain.c:7:
-MPI_Operations.h:32:13: note: expected ‘T_stExecutionStructure * {aka struct <anonymous> *}’ but argument is of type ‘T_stExecutionStructure (*)[2048] {aka struct <anonymous> (*)[2048]}’
- MutantList* receiveMutants_adaptive(T_stExecutionStructure pExeMode[MAX_WORKERS],int *pnWorkerSource);
-             ^~~~~~~~~~~~~~~~~~~~~~~
-distribution_dynamic_mutants.c: In function ‘distribution_dynamic_mutants’:
-distribution_dynamic_mutants.c:54:44: warning: passing argument 1 of ‘receiveMutants’ from incompatible pointer type [-Wincompatible-pointer-types]
-             nWorkerSource = receiveMutants(&exeVector);
-                                            ^
-In file included from DistributionAlgorithms.h:19:0,
-                 from distribution_dynamic_mutants.c:7:
-MPI_Operations.h:33:5: note: expected ‘T_stExecutionStructure * {aka struct <anonymous> *}’ but argument is of type ‘T_stExecutionStructure (*)[2048] {aka struct <anonymous> (*)[2048]}’
- int receiveMutants(T_stExecutionStructure pExeMode[MAX_WORKERS]);
-     ^~~~~~~~~~~~~~
-distribution_full_dynamic.c: In function ‘distribution_full_dynamic’:
-distribution_full_dynamic.c:75:48: warning: passing argument 1 of ‘receiveSingleTestAndCheck’ from incompatible pointer type [-Wincompatible-pointer-types]
-             nAlive = receiveSingleTestAndCheck(&exeVector, &nWorkerSource);
-                                                ^
-In file included from DistributionAlgorithms.h:19:0,
-                 from distribution_full_dynamic.c:7:
-MPI_Operations.h:26:5: note: expected ‘T_stExecutionStructure * {aka struct <anonymous> *}’ but argument is of type ‘T_stExecutionStructure (*)[2048] {aka struct <anonymous> (*)[2048]}’
- int receiveSingleTestAndCheck(T_stExecutionStructure pExeMode[MAX_WORKERS],int *pnWorkerSource);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~
-distribution_full_dynamic_scatter.c: In function ‘distribution_full_dynamic_scatter’:
-distribution_full_dynamic_scatter.c:83:48: warning: passing argument 1 of ‘receiveSingleTestAndCheck’ from incompatible pointer type [-Wincompatible-pointer-types]
-             nAlive = receiveSingleTestAndCheck(&exeVector, &nWorkerSource);
-                                                ^
-In file included from DistributionAlgorithms.h:19:0,
-                 from distribution_full_dynamic_scatter.c:7:
-MPI_Operations.h:26:5: note: expected ‘T_stExecutionStructure * {aka struct <anonymous> *}’ but argument is of type ‘T_stExecutionStructure (*)[2048] {aka struct <anonymous> (*)[2048]}’
- int receiveSingleTestAndCheck(T_stExecutionStructure pExeMode[MAX_WORKERS],int *pnWorkerSource);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~
-distribution_static_mutants.c: In function ‘distribution_static_mutants’:
-distribution_static_mutants.c:38:26: warning: passing argument 1 of ‘printDeployArray’ from incompatible pointer type [-Wincompatible-pointer-types]
-         printDeployArray(&oIndex, m_nSize);
-                          ^
-In file included from DistributionAlgorithms.h:18:0,
-                 from distribution_static_mutants.c:7:
-printers.h:28:6: note: expected ‘int *’ but argument is of type ‘int (*)[2048]’
- void printDeployArray(int pIndex[], int nSize);
-      ^~~~~~~~~~~~~~~~
-distribution_static_mutants.c:55:28: warning: passing argument 1 of ‘receiveMutants’ from incompatible pointer type [-Wincompatible-pointer-types]
-             receiveMutants(&exeVector);
-                            ^
-In file included from DistributionAlgorithms.h:19:0,
-                 from distribution_static_mutants.c:7:
-MPI_Operations.h:33:5: note: expected ‘T_stExecutionStructure * {aka struct <anonymous> *}’ but argument is of type ‘T_stExecutionStructure (*)[2048] {aka struct <anonymous> (*)[2048]}’
- int receiveMutants(T_stExecutionStructure pExeMode[MAX_WORKERS]);
-     ^~~~~~~~~~~~~~
 In file included from md5Parallel.c:20:0:
 EquivalenceChecking.h:10:0: warning: "EQUIVALENCE_PRINT" redefined
  #define EQUIVALENCE_PRINT 0
@@ -81,71 +28,12 @@ In file included from md5Parallel.c:19:0:
 MPI_Operations.h:39:5: note: expected ‘T_stExecutionStructure * {aka struct <anonymous> *}’ but argument is of type ‘T_stExecutionStructure (*)[2048] {aka struct <anonymous> (*)[2048]}’
  int receiveMd5Mutants(T_stExecutionStructure pExeMode[MAX_WORKERS]);
      ^~~~~~~~~~~~~~~~~
-test_deploys.c: In function ‘test_deploy_4’:
-test_deploys.c:149:26: warning: passing argument 1 of ‘printDeployArray’ from incompatible pointer type [-Wincompatible-pointer-types]
-         printDeployArray(&oIndex, m_nSize);
-                          ^
-In file included from test_deploys.c:10:0:
-printers.h:28:6: note: expected ‘int *’ but argument is of type ‘int (*)[2048]’
- void printDeployArray(int pIndex[], int nSize);
-      ^~~~~~~~~~~~~~~~
+test_command.c: In function ‘example_reading’:
+test_command.c:208:4: warning: implicit declaration of function ‘err’; did you mean ‘erf’? [-Wimplicit-function-declaration]
+    err(EXIT_FAILURE, "popen_noshell_compat()");
+    ^~~
+    erf
 test_envfile.c: In function ‘loadEnvFile_t’:
 test_envfile.c:119:16: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
      strEnvFile = envValue;
                 ^
-test_testcases.c: In function ‘test_testcase_0’:
-test_testcases.c:29:36: warning: implicit declaration of function ‘createTestST’; did you mean ‘createTestTrap’? [-Wimplicit-function-declaration]
-         pTest = (struct TestInfo*) createTestST(0, "Test BRO!\n", 0.1,1);
-                                    ^~~~~~~~~~~~
-                                    createTestTrap
-test_testcases.c:29:17: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
-         pTest = (struct TestInfo*) createTestST(0, "Test BRO!\n", 0.1,1);
-                 ^
-test_testcases.c:30:19: warning: passing argument 1 of ‘printTest’ from incompatible pointer type [-Wincompatible-pointer-types]
-         printTest(pTest);
-                   ^~~~~
-In file included from test_testcases.c:8:0:
-printers.h:24:6: note: expected ‘T_stTestInfo * {aka struct T_stTestInfo *}’ but argument is of type ‘struct TestInfo *’
- void printTest(T_stTestInfo* pTest);
-      ^~~~~~~~~
-test_testcases.c:31:18: warning: passing argument 1 of ‘sendTest’ from incompatible pointer type [-Wincompatible-pointer-types]
-         sendTest(pTest,1);
-                  ^~~~~
-In file included from test_testcases.c:10:0:
-MPI_Operations.h:28:6: note: expected ‘T_stTestInfo * {aka struct T_stTestInfo *}’ but argument is of type ‘struct TestInfo *’
- void sendTest(T_stTestInfo *pTest,int nDest);
-      ^~~~~~~~
-test_testcases.c:35:28: warning: passing argument 2 of ‘receiveTestRefP’ from incompatible pointer type [-Wincompatible-pointer-types]
-         receiveTestRefP(0, &pTest);
-                            ^
-In file included from test_testcases.c:10:0:
-MPI_Operations.h:22:6: note: expected ‘T_stTestInfo ** {aka struct T_stTestInfo **}’ but argument is of type ‘struct TestInfo **’
- void receiveTestRefP(int nSource, T_stTestInfo** pTest);
-      ^~~~~~~~~~~~~~~
-test_testcases.c:37:19: warning: passing argument 1 of ‘printTest’ from incompatible pointer type [-Wincompatible-pointer-types]
-         printTest(pTest);
-                   ^~~~~
-In file included from test_testcases.c:8:0:
-printers.h:24:6: note: expected ‘T_stTestInfo * {aka struct T_stTestInfo *}’ but argument is of type ‘struct TestInfo *’
- void printTest(T_stTestInfo* pTest);
-      ^~~~~~~~~
-test_testcases.c: In function ‘test_testcase_1’:
-test_testcases.c:50:9: warning: implicit declaration of function ‘createTestRefP’; did you mean ‘createTestTrap’? [-Wimplicit-function-declaration]
-         createTestRefP(0, "Test BRO!\n", 0.1,1, &pTest);
-         ^~~~~~~~~~~~~~
-         createTestTrap
-test_testcases.c: In function ‘test_testcase_2’:
-test_testcases.c:81:44: warning: passing argument 1 of ‘receiveSingleTestAndCheck’ from incompatible pointer type [-Wincompatible-pointer-types]
-         nAlive = receiveSingleTestAndCheck(&exeVector, &nWorkerSource);
-                                            ^
-In file included from test_testcases.c:10:0:
-MPI_Operations.h:26:5: note: expected ‘T_stExecutionStructure * {aka struct <anonymous> *}’ but argument is of type ‘T_stExecutionStructure (*)[2048] {aka struct <anonymous> (*)[2048]}’
- int receiveSingleTestAndCheck(T_stExecutionStructure pExeMode[MAX_WORKERS],int *pnWorkerSource);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~
-test_testcases.c:88:17: error: too few arguments to function ‘generateRandomTest’
-         pTest = generateRandomTest();
-                 ^~~~~~~~~~~~~~~~~~
-In file included from test_testcases.c:9:0:
-randomElements.h:8:15: note: declared here
- T_stTestInfo *generateRandomTest(int nTest);
-               ^~~~~~~~~~~~~~~~~~
