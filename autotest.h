@@ -26,7 +26,7 @@ extern "C" {
 #include "test_testcases.h"    
 #include "test_mutants.h"    
 #include "test_dist_algorithm.h"    
-#define TEST_DEBUG 0
+#define TEST_DEBUG 1
 
 
 #ifdef __cplusplus

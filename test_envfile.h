@@ -25,6 +25,7 @@ void test_envfile_1();
 void test_envfile_2();        
 void test_envfile_3();   
 void test_envfile_4();
+void test_envfile_5();
 char* loadEnvFile_t(const char* envValue);
 
 

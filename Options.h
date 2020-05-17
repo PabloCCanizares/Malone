@@ -1,9 +1,21 @@
-/* 
- * File:   Options.h
- * Author: Pablo C. Cañizares
- *
- * Created on October 28, 2015, 12:47 PM
- */
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file Options.h
+ *     This file contains all the data structures necessaries to run MALONE. 
+ * @par Purpose:
+ *     Provide all the information necessary to configure and run MALONE.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date     28 Oct 2015
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
 
 #ifndef OPTIONS_H
 #define	OPTIONS_H
@@ -35,65 +47,70 @@
 #include <stdlib.h>
 #include <glib.h>
 #include <mpi.h>
-#include "Vector.h"
+#include "Vector.h"             //TODO: Posiblemente esto haya que quitarlo, era una prueba y no funciono bien.,
 #include "configuration.h"
 
 
 #define DEBUG 0
-#define MAX_MUTANTS 85000
-#define MAX_MUTANTS_RED 100
-#define MAX_TESTS 1000         //Ojo, disminuyendo esto, no van algunas funcionalidades!!!!
-#define MAX_RESULT_SIZE 1000
-#define MAX_MD5_SIZE 100
-#define MAX_EXELINE 2000
-#define MAX_WORKERS 2048
-#define RES_MUTANT_ALIVE -1
-#define ALIVE 1
-#define DEAD 0
-#define MAX_CONSEC_LINES 10
-#define REQUIRED_ARGS 4
-#define INITIAL_MONITOR_LINES 100
-#define INITIAL_MONITOR_ONCE_LINES 100
-#define INITIAL_MAX_CLONES 10
+#define MAX_MUTANTS 85000       //A maximum of mutants, defined due to a structure limitation. 
+#define MAX_MUTANTS_RED 100     //Maximum of reduced mutants, usually the mutant grain is lesser than this quantity. 
+#define MAX_TESTS 1000          //Maximum size of tests. [Ojo, disminuyendo esto, no van algunas funcionalidades!!!!]
+#define MAX_RESULT_SIZE 1000    //Maximum size of the text string (char*) resulting from executing a command. 
+#define MAX_MD5_SIZE 100        //Maximum size of a MD5.
+#define MAX_EXELINE 2000        //Maximum size of a command.
+#define MAX_WORKERS 2048        //Maximum size of workers. 
+#define RES_MUTANT_ALIVE -1     //Definition of mutant alive.
+#define ALIVE 1                 //Definition of alive mutant.
+#define DEAD 0                  //Definition of dead mutant.
+//#define MAX_CONSEC_LINES 10     
+//#define REQUIRED_ARGS 4
 
-#define MAX_ORIGINAL_TIMEOUT 3600
-#define WORKER_TIME_MARGIN 25
-#define MINIMUM_WORKER_TIME_MARGIN 5
-#define DEFAULT_MARKER_TOKEN "#__#"
+#define INITIAL_MONITOR_LINES 100       //Maximum lines of commands for monitoring the system. Let us remark that these commands are invoked several times during the execution
+#define INITIAL_MONITOR_ONCE_LINES 100  //Maximum lines of commands for monitoring the system. Only invoked once time.
+#define INITIAL_MAX_CLONES 10           //Maximum size of the initial set of clones. It is dynamically incremented by realloc in runtime.
 
-#define LINE_SIZE 500 /* can change the buffer size as well */
-#define TESTSUITE_SIZE 10000 /* change to accomodate other sizes, change ONCE here */
+#define MAX_ORIGINAL_TIMEOUT 3600       //Maximum execution time of a test case over the original program.
+#define WORKER_TIME_MARGIN 25           //Maximum number of times that the execution of a mutant can be delayed with respect to the original program.
+#define MINIMUM_WORKER_TIME_MARGIN 5    //Minimum number of times that the execution of a mutant can be delayed with respect to the original program.
+#define DEFAULT_MARKER_TOKEN "#__#"     //Default token used to grep a result line.
 
-#define TOTAL_MUTANTS_ALIAS "[[NUMBER_MUTANT]]"
-#define TOTAL_TESTS_ALIAS "[[TOTAL_TESTS]]"
-#define INDEX_TEST_ALIAS "[[INDEX_TEST]]"
-#define INDEX_MUTANT_ALIAS "[[INDEX_MUTANT]]"
-#define PATH_MUTANT_ALIAS "[[MUTANTS_PATH]]"
-#define PATH_ORIGINAL_ALIAS "[[ORIGINAL_PATH]]"
+#define LINE_SIZE 500                   //Maximum size of a test suite line.
+#define TESTSUITE_SIZE 10000            //Maximum size of a test suite.
 
-#define PATH_ENV_INI "/home/pablo/Frameworks/Milu/env_first.ini"
-#define PATH_RES_DIR "/Results/"
+#define TOTAL_MUTANTS_ALIAS "[[NUMBER_MUTANT]]"     //Wildcard used to be replaced by the total number of mutants.
+#define TOTAL_TESTS_ALIAS "[[TOTAL_TESTS]]"         //Wildcard used to be replaced by the total number of test cases.
+#define INDEX_TEST_ALIAS "[[INDEX_TEST]]"           //Wildcard used to be replaced by a test case identifier.
+#define INDEX_MUTANT_ALIAS "[[INDEX_MUTANT]]"       //Wildcard used to be replaced by a mutant identifier.
+#define PATH_MUTANT_ALIAS "[[MUTANTS_PATH]]"        //Wildcard used to be replaced by the mutants path.
+#define PATH_ORIGINAL_ALIAS "[[ORIGINAL_PATH]]"     //Wildcard used to be replaced by the original path.
 
-#define BUILD_LINE_ORIGINAL_MODE 1
-#define BUILD_LINE_MUTANT_MODE 0
 
-#define EXECUTION_MAP_FILE "executionMap.txt"
-#define EXECUTION_TIMES_MAP_FILE "originalExecutionTimesMap.txt"
-#define EXECUTION_RESULTS_MAP_FILE "originalResultsMap.txt"
-#define EXECUTION_WHOLE_TIMES_MAP_FILE "totalExecutionTimesMap.txt"
-#define MUTATION_TESTING_TIMES_MAP_FILE "mutationTestingTicksMap.txt"
-#define MUTATION_TESTING_OVERVIEW "malone_overview.txt"
-#define EQUIVALENCE_FILE "equivalence.txt"
-#define SAVE_CFG_FILE "Config.ini"
-#define SAVE_ENV_FILE "Environment.ini"
-#define MONITOR_FILE "monitor.txt"
+//#define PATH_ENV_INI "/home/pablo/Frameworks/Milu/env_first.ini"
 
-#define NORMAL_EQUIV_METHOD 1
-#define AGGRESIVE_EQUIV_METHOD 2
+#define BUILD_LINE_ORIGINAL_MODE 1  //Definition to build a line for compiling the original program.
+#define BUILD_LINE_MUTANT_MODE 0    //Definition to build a line for compiling a mutant.         
+
+//TODO: Mover a ExecutionMapSaver
+//Y cambiar el nombre del archivo a Malone_saver.c
+#define PATH_RES_DIR "/Results/"                                        //Path for storing the results
+#define EXECUTION_MAP_FILE "executionMap.txt"                           //Filename where the execution info is stored.
+#define EXECUTION_TIMES_MAP_FILE "originalExecutionTimesMap.txt"        //Filename where the execution times of the original program are stored.
+#define EXECUTION_RESULTS_MAP_FILE "originalResultsMap.txt"             //Filename where the results of the original program are stored.
+#define EXECUTION_WHOLE_TIMES_MAP_FILE "totalExecutionTimesMap.txt"     //Filename where the all the execution time ticks are stored.
+#define MUTATION_TESTING_TIMES_MAP_FILE "mutationTestingTicksMap.txt"   //Filename where the all the important ticks of the mutation testing process are stored.
+#define MUTATION_TESTING_OVERVIEW "malone_overview.txt"                 //Filename where a overview of the mutation testing process is stored.
+#define EQUIVALENCE_FILE "equivalence.txt"                              //Filename where the equivalence information is included.             
+#define SAVE_CFG_FILE "Config.ini"                                      //Configuration filename.                
+#define SAVE_ENV_FILE "Environment.ini"                                 //Default environment filename.        
+#define MONITOR_FILE "monitor.txt"                                      //Default monitor filename.        
+
+#define NORMAL_EQUIV_METHOD 1                                           //Identifier of the normal equivalent method
+#define AGGRESIVE_EQUIV_METHOD 2                                        //Identifier of the aggressive equivalent method.
 
 #define COMMAND_EXEC_HPC 1
 
-//Log levels;
+//Log levels; 
+//TODO: This enum status is not used at the present. Quitar
 static gint MALONE_GLOBAL_LOG = 1;
 static gint MALONE_MASTER = 0;
 static gint LOG_ERROR = 1;
@@ -101,16 +118,18 @@ static gint LOG_INFO = 2;
 static gint LOG_DEBUG = 3;
 static gint LOG_VERBOSE = 4;
 
+//This enum represents the 6 different distribution algorithms
 typedef enum
 {
-    eSequential=0,
-    eStaticMutants=1,
-    eStaticTests=2,            
-    eDynamic=3,
-    eFullDynamic=4,   
-    eAdaptiveGrain=5,
+    eSequential=0,      //Sequential mode
+    eStaticMutants=1,   //Static mutants mode
+    eStaticTests=2,     //Static tests mode:        
+    eDynamic=3,         //PEDRO algorithm
+    eFullDynamic=4,     //EMINENT
+    eAdaptiveGrain=5,   //Adaptive grain
 }T_eExecutionMode;
 
+//TODO: This enum status is not used at the present.
 typedef enum
 {
     eIdle=1,
@@ -120,6 +139,7 @@ typedef enum
 
 T_stConfigValues* m_stConfigValues;
 
+//TODO: Esta parte se deberia mover a malone_testcase.h o algo asi
 typedef struct T_stTestInfo{
     char res[MAX_RESULT_SIZE];  //Result of the test case execution
     double dTime;               //Execution time of the test
@@ -146,6 +166,7 @@ typedef struct{
     int nMutant;       
 }T_stTI;  //Reduced version
 
+//TODO: Esta parte se deberia mover a malone_mutant.h o algo asi
 typedef struct {
     int nNumber;
     int nState; //State of the mutant Dead=0, Alive =1
@@ -195,7 +216,7 @@ typedef struct
     char * oMd5Map[MAX_MUTANTS];    
     T_stEquivalentInfo* oEquivalentInfo[MAX_MUTANTS];
     T_stMutantExecution* oMutantMap[MAX_MUTANTS];
-    int oMap[MAX_MUTANTS][MAX_TESTS];               // Indicates which worker has execute an specific duple <mutant,test>
+    int oMap[MAX_MUTANTS][MAX_TESTS];               // Indicates the worker that has executed an specific duple <mutant,test>
 
 }T_stExecutionMap;
 
@@ -278,6 +299,7 @@ MonitorLines m_oMonitorLines;
 MonitorLines m_oMonitorOnceLines;
 int m_nOnceLines;
 
+//TODO: Mover a malone_timing.h
 //Ticks
 long int m_lInitTick;
 long int m_lInitializeInitTick;

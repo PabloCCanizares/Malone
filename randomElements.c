@@ -51,6 +51,7 @@ T_stTestInfo* generateTestTrap(int nTest, char* strResult)
             
     return pRet;
 }
+//TODO: Si no se utiliza, borrar
 void doingTraps()
 {
     T_stTestInfo* pTest;

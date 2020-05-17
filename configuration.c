@@ -15,6 +15,38 @@
 #include <stdlib.h>
 #include "Options.h"    
 #include "Auxiliars.h"
+
+void free_envfile(T_stIniValues* pEnvFile)
+{    
+    if(pEnvFile)
+    {
+        if(pEnvFile->strAppName != NULL)
+        {
+            free(pEnvFile->strAppName);
+            pEnvFile->strAppName = NULL;
+        }
+        if(pEnvFile->strAppPath != NULL)
+        {
+            free(pEnvFile->strAppPath);
+            pEnvFile->strAppPath = NULL;
+        }
+        if(pEnvFile->strCompLineMutants != NULL)
+        {
+            free(pEnvFile->strCompLineMutants);
+            pEnvFile->strCompLineMutants = NULL;
+        }
+        if(pEnvFile->strCompLineOriginal != NULL)
+        {
+            free(pEnvFile->strCompLineOriginal);
+            pEnvFile->strCompLineOriginal = NULL;
+        }
+        
+        //TODO: Falta aun, completar y unir a los tests!!
+        free(pEnvFile);
+        pEnvFile = NULL;
+    }
+}
+
 void loadConfig() {
     char* strMaloneHome;
     int nLen;
@@ -112,9 +144,9 @@ T_stIniValues* loadEnvironmentFromIniFile(char* strPath) {
     GError *error;
 
     pReturn = NULL;
-
-    if (DEBUG_CONFIG) printf("loadEnvironmentFromIniFile - Init | from %s\n", strPath);
-    if (strPath != NULL) {
+    
+    if (strPath != NULL) {        
+        if (DEBUG_CONFIG) printf("loadEnvironmentFromIniFile - Init | from %s\n", strPath);        
         error = NULL;
         key_file = g_key_file_new();
         if (!g_key_file_load_from_file(key_file,

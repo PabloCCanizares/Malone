@@ -28,6 +28,16 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="f3"
+                     displayName="DistributionAlgorithms"
+                     projectFiles="true">
+        <itemPath>DistributionAlgorithms.c</itemPath>
+        <itemPath>distribution_adaptive_grain.c</itemPath>
+        <itemPath>distribution_dynamic_mutants.c</itemPath>
+        <itemPath>distribution_full_dynamic.c</itemPath>
+        <itemPath>distribution_full_dynamic_scatter.c</itemPath>
+        <itemPath>distribution_static_mutants.c</itemPath>
+      </logicalFolder>
       <logicalFolder name="f2" displayName="LaunchModes" projectFiles="true">
         <itemPath>debugMode.c</itemPath>
         <itemPath>executionMode.c</itemPath>
@@ -41,16 +51,6 @@
           <itemPath>printers.c</itemPath>
           <itemPath>randomElements.c</itemPath>
           <itemPath>transformations.c</itemPath>
-        </logicalFolder>
-        <logicalFolder name="f3"
-                       displayName="DistributionAlgorithms"
-                       projectFiles="true">
-          <itemPath>DistributionAlgorithms.c</itemPath>
-          <itemPath>distribution_adaptive_grain.c</itemPath>
-          <itemPath>distribution_dynamic_mutants.c</itemPath>
-          <itemPath>distribution_full_dynamic.c</itemPath>
-          <itemPath>distribution_full_dynamic_scatter.c</itemPath>
-          <itemPath>distribution_static_mutants.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f4" displayName="Equivalence" projectFiles="true">
           <itemPath>EquivalenceChecking.c</itemPath>

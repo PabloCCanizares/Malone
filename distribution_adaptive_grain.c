@@ -1,5 +1,5 @@
 /* 
- * File:   DistributionAlgorithms.h
+ * File:   distribution_adaptive_grain_scatter.c
  * Author: Pablo C. Cañizares
  *
  * Created on August 15, 2018, 12:54 PM
@@ -43,6 +43,7 @@ int distribution_adaptive_grain_scatter(T_eExecutionMode eMethod)
         nWorkerSource = -1;
 
         //Si te estas preguntando por que usamos mutant init y mutant end, es por que queremos hacer un metodo general.
+        //Donde se permita mandar varios mutantes
         if (m_stEnvValues->nStartingMutant != 0) {
             nIndexMutantInit = m_stEnvValues->nStartingMutant;
             nIndexMutantEnd = m_stEnvValues->nStartingMutant;

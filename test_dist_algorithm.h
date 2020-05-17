@@ -23,7 +23,11 @@ extern "C" {
     
 void testDistributionAlgorithms();
 void test_dist_algorithm_1();
-
+void test_dist_algorithm_2();
+void test_dist_algorithm_3();
+void test_dist_algorithm_4();
+void test_dist_algorithm_5();
+void test_dist_base();
 
 #ifdef __cplusplus
 }

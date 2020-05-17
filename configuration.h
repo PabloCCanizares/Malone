@@ -161,6 +161,8 @@ T_stIniValues *loadEnvironmentFromIniMemory(const char *pBuffer,int nSize);
 T_stIniValues *loadEnvironmentFromIniFile(char *strPath);
 T_stIniValues *loadEnvironmentKeys(GKeyFile *key_file);
 
+//free
+void free_envfile(T_stIniValues* pEnvFile);
 #ifdef __cplusplus
 }
 #endif

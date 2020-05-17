@@ -8,6 +8,7 @@
 #include <sys/wait.h> 
 #include <sys/stat.h>
 #include "popen_noshell.h"
+#include "configuration.h"
 #define SLEEP_FOR_DEBUG 0
 
 
@@ -15,6 +16,43 @@
 //Dejar common lo que de verdad sea common.
 //#define TEMP_DEBUG_AUX 1    
 //-------------------------------------------------------
+
+void free_mutant(T_stMutant* pMutant)
+{
+    if (DEBUG_AUX) printf("free_mutant - Init\n");
+    if(pMutant != NULL)
+    {
+        pMutant->nNumber=pMutant->nState=pMutant->nTestKiller = -1;
+        if(pMutant->strDescription != NULL)
+        {
+            free(pMutant->strDescription);
+            pMutant->strDescription = NULL;
+        }        
+        
+        //TODO: Falta liberar los tests
+        free(pMutant);
+        pMutant = NULL;           
+    } 
+    if (DEBUG_AUX) printf("free_mutant - End\n");
+}
+/**
+ * Free the auxiliar variables
+ */
+void free_auxiliars()
+{
+    if (DEBUG_AUX) printf("free_auxiliars - Init\n");
+    //Free the mutant list
+    for (int i = 0; i < m_oMutantList.nElems; i++) {
+        T_stMutant* pMutant;
+                
+        pMutant =  m_oMutantList.array[i];
+        //free_mutant(pMutant); TODO: esto nos sigue dando problemas
+        m_oMutantList.array[i] = NULL;                 
+    }
+    //Free the env values.
+    free_envfile(m_stEnvValues);        
+    if (DEBUG_AUX) printf("free_auxiliars - End\n");
+}
 
 void initialize_auxiliars() {
     int i, j;
@@ -514,7 +552,7 @@ int isMutantAllocated(int nIndexMutant) {
 
     if (DEBUG_AUX) printf("<%d>isMutantAllocated - Checking allocation of mutant %d\n", m_nRank, nIndexMutant);
 
-    if (m_oMutantList.array[nIndexMutant] == NULL)
+    if (nIndexMutant >= sizeof(m_oMutantList.array) || m_oMutantList.array[nIndexMutant] == NULL)
         nRet = 0;
     else {
         T_stMutant* pMutant;
@@ -523,6 +561,8 @@ int isMutantAllocated(int nIndexMutant) {
         if (pMutant) {
             nRet = 1;
         }
+        else
+            printf("<%d>isMutantAllocated - The mutant (%d) stored in the array is NULL!\n", m_nRank, nIndexMutant);
     }
 
     if (DEBUG_AUX) printf("<%d>isMutantAllocated - Checking allocation End, code ret: %d\n", m_nRank, nRet);
@@ -562,7 +602,6 @@ void insertMutant(T_stMutant* pMutant, int nIndexMutant) {
         m_oMutantList.array[nIndexMutant] = pMutant;
         m_oMutantList.nElems++;
     }
-
 }
 
 void insertMutantTestByTest(T_stMutant* pMutant, int nIndexMutant, int nWorkerSource) {
@@ -592,12 +631,17 @@ void insertMutantTestByTest(T_stMutant* pMutant, int nIndexMutant, int nWorkerSo
                     nIndexTest = pTest->nTest;
                     printTest(pTest);
                     if (DEBUG_AUX) printf("<%d>insertMutantTestByTest - Inserting test (%d) -> at(%d)\n", m_nRank, i, nIndexTest);
-                    insertTestResult(nIndexMutant, nIndexTest, pTest);
-
-                    //Update the execution Map
-                    m_oTestExecMap.oMap[nIndexMutant][nIndexTest] = nWorkerSource;
-                    if (DEBUG_AUX) printf("<%d>insertMutantTestByTest - Associating duple [Mutant: %d - Test: %d] to worker %d\n", m_nRank, nIndexMutant, nIndexTest, nWorkerSource);
-
+                    
+                    if(insertTestResult(nIndexMutant, nIndexTest, pTest))
+                    {
+                        //Update the execution Map
+                        m_oTestExecMap.oMap[nIndexMutant][nIndexTest] = nWorkerSource;
+                        if (DEBUG_AUX) printf("<%d>insertMutantTestByTest - Associating duple [Mutant: %d - Test: %d] to worker %d\n", m_nRank, nIndexMutant, nIndexTest, nWorkerSource);
+                    }
+                    else
+                    {
+                        printf("<%d>insertMutantTestByTest - ERROR inserting test %d into mutant %d\n", m_nRank, nIndexTest, nIndexMutant);
+                    }
                 }
             }
             if (DEBUG_AUX) printf("<%d><----\n", m_nRank);
@@ -612,17 +656,19 @@ int insertTestResult(int nMutant, int nTest, T_stTestInfo* pTest) {
     nRet = 0;
     if (DEBUG_AUX) printf("<%d>insertTestResult - Init\n", m_nRank);
     //If the mutant is allocated in memory
-    if (isMutantAllocated(nMutant) && pTest != NULL && nMutant < MAX_MUTANTS && nTest < MAX_TESTS) {
+    if (pTest != NULL && isMutantAllocated(nMutant) &&  nMutant < MAX_MUTANTS && nTest < MAX_TESTS && nTest>=0) {
         //Ensure that the mutant is allocated ...
+        
         pCheckMutant = m_oMutantList.array[nMutant];
         if (pCheckMutant != NULL) {
 
+            
             pTest->nTest = nTest;
             if (DEBUG_AUX) printf("<%d>insertTestResult - Inserting test number %d  on mutant %d\n", m_nRank, nTest, nMutant);
 
             //Check if the test already exist!
             if (pCheckMutant->oTestList.tests[nTest] != NULL)
-                if (DEBUG_AUX) printf("<%d>insertTestResult - Wei, the inserting test number %d already exists  on mutant %d\n", m_nRank, nTest, nMutant);
+                if (DEBUG_AUX) printf("<%d>insertTestResult - The inserting test number %d already exists  on mutant %d\n", m_nRank, nTest, nMutant);
 
             pCheckMutant->oTestList.tests[nTest] = pTest;
             pCheckMutant->oTestList.nElems++;
@@ -637,9 +683,18 @@ int insertTestResult(int nMutant, int nTest, T_stTestInfo* pTest) {
 
                 if (DEBUG_AUX) printf("<%d>insertTestResult - Mutant %d Killed by test %d!!\n", m_nRank, nMutant, nTest);
             }
+            
+            //Mark as pass
+            nRet =1;
         }
+
     } else {
-        printf("<%d> Warning!! Mutant data not inserted!\n", m_nRank);
+        if(pTest == NULL)
+            printf("<%d> Warning!! The input test is null!! Mutant (M:%d|T:%d) data not inserted!\n", m_nRank, nMutant, nTest);
+        else if(nMutant > sizeof(m_oMutantList.array))
+            printf("<%d>The mutant index (%d) is greater than the capacity of the array (%d)\n", m_nRank, nMutant, sizeof(m_oMutantList.array));
+        else            
+            printf("<%d> Warning!! Mutant (M:%d|T:%d) data not inserted!\n", m_nRank, nMutant, nTest);
     }
     if (DEBUG_AUX) printf("<%d>insertTestResult - End\n", m_nRank);
 
@@ -660,7 +715,7 @@ int insertTestResult_unsorted(int nMutant, int nTest, T_stTestInfo* pTest) {
     nRet = 0;
     if (DEBUG_AUX) printf("<%d>insertTestResult_unsorted - Init\n", m_nRank);
     //If the mutant is allocated in memory
-    if (isMutantAllocated(nMutant) && pTest != NULL && nMutant < MAX_MUTANTS && nTest < MAX_TESTS) {
+    if (pTest != NULL && isMutantAllocated(nMutant) && nMutant < MAX_MUTANTS && nTest < MAX_TESTS && nTest>=0) {
         //Ensure that the mutant is allocated ...
         pCheckMutant = m_oMutantList.array[nMutant];
         if (pCheckMutant != NULL) {
@@ -739,6 +794,8 @@ int checkTestResult(T_stTestInfo* pTest) {
     return nRet;
 }
 
+//TODO: pabloSays: Considero que es innecesario leer esto de disco en una estructura intermedia
+//y mas cuando es estatica, hay que eliminar lo estatico comos sea.
 int readTestSuite() {
 
     char line[TESTSUITE_SIZE][LINE_SIZE];
@@ -826,8 +883,8 @@ int checkResultOriginal(int nIndexTest, const char* strResult) {
 }
 
 /**
- * Get the execution time needed to apply the test over the original program
- * @param nTest
+ * Get the execution time needed to apply an specific test over the original program
+ * @param nTest Identifier of the test whose execution time is requested.
  * @return 
  */
 int getOriginalTime(T_stTestList* pList, int nTest) {
@@ -898,6 +955,7 @@ T_stTestInfo* createTest(int nIndexTest, char* strResult, double dTime, int nKil
 
 struct TestInfo* createTestST(int nIndexTest, char* strResult, double dTime, int nKill) {
     struct TestInfo* pTest;
+    
     if (DEBUG_AUX) printf("createTest - Init\n");
 
     pTest = (struct TestInfo*) malloc(sizeof (struct TestInfo));
@@ -1074,13 +1132,13 @@ void saveConfigAndEnvironmentFiles() {
     nLen = strlen(m_strResFolder) + strlen(SAVE_CFG_FILE) + 1;
     strConfigFile = malloc((nLen + 1) * sizeof (char));
     sprintf(strConfigFile, "%s%s", m_strResFolder, SAVE_CFG_FILE);
-    if (1) printf("saveConfigAndEnvironmentFiles - Config file to be saved: %s\n", strConfigFile);
+    if (DEBUG_AUX) printf("saveConfigAndEnvironmentFiles - Config file to be saved: %s\n", strConfigFile);
 
     //Create the string for copying the config file
     nLen = strlen(m_strResFolder) + strlen(SAVE_ENV_FILE) + 1;
     strEnvFile = malloc((nLen + 1) * sizeof (char));
     sprintf(strEnvFile, "%s%s", m_strResFolder, SAVE_ENV_FILE);
-    if (1) printf("saveConfigAndEnvironmentFiles - Config file to be saved: %s\n", strEnvFile);
+    if (DEBUG_AUX) printf("saveConfigAndEnvironmentFiles - Config file to be saved: %s\n", strEnvFile);
 
     //Copy the files
     copy(m_strConfig, strConfigFile);
@@ -1406,8 +1464,9 @@ int pclose2(FILE * fp, pid_t pid) {
 
 void createTestRefP(int nIndexTest, char* strResult, double dTime, int nKill, T_stTestInfo** pTest) {
     
-
-    *pTest = (T_stTestInfo*) malloc(sizeof (T_stTestInfo));
+    if(*pTest == NULL)
+        *pTest = (T_stTestInfo*) malloc(sizeof (T_stTestInfo));
+    
     (*pTest)->dTime = dTime;
     (*pTest)->nKill = nKill;
     (*pTest)->nTest = nIndexTest;
@@ -1416,7 +1475,7 @@ void createTestRefP(int nIndexTest, char* strResult, double dTime, int nKill, T_
     if (strResult != NULL)
         strcpy((*pTest)->res, strResult);    
 }
-
+//TODO: Cambiar nombre.
 T_stTestInfo* createTestTrap2(int nIndexTest, char* strResult, double dTime, int nKill) {
     T_stTestInfo* pTest;
 

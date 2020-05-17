@@ -1,11 +1,23 @@
 
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file main.c
+ *     Main program, exception handling and argument parser.
+ * @par Purpose:
+ *     Main program of MALONE.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date     27 Oct 2015 - 11 May 2020
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
 #include "Options.h"
-/* 
- * File:   main.c
- * Author: Pablo C. Cañizares
- *
- * Created on October 27, 2015, 2:58 PM
- */
 #include "Malone.h"
 #include "Auxiliars.h"
 #include "executionMode.h"
@@ -27,7 +39,7 @@ void mySignalCatcher(int n) {
     malone_free();    
 }
 
-
+//TODO: Hora de borrarte amigo.
 void writeLog(int nLogLevel, const char *fmt, ...) {
     /* va_list arg;
      gchar strCommand[10000];  
@@ -41,7 +53,7 @@ void writeLog(int nLogLevel, const char *fmt, ...) {
 }
 
 int parseArguments(int argc, char** argv) {
-    int nOpt, nRequired, nRet, nLen;
+    int nOpt, nRet, nLen;
     char* strMaloneHome, *strEnvFile;
 
     nOpt = nRet = 0;
@@ -95,13 +107,14 @@ int parseArguments(int argc, char** argv) {
  */
 int main(int argc, char** argv) {
 
-    printf("MALONE: Manager for pAralleL mutatiON tEsting v1.0\n");
+    printf("MALONE: Manager for pAralleL mutatiON tEsting v1.1\n");
 
     //Configure signal catcher
     signal(SIGINT, mySignalCatcher);
     signal(SIGTERM, mySignalCatcher);
     signal(SIGHUP, mySignalCatcher);
     signal(SIGSEGV, mySignalCatcher);
+    signal(SIGABRT, mySignalCatcher);
     
     showDebugOptions();
             

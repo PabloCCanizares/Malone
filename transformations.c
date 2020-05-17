@@ -16,6 +16,7 @@ void test2redTest(T_stTestInfo* pTest, T_stTI* pTestRed);
 #define DEBUG_TRANS isEnabledTransLog()
 #endif
 
+//TODO: Cambiar el nombre del archivo a Malone_transformations
 T_stMutant* redMut2Mut(T_stM* pReducedMut)
 {
     T_stMutant* pRet;

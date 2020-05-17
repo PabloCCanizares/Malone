@@ -1,3 +1,22 @@
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file MPI_Operations.c
+ *     This file contains the main MPI operations of MALONE.
+ * @par Purpose:
+ *    Provide the main communication features of MALONE.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date     4 Dec 2015 - 11 May 2020
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
+
 #ifndef MPI_OPERATIONS_H
 #define	MPI_OPERATIONS_H
 

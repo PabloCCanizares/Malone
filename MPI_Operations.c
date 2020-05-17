@@ -1,11 +1,21 @@
-
-/* 
- * File:   MPI_Operations.c
- * Author: Pablo C. Cañizares
- *
- * Created on December 4, 2015.
- */
-
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file MPI_Operations.c
+ *     This file contains the main MPI operations of MALONE.
+ * @par Purpose:
+ *    Provide the main communication features of MALONE.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date     4 Dec 2015 - 11 May 2020
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
 #include "mpi.h"
@@ -22,6 +32,9 @@
 #define DEBUG_MPI_OPS isEnabledMpiOperations()
 #endif
 
+/**
+ * Initialise the deploy datatype
+ */
 void init_Datatype_deploy() {
     //Commit the struct
     MPI_Type_contiguous(NUM_DEPLOY_PARAMS, MPI_INT, &m_DeployType);    
@@ -75,6 +88,9 @@ void init_Datatype_test() {
     MPI_Type_commit(&m_TestType);
 }
 
+/**
+ * Initialises the mutant datatype
+ */
 void init_Datatype_mutant() {
     int base, i;
     int blocklen[7] = {1, 1, 1, 1, MAX_TESTS, MAX_TESTS, MAX_TESTS};
@@ -104,6 +120,7 @@ void init_Datatype_mutant() {
     }
     else
     {
+        //This method of building a datatype is deprecated and is not working in some computers.
         MPI_Address(m_oMutant, disp);
         MPI_Address(&m_oMutant[0].nState, disp + 1);
         MPI_Address(&m_oMutant[0].nTestKiller, disp + 2);
@@ -123,6 +140,7 @@ void init_Datatype_mutant() {
     MPI_Type_commit(&m_MutantType);
 
 }
+
 /**
  *  Initialize the MPICH library
  */
@@ -134,6 +152,7 @@ void initializeMPI() {
     initializeMPI_Datatype();
     printf("<%d> Initialized process %d of %d\n", m_nRank, m_nRank, m_nSize);
 }
+
 /**
  * Initialise the MPI Datatypes that are used in Malone
  */
@@ -145,8 +164,12 @@ void initializeMPI_Datatype() {
     if (DEBUG_MPI_OPS) printf("initializeMPI_Datatype - Initialized\n");
 }
 
+/**
+ * Sends to an specific worker process a deploy structure, which indicates the distribution algorithm to use and the portion of execution grain.
+ * @param exeMode Deploy structure
+ * @param nDest Identifier of the worker process, which must receive the deploy structure.
+ */
 void sendDeployMode(T_stExecutionStructure* exeMode, int nDest) {
-    int i;
     int exeParams[NUM_DEPLOY_PARAMS];
 
     if (DEBUG_MPI_OPS) printf("<%d>sendDeployMode - Init!\n", m_nRank);
@@ -172,6 +195,10 @@ void sendDeployMode(T_stExecutionStructure* exeMode, int nDest) {
     if (DEBUG_MPI_OPS) printf("sendDeployMode - Done!\n");
 }
 
+/**
+ * Receives a deploy structure.
+ * @return The deploy structure.
+ */
 T_stExecutionStructure* receiveDeployMode() {
     MPI_Status status;
     T_stExecutionStructure* exeMode;
@@ -341,7 +368,6 @@ T_stTestInfo* receiveTestList(int nSource, int nTests) {
 
 void sendMutant(T_stMutant* pMutant, int nDest) {
     int i;
-    MPI_Status status;
 
     if (pMutant && nDest >= 0) {
         m_oMutant[0].nNumber = pMutant->nNumber;
@@ -713,8 +739,8 @@ int receiveMutants(T_stExecutionStructure pExeMode[MAX_WORKERS]) {
             nMutantEnd = pExeMode[nWorkerSource].nMutantEnd;
             nTestInit = pExeMode[nWorkerSource].nTestInit;
             nTestEnd = pExeMode[nWorkerSource].nTestEnd;
-            nTotalMutants = (nMutantEnd - nMutantInit);
-            nTotalTests = (nTestEnd - nTestInit);
+            nTotalMutants = (nMutantEnd - nMutantInit)+1;
+            nTotalTests = (nTestEnd - nTestInit)+1;
 
             if (nMutantInit > 0) {
                 //
@@ -725,16 +751,25 @@ int receiveMutants(T_stExecutionStructure pExeMode[MAX_WORKERS]) {
 #endif
                 if (DEBUG_MPI_OPS) printf("<%d>receiveMutants - Received mutants!! Mutants: %d, tests: %d\n", m_nRank, nTotalMutants, nTotalTests);
 
+                printf("<%d>receiveMutants - 0\n", m_nRank);
+                
                 //Transform
                 for (i = nMutantInit; i <= nMutantEnd; i++) {
 #ifdef EXPERIMENTAL_MEM_SAFE 
-                    pMutant = redMut2Mut((T_stM*) & m_oMutant[i-nMutantInit]);
+                    printf("<%d>receiveMutants - 0.%d\n", m_nRank, i);
+                    pMutant = redMut2Mut((T_stM*) & m_oMutant[i-nMutantInit]);                    
 #else
                     pMutant = redMut2Mut((T_stM*) & m_oMutant[i]);
 #endif
+                    printf("<%d>receiveMutants - 1.%d\n", m_nRank, i);
                     insertMutantTestByTest(pMutant, i, status.MPI_SOURCE);
+                    printf("<%d>receiveMutants - 2.%d\n", m_nRank, i);
+                    
+                    /* Esto da error por doble free
                     if (pMutant != NULL)
                         free(pMutant);
+                    */
+                    printf("<%d>receiveMutants - 3.%d\n", m_nRank, i);
                 }
             } else {
                 printf("<%d>receiveMutants - WARNING!! Invalid mutant index!\n", m_nRank);

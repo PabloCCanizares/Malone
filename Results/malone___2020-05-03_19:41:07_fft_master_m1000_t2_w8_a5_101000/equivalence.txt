@@ -1,6 +1,0 @@
-----------------
-Total mutants: 1000
-Equivalent mutants: 0
-Dupped mutants: 0
-----------------
-----------------

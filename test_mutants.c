@@ -18,7 +18,7 @@ void testMutants()
 }
 void test_mutants_1()
 {    
-    int nAlive, nRemainingBlocks, nWorkerSource;
+    int nRemainingBlocks, nWorkerSource;
     T_stMutant* pMutant;
     T_stExecutionStructure exeVector[MAX_WORKERS];
     
@@ -37,8 +37,7 @@ void test_mutants_1()
         for(int i=1;i<m_nSize;i++)
         {
             sendDeployMode(&exeVector[0], i);
-        }
-        
+        }      
         
         do
         {        
@@ -60,7 +59,7 @@ void test_mutants_1()
         if(pExeRetMode != NULL)
         {
             pMutant = generateRandomMutant(1000);
-            printMutant((T_stTestInfo*) pMutant);
+            printMutant((T_stMutant*) pMutant);
             sendMutant(pMutant, MALONE_MASTER);
         }
         else

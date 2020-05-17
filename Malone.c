@@ -1,3 +1,22 @@
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file Malone.c
+ *     Main functions of the framework, which provide the principal features of 
+ *     MALONE 
+ * @par Purpose:
+ *     Provide the API of MALONE.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date     25 Oct 2015 - 11 May 2020
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
 
 #include "Options.h"
 #include "Malone.h"
@@ -62,9 +81,12 @@ void MonitorAlarmhandler(int sig) {
     if (m_stEnvValues->nMonitorFrequency >= 0)
         alarm(m_stEnvValues->nMonitorFrequency);
     
-    printf("<%d>Alarm [MonitorAlarmhandler] hanlded end [Elems:%d, alarms: %d]\n", m_nRank, m_oMonitorLines.nElems, m_oMonitorLines.nAlarms);
+    printf("<%d>Alarm [MonitorAlarmhandler] handled end [Elems:%d, alarms: %d]\n", m_nRank, m_oMonitorLines.nElems, m_oMonitorLines.nAlarms);
 }
-
+/**
+ * Function that checks if the provided configuration of the framework is correct, or on the contrary, describes the error.
+ * @return true if the cfg is correct.
+ */
 int malone_isReady() {
     int nRet, nError;
 
@@ -634,7 +656,11 @@ int malone_load_environment_values(char* strPath) {
 
     return nRet;
 }
-
+/**
+ * This methods selects the distribution algorithm, and starts the the mutation testing process using the selected algorithm. 
+ * @param eMethod:  Enum that represents the distribution algorithm.
+ * @return true if the distribution algorithm exists.
+ */
 int malone_distribute_workflow(T_eExecutionMode eMethod) {
     int nRet;
 
@@ -646,6 +672,7 @@ int malone_distribute_workflow(T_eExecutionMode eMethod) {
             distribution_static_mutants(eMethod);
             break;
         case eStaticTests:
+            //TODO: Este metodo no esta hecho! Tratar de hacerlo porque muy dificil no parece.
         case eDynamic:
             if (m_nRank == MALONE_MASTER)
                 printf("<%d> Executing dynamic mutant distribution\n", m_nRank);
@@ -921,13 +948,8 @@ int malone_execute_originalprogram_by_scheme(T_stExecutionStructure* pExeMode) {
 
                 free(pTest);
             }
-
-
         }
-
     }
-
-
     if (MALONE_WORKER_LOG) printf("<%d> malone_execute_originalprogram_by_scheme - End\n", m_nRank);
 
     return nRet;
@@ -1305,7 +1327,6 @@ int malone_save_results() {
         saveMonitorResults();
         printf("<%d> malone_save_results() - End with code: %d\n", m_nRank, nRet);
     }
-
 
     return nRet;
 }

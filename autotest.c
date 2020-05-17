@@ -22,6 +22,7 @@ void mySignalCatcher(int n) {
     printf("<%d>  SIGNAL (%d) catched during the execution of the program", m_nRank, n);
     MPI_Abort(MPI_COMM_WORLD,33);    
 }
+
 int main(int argc, char** argv)
 {
     printf("Auto test v0.0 starting\n");
@@ -31,6 +32,7 @@ int main(int argc, char** argv)
     signal(SIGTERM, mySignalCatcher);
     signal(SIGHUP, mySignalCatcher);
     signal(SIGSEGV, mySignalCatcher);
+    signal(SIGABRT, mySignalCatcher);
     
     autotest();
 
@@ -51,23 +53,23 @@ void autotest()
     //testConfFile();
     
     //Testing command execution
-    testCommand();
+    //testCommand();
     
     //  - Auxiliar functions 
     
     //2 - Multiprocess
-    initialize_auxiliars();
+    //initialize_auxiliars();
     initializeMPI();
     loadConfig();
     
     //  - Deploys
-    testDeploy();
+    //testDeploy();
     
     // Tests 
-    testTestcases();
+    //testTestcases();
     
     //Mutants
-    testMutants();
+    //testMutants();
            
     //3 - Test full executions
     //Distribution algorithms

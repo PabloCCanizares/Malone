@@ -31,6 +31,7 @@ void addResultIndex(T_stTestList *pTestList,int nIndex,const char *t,double dTim
 void initializeEquivalentMap(int nMutants,int nTests);
 void initializeExecutionMap(int nMutants,int nTests);
 void initialize_auxiliars();
+void free_auxiliars(); 
 int addResult(T_stTestList *pTestList,const char *t,double dTime,int nKill);
 T_stTestInfo *createTest(int nIndexTest,char *strResult,double dTime,int nKill);
 struct TestInfo* createTestST(int nIndexTest, char* strResult, double dTime, int nKill);
@@ -44,6 +45,8 @@ int generateResFolder();
 void saveConfigAndEnvironmentFiles();
 MutantList* generateCleanMutantList(int nMutants);
 void freeMutantList(MutantList* pList);
+void free_mutant(T_stMutant* pMutant);
+void free_envfile(T_stIniValues* pEnvFile);
 
 void createHeuristicStructures();
 void createTestRefP(int nIndexTest, char* strResult, double dTime, int nKill, T_stTestInfo** pTest);

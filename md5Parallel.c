@@ -12,7 +12,6 @@
  */
 
 
-#define EQUIVALENCE_PRINT 1
 
 #include "printers.h"
 #include "Auxiliars.h"

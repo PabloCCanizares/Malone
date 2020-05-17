@@ -12,6 +12,7 @@ int distribution_static_mutants(T_eExecutionMode eMethod) {
     int oIndex[MAX_WORKERS];
     T_stExecutionStructure exeVector[MAX_WORKERS];
     T_stExecutionStructure* pExeRetMode;
+    
     printf("distribution_static_mutants - Init\n");
 
     if (m_nRank == MALONE_MASTER) {

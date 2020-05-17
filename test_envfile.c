@@ -24,6 +24,9 @@ void testEnvFile()
     //Test 4
     test_envfile_4();
     
+    //Test 5
+    test_envfile_5();
+    
     printf("testEnvFile - End\n");
 }
 void test_envfile_1()
@@ -110,6 +113,19 @@ void test_envfile_4()
     printf("Test [testEnvFile] - Ini_5 sucessfully processed\n");
 }
 
+void test_envfile_5()
+{
+    T_stIniValues* stNotExisting;
+    //Load a file that not exists
+    stNotExisting = (T_stIniValues*) loadEnvironmentFromIniFile(loadEnvFile_t("autotest/test_autotest_add_stand.ini"));
+
+    assert(stNotExisting != NULL);
+    
+    if(stNotExisting != NULL)
+        printf("Test [testEnvFile] - Test_5 OK\n");
+    else
+        printf("Test [testEnvFile] - Test_5 KO\n");    
+}
 char* loadEnvFile_t(const char* envValue)
 {
     char* strEnvFile, *strMaloneHome, *fileRet;
@@ -118,8 +134,9 @@ char* loadEnvFile_t(const char* envValue)
     fileRet = NULL;
     strEnvFile = envValue;
     
+    if (TEST_DEBUG) printf("parseArguments - Init\n");
     strMaloneHome = getenv("MALONE_HOME");
-    printf("MaloneHome: %s|  File: %s", strMaloneHome, strEnvFile);
+    if (TEST_DEBUG)  printf("parseArguments - MaloneHome: %s |  File: %s", strMaloneHome, strEnvFile);
     if (strMaloneHome != NULL && strEnvFile != NULL) {
         m_stEnvValues = NULL;
         if (TEST_DEBUG) printf("parseArguments - Malone environment variable: %s\n", strMaloneHome);
@@ -138,5 +155,6 @@ char* loadEnvFile_t(const char* envValue)
         printf("<%d> Malone environment variable is empty! Please insert $MALONE_HOME in your system\n", m_nRank);
     }
     
+    if (TEST_DEBUG) printf("parseArguments - End\n");
     return fileRet;
 }

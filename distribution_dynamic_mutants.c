@@ -1,5 +1,5 @@
 /* 
- * File:   DistributionAlgorithms.h
+ * File:   distribution_dynamic_mutants.c
  * Author: Pablo C. Cañizares
  *
  * Created on August 15, 2018, 12:54 PM
@@ -7,8 +7,7 @@
 #include "DistributionAlgorithms.h"
 int distribution_dynamic_mutants(T_eExecutionMode eMethod) {
     //Divide the number of mutants among the available workers!
-    int nMutants, nTests, nIndex, nRet, nNumReceives, nWorkerSource, nFinish, nSent;
-    int oIndex[MAX_WORKERS];
+    int nMutants, nTests, nIndex, nNumReceives, nWorkerSource, nFinish, nSent;
     T_stExecutionStructure exeVector[MAX_WORKERS];
     T_stExecutionStructure* pExeRetMode;
 
@@ -55,26 +54,32 @@ int distribution_dynamic_mutants(T_eExecutionMode eMethod) {
             nNumReceives++;
             if (MALONE_DEBUG_DIST_MASTER) printf("distribution_dynamic_mutants - Received mutants results, total received: %d\n", nNumReceives);
             //If there is remaining mutants to send, send it!
-            if (nIndex <= nMutants) {
-                exeVector[nWorkerSource].nMutantInit = nIndex;
-                exeVector[nWorkerSource].nMutantEnd = nIndex;
-                sendDeployMode((T_stExecutionStructure*)&exeVector[nWorkerSource], nWorkerSource);
-                nIndex++;
-            } else {
-                //Mutant has finished its work.
-                if (MALONE_DEBUG_DIST_MASTER) printf("distribution_dynamic_mutants - Worker %d has finished!\n", nWorkerSource);
-                exeVector[nWorkerSource].nMutantInit = -1;
-                sendDeployMode((T_stExecutionStructure*)&exeVector[nWorkerSource], nWorkerSource);
-                if (nNumReceives <= nMutants) {
-                    if (MALONE_DEBUG_DIST_MASTER) printf("distribution_dynamic_mutants - Mutants remain: %d\n", nMutants - nNumReceives);
+            
+            if(nWorkerSource != -1)
+            {
+                if (nIndex <= nMutants) {
+                    exeVector[nWorkerSource].nMutantInit = nIndex;
+                    exeVector[nWorkerSource].nMutantEnd = nIndex;
+                    sendDeployMode((T_stExecutionStructure*)&exeVector[nWorkerSource], nWorkerSource);
+                    nIndex++;
+                } else {
+                    //Mutant has finished its work.
+                    if (MALONE_DEBUG_DIST_MASTER) printf("distribution_dynamic_mutants - Worker %d has finished!\n", nWorkerSource);
+                    exeVector[nWorkerSource].nMutantInit = -1;
+                    sendDeployMode((T_stExecutionStructure*)&exeVector[nWorkerSource], nWorkerSource);
+                    if (nNumReceives <= nMutants) {
+                        if (MALONE_DEBUG_DIST_MASTER) printf("distribution_dynamic_mutants - Mutants remain: %d\n", nMutants - nNumReceives);
 
-                }
+                    }
+                }                
             }
+            else
+                printf("distribution_dynamic_mutants - ERROR! Undefined worker source!!!\n");  
+
         } while (nNumReceives < nMutants); // Substracting 1 by the master
     } else {
         nFinish = 0;
         if (MALONE_DEBUG_DIST_WORKERS) printf("distribution_dynamic_mutants - Workers mode!\n");
-
 
         //if(DEBUG)
         do {
@@ -101,11 +106,11 @@ int distribution_dynamic_mutants(T_eExecutionMode eMethod) {
                 sendMutants(pExeRetMode, MALONE_MASTER);
 
                 if (MALONE_DEBUG_DIST_WORKERS) printf("distribution_dynamic_mutants - Worker <%d> finished!\n", m_nRank);
-            } else {
+            } else 
+            {
                 if (pExeRetMode->nMutantInit == -1)
                     if (MALONE_DEBUG_DIST_WORKERS) printf("distribution_dynamic_mutants - Worker %d finished!\n", m_nRank);
                     else
-
                         if (MALONE_DEBUG_DIST_WORKERS) printf("distribution_dynamic_mutants - WARNING! Deploy mode is empty!!!\n");
             }
 

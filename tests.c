@@ -9,8 +9,7 @@ void testDataType(int choice)
     printf("<%d>testDataType - Init\n", m_nRank);        
     MPI_Bcast(&choice, 1, MPI_INT, 0, MPI_COMM_WORLD);
     
-    //
-    
+    //    
     nValue =33;
     MPI_Send(&nValue, 1, MPI_INT, 1, 0, MPI_COMM_WORLD);
     
