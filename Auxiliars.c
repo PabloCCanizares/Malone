@@ -17,41 +17,97 @@
 //#define TEMP_DEBUG_AUX 1    
 //-------------------------------------------------------
 
+void free_test(T_stTestInfo* pTest)
+{
+
+    if(pTest != NULL)
+    {
+        pTest->dEndTick = pTest->dInitTick = pTest->dTime = -1.0;
+
+        free(pTest);
+        pTest = NULL;
+    }
+}
 void free_mutant(T_stMutant* pMutant)
 {
-    if (DEBUG_AUX) printf("free_mutant - Init\n");
+    if (DEBUG_AUX) printf("<%d>free_mutant - Init\n", m_nRank);
     if(pMutant != NULL)
     {
         pMutant->nNumber=pMutant->nState=pMutant->nTestKiller = -1;
         if(pMutant->strDescription != NULL)
         {
-            free(pMutant->strDescription);
+            free(pMutant->strDescription);  
             pMutant->strDescription = NULL;
+        }        
+        for(int i=0;i<pMutant->oTestList.nElems;i++)
+        {
+            T_stTestInfo* pTest;
+            
+            pTest = pMutant->oTestList.tests[i];
+            //free_test(pTest);  TODO: Buscar posible doble free de tests          
+            pMutant->oTestList.tests[i] = NULL;
         }        
         
         //TODO: Falta liberar los tests
         free(pMutant);
         pMutant = NULL;           
     } 
-    if (DEBUG_AUX) printf("free_mutant - End\n");
+    if (DEBUG_AUX) printf("<%d>free_mutant - End\n", m_nRank);
 }
 /**
  * Free the auxiliar variables
  */
 void free_auxiliars()
 {
-    if (DEBUG_AUX) printf("free_auxiliars - Init\n");
+    if (DEBUG_AUX) printf("<%d>free_auxiliars - Init\n", m_nRank);
     //Free the mutant list
     for (int i = 0; i < m_oMutantList.nElems; i++) {
         T_stMutant* pMutant;
                 
         pMutant =  m_oMutantList.array[i];
-        //free_mutant(pMutant); TODO: esto nos sigue dando problemas
+        free_mutant(pMutant); 
         m_oMutantList.array[i] = NULL;                 
     }
+    
     //Free the env values.
-    free_envfile(m_stEnvValues);        
-    if (DEBUG_AUX) printf("free_auxiliars - End\n");
+    free_envfile(m_stEnvValues);     
+    
+    if(m_pResList != NULL)
+    {
+        for (int i = 0; i < m_pResList->nElems; i++) 
+        {
+            T_stTestInfo* pTest;
+            
+            pTest = m_pResList->tests[i];
+            if(pTest != NULL)
+                free_test(pTest);
+            
+            m_pResList->tests[i] = NULL;
+        }
+        free(m_pResList);
+        m_pResList = NULL;    
+    }
+    
+    if(m_pTestList != NULL)
+    {
+        for (int i = 0; i < m_pTestList->nElems; i++) 
+        {
+            T_stTestInfo* pTest;
+            
+            pTest = m_pTestList->tests[i];
+            if(pTest != NULL)
+                free_test(pTest);
+            
+            m_pTestList->tests[i] = NULL;
+        }
+        free(m_pTestList);
+        m_pTestList = NULL;    
+    }  
+    
+    //TODO:
+    //free_conffile
+    
+    if (DEBUG_AUX) printf("<%d>free_auxiliars - End\n", m_nRank);
 }
 
 void initialize_auxiliars() {
@@ -581,6 +637,8 @@ int allocMutant(int nIndexMutant) {
         pMutantInfo->nState = ALIVE;
         pMutantInfo->nTestKiller = -1;
         pMutantInfo->oTestList.nElems = 0;
+        pMutantInfo->strDescription = NULL;
+        
         for (int i = 0; i < MAX_TESTS; i++) {
             pMutantInfo->oTestList.tests [i] = NULL;
         }
@@ -662,7 +720,6 @@ int insertTestResult(int nMutant, int nTest, T_stTestInfo* pTest) {
         pCheckMutant = m_oMutantList.array[nMutant];
         if (pCheckMutant != NULL) {
 
-            
             pTest->nTest = nTest;
             if (DEBUG_AUX) printf("<%d>insertTestResult - Inserting test number %d  on mutant %d\n", m_nRank, nTest, nMutant);
 
@@ -692,7 +749,7 @@ int insertTestResult(int nMutant, int nTest, T_stTestInfo* pTest) {
         if(pTest == NULL)
             printf("<%d> Warning!! The input test is null!! Mutant (M:%d|T:%d) data not inserted!\n", m_nRank, nMutant, nTest);
         else if(nMutant > sizeof(m_oMutantList.array))
-            printf("<%d>The mutant index (%d) is greater than the capacity of the array (%d)\n", m_nRank, nMutant, sizeof(m_oMutantList.array));
+            printf("<%d> Warning!! The mutant index (%d) is greater than the capacity of the array (%d)\n", m_nRank, nMutant, sizeof(m_oMutantList.array));
         else            
             printf("<%d> Warning!! Mutant (M:%d|T:%d) data not inserted!\n", m_nRank, nMutant, nTest);
     }
@@ -942,23 +999,6 @@ T_stTestInfo* createTest(int nIndexTest, char* strResult, double dTime, int nKil
     if (DEBUG_AUX) printf("createTest - Init\n");
 
     pTest = malloc(sizeof (T_stTestInfo));
-    pTest->dTime = dTime;
-    pTest->nKill = nKill;
-    pTest->nTest = nIndexTest;
-    bzero(pTest->res, MAX_RESULT_SIZE);
-
-    if (strResult != NULL)
-        strcpy(pTest->res, strResult);
-    
-    return pTest;
-}
-
-struct TestInfo* createTestST(int nIndexTest, char* strResult, double dTime, int nKill) {
-    struct TestInfo* pTest;
-    
-    if (DEBUG_AUX) printf("createTest - Init\n");
-
-    pTest = (struct TestInfo*) malloc(sizeof (struct TestInfo));
     pTest->dTime = dTime;
     pTest->nKill = nKill;
     pTest->nTest = nIndexTest;

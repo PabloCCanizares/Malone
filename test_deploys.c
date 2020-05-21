@@ -16,6 +16,8 @@ void testDeploy()
     test_deploy_2();
     test_deploy_3();
     test_deploy_4();
+    
+    m_oAutoTests.nCategories++;
     printf("Test [testDeploy] - Init\n");
 }
 
@@ -64,6 +66,8 @@ void test_deploy_1()
         assert(pExeRetMode != NULL);        
         printf(" DP %d, %d\n", pExeRetMode->nExecutionMode, pExeRetMode->nMutantInit);
     }
+    m_oAutoTests.nPass++;
+    m_oAutoTests.nTotalTests++;
     printf("T1 [test_deploy_1] - End\n");    
 }
 
@@ -98,6 +102,8 @@ void test_deploy_2()
                 
         printf("Test [test_deploy_2] - T2 DP %d, %d\n", oExeRetMode.nExecutionMode, oExeRetMode.nMutantInit);
     }
+    m_oAutoTests.nPass++;
+    m_oAutoTests.nTotalTests++;
     printf("Test [test_deploy_2] - End\n"); 
 }
 void test_deploy_3()
@@ -133,6 +139,8 @@ void test_deploy_3()
         assert(pExeRetMode != NULL);
         printf("T3 DP %d, %d\n", pExeRetMode->nExecutionMode, pExeRetMode->nMutantInit);
     }
+    m_oAutoTests.nPass++;
+    m_oAutoTests.nTotalTests++;
     printf("Test [test_deploy_3] - End\n"); 
 }
 void test_deploy_4()
@@ -199,5 +207,7 @@ void test_deploy_4()
         assert(pExeRetMode != NULL);
         printf("Test [test_deploy_4] - T4 DP %d, %d\n", pExeRetMode->nExecutionMode, pExeRetMode->nMutantInit);
     }
+    m_oAutoTests.nPass++;
+    m_oAutoTests.nTotalTests++;
     printf("Test [test_deploy_4] - End\n"); 
 }

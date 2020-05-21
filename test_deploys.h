@@ -17,7 +17,9 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-
+    
+#include "autotest.h"
+    
 void testDeploy();
 void test_deploy_1();
 void test_deploy_2();

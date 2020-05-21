@@ -14,6 +14,8 @@
 #ifndef TEST_MUTANTS_H
 #define TEST_MUTANTS_H
 
+#include "autotest.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif

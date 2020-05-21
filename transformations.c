@@ -27,10 +27,10 @@ T_stMutant* redMut2Mut(T_stM* pReducedMut)
     pRet = malloc(sizeof(T_stMutant));
     pRet->nNumber = pReducedMut->nNumber;
     pRet->nState = pReducedMut->nState;
-    pRet->nTestKiller =  pReducedMut->nTestKiller;
-    
+    pRet->nTestKiller =  pReducedMut->nTestKiller;    
     pRet->oTestList.nElems = pReducedMut->nTests;            
-
+    pRet->strDescription = NULL;
+    
     for(i = 0;i<pRet->oTestList.nElems;i++)
     {        
         pRet->oTestList.tests[i] = malloc(sizeof(T_stTestInfo));

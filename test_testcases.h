@@ -14,6 +14,7 @@
 #ifndef TEST_TESTCASES_H
 #define TEST_TESTCASES_H
 
+#include "autotest.h"
 
 #ifdef __cplusplus
 extern "C" {

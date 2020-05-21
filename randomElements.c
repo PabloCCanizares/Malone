@@ -6,7 +6,7 @@
 T_stTestInfo* generateRandomTest(int nTest)
 {
     T_stTestInfo* pRet;
-    char buffer [50];
+    char buffer [100];
     srand(time(NULL));
     
     pRet = malloc(sizeof(T_stTestInfo));
@@ -14,7 +14,7 @@ T_stTestInfo* generateRandomTest(int nTest)
     pRet->dTime = rand();
     pRet->nKill = rand();
     bzero(&buffer,50);
-    sprintf (buffer, "data_%d", rand());
+    sprintf (buffer, "data_%04d", rand());
     strcpy(pRet->res, buffer);
             
     return pRet;
@@ -98,11 +98,15 @@ T_stTestList* generateRandomTestList_r(int nTests)
 void generateRandomTestList(T_stTestList* pTestList, int nTests)
 {
     int i;
-    pTestList->nElems = nTests;
-    for(i=0;i<nTests;i++)
+    if(pTestList != NULL)
     {
-        pTestList->tests[i] = generateRandomTest(i);
+        pTestList->nElems = nTests;
+        for(i=0;i<nTests;i++)
+        {
+            pTestList->tests[i] = generateRandomTest(i);
+        }
     }
+    
 }
 T_stMutant* generateRandomMutant(int nTests)
 {
@@ -110,8 +114,12 @@ T_stMutant* generateRandomMutant(int nTests)
     
     pMutant = malloc(sizeof(T_stMutant));
     pMutant->nNumber = 1;
-    pMutant->nState=2;
-    generateRandomTestList(&pMutant->oTestList,nTests);
+    pMutant->nState=2;    
+    
+    for(int i=0;i<nTests;i++)
+    {
+        pMutant->oTestList.tests[i] = generateRandomTest(i);
+    }
     printf("generateRandomMutant done!");
     
     return pMutant;

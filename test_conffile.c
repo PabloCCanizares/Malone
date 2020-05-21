@@ -12,4 +12,6 @@ void testConfFile()
     printf("testConfFile - Init\n");
     
     printf("testConfFile - End\n");
+    m_oAutoTests.nPass++;
+    m_oAutoTests.nCategories++;
 }

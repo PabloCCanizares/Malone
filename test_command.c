@@ -11,13 +11,14 @@ void testCommand()
 {
     printf("Test [testCommand] - Init\n");
    
-    test_command_waste();
-    //test_command_1();
+    //test_command_waste();
+    test_command_1();
     test_command_2();
     //test_command_3();   
     //test_command_4();   
     //test_command_5();   
     //test_command_6();   
+    m_oAutoTests.nCategories++;
     printf("Test [testCommand] - End\n");
 }
 
@@ -44,6 +45,8 @@ void test_command_1()
         }
         
     }
+    m_oAutoTests.nPass++;
+    m_oAutoTests.nTotalTests++;
     printf(" OK\n");
 }
 
@@ -73,7 +76,8 @@ void test_command_2()
         }
      
     }
-    
+    m_oAutoTests.nPass++;
+    m_oAutoTests.nTotalTests++;
     printf(" OK\n");
 }
 
@@ -100,6 +104,8 @@ void test_command_3()
                 free(strCommandRet);
         }
     }
+    m_oAutoTests.nPass++;
+    m_oAutoTests.nTotalTests++;
     printf(" OK\n");
 }
 
@@ -127,6 +133,8 @@ void test_command_4()
                 free(strCommandRet);
         }
     }
+    m_oAutoTests.nPass++;
+    m_oAutoTests.nTotalTests++;
     printf(" OK\n");
 }
 
@@ -153,6 +161,8 @@ void test_command_5()
                 free(strCommandRet);
         }
     }
+    m_oAutoTests.nPass++;
+    m_oAutoTests.nTotalTests++;
     printf(" OK\n");
 }
 /**
@@ -184,6 +194,8 @@ void test_command_6()
                 free(strCommandRet);
         }
     }
+    m_oAutoTests.nPass++;
+    m_oAutoTests.nTotalTests++;
     printf(" OK\n");
 }
 

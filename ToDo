@@ -62,9 +62,9 @@ TODO cercano:
 - Con un autotest_add y markertoken '-' Excepcion no controlada (Creo que está bien, pero la salida por abort es abrupta)
 - Arreglar el esquema de distribucion 1
 -Esquema de distribucion 3. Fixed [17/05/20]
--Autotest de todos los algoritmos seguidos deja entrever problemas en la liberacion de memoria. Arreglar!
-    + Por separado funcionan, pero juntos falla. 
-    + Generar funciones de liberacion de memoria y conseguir que 1 unica ejecucion termine
+-Autotest de todos los algoritmos seguidos deja entrever problemas en la liberacion de memoria. Arreglar! Fixed [18/05/20]
+    + Por separado funcionan, pero juntos falla. Fixed [18/05/20]
+    + Generar funciones de liberacion de memoria y conseguir que 1 unica ejecucion termine. Fixed [18/05/20]
 ------------------------
 TODO futuro:
 * Incluir un nuevo macro, [[MALONE_HOME]] y [[MALONE_PROJECTS]] para permitir compatibilidad de posibles proyectos

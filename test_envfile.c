@@ -27,6 +27,7 @@ void testEnvFile()
     //Test 5
     test_envfile_5();
     
+    m_oAutoTests.nCategories++;
     printf("testEnvFile - End\n");
 }
 void test_envfile_1()
@@ -39,9 +40,11 @@ void test_envfile_1()
     stEnvValueIncomp = (T_stIniValues*) loadEnvironmentFromIniFile(strPathIncomp);
     if(stEnvValueIncomp != NULL)
     {
-        free(stEnvValueIncomp);
+        m_oAutoTests.nPass++;
+        free_envfile(stEnvValueIncomp);
         printf("Test [testEnvFile] - Ini_1 sucessfully processed\n");
     }
+    m_oAutoTests.nTotalTests++;
 }
 /**
  * Loads an existing environmental file, analyses a part of its content and delete it.
@@ -62,13 +65,14 @@ void test_envfile_2()
         assert(stEnvValueComp->nParallelCompilation == 0);
         assert(stEnvValueComp->nParallelMd5sum == 1);
         assert(stEnvValueComp->nMultipleCoordinators == 0);
-        
-        free(stEnvValueComp);
+        m_oAutoTests.nPass++;
+        free_envfile(stEnvValueComp);
         printf("Test [testEnvFile] - Test_2 OK\n");
     }
     else
         printf("Test [testEnvFile] - Test_2 KO\n");
     
+    m_oAutoTests.nTotalTests++;
 }
 /**
  * Test_3: Tries to load an inexistent file.
@@ -82,9 +86,18 @@ void test_envfile_3()
     assert(stNotExisting == NULL);
     
     if(stNotExisting == NULL)
+    {
         printf("Test [testEnvFile] - Test_3 OK\n");
+        m_oAutoTests.nPass++;
+    }
     else
-        printf("Test [testEnvFile] - Test_3 KO\n");
+    {
+        m_oAutoTests.nFail++;
+        printf("Test [testEnvFile] - Test_3 KO\n");        
+    }
+        
+    
+    m_oAutoTests.nTotalTests++;
 }
 /**
  * Test_4: Loads an existing environmental file and free it for 1000 times.
@@ -105,11 +118,14 @@ void test_envfile_4()
         
         if(stEnvValueComp != NULL)
         {
-            free(stEnvValueComp);
+            free_envfile(stEnvValueComp);
         }
     
         n--;
     }while(n>0);
+    
+    m_oAutoTests.nPass++;
+    m_oAutoTests.nTotalTests++;
     printf("Test [testEnvFile] - Ini_5 sucessfully processed\n");
 }
 
@@ -122,9 +138,18 @@ void test_envfile_5()
     assert(stNotExisting != NULL);
     
     if(stNotExisting != NULL)
+    {
+        m_oAutoTests.nPass++;
         printf("Test [testEnvFile] - Test_5 OK\n");
+    }
     else
+    {
+        m_oAutoTests.nFail++;
         printf("Test [testEnvFile] - Test_5 KO\n");    
+    }
+        
+    
+    m_oAutoTests.nTotalTests++;
 }
 char* loadEnvFile_t(const char* envValue)
 {

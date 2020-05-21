@@ -31,10 +31,13 @@ void addResultIndex(T_stTestList *pTestList,int nIndex,const char *t,double dTim
 void initializeEquivalentMap(int nMutants,int nTests);
 void initializeExecutionMap(int nMutants,int nTests);
 void initialize_auxiliars();
+
 void free_auxiliars(); 
+void free_test(T_stTestInfo* pTest);
+void free_mutant(T_stMutant* pMutant);
+
 int addResult(T_stTestList *pTestList,const char *t,double dTime,int nKill);
 T_stTestInfo *createTest(int nIndexTest,char *strResult,double dTime,int nKill);
-struct TestInfo* createTestST(int nIndexTest, char* strResult, double dTime, int nKill);
 char *buildExeLine(int nIndexMutant,int nIndexTest, int nOriginalMode);
 char* buildEquivLine(int nIndexMutant, int nOriginalMode);
 char* generateCompilationLine(int nIndexMutant, int nOriginalMode);

@@ -9,7 +9,7 @@
 int distribution_full_dynamic(T_eExecutionMode eMethod) {
     //Divide the number of mutants among the available workers!
     int nMutants, nTests, nSent, nIndex, nIndexMutant, nIndexTest, nAlive, nWorkerSource, nFinish, nRemainBlocks, nCounterAux;
-    int nTestRecalc, nMutantRecalc;
+    int nTestRecalc;
     T_stExecutionStructure exeVector[MAX_WORKERS];
     T_stExecutionStructure* pExeRetMode;
     T_stTestInfo* pTest;
@@ -94,7 +94,6 @@ int distribution_full_dynamic(T_eExecutionMode eMethod) {
                     long int lElapsed = (long int) (getTick() - m_lTotalTime);
                     if (MALONE_DEBUG_DIST_MASTER) printf("distribution_full_dynamic - Executing Mutant %d of %d | Elapsed: %ld\n", nCounterAux, nMutants, lElapsed);
                 }
-
             }
 
             //If there is remaining mutants to distribute, send it!
@@ -141,8 +140,10 @@ int distribution_full_dynamic(T_eExecutionMode eMethod) {
                 nIndexTest = pExeRetMode->nTestInit;
                 nIndexMutant = pExeRetMode->nMutantInit;
                 if (MALONE_DEBUG_DIST_WORKERS) printf("distribution_full_dynamic - Sending results to master [M: %d - T: %d]\n", nIndexMutant, nIndexTest);
-                pTest = m_oMutantList.array[nIndexMutant]->oTestList.tests[nIndexTest];
-                if (MALONE_DEBUG_DIST_WORKERS) printTest(pTest);
+                
+                //Quitar esto de aqui, pero ya
+                //pTest = m_oMutantList.array[nIndexMutant]->oTestList.tests[nIndexTest];
+                //if (MALONE_DEBUG_DIST_WORKERS) printTest(pTest);
             } else {
                 if (MALONE_DEBUG_DIST_WORKERS) printf("distribution_full_dynamic - Worker <%d> finished!\n", m_nRank);
             }

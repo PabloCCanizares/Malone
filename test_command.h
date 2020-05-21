@@ -6,7 +6,7 @@
 
 /* 
  * File:   test_command.h
- * Author: j0hn
+ * Author: Pablo C. Cañizares
  *
  * Created on April 28, 2020, 9:16 PM
  */
@@ -17,6 +17,8 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+#include "autotest.h"
 
 void testCommand();
 void test_command_1();

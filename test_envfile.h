@@ -15,6 +15,7 @@
 #define TEST_ENVFILE_H
 
 #include "Auxiliars.h"
+#include "autotest.h"
 
 #ifdef __cplusplus
 extern "C" {

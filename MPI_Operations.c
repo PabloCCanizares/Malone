@@ -505,6 +505,7 @@ void sendMutants(T_stExecutionStructure* pExeMode, int nDest) {
                 } else
                     printf("<%d>sendMutants - WARNING! empty mutant\n", m_nRank);
                 if (DEBUG_MPI_OPS) printf("<%d>sendMutants - Configured mutant %d with tests: %d test-list-size: %d\n", m_nRank, i, nTotalTestsToSend, m_oMutant[i - nMutantInit].nTests);
+            
             }
             if (DEBUG_MPI_OPS) printf("<%d>sendMutants - Informing the master with the number of mutants to send: %d\n", m_nRank, nTotalMutants);
             //Informs the master with the number of mutants to send        
@@ -527,7 +528,14 @@ void sendMutants(T_stExecutionStructure* pExeMode, int nDest) {
         if (nDest < 0)
             printf("<%d>sendMutants - WARNING!! Negative destination.\n", m_nRank);
     }
+    #ifdef EXPERIMENTAL_MEM_SAFE  
+    for (i = nMutantInit; i <= nMutantEnd; i++) {
+        //After sending, reset the mutants in safe mode
+        //we must reset the mutant!!
+        m_oMutant[i - nMutantInit].nTests=0;
+    }
 
+    #endif 
     if (DEBUG_MPI_OPS) printf("sendMutants - End\n");
 }
 
@@ -536,7 +544,7 @@ void sendMd5Mutants(T_stExecutionStructure* pExeMode, char** strMd5List, int nTo
     MPI_Status status;
     char* strMd5ListPlain;
 
-    if (DEBUG_MPI_OPS) printf("<%d>sendMutants - Init\n", m_nRank);
+    if (DEBUG_MPI_OPS) printf("<%d>sendMd5Mutants - Init\n", m_nRank);
     if (pExeMode && nDest >= 0) {
         nTotalTestsToSend = 0;
         nMutantInit = pExeMode->nMutantInit;
@@ -544,19 +552,19 @@ void sendMd5Mutants(T_stExecutionStructure* pExeMode, char** strMd5List, int nTo
 
         nTotalMutants = (nMutantEnd - nMutantInit) + 1;
 
-        if (DEBUG_MPI_OPS) printf("<%d>sendMutants - Sending %d mutants - [%d - %d]\n", m_nRank, nTotalMutants, nMutantInit, nMutantEnd);
+        if (DEBUG_MPI_OPS) printf("<%d>sendMd5Mutants - Sending %d mutants - [%d - %d]\n", m_nRank, nTotalMutants, nMutantInit, nMutantEnd);
         if (nTotalMutants > 0) {
 
             nTotalSize = sizeof (char) * sizeof (strMd5List);
 
-            if (DEBUG_MPI_OPS) printf("<%d>sendMutants - Informing the master with the number of mutants to send: %d\n", m_nRank, nTotalMutants);
+            if (DEBUG_MPI_OPS) printf("<%d>sendMd5Mutants - Informing the master with the number of mutants to send: %d\n", m_nRank, nTotalMutants);
             //Informs the master with the number of mutants to send        
             MPI_Send(&nTotalMutants, 1, MPI_INT, nDest, 0, MPI_COMM_WORLD);
 
             //Informs the master with the number of mutants to send        
             MPI_Send(&nTotalSizeInput, 1, MPI_INT, nDest, 0, MPI_COMM_WORLD);
 
-            if (DEBUG_MPI_OPS) printf("<%d>sendMutants - Sending md5 mutants!\n", m_nRank);
+            if (DEBUG_MPI_OPS) printf("<%d>sendMd5Mutants - Sending md5 mutants!\n", m_nRank);
 
             //plain the md5List
             strMd5ListPlain = malloc(sizeof (char*)*nTotalSizeInput);
@@ -582,16 +590,16 @@ void sendMd5Mutants(T_stExecutionStructure* pExeMode, char** strMd5List, int nTo
             free(strMd5ListPlain);
 
         } else {
-            printf("<%d>sendMutants - WARNING!! Negative number of mutants to send!!\n", m_nRank);
+            printf("<%d>sendMd5Mutants - WARNING!! Negative number of mutants to send!!\n", m_nRank);
         }
     } else {
         if (!pExeMode)
-            printf("<%d>sendMutants - WARNING!! Null mutant.\n", m_nRank);
+            printf("<%d>sendMd5Mutants - WARNING!! Null mutant.\n", m_nRank);
         if (nDest < 0)
-            printf("<%d>sendMutants - WARNING!! Negative destination.\n", m_nRank);
+            printf("<%d>sendMd5Mutants - WARNING!! Negative destination.\n", m_nRank);
     }
 
-    if (DEBUG_MPI_OPS) printf("sendMutants - End\n");
+    if (DEBUG_MPI_OPS) printf("sendMd5Mutants - End\n");
 }
 
 int receiveSingleTestAndCheck(T_stExecutionStructure pExeMode[MAX_WORKERS], int *pnWorkerSource) {
@@ -740,7 +748,7 @@ int receiveMutants(T_stExecutionStructure pExeMode[MAX_WORKERS]) {
             nTestInit = pExeMode[nWorkerSource].nTestInit;
             nTestEnd = pExeMode[nWorkerSource].nTestEnd;
             nTotalMutants = (nMutantEnd - nMutantInit)+1;
-            nTotalTests = (nTestEnd - nTestInit)+1;
+            nTotalTests = (nTestEnd - nTestInit);
 
             if (nMutantInit > 0) {
                 //
@@ -765,7 +773,7 @@ int receiveMutants(T_stExecutionStructure pExeMode[MAX_WORKERS]) {
                     insertMutantTestByTest(pMutant, i, status.MPI_SOURCE);
                     printf("<%d>receiveMutants - 2.%d\n", m_nRank, i);
                     
-                    /* Esto da error por doble free
+                    /* Esto da error por doble free y creo que logicamente. Hay tests compartidos!
                     if (pMutant != NULL)
                         free(pMutant);
                     */

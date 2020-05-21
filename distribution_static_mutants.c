@@ -1,5 +1,5 @@
 /* 
- * File:   DistributionAlgorithms.h
+ * File:   distribution_static_mutants.c
  * Author: Pablo C. Cañizares
  *
  * Created on August 15, 2018, 12:54 PM
@@ -18,7 +18,6 @@ int distribution_static_mutants(T_eExecutionMode eMethod) {
     if (m_nRank == MALONE_MASTER) {
         printf("distribution_static_mutants - Master!! mode!\n");
         //Initialize
-        //memset(&exeVector, 0, sizeof(T_stExecutionStructure)*MAX_WORKERS);
         nMutants = m_stEnvValues->nTotalMutants;
         nTests = m_stEnvValues->nTotalTests;
         nIndex = 1;
@@ -66,7 +65,7 @@ int distribution_static_mutants(T_eExecutionMode eMethod) {
             pExeRetMode = receiveDeployMode();
 
         if (MALONE_DEBUG_DIST_WORKERS) printf("distribution_static_mutants - Received deploy mode!\n");
-        //if(DEBUG)
+
         printDeployStruct(pExeRetMode);
 
         //execute

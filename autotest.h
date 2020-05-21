@@ -18,6 +18,7 @@
 extern "C" {
 #endif
 
+#include <math.h>
 #include "Options.h"
 #include "test_command.h"
 #include "test_envfile.h"
@@ -28,7 +29,21 @@ extern "C" {
 #include "test_dist_algorithm.h"    
 #define TEST_DEBUG 1
 
+typedef struct
+{
+    int nTotalTests;
+    int nPass;
+    int nFail;
+    int nCategories;
+}T_stAutoTests;
 
+T_stAutoTests m_oAutoTests;
+
+int main(int argc, char** argv);
+static void mySignalCatcher(int n);
+void autotest();
+void autotest_print_results();
+void autotest_initialise();
 #ifdef __cplusplus
 }
 #endif

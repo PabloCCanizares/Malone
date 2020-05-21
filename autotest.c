@@ -13,44 +13,30 @@
 #include "autotest.h"
 #include "Auxiliars.h"
 #include "MPI_Operations.h"
+void autotest_initialise();
 void autotest();
+void autotest_print_results();
 
-static
-void mySignalCatcher(int n) {
-    fprintf(stderr, "<%d> Control-C or similar caught, quitting.\n", m_nRank);
-
-    printf("<%d>  SIGNAL (%d) catched during the execution of the program", m_nRank, n);
-    MPI_Abort(MPI_COMM_WORLD,33);    
-}
-
-int main(int argc, char** argv)
+void autotest_initialise()
 {
-    printf("Auto test v0.0 starting\n");
-    
-    //Configure signal catcher
-    signal(SIGINT, mySignalCatcher);
-    signal(SIGTERM, mySignalCatcher);
-    signal(SIGHUP, mySignalCatcher);
-    signal(SIGSEGV, mySignalCatcher);
-    signal(SIGABRT, mySignalCatcher);
-    
-    autotest();
-
-    printf("End\n");
+    m_oAutoTests.nCategories = m_oAutoTests.nFail = m_oAutoTests.nPass = m_oAutoTests.nTotalTests = 0;
 }
-
 void autotest()
 {
+    printf("Auto test v1.0 starting\n");
+   
+    autotest_initialise();
+    
     //The main idea is to load a test file, and configure it
     //Depending on the size of the MPI environment, several tests will be conducted.
     initialize_auxiliars();
     
     //1 - Single process
     //  - Environment file load.
-    //testEnvFile();
+    testEnvFile();
     
     //  - Configuration load.
-    //testConfFile();
+    testConfFile();
     
     //Testing command execution
     //testCommand();
@@ -73,54 +59,32 @@ void autotest()
            
     //3 - Test full executions
     //Distribution algorithms
+    free_auxiliars();
+    //initialize_auxiliars();
+    //loadConfig();
     testDistributionAlgorithms();
     
     MPI_Finalize();
     
     //Lo mas importante y donde mas flaquea el proyecto es en las estructuras estaticas
     //Algun dia habra que echarle webs
-}
-
-
-/*
-struct a_tag {
-   char c;
-   int i;
-   char *w;
-};
-// return_ptr: return a pointer to a struct 
-struct a_tag *return_ptr(void) {
-   struct a_tag *p;
-   p = (struct a_tag *) malloc(sizeof(struct a_tag));
-   p -> c = 'Z'; // same as (*p).c = 'Z' 
-   p -> i = 77;  // same as (*p).i = 77 
-   p -> w = "Yours does too";
-   return p;
-}
-struct TestInfo* createTestST99(int nIndexTest, char* strResult, double dTime, int nKill) {
-    struct TestInfo* pTest;    
-
-    pTest = (struct TestInfo*) malloc(sizeof (struct TestInfo));
-    pTest->dTime = dTime;
-    pTest->nKill = nKill;
-    pTest->nTest = nIndexTest;
-    bzero(pTest->res, MAX_RESULT_SIZE);
-
-    if (strResult != NULL)
-        strcpy(pTest->res, strResult);
     
-    return pTest;
+    autotest_print_results();
+    
+    printf("End\n");
 }
 
-// print_a: print a struct where pointer is passed 
-void print_p(int test_num, struct a_tag *p) {
-   printf("Test %i, ", test_num);
-   printf("Passing pointer, fields: c:%c, i:%3i, w:\"%s\"\n",
-      p -> c, p -> i, p -> w);   p -> c same as (*p).c 
-    increment below changes struct back in main 
-   p->i++; /* same as (p->i)++ 
+void autotest_print_results()
+{
+    if(m_nRank == 0)
+    {
+        printf("================================\n");
+        printf("MALONE autotest v1.0\n");
+        printf("Total categories: %d\n", m_oAutoTests.nCategories);
+        printf("Total tests: %d\n", m_oAutoTests.nTotalTests);
+        printf("Total pass: %d\n", m_oAutoTests.nPass);
+        printf("Total fail: %d\n", m_oAutoTests.nFail);
+        printf("================================\n");
+    }
+    
 }
-    struct a_tag *p3;
-    p3 = return_ptr();
-    print_p(8, p3);
- */

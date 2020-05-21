@@ -9,7 +9,7 @@
  * @par Comment:
  *     None.
  * @author   Pablo C. Cañizares
- *  * @date     25 Oct 2015 - 11 May 2020
+ *  * @date     25 Oct 2015 - 20 May 2020
  * @par  Copying and copyrights:
  *     This program is free software; you can redistribute it and/or modify
  *     it under the terms of the GNU General Public License as published by
@@ -38,7 +38,7 @@
 #endif
 
 //TODO: Temporal define to disable memory allocation
-#define FREE_MEM 0
+#define FREE_MEM 1
 
 void MonitorAlarmhandler(int sig) {
     char* strCommand, *strResult;
@@ -236,6 +236,10 @@ int malone_initialize() {
 
 void malone_free() {
     printf("<%d> free_Malone!!\n", m_nRank);
+    
+    //Now trying to delete the shared memory
+    free_auxiliars();
+    
     if (m_nRank == MALONE_MASTER) {
         //End mpi
         MPI_Finalize();

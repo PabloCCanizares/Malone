@@ -17,18 +17,21 @@ void testTestcases()
     test_testcase_0();
     test_testcase_1();
     test_testcase_2();
+    
+    m_oAutoTests.nCategories++;
     printf("Test [testTestcases] - End\n");
 }
 
 void test_testcase_0()
 {
-    struct TestInfo* pTest;
+    T_stTestInfo* pTest;
     
+    MPI_Barrier(MPI_COMM_WORLD);
     printf("Test [test_testcase_0] - Init\n");
     
     if(m_nRank == 0)
     {
-        pTest = (struct TestInfo*) createTestST(0, "Test BRO!\n", 0.1,1);
+        createTestRefP(0, "Test BRO!\n", 0.1,1, &pTest);
         printTest((T_stTestInfo*)pTest);
         
         for(int i=1;i<m_nSize;i++)
@@ -42,6 +45,8 @@ void test_testcase_0()
         
         printTest((T_stTestInfo*) pTest);
     }
+    m_oAutoTests.nPass++;
+    m_oAutoTests.nTotalTests++;
     printf("Test [test_testcase_0] - End\n");
 }
 
@@ -51,6 +56,7 @@ void test_testcase_1()
     
     printf("Test [test_testcase_1] - Init\n");
     
+    MPI_Barrier(MPI_COMM_WORLD);
     if(m_nRank == 0)
     {
         createTestRefP(0, "Test BRO!\n", 0.1,1, &pTest);
@@ -68,6 +74,8 @@ void test_testcase_1()
         
         printTest(pTest);
     }
+    m_oAutoTests.nPass++;
+    m_oAutoTests.nTotalTests++;
     printf("Test [test_testcase_1] - End\n");
 }
 
@@ -77,6 +85,7 @@ void test_testcase_2()
     T_stExecutionStructure exeVector[MAX_WORKERS];
     
     printf("Test [test_testcase_2] - Init\n");
+    MPI_Barrier(MPI_COMM_WORLD);
     if(m_nRank == 0)
     {
         nRemainingBlocks = m_nSize -1;
@@ -119,5 +128,7 @@ void test_testcase_2()
             printf("Test [test_testcase_2] - ERROR receiving deploymode\n");
         }        
     }
+    m_oAutoTests.nPass++;
+    m_oAutoTests.nTotalTests++;
     printf("Test [test_testcase_2] - End\n");
 }

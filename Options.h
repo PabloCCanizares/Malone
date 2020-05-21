@@ -149,14 +149,14 @@ typedef struct T_stTestInfo{
     int nTest;                  //Id of the test case    
 }T_stTestInfo;
 
-struct TestInfo{
+/*struct TestInfo{
     char res[MAX_RESULT_SIZE];  //Result of the test case execution
     double dTime;               //Execution time of the test
     double dInitTick;           //This time is ticked by the master
     double dEndTick;            //This time is ticked by the master
     int nKill;                  //Indicates if this test kills a mutant
     int nTest;                  //Id of the test case    
-};
+};*/
 
 typedef struct{
     char res[MAX_RESULT_SIZE]; 
@@ -245,11 +245,11 @@ typedef struct
 }T_stExecutionStructure;        //TODO: Dime donde se usa
 
 typedef struct {
-    int nNumber;
-    int nState; //State of the mutant Dead=0, Alive =1
-    int nTestKiller; //Number of test that kills the mutant
+    int nNumber;        //Id of the mutant
+    int nState;         //State of the mutant Dead=0, Alive =1
+    int nTestKiller;    //Number of test that kills the mutant
     char* strDescription; //Brief description: type of mutant, line of code ... 
-    T_stTestList oTestList;
+    T_stTestList oTestList; //List of tests associated to this mutant
 } T_stMutant;
 
 typedef struct {
@@ -271,9 +271,9 @@ T_stM m_oMutant[MAX_MUTANTS];
 #endif
 
 //DATATYPES
-MPI_Datatype m_DeployType;
-MPI_Datatype m_TestType;
-MPI_Datatype m_MutantType;
+MPI_Datatype m_DeployType;          //Datatype used for the distribution algorithms, which allows to change the size of the grain (used for all the algorithms).
+MPI_Datatype m_TestType;            //Datatype of test cases
+MPI_Datatype m_MutantType;          //Datatype of mutants
 
 int m_oReorderIndexTest[MAX_TESTS];
 int m_oSortedIndexTest[MAX_TESTS];
@@ -330,6 +330,7 @@ gint m_nRank;
 gint m_nSize;
 
 int m_nDebugMode;
+int m_nAutoTest;
 int m_nSelAlgorithm;
 int m_nCompilationEnabled;
 int m_nRedirectToDiskEnabled;

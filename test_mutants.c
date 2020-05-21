@@ -14,6 +14,8 @@ void testMutants()
 {
     printf("Test [testMutants] - Testing Mutants start\n");
     test_mutants_1();
+    //TODO: test_mutants_1() enviando VARIOS mutantes
+    m_oAutoTests.nCategories++;
     printf("Test [testMutants] - End\n");
 }
 void test_mutants_1()
@@ -23,6 +25,7 @@ void test_mutants_1()
     T_stExecutionStructure exeVector[MAX_WORKERS];
     
     printf("Test [test_mutants_1] - Init\n");
+    MPI_Barrier(MPI_COMM_WORLD);
     if(m_nRank == 0)
     {
         nRemainingBlocks = m_nSize -1;
@@ -45,6 +48,9 @@ void test_mutants_1()
             
             assert(pMutant != NULL);
             
+            if(pMutant != NULL)
+                free_mutant(pMutant);
+            
             nRemainingBlocks--;
             printf("%d\n", nRemainingBlocks);
         }while(nRemainingBlocks);
@@ -58,14 +64,19 @@ void test_mutants_1()
          
         if(pExeRetMode != NULL)
         {
-            pMutant = generateRandomMutant(1000);
+            pMutant = generateRandomMutant(MAX_TESTS);
             printMutant((T_stMutant*) pMutant);
             sendMutant(pMutant, MALONE_MASTER);
+            
+            if(pMutant != NULL)
+                free_mutant(pMutant);            
         }
         else
         {
             printf("Test [test_mutants_1] - ERROR receiving deploymode\n");
         }        
     }
+    m_oAutoTests.nPass++;
+    m_oAutoTests.nTotalTests++;
     printf("Test [test_mutants_1] - End\n");
 }
