@@ -16,6 +16,7 @@
 void autotest_initialise();
 void autotest();
 void autotest_print_results();
+#define CONF_ALLOC_FREE 100
 
 void autotest_initialise()
 {
@@ -29,8 +30,16 @@ void autotest()
     
     //The main idea is to load a test file, and configure it
     //Depending on the size of the MPI environment, several tests will be conducted.
-    initialize_auxiliars();
     
+    //TODO: otra categoria de tests. De estres o lo que sea
+    for(int i=0;i<CONF_ALLOC_FREE;i++)
+    {
+        printf("Testing init/free method - %d\n", i);
+        initialize_auxiliars();
+        free_auxiliars();
+    }
+    
+    initialize_auxiliars();
     //1 - Single process
     //  - Environment file load.
     //testEnvFile();
@@ -55,7 +64,7 @@ void autotest()
     //testTestcases();
     
     //Mutants
-    //testMutants();
+    testMutants();
            
     //3 - Test full executions
     //Distribution algorithms
@@ -67,7 +76,7 @@ void autotest()
     MPI_Finalize();
     
     //Lo mas importante y donde mas flaquea el proyecto es en las estructuras estaticas
-    //Algun dia habra que echarle webs
+    //Algun dia habra que echarle webs. Llego el dia y se lo echamos! Quitamos el limite! 24/05/2020
     
     autotest_print_results();
     

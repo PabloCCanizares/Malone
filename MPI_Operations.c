@@ -25,6 +25,7 @@
 #include "Auxiliars.h"
 #include "MPI_Operations.h"
 
+//TODO: Dividir MPI operations en minimo dos: MALONE_MPI_Ops_Tests && MALONE_MPI_Ops_Mutants
 
 #ifdef DISABLELOGS
 #define DEBUG_MPI_OPS 0
@@ -362,6 +363,8 @@ void sendMutant(T_stMutant* pMutant, int nDest) {
     T_stM oRedMutant;
     int i;
 
+    printfMutantFull(pMutant);
+    
     if (pMutant && nDest >= 0) {
         oRedMutant.nNumber = pMutant->nNumber;
         oRedMutant.nState = pMutant->nState;
@@ -456,6 +459,7 @@ void sendMutants(T_stExecutionStructure* pExeMode, int nDest) {
             for (i = nMutantInit; i <= nMutantEnd; i++) {
                 pMutant = m_oMutantList.array[i];
                 pTest = NULL;;
+                
                 if (pMutant) {
                     if (DEBUG_MPI_OPS) printf("<%d>sendMutants - [Mutant - %d] Inserting Tests: %d \n", m_nRank, i, pMutant->oTestList.nElems);
                     printMutant(pMutant);
@@ -486,12 +490,26 @@ void sendMutants(T_stExecutionStructure* pExeMode, int nDest) {
                             m_oRedMutantList[i].oTest[j] = pTest->nTest;
                             m_oRedMutantList[i].oTime[j] = pTest->dTime;
                             m_oRedMutantList[i].nTests++;
-#endif                            
+#endif                        
+                            /* To delete, debug intro
+                            if(pTest)
+                            {
+                                printf("<+ Numbers: redmutIndex: %d, jIndex: %d\n", i-nMutantInit, j);
+                                printf("<+ Overall test %d,%lf,%d,%s>\n",pTest->nTest, pTest->dTime,pTest->nKill,pTest->res);
+                                printf("<+ sendp %d(%d, %d, %lf)\n",i-nMutantInit, pTest->nKill,pTest->nTest,pTest->dTime);
+                                printf("<+ sendred: %d( %d, %d, %lf)\n", i-nMutantInit, m_oRedMutantList[i-nMutantInit].oKill[j], m_oRedMutantList[i-nMutantInit].oTest[j], m_oRedMutantList[i-nMutantInit].oTime[j]);
+                                printf("<+ sendfix0: %d( %d, %d, %lf)\n", 0, m_oRedMutantList[0].oKill[0], m_oRedMutantList[0].oTest[0], m_oRedMutantList[0].oTime[0]);
+                            }*/
+                            
+                            /* Also to delete
                             if (DEBUG_MPI_OPS) printf("<%d>sendMutants - Inserting test: ", m_nRank);
                             printTest(pTest);
                             if (DEBUG_MPI_OPS) printf("<%d>sendMutants - -\n", m_nRank);
+                             * */
                             nTotalTestsToSend++;
                         }
+                        else
+                             printf("<%d>sendMutants - WARNING! empty test %d\n", m_nRank, j);
                     }
 
                 } else
@@ -506,6 +524,10 @@ void sendMutants(T_stExecutionStructure* pExeMode, int nDest) {
             if (DEBUG_MPI_OPS) printf("<%d>sendMutants - Sending mutants!\n", m_nRank);
             //Then, send the mutants!            
 #ifdef EXPERIMENTAL_MEM_SAFE 
+           /* TODO: delete
+            * printf("<+ sendfix0: %d( %d, %d, %ld)\n", 0, m_oRedMutantList[0].oKill[0], m_oRedMutantList[0].oTest[0], m_oRedMutantList[0].oTime[0]);
+            printf("<+ sendfix1: %d( %d, %d, %ld)\n", 0, m_oRedMutantList[0].oKill[1], m_oRedMutantList[0].oTest[1], m_oRedMutantList[0].oTime[1]);
+            * */
             MPI_Send(&m_oRedMutantList[0], nTotalMutants, m_MutantType, nDest, 0, MPI_COMM_WORLD);
 #else   
             MPI_Send(&m_oRedMutantList[nMutantInit], nTotalMutants, m_MutantType, nDest, 0, MPI_COMM_WORLD);
@@ -621,14 +643,35 @@ int receiveSingleTestAndCheck(T_stExecutionStructure pExeMode[MAX_WORKERS], int 
         pTest->dInitTick = pExeMode[nWorkerSource].dInitTick;
         pTest->dEndTick = getTick();
 
-        if (DEBUG_MPI_OPS) printf("receiveSingleTestAndCheck- %f/%f\n", pTest->dInitTick, pTest->dEndTick);
+        if (DEBUG_MPI_OPS) printf("receiveSingleTestAndCheck- ticks -  %f/%f\n", pTest->dInitTick, pTest->dEndTick);
+        
+        //TODO: Aligerar codigo, pasando este metodo completo a otro.
         if (!checkTestResult(pTest)) {
             pTest->nKill = 1;
             if (DEBUG_MPI_OPS) printf("receiveSingleTestAndCheck- Test %d of Mutant %d Killed!!\n", pTest->nTest, oRedTest.nMutant);
-            m_oTestExecMap.oMap[nMutantInit][nTestInit] = nWorkerSource * 100;
+            
+            //Check different min and max values
+            if(nMutantInit >=0 && nMutantInit<MAX_MUTANTS && nTestInit>=0 && nTestInit < MAX_TESTS)
+            {
+                if(m_oTestExecMap.pMap != NULL && nMutantInit<m_oTestExecMap.nMutants && nTestInit<m_oTestExecMap.nTests)
+                    m_oTestExecMap.pMap[nMutantInit][nTestInit] = nWorkerSource * 100;
+                else
+                    printf("receiveSingleTestAndCheck - WARNING! receiving test-mutant: %d-%d\n", nTestInit, nMutantInit);
+            }
+            else
+                printf("receiveSingleTestAndCheck - WARNING! receiving test-mutant: %d-%d\n", nTestInit, nMutantInit);
+            
         } else {
             nRet = 1;
-            m_oTestExecMap.oMap[nMutantInit][nTestInit] = nWorkerSource;
+            if(nMutantInit >=0 && nMutantInit<MAX_MUTANTS && nTestInit>=0 && nTestInit < MAX_TESTS)
+            {
+                if(m_oTestExecMap.pMap != NULL && nMutantInit<m_oTestExecMap.nMutants && nTestInit<m_oTestExecMap.nTests)
+                    m_oTestExecMap.pMap[nMutantInit][nTestInit] = nWorkerSource;
+                else
+                    printf("receiveSingleTestAndCheck - WARNING! receiving test-mutant: %d-%d\n", nTestInit, nMutantInit);
+            }
+            else
+                printf("receiveSingleTestAndCheck - WARNING! receiving test-mutant: %d-%d\n", nTestInit, nMutantInit);
         }
 
         allocMutant(nMutantInit);
@@ -746,6 +789,7 @@ int receiveMutants(T_stExecutionStructure pExeMode[MAX_WORKERS]) {
                 
                 //Transform
                 for (i = nMutantInit; i <= nMutantEnd; i++) {
+                    
 #ifdef EXPERIMENTAL_MEM_SAFE 
                     pMutant = redMut2Mut((T_stM*) &m_oRedMutantList[i-nMutantInit]);                    
 #else
@@ -872,6 +916,8 @@ MutantList* receiveMutants_adaptive(T_stExecutionStructure pExeMode[MAX_WORKERS]
 
                 //Transform
                 for (i = nMutantInit; i <= nMutantEnd; i++) {
+                    
+                    //printf("<+ received: %d( %d, %d, %ld)\n", i, m_oRedMutantList[i-nMutantInit].oKill[i], m_oRedMutantList[i-nMutantInit].oTest[i], m_oRedMutantList[i-nMutantInit].oTime[i]);
 #ifdef EXPERIMENTAL_MEM_SAFE   
                     pMutant = redMut2Mut((T_stM*) & m_oRedMutantList[i-nMutantInit]);
 #else                    
@@ -880,7 +926,7 @@ MutantList* receiveMutants_adaptive(T_stExecutionStructure pExeMode[MAX_WORKERS]
                     //insert
                     insertMutantTestByTest(pMutant, i, nWorkerSource);
 
-                    if (pMutant && pMutant->nState == 0)
+                    if (pMutant && (pMutant->nState == 0))
                         pMutantList->nDead++;
 
                     pMutantList->array[nRetIndex] = pMutant;

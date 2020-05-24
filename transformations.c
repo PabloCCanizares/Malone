@@ -22,21 +22,22 @@ T_stMutant* redMut2Mut(T_stM* pReducedMut)
     T_stMutant* pRet;
     int i;
     
-    if(DEBUG_TRANS) printf("redMut2Mut - Init\n");
+    if(DEBUG_TRANS) printf("<%d>redMut2Mut - Init\n", m_nRank);
     
     pRet = malloc(sizeof(T_stMutant));
     pRet->nNumber = pReducedMut->nNumber;
     pRet->nState = pReducedMut->nState;
     pRet->nTestKiller =  pReducedMut->nTestKiller;    
     pRet->oTestList.nElems = pReducedMut->nTests;            
-    pRet->strDescription = NULL;
+    pRet->strDescription = NULL;                    //the reduced mutant does not have description
     
     for(i = 0;i<pRet->oTestList.nElems;i++)
     {        
         pRet->oTestList.tests[i] = malloc(sizeof(T_stTestInfo));
         pRet->oTestList.tests[i]->nKill = pReducedMut->oKill[i]; 
         pRet->oTestList.tests[i]->nTest = pReducedMut->oTest[i]; 
-        pRet->oTestList.tests[i]->dTime = pReducedMut->oTime[i]; 
+        pRet->oTestList.tests[i]->dTime = pReducedMut->oTime[i];                
+        
         //Reset
         pReducedMut->oKill[i] = -1;
         pReducedMut->oTest[i] = -1;
@@ -44,9 +45,9 @@ T_stMutant* redMut2Mut(T_stM* pReducedMut)
         pReducedMut->nTests = 0;
         pReducedMut->nState = 1;
     }     
-    printMutant(pRet);
-    
-    if(DEBUG_TRANS) printf("redMut2Mut - End\n");
+    if(DEBUG_TRANS) printMutant(pRet);
+        
+    if(DEBUG_TRANS) printf("<%d>redMut2Mut - End\n", m_nRank);
     
     return pRet;
 }

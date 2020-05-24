@@ -216,8 +216,8 @@ typedef struct
     char * oMd5Map[MAX_MUTANTS];    
     T_stEquivalentInfo* oEquivalentInfo[MAX_MUTANTS];
     T_stMutantExecution* oMutantMap[MAX_MUTANTS];
-    int oMap[MAX_MUTANTS][MAX_TESTS];               // Indicates the worker that has executed an specific duple <mutant,test>
-
+    //int oMap[MAX_MUTANTS][MAX_TESTS];               // Indicates the worker that has executed an specific duple <mutant,test>
+    int** pMap; 
 }T_stExecutionMap;
 
 

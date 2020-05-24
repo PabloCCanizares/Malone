@@ -60,7 +60,8 @@ int distribution_full_dynamic(T_eExecutionMode eMethod) {
             }
             sendDeployMode(&exeVector[nIndex], nIndex);
 
-            m_oTestExecMap.oMap[nIndexMutant][nTestRecalc] = nIndex;
+            if(nIndexMutant >=0 && nIndexMutant<MAX_MUTANTS && nTestRecalc>=0 && nTestRecalc < MAX_TESTS)
+                m_oTestExecMap.pMap[nIndexMutant][nTestRecalc] = nIndex;
             //Inc counters
             nIndex++;
             if (nIndex < m_nSize)

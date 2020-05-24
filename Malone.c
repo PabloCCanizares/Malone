@@ -425,7 +425,6 @@ int malone_execute_Original_Program_Distributed() {
     //Divide the number of mutants among the available workers!
     int nRet, nMutants, nTests, nSent, nIndex, nIndexMutant, nIndexTest, nAlive, nWorkerSource, nFinish, nRemainBlocks, nCounterAux, nErrorFound;
     T_stExecutionStructure exeVector[MAX_WORKERS];
-    T_stTestInfo* pTest;
 
     //Initialize
     nRet = 0;
@@ -469,7 +468,8 @@ int malone_execute_Original_Program_Distributed() {
             }
             sendDeployMode(&exeVector[nIndex], nIndex);
 
-            m_oTestExecMap.oMap[nIndexMutant][nIndexTest] = nIndex;
+            if(nIndexMutant >=0 && nIndexMutant<MAX_MUTANTS && nIndexTest>=0 && nIndexTest < MAX_TESTS)
+                m_oTestExecMap.pMap[nIndexMutant][nIndexTest] = nIndex;
             //Inc counters
             nIndex++;
             nIndexTest++;
@@ -488,7 +488,9 @@ int malone_execute_Original_Program_Distributed() {
 
             nAlive = receiveSingleTestOriginal((T_stExecutionStructure *)&exeVector, &nWorkerSource);
             nRemainBlocks--;
-            m_oTestExecMap.oMap[nIndexMutant][nIndexTest] = nWorkerSource;
+            
+            if(nIndexMutant >=0 && nIndexMutant<MAX_MUTANTS && nIndexTest>=0 && nIndexTest < MAX_TESTS)
+                m_oTestExecMap.pMap[nIndexMutant][nIndexTest] = nWorkerSource;
 
             if (hasOriginalProgramRemainingWork(nIndexTest)) {
                 if (nAlive == 1) {
@@ -1070,10 +1072,14 @@ int malone_distributed_mutation_testing(T_eExecutionMode eMethod) {
         //Master notificates the distribution mode
         malone_notificate_mode(eMethod);
 
+        //Initialise the execution map
+        createExecutionStructure();
+        
         printf("<%d> malone_distributed_mutation_testing - Compiling original program\n", m_nRank);
         //Compile original
         malone_compile_original();
 
+       
         printf("<%d> malone_distributed_mutation_testing - Executing original program\n", m_nRank);
         //Execute the original program
         if (malone_execute_Original_Program()) {

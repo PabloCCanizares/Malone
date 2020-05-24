@@ -89,7 +89,7 @@ void printMutant(T_stMutant* pMutant)
             if (pMutant->nState == ALIVE)            
                 printf(">[%d] Alive! - %d\n", pMutant->nNumber, pMutant->oTestList.nElems);
             else
-                printf(">[%d] Dead! killed by test %d - %d\n", pMutant->nNumber, pMutant->nTestKiller, pMutant->oTestList.nElems);
+                printf(">[%d] Dead! killed by test %d - #%d\n", pMutant->nNumber, pMutant->nTestKiller, pMutant->oTestList.nElems);
         }
         printf("printMutant  End\n");
     }

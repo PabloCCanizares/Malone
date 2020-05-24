@@ -81,23 +81,43 @@ void testDistributionAlgorithms()
     test_dist_algorithm_40();
     
     //Distribute + scatter + equivalents + parallel [101101]
+    test_dist_algorithm_41();
+    test_dist_algorithm_42();
     
     //Distribute + equivalents [100100]
+    test_dist_algorithm_43();
+    test_dist_algorithm_44();
     
-    //Distribute + equivalents + parallel [101101]
-        
+    //Distribute + equivalents + parallel [100101]
+    test_dist_algorithm_45();
+    test_dist_algorithm_46();
+    
     //Sort [010000]
+    //test_dist_algorithm_47();
+    test_dist_algorithm_48();
+    test_dist_algorithm_49();
+    test_dist_algorithm_50();
+    test_dist_algorithm_51();
     
     //Sort + Scatter [011000]
+    test_dist_algorithm_52();
+    test_dist_algorithm_53();
     
     //Sort + Equivalent [010100]
+    test_dist_algorithm_54();
+    test_dist_algorithm_55();
     
     //Sort + Equivalent  + parallel [010101]
+    test_dist_algorithm_56();
+    test_dist_algorithm_57();
     
     //Scatter + equivalents [001100]
+    test_dist_algorithm_58();
+    test_dist_algorithm_59();
     
     //Scatter + equivalents + parallel [001101]
-    
+    test_dist_algorithm_60();
+    test_dist_algorithm_61();    
         
    
 
@@ -902,7 +922,7 @@ void test_dist_algorithm_34()
         
     if(m_nRank == 0)
     {
-        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+        if(Equality(fMS, 0.909, 0.009))  //Equivalent mutants
             m_oAutoTests.nPass++;
         else
         {
@@ -999,7 +1019,7 @@ void test_dist_algorithm_38()
         
     if(m_nRank == 0)
     {
-        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+        if(Equality(fMS, 0.909, 0.005))  //Equivalent mutants
             m_oAutoTests.nPass++;
         else
         {
@@ -1011,7 +1031,6 @@ void test_dist_algorithm_38()
     m_oAutoTests.nTotalTests++;    
     printf("Test [test_dist_algorithm_38] - End\n");
 }
-//
 void test_dist_algorithm_39()
 {  
     float fMS;
@@ -1059,6 +1078,514 @@ void test_dist_algorithm_40()
 
     m_oAutoTests.nTotalTests++;    
     printf("Test [test_dist_algorithm_40] - End\n");
+}
+void test_dist_algorithm_41()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_41] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =4;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_101101_m20_t999.ini");
+        
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.95, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_41] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_41] - End\n");
+}
+void test_dist_algorithm_42()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_42] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =5;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_101101_m20_t999.ini");
+    
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_42] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_42] - End\n");
+}
+//
+void test_dist_algorithm_43()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_43] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =4;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_100100_m20_t999.ini");
+        
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.95, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_43] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_43] - End\n");
+}
+void test_dist_algorithm_44()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_44] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =5;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_100100_m20_t999.ini");
+    
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_44] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_44] - End\n");
+}
+void test_dist_algorithm_45()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_45] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =4;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_100101_m20_t999.ini");
+        
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.95, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_45] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_45] - End\n");
+}
+void test_dist_algorithm_46()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_46] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =5;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_100101_m20_t999.ini");
+    
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_46] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_46] - End\n");
+}
+//
+void test_dist_algorithm_47()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_47] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =1;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_010000_m20_t999.ini");
+        
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.95, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_47] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_47] - End\n");
+}
+void test_dist_algorithm_48()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_48] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =2;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_010000_m20_t999.ini");
+    
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_48] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_48] - End\n");
+}
+void test_dist_algorithm_49()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_49] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =3;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_010000_m20_t999.ini");
+        
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.95, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_49] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_49] - End\n");
+}
+void test_dist_algorithm_50()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_50] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =4;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_010000_m20_t999.ini");
+    
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_50] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_50] - End\n");
+}
+void test_dist_algorithm_51()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_51] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =5;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_010000_m20_t999.ini");
+    
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_51] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_51] - End\n");
+}
+void test_dist_algorithm_52()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_52] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =4;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_011000_m20_t999.ini");
+    
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_52] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_52] - End\n");
+}
+void test_dist_algorithm_53()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_53] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =5;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_011000_m20_t999.ini");
+    
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_53] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_53] - End\n");
+}
+//
+void test_dist_algorithm_54()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_54] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =4;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_010100_m20_t999.ini");
+    
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_54] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_54] - End\n");
+}
+void test_dist_algorithm_55()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_55] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =5;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_010100_m20_t999.ini");
+    
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_55] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_55] - End\n");
+}
+void test_dist_algorithm_56()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_56] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =4;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_010101_m20_t999.ini");
+    
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_56] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_56] - End\n");
+}
+void test_dist_algorithm_57()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_57] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =5;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_010101_m20_t999.ini");
+    
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_57] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_57] - End\n");
+}
+void test_dist_algorithm_58()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_58] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =4;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_001100_m20_t999.ini");
+    
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_58] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_58] - End\n");
+}
+void test_dist_algorithm_59()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_59] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =5;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_001100_m20_t999.ini");
+    
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_59] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_59] - End\n");
+}
+//
+void test_dist_algorithm_60()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_60] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =4;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_001101_m20_t999.ini");
+    
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_60] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_60] - End\n");
+}
+void test_dist_algorithm_61()
+{  
+    float fMS;
+    printf("Test [test_dist_algorithm_61] - Init\n");
+    
+    MPI_Barrier(MPI_COMM_WORLD);
+    m_nSelAlgorithm =5;
+    
+    fMS = test_dist_base("autotest/test_autotest_add_stand_001101_m20_t999.ini");
+    
+    if(m_nRank == 0)
+    {
+        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+            m_oAutoTests.nPass++;
+        else
+        {
+            printf("Test [test_dist_algorithm_61] - MS obtained: %f\n", fMS);
+            m_oAutoTests.nFail++;
+        }
+    }
+
+    m_oAutoTests.nTotalTests++;    
+    printf("Test [test_dist_algorithm_61] - End\n");
 }
 float test_dist_base(char* strPathIn)
 {

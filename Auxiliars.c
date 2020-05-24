@@ -44,7 +44,7 @@ void free_mutant(T_stMutant* pMutant)
         {
             T_stTestInfo* pTest;
             
-            if(m_nRank == 0) printf("%d ", i);
+            if(DEBUG_AUX && m_nRank == 0) printf("%d ", i);
             pTest = pMutant->oTestList.tests[i];
             free_test(pTest);  
             pMutant->oTestList.tests[i] = NULL;
@@ -66,7 +66,7 @@ void free_auxiliars()
         T_stMutant* pMutant;
                 
         pMutant =  m_oMutantList.array[i];
-        if(m_nRank == 0) printf("Mutant: %d \n", i);
+        if(DEBUG_AUX && m_nRank == 0) printf("Mutant: %d \n", i);
         free_mutant(pMutant); 
         m_oMutantList.array[i] = NULL;                 
     }
@@ -105,6 +105,9 @@ void free_auxiliars()
         free(m_pTestList);
         m_pTestList = NULL;    
     }  
+
+    if(m_nRank == 0 && m_oTestExecMap.pMap != NULL  )
+        deinitializeExecutionMap();
     
     //TODO:
     //free_conffile
@@ -164,28 +167,68 @@ void initialize_auxiliars() {
     for (i = 0; i < MAX_TESTS; i++) {
         m_oSortedIndexTest[i] = -1;
     }
-
-    //Initialize execution map
-    
-    
+          
+    m_oTestExecMap.pMap =NULL;
     m_oTestExecMap.nMutants = 0;
     m_oTestExecMap.nTests = 0;
     m_oTestExecMap.nCollapsed = 0;
-    for (i = 0; i < MAX_MUTANTS; i++) {
-        for (j = 0; j < MAX_TESTS; j++) {
-            m_oTestExecMap.oMap[i][j] = -1;
-        }
-    }
-
+    
     if (DEBUG_AUX) printf("initialize_auxiliars - Initialized!\n");
 }
 
+void deinitializeExecutionMap()
+{
+    int nMutants;
+    if(DEBUG_AUX && m_nRank == 0)printf("->0\n");
+    nMutants = m_oTestExecMap.nMutants;
+    //Execution map
+    if(m_oTestExecMap.pMap != NULL && nMutants >=0)
+    {
+        //free aux_exec map
+        for (int i = 0; i < nMutants; i++)
+        {
+            if(DEBUG_AUX)printf("->1.%d\n", i);
+            if(m_oTestExecMap.pMap[i] != NULL)
+            {
+                free(m_oTestExecMap.pMap[i]);        
+                m_oTestExecMap.pMap[i] = NULL;
+            }
+        }
+        if(DEBUG_AUX)printf("->2\n");
+        if(m_oTestExecMap.pMap != NULL)
+        {
+            free(m_oTestExecMap.pMap);
+            m_oTestExecMap.pMap = NULL;        
+        }
+        m_oTestExecMap.nMutants = m_oTestExecMap.nTests = 0;
+        
+        if(DEBUG_AUX)printf("->3\n");
+    }
+          
+}
 void initializeExecutionMap(int nMutants, int nTests) {
-    int i;
+    int i,j;
+    
+    
     m_oTestExecMap.nMutants = nMutants;
     m_oTestExecMap.nTests = nTests;
     m_oTestExecMap.nRemainingMutants = nMutants;
 
+    //Initialise the mutant execution map
+    //We need to check if it is capable to malloc the memory
+   //Allocate the execution map: this is a complicated point, inserted at 24/05/20 to avoid the limit of mutants
+    //it has been tested by analysing all the combinations of the proposed improvements, but, beware with the dog.
+    
+    m_oTestExecMap.pMap = (int **)malloc((nMutants)*sizeof(int *));
+    for (int i = 0; i < nMutants; i++)
+        m_oTestExecMap.pMap[i] = (int*) malloc(nTests * sizeof(int));
+    
+    for (i = 0; i < nMutants; i++) {
+        for (j = 0; j < nTests; j++) {
+            m_oTestExecMap.pMap[i][j] = -1;
+        }
+    }
+    
     for (i = 0; i <= nMutants; i++) {
         T_stMutantExecution* pExe = (T_stMutantExecution*) malloc(sizeof (T_stMutantExecution));
         pExe->nFinished = 0;
@@ -684,7 +727,6 @@ void insertMutantTestByTest(T_stMutant* pMutant, int nIndexMutant, int nWorkerSo
             nTests = pMutant->oTestList.nElems;
             if (DEBUG_AUX) printf("<%d>insertMutantTestByTest - The inserting mutant %d has %d tests\n", m_nRank, nIndexMutant, nTests);
 
-            if (DEBUG_AUX) printf("<%d>---->\n", m_nRank);
             for (int i = 0; i < nTests; i++) {
                 
                 //Make a copy to avoid double free
@@ -699,16 +741,29 @@ void insertMutantTestByTest(T_stMutant* pMutant, int nIndexMutant, int nWorkerSo
                     if(insertTestResult(nIndexMutant, nIndexTest, pTestNew))
                     {
                         //Update the execution Map
-                        m_oTestExecMap.oMap[nIndexMutant][nIndexTest] = nWorkerSource;
+                        //TODO: Asociar un metodo al struct execution map, que compare esto my bro.
+                        if(nIndexMutant >=0 && nIndexMutant<MAX_MUTANTS && nIndexTest>=0 && nIndexTest < MAX_TESTS && 
+                           nIndexMutant<m_oTestExecMap.nMutants && nIndexTest<m_oTestExecMap.nTests)
+                        {
+                            if(m_oTestExecMap.pMap != NULL)
+                            {
+                                m_oTestExecMap.pMap[nIndexMutant][nIndexTest] = nWorkerSource;
+                            }
+                            else
+                                printf("<%d>insertMutantTestByTest - WARNING m_oTestExecMap.oMap is NULL \n", m_nRank);
+                            
+                        }
+                        else
+                            printf("<%d>insertMutantTestByTest - WARNING inserting the [Mutant: %d - Test: %d] to worker %d\n", m_nRank, nIndexMutant, nIndexTest, nWorkerSource);
+                        
                         if (DEBUG_AUX) printf("<%d>insertMutantTestByTest - Associating duple [Mutant: %d - Test: %d] to worker %d\n", m_nRank, nIndexMutant, nIndexTest, nWorkerSource);
                     }
                     else
-                    {
-                        printf("<%d>insertMutantTestByTest - ERROR inserting test %d into mutant %d\n", m_nRank, nIndexTest, nIndexMutant);
-                    }
+                        printf("<%d>insertMutantTestByTest - ERROR inserting test %d into mutant %d\n", m_nRank, nIndexTest, nIndexMutant);                    
                 }
+                else
+                    printf("<%d>insertMutantTestByTest - WARNING! NULL mutant generated\n", m_nRank);
             }
-            if (DEBUG_AUX) printf("<%d><----\n", m_nRank);
         }
     }
     if (DEBUG_AUX) printf("<%d>insertMutantTestByTest - End\n", m_nRank);
@@ -717,29 +772,34 @@ void insertMutantTestByTest(T_stMutant* pMutant, int nIndexMutant, int nWorkerSo
 int insertTestResult(int nMutant, int nTest, T_stTestInfo* pTest) {
     int nRet;
     T_stMutant* pCheckMutant;
+    
     nRet = 0;
     if (DEBUG_AUX) printf("<%d>insertTestResult - Init\n", m_nRank);
     //If the mutant is allocated in memory
     if (pTest != NULL && isMutantAllocated(nMutant) &&  nMutant < MAX_MUTANTS && nTest < MAX_TESTS && nTest>=0) {
-        //Ensure that the mutant is allocated ...
         
+        //Ensure that the mutant is allocated ...        
         pCheckMutant = m_oMutantList.array[nMutant];
         if (pCheckMutant != NULL) {
 
             pTest->nTest = nTest;
             if (DEBUG_AUX) printf("<%d>insertTestResult - Inserting test number %d  on mutant %d\n", m_nRank, nTest, nMutant);
 
+                            
             //Check if the test already exist!
             if (pCheckMutant->oTestList.tests[nTest] != NULL)
             {
                 if (DEBUG_AUX) printf("<%d>insertTestResult - The inserting test number %d already exists  on mutant %d\n", m_nRank, nTest, nMutant);
+                pCheckMutant->oTestList.tests[nTest] = pTest;
             }
             else
+            {
+                pCheckMutant->oTestList.tests[nTest] = pTest;
                 pCheckMutant->oTestList.nElems++;
-
-            pCheckMutant->oTestList.tests[nTest] = pTest;            
+            }
+                  
             m_oMutantList.dTime += pTest->dTime;
-            if (DEBUG_AUX) printf("<%d>insertTestResult - Total list: %d\n", m_nRank, m_oMutantList.nElems);
+            if (DEBUG_AUX) printf("<%d>insertTestResult - Total mutant list: %d\n", m_nRank, m_oMutantList.nElems);
             if (pTest->nKill) {
                 if (pCheckMutant->nState != DEAD) {
                     pCheckMutant->nState = DEAD;
@@ -747,7 +807,12 @@ int insertTestResult(int nMutant, int nTest, T_stTestInfo* pTest) {
                     m_oMutantList.nDead++;
                 }
 
-                if (DEBUG_AUX) printf("<%d>insertTestResult - Mutant %d Killed by test %d!!\n", m_nRank, nMutant, nTest);
+                if (DEBUG_AUX) printf("<%d>insertTestResult - Mutant %d Killed by test %d!! [#AccKilled: %d]\n", m_nRank, nMutant, nTest, m_oMutantList.nDead);
+            }
+            else
+            {
+                if (DEBUG_AUX) printf("Mutant alive! \n");                    
+                printTest(pTest);
             }
             
             //Mark as pass
@@ -789,6 +854,16 @@ int insertTestResult_unsorted(int nMutant, int nTest, T_stTestInfo* pTest) {
             pTest->nTest = nTest;
             if (DEBUG_AUX) printf("<%d>insertTestResult_unsorted - Inserting test number %d  on mutant %d\n", m_nRank, nTest, nMutant);
 
+            if(pCheckMutant->oTestList.nElems >= 0 && pCheckMutant->oTestList.nElems<MAX_TESTS)
+            {
+                pCheckMutant->oTestList.tests[pCheckMutant->oTestList.nElems] = pTest;             
+                pCheckMutant->oTestList.nElems++;
+            }
+            else
+                printf("<%d>insertTestResult_unsorted - WARNING! Inserting test number %d  on mutant %d\n", m_nRank, nTest, nMutant);
+                        
+            //No sense introducing this checking here.
+            /*
             //Check if the test already exist!
             if (pCheckMutant->oTestList.tests[nTest] != NULL)
             {
@@ -796,8 +871,9 @@ int insertTestResult_unsorted(int nMutant, int nTest, T_stTestInfo* pTest) {
             }
             else
                 pCheckMutant->oTestList.nElems++;
+            */
             
-            pCheckMutant->oTestList.tests[pCheckMutant->oTestList.nElems] = pTest;            
+            
             m_oMutantList.dTime += pTest->dTime;
             if (DEBUG_AUX) printf("<%d>insertTestResult_unsorted - Total list: %d\n", m_nRank, m_oMutantList.nElems);
             if (pTest->nKill) {
@@ -1619,8 +1695,23 @@ void createHeuristicStructures()
         nMutants = m_stEnvValues->nTotalMutants;
         nTests = m_stEnvValues->nTotalTests;
         printf("<%d> distribution_full_dynamic_scatter - Mutants: %d Tests :%d \n", m_nRank, nMutants, nTests);
-        initializeExecutionMap(nMutants, nTests);
+        //initializeExecutionMap(nMutants, nTests);
         if (m_stEnvValues->nClusterMutants != 0)
             initializeEquivalentMap(nMutants, nTests);
     }
+}
+void createExecutionStructure()
+{
+    int nMutants, nTests;
+
+    //Initialize some information related with execution map and equivalent mutants
+    if (m_stEnvValues != NULL) {
+        printf("<%d> createExecutionStructure - Creating execution structure\n", m_nRank);
+        nMutants = m_stEnvValues->nTotalMutants;
+        nTests = m_stEnvValues->nTotalTests;
+        printf("<%d> createExecutionStructure - Mutants: %d Tests :%d \n", m_nRank, nMutants, nTests);
+        initializeExecutionMap(nMutants, nTests);
+    }
+    else
+        printf("WARNING!! Error in createExecutionStructure due to m_stEnvValues is NULL\n");
 }

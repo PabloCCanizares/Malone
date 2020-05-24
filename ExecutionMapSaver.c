@@ -21,15 +21,18 @@ void saveExecutionMap()
     if(SAVING_PRINT) printf("saveExecutionMap - Mutants: %d | Tests: %d\n", nMutants, nTests);
     file = fopen(strFile, "w");
     
-    if (file != NULL)
+    if (file != NULL && m_oTestExecMap.pMap != NULL)
     {
-        for(i=1;i<=nMutants;i++)
+        for(i=1;i<nMutants;i++)
         {
-            for(j=0;j<nTests;j++)
+            if(m_oTestExecMap.pMap[i] != NULL)
             {
-                fprintf(file, "%d ", m_oTestExecMap.oMap[i][j]);
-            }          
-            fprintf(file, "\n");
+                for(j=0;j<nTests;j++)
+                {
+                    fprintf(file, "%d ", m_oTestExecMap.pMap[i][j]);
+                }          
+                fprintf(file, "\n");            
+            }
         }
         fflush(file);
         fclose(file);

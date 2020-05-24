@@ -64,6 +64,27 @@ void test_dist_algorithm_37();
 void test_dist_algorithm_38();
 void test_dist_algorithm_39();
 void test_dist_algorithm_40();
+void test_dist_algorithm_41();
+void test_dist_algorithm_42();
+void test_dist_algorithm_43();
+void test_dist_algorithm_44();
+void test_dist_algorithm_45();
+void test_dist_algorithm_46();
+void test_dist_algorithm_47();
+void test_dist_algorithm_48();
+void test_dist_algorithm_49();
+void test_dist_algorithm_50();
+void test_dist_algorithm_51();
+void test_dist_algorithm_52();
+void test_dist_algorithm_53();
+void test_dist_algorithm_54();
+void test_dist_algorithm_55();
+void test_dist_algorithm_56();
+void test_dist_algorithm_57();
+void test_dist_algorithm_58();
+void test_dist_algorithm_59();
+void test_dist_algorithm_60();
+void test_dist_algorithm_61();
 float test_dist_base(char* strPathIn);
 
 #ifdef __cplusplus

@@ -14,7 +14,7 @@ void testMutants()
 {
     printf("Test [testMutants] - Testing Mutants start\n");
     test_mutants_1();
-    //TODO: test_mutants_1() enviando VARIOS mutantes
+    //TODO: test_mutants_2() enviando VARIOS mutantes, la idea es comprobar EL INTERIOR de los mutantes, si esta vivo etc.
     m_oAutoTests.nCategories++;
     printf("Test [testMutants] - End\n");
 }
@@ -80,3 +80,5 @@ void test_mutants_1()
     m_oAutoTests.nTotalTests++;
     printf("Test [test_mutants_1] - End\n");
 }
+
+//Probar sendmutants (en plural)

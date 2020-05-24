@@ -30,6 +30,7 @@ char *buildExeLine_StandAlone(int nIndexMutant,int nIndexTest, int nOriginalMode
 void addResultIndex(T_stTestList *pTestList,int nIndex,const char *t,double dTime,int nKill);
 void initializeEquivalentMap(int nMutants,int nTests);
 void initializeExecutionMap(int nMutants,int nTests);
+void deinitializeExecutionMap();
 void initialize_auxiliars();
 
 void free_auxiliars(); 
@@ -53,6 +54,7 @@ void free_mutant(T_stMutant* pMutant);
 void free_envfile(T_stIniValues* pEnvFile);
 
 void createHeuristicStructures();
+void createExecutionStructure();
 void createTestRefP(int nIndexTest, char* strResult, double dTime, int nKill, T_stTestInfo** pTest);
 char* getMarkerToken();
 int existsMarkerToken();
