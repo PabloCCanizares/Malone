@@ -6,7 +6,7 @@
 #include "autotest.h"
 #include "test_command.h"   
 #include "popen_noshell.h"
-
+#include <err.h>
 void testCommand()
 {
     printf("Test [testCommand] - Init\n");

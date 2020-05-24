@@ -33,10 +33,10 @@ void autotest()
     
     //1 - Single process
     //  - Environment file load.
-    testEnvFile();
+    //testEnvFile();
     
     //  - Configuration load.
-    testConfFile();
+    //testConfFile();
     
     //Testing command execution
     //testCommand();

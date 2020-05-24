@@ -38,6 +38,7 @@ void free_mutant(T_stMutant* pMutant);
 
 int addResult(T_stTestList *pTestList,const char *t,double dTime,int nKill);
 T_stTestInfo *createTest(int nIndexTest,char *strResult,double dTime,int nKill);
+T_stTestInfo* copyTest(const T_stTestInfo* pTestIn);
 char *buildExeLine(int nIndexMutant,int nIndexTest, int nOriginalMode);
 char* buildEquivLine(int nIndexMutant, int nOriginalMode);
 char* generateCompilationLine(int nIndexMutant, int nOriginalMode);

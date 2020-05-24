@@ -79,7 +79,7 @@ void test2redTest(T_stTestInfo* pTest, T_stTI* pTestRed)
     }
     if(DEBUG_TRANS) printf("<%d>test2redTest - End\n", m_nRank);
 }
-void redtestList2TestList(T_stTI* oTest[],  T_stTestList* pList, int nItems)
+void redtestList2TestList(T_stTI oTest[],  T_stTestList* pList, int nItems)
 {
     int i;
     if(DEBUG_TRANS) printf("redtestList2TestList - Init\n");
@@ -89,14 +89,14 @@ void redtestList2TestList(T_stTI* oTest[],  T_stTestList* pList, int nItems)
         pList->nElems = nItems;
         for(i=0;i<pList->nElems;i++)
         {
-            pList->tests[i] = testred2Test(oTest[i]);
+            pList->tests[i] = redtest2Test(&oTest[i]);
         }
     }
     printTestResults(pList);
     if(DEBUG_TRANS) printf("redtestList2TestList - End\n");
 }
 
-T_stTestList* redtestList2TestList_r(T_stTI* oTest,  int nItems)
+T_stTestList* redtestList2TestList_r(T_stTI oTest[],  int nItems)
 {
     int i;
     T_stTestList* pTestList;
@@ -109,7 +109,7 @@ T_stTestList* redtestList2TestList_r(T_stTI* oTest,  int nItems)
         
         for(i=0;i<pTestList->nElems;i++)
         {
-            pTestList->tests[i] = testred2Test(oTest+i);    //TODO: \pabloSays{Por dios!!!!!!!!}
+            pTestList->tests[i] = redtest2Test(&oTest[i]);    //TODO: \pabloSays{Por dios!!!!!!!!}
         }
     }
     if(DEBUG_TRANS) printf("redtestList2TestList_r - End\n");
@@ -117,11 +117,11 @@ T_stTestList* redtestList2TestList_r(T_stTI* oTest,  int nItems)
     
     return pTestList;
 }
-T_stTestInfo*  testred2Test(T_stTI* pTestRed)
+T_stTestInfo*  redtest2Test(T_stTI* pTestRed)
 {
     T_stTestInfo* pTest;
     
-    if(DEBUG_TRANS) printf("testred2Test - Init\n");
+    if(DEBUG_TRANS) printf("redtest2Test - Init\n");
     
     if(pTestRed)
     {

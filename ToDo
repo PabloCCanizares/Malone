@@ -47,14 +47,14 @@ Fallos integracion:
 
 ------------------------
 TODO cercano:
-- Eliminar warnings
-- Creacion de modo autotest
+- Eliminar warnings. Done [21/05/20]
+- Creacion de modo autotest. Done [21/05/20]
 - Inclusion de un mini proyecto de mutation con la suma por ejemplo. Done [07/15/20]
     + Utilizar este proyecto para el auto test
     + Con este proyecto podemos dejar .sh que permitan ver como se utiliza el programa
 - Organizar las carpetas (Importante, porque vaya desorden comp.)
 - Comentar algo el codigo
-- Quitar todo lo estatico posible, m_oTest[0] -> no hay necesidad
+- Quitar todo lo estatico posible, m_oTest[0] -> no hay necesidad. Done [21/05/20]
 - Comentar los tipos de Options.h
 - Tratar de eliminar los tipos que no aplican.
 - Convertir oMap de estatico a dinamico (Pruebas empezadas en malone lab)

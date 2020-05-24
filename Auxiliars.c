@@ -19,7 +19,6 @@
 
 void free_test(T_stTestInfo* pTest)
 {
-
     if(pTest != NULL)
     {
         pTest->dEndTick = pTest->dInitTick = pTest->dTime = -1.0;
@@ -39,16 +38,18 @@ void free_mutant(T_stMutant* pMutant)
             free(pMutant->strDescription);  
             pMutant->strDescription = NULL;
         }        
-        for(int i=0;i<pMutant->oTestList.nElems;i++)
+        
+        if(DEBUG_AUX && m_nRank == 0) printf("tests #%d[ ", pMutant->oTestList.nElems);
+        for(int i=0;i<pMutant->oTestList.nElems && i < MAX_TESTS;i++)
         {
             T_stTestInfo* pTest;
             
+            if(m_nRank == 0) printf("%d ", i);
             pTest = pMutant->oTestList.tests[i];
-            //free_test(pTest);  TODO: Buscar posible doble free de tests          
+            free_test(pTest);  
             pMutant->oTestList.tests[i] = NULL;
         }        
-        
-        //TODO: Falta liberar los tests
+        if(DEBUG_AUX && m_nRank == 0) printf(" ]\n");
         free(pMutant);
         pMutant = NULL;           
     } 
@@ -61,10 +62,11 @@ void free_auxiliars()
 {
     if (DEBUG_AUX) printf("<%d>free_auxiliars - Init\n", m_nRank);
     //Free the mutant list
-    for (int i = 0; i < m_oMutantList.nElems; i++) {
+    for (int i = 0; i < m_oMutantList.nElems && i < MAX_MUTANTS; i++) {
         T_stMutant* pMutant;
                 
         pMutant =  m_oMutantList.array[i];
+        if(m_nRank == 0) printf("Mutant: %d \n", i);
         free_mutant(pMutant); 
         m_oMutantList.array[i] = NULL;                 
     }
@@ -164,6 +166,8 @@ void initialize_auxiliars() {
     }
 
     //Initialize execution map
+    
+    
     m_oTestExecMap.nMutants = 0;
     m_oTestExecMap.nTests = 0;
     m_oTestExecMap.nCollapsed = 0;
@@ -665,7 +669,7 @@ void insertMutant(T_stMutant* pMutant, int nIndexMutant) {
 void insertMutantTestByTest(T_stMutant* pMutant, int nIndexMutant, int nWorkerSource) {
 
     int nTests, nIndexTest;
-    T_stTestInfo* pTest;
+    T_stTestInfo* pTestMut, *pTestNew;
     if (pMutant != NULL) {
         if (DEBUG_AUX) printf("<%d>insertMutantTestByTest - Inserting mutant %d at pos: %d\n", m_nRank, pMutant->nNumber, nIndexMutant);
 
@@ -682,15 +686,17 @@ void insertMutantTestByTest(T_stMutant* pMutant, int nIndexMutant, int nWorkerSo
 
             if (DEBUG_AUX) printf("<%d>---->\n", m_nRank);
             for (int i = 0; i < nTests; i++) {
-                pTest = pMutant->oTestList.tests[i];
+                
+                //Make a copy to avoid double free
+                pTestMut = pMutant->oTestList.tests[i]; 
+                pTestNew = copyTest(pTestMut);
+                if (pTestNew != NULL) {
 
-                if (pTest != NULL) {
-
-                    nIndexTest = pTest->nTest;
-                    printTest(pTest);
+                    nIndexTest = pTestNew->nTest;
+                    printTest(pTestNew);
                     if (DEBUG_AUX) printf("<%d>insertMutantTestByTest - Inserting test (%d) -> at(%d)\n", m_nRank, i, nIndexTest);
                     
-                    if(insertTestResult(nIndexMutant, nIndexTest, pTest))
+                    if(insertTestResult(nIndexMutant, nIndexTest, pTestNew))
                     {
                         //Update the execution Map
                         m_oTestExecMap.oMap[nIndexMutant][nIndexTest] = nWorkerSource;
@@ -725,10 +731,13 @@ int insertTestResult(int nMutant, int nTest, T_stTestInfo* pTest) {
 
             //Check if the test already exist!
             if (pCheckMutant->oTestList.tests[nTest] != NULL)
+            {
                 if (DEBUG_AUX) printf("<%d>insertTestResult - The inserting test number %d already exists  on mutant %d\n", m_nRank, nTest, nMutant);
+            }
+            else
+                pCheckMutant->oTestList.nElems++;
 
-            pCheckMutant->oTestList.tests[nTest] = pTest;
-            pCheckMutant->oTestList.nElems++;
+            pCheckMutant->oTestList.tests[nTest] = pTest;            
             m_oMutantList.dTime += pTest->dTime;
             if (DEBUG_AUX) printf("<%d>insertTestResult - Total list: %d\n", m_nRank, m_oMutantList.nElems);
             if (pTest->nKill) {
@@ -749,7 +758,7 @@ int insertTestResult(int nMutant, int nTest, T_stTestInfo* pTest) {
         if(pTest == NULL)
             printf("<%d> Warning!! The input test is null!! Mutant (M:%d|T:%d) data not inserted!\n", m_nRank, nMutant, nTest);
         else if(nMutant > sizeof(m_oMutantList.array))
-            printf("<%d> Warning!! The mutant index (%d) is greater than the capacity of the array (%d)\n", m_nRank, nMutant, sizeof(m_oMutantList.array));
+            printf("<%d> Warning!! The mutant index (%d) is greater than the capacity of the array (%d)\n", m_nRank, nMutant, (int) (sizeof(m_oMutantList.array)/sizeof(m_oMutantList.array[0])));
         else            
             printf("<%d> Warning!! Mutant (M:%d|T:%d) data not inserted!\n", m_nRank, nMutant, nTest);
     }
@@ -780,8 +789,15 @@ int insertTestResult_unsorted(int nMutant, int nTest, T_stTestInfo* pTest) {
             pTest->nTest = nTest;
             if (DEBUG_AUX) printf("<%d>insertTestResult_unsorted - Inserting test number %d  on mutant %d\n", m_nRank, nTest, nMutant);
 
-            pCheckMutant->oTestList.tests[pCheckMutant->oTestList.nElems] = pTest;
-            pCheckMutant->oTestList.nElems++;
+            //Check if the test already exist!
+            if (pCheckMutant->oTestList.tests[nTest] != NULL)
+            {
+                if (DEBUG_AUX) printf("<%d>insertTestResult_unsorted - The inserting test number %d already exists  on mutant %d\n", m_nRank, nTest, nMutant);
+            }
+            else
+                pCheckMutant->oTestList.nElems++;
+            
+            pCheckMutant->oTestList.tests[pCheckMutant->oTestList.nElems] = pTest;            
             m_oMutantList.dTime += pTest->dTime;
             if (DEBUG_AUX) printf("<%d>insertTestResult_unsorted - Total list: %d\n", m_nRank, m_oMutantList.nElems);
             if (pTest->nKill) {
@@ -993,7 +1009,24 @@ int checkResult(int nIndexTest, const char* strResult) {
 
     return nRet;
 }
-
+T_stTestInfo* copyTest(const T_stTestInfo* pTestIn)
+{
+    T_stTestInfo* pTest;
+    
+    if(pTestIn != NULL)
+    {
+        pTest = malloc(sizeof (T_stTestInfo));
+        pTest->dTime = pTestIn->dTime;
+        pTest->nKill = pTestIn->nKill;
+        pTest->nTest = pTestIn->nTest;
+        bzero(pTest->res, MAX_RESULT_SIZE);
+        strcpy(pTest->res, pTestIn->res);
+    }    
+    else
+        pTest = NULL;
+    
+    return pTest;
+}
 T_stTestInfo* createTest(int nIndexTest, char* strResult, double dTime, int nKill) {
     T_stTestInfo* pTest;
     if (DEBUG_AUX) printf("createTest - Init\n");
@@ -1434,7 +1467,7 @@ void freeMutantList(MutantList* pList) {
             pMutant = pList->array[i];
 
             if (pMutant != NULL)
-                free(pMutant);
+                free_mutant(pMutant);
         }
         free(pList);
     }

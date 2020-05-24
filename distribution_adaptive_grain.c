@@ -265,26 +265,35 @@ int updateCounters_adaptive(T_stExecutionMap* exeMap, T_stExecutionStructure* ex
                 if (exeWorker->nMutantInit <= exeMap->nMutants) {
                     pMutantExec = exeMap->oMutantMap[exeWorker->nMutantInit];
 
-                    pMutantExec->nIndexTest++;
-                    if (pMutantExec->nFinished == 0 && pMutantExec->nIndexTest < exeMap->nTests && (exeWorker->nTestEnd < exeMap->nTests-1)) {
-                        //Set the index and the mutant
-                        *nIndexTestInit = pMutantExec->nIndexTest;
-                        *nIndexTestEnd = pMutantExec->nIndexTest;
-                        *nIndexMutantInit = exeWorker->nMutantInit;
-                        *nIndexMutantEnd = exeWorker->nMutantEnd;
-                        if (MALONE_DEBUG_DIST_UPDATE) printf("<%d>updateCounters_adaptive - (fine-grain-mode) Worker %d has associated the mutant %d test %d (Remaining mutants: %d)\n", m_nRank, exeWorker->nWorker, exeWorker->nMutantInit, exeWorker->nTestInit, nRemainingWork);
-                        if (MALONE_DEBUG_DIST_UPDATE) printf("<%d>updateCounters_adaptive - (fine-grain-mode) Worker %d = [%d < %d && (%d < %d)]", m_nRank, exeWorker->nWorker,pMutantExec->nIndexTest, exeMap->nTests, exeWorker->nTestEnd, exeMap->nTests-1);
-                    } else {
-                        //The mutant has finished!! Mark it and realloc!
-                        if (pMutantExec->nFinished == 0) {
-                            exeMap->nRemainingMutants--;
-                            pMutantExec->nFinished = 1;
-                            if (MALONE_DEBUG_DIST_UPDATE)printf("<%d>updateCounters_adaptive - The mutant %d has been marked as finished, indexTest: %d\n", m_nRank, exeWorker->nMutantInit, pMutantExec->nIndexTest);
+                    if(pMutantExec)
+                    {
+                        pMutantExec->nIndexTest++;
+                        if (pMutantExec->nFinished == 0 && pMutantExec->nIndexTest < exeMap->nTests && (exeWorker->nTestEnd < exeMap->nTests-1)) {
+                            //Set the index and the mutant
+                            *nIndexTestInit = pMutantExec->nIndexTest;
+                            *nIndexTestEnd = pMutantExec->nIndexTest;
+                            *nIndexMutantInit = exeWorker->nMutantInit;
+                            *nIndexMutantEnd = exeWorker->nMutantEnd;
+                            if (MALONE_DEBUG_DIST_UPDATE) printf("<%d>updateCounters_adaptive - (fine-grain-mode) Worker %d has associated the mutant %d test %d (Remaining mutants: %d)\n", m_nRank, exeWorker->nWorker, exeWorker->nMutantInit, exeWorker->nTestInit, nRemainingWork);
+                            if (MALONE_DEBUG_DIST_UPDATE) printf("<%d>updateCounters_adaptive - (fine-grain-mode) Worker %d = [%d < %d && (%d < %d)]", m_nRank, exeWorker->nWorker,pMutantExec->nIndexTest, exeMap->nTests, exeWorker->nTestEnd, exeMap->nTests-1);
+                        } else 
+                        {
+                            //The mutant has finished!! Mark it and realloc!
+                            if (pMutantExec->nFinished == 0) {
+                                exeMap->nRemainingMutants--;
+                                pMutantExec->nFinished = 1;
+                                if (MALONE_DEBUG_DIST_UPDATE)printf("<%d>updateCounters_adaptive - The mutant %d has been marked as finished, indexTest: %d\n", m_nRank, exeWorker->nMutantInit, pMutantExec->nIndexTest);
+                            }
+                            exeWorker->nMutantInit = -1;
+                            exeWorker->nMutantEnd = -1;
+                            nNeedRealloc = 1;
+                            pMutantExec->nManaged--;
                         }
-                        exeWorker->nMutantInit = -1;
-                        exeWorker->nMutantEnd = -1;
-                        nNeedRealloc = 1;
-                        pMutantExec->nManaged--;
+                    }
+                    else
+                    {
+                        nFinish = 1;
+                        printf("<%d>WARNING!!!! updateCounters has a NULL mutant exec [%d vs %d]\n", m_nRank, exeWorker->nMutantInit, exeMap->nMutants);
                     }
                 } else
                     printf("<%d>WARNING!!!! updateCounters is increasing an invalid mutant [%d vs %d]\n", m_nRank, exeWorker->nMutantInit, exeMap->nMutants);
@@ -358,7 +367,7 @@ int updateCounters_adaptive(T_stExecutionMap* exeMap, T_stExecutionStructure* ex
 
                     searchNextMutantNotProcessed(exeMap, &nSearch, &nIndex, &pMutantExec);
 
-                    if (nSearch == 0) {
+                    if (nSearch == 0 && pMutantExec != NULL) {
                         
                         //Mutant index found!
                         pMutantExec->nIndexTest++;
@@ -557,7 +566,7 @@ int updateCounters_adaptive_equiv_aggresive(T_stExecutionMap* exeMap, T_stExecut
 
                     searchNextMutantNotProcessed_equiv_aggresive(exeMap, &nSearch, &nIndex, &pMutantExec);
 
-                    if (nSearch == 0) {
+                    if (nSearch == 0 && pMutantExec!= NULL) {
                         
                         //Mutant index found!
                         if(pMutantExec->nManaged !=0)
@@ -681,8 +690,7 @@ void updateKillMutant_adaptive(T_stExecutionMap* exeMap, T_stExecutionStructure*
 
 int searchNextMutantNotProcessed(T_stExecutionMap* exeMap, int* nSearch, int* nIndex, T_stMutantExecution** pMutantExec)
 {
-    int nMaxWorkersAllowed;
-    int nAllMutantsFinished;
+    int nMaxWorkersAllowed, nAllMutantsFinished;
     
     nAllMutantsFinished = 1;
     if ((*nIndex) <= exeMap->nMutants) {
@@ -728,6 +736,7 @@ int searchNextMutantNotProcessed(T_stExecutionMap* exeMap, int* nSearch, int* nI
         else
             (*nSearch) = -1;
     }
+    return *nSearch;            
 }
 
 int searchNextMutantNotProcessed_equiv_aggresive(T_stExecutionMap* exeMap, int* nSearch, int* nIndex, T_stMutantExecution** pMutantExec)

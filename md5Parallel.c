@@ -10,9 +10,6 @@
  *
  * Created on October 4, 2018, 12:54 PM
  */
-
-
-
 #include "printers.h"
 #include "Auxiliars.h"
 #include "MPI_Operations.h"
@@ -156,7 +153,7 @@ int parallelEquivalenceChecking() {
             nIndex++;
             nRemWork--;
         }
-        printDeployArray(&oIndex, m_nSize);
+        printDeployArray(oIndex, m_nSize);
         //exeMode.nExecutionMode = (int) eMethod;
 
         
@@ -173,7 +170,7 @@ int parallelEquivalenceChecking() {
         }
         //Wait for receiving values from all workers and filling final result
         do {
-            receiveMd5Mutants(&exeVector);
+            receiveMd5Mutants(exeVector);
             nNumReceives++;
         } while (nNumReceives < (m_nSize - 1)); // Decreasing in 1, due to the master
     }

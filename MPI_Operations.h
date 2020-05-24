@@ -36,7 +36,6 @@ void init_Datatype_deploy();
 
 //Test operations    
 T_stTestList *receiveOriginalTestResults_r();
-T_stTestInfo *receiveTestList(int nSource,int nTests);
 T_stTestInfo *receiveTest(int nSource);
 void receiveTestRefP(int nSource, T_stTestInfo** pTest);
 void receiveOriginalTestResults(T_stTestList *pResList);

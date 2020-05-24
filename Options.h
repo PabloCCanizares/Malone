@@ -261,13 +261,13 @@ typedef struct {
 } MutantList;
 
 T_stExecutionMap m_oTestExecMap;
-T_stTI m_oTest[MAX_TESTS];   
+T_stTI m_oRedTestList[MAX_TESTS];   
 
 
 #ifdef EXPERIMENTAL_MEM_SAFE        //This is the reduced version of a mutant, that is used to send it with datatypes. (The full version is MutantList)
-T_stM m_oMutant[MAX_MUTANTS_RED];   //This change limits the static distribution, due to the maximum interval allowed is 100
+T_stM m_oRedMutantList[MAX_MUTANTS_RED];   //This change limits the static distribution, due to the maximum interval allowed is 100
 #else
-T_stM m_oMutant[MAX_MUTANTS];   
+T_stM m_oRedMutantList[MAX_MUTANTS];   
 #endif
 
 //DATATYPES

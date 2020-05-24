@@ -49,7 +49,7 @@ void saveExecutionMap()
 void saveOriginalProgramExecutionTimes()
 {
     char* strFile;
-    int i, j, nMutants, nTests, nLen;
+    int i, nMutants, nTests, nLen;
     long lValue;
     FILE *f;
      

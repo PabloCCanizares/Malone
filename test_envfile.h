@@ -27,7 +27,7 @@ void test_envfile_2();
 void test_envfile_3();   
 void test_envfile_4();
 void test_envfile_5();
-char* loadEnvFile_t(const char* envValue);
+char* loadEnvFile_t(char* envValue);
 
 
 #ifdef __cplusplus

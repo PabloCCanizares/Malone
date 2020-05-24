@@ -237,9 +237,7 @@ int malone_initialize() {
 void malone_free() {
     printf("<%d> free_Malone!!\n", m_nRank);
     
-    //Now trying to delete the shared memory
-    free_auxiliars();
-    
+   
     if (m_nRank == MALONE_MASTER) {
         //End mpi
         MPI_Finalize();
@@ -252,6 +250,8 @@ void malone_free() {
         //End mpi
         MPI_Finalize();
 
+    //Now trying to delete the shared memory
+    free_auxiliars();
 }
 
 int malone_compile_original() {
@@ -544,7 +544,6 @@ int malone_execute_Original_Program_Distributed() {
 
 int malone_execute_Original_Program_Sequential() {
     int nTotalTests;
-    char* dir;
     int nRet, nIndexTest, i, nProg, nMaxOriginalTimeout;
     char* strResult;
     char* exeLine;
@@ -711,13 +710,12 @@ int malone_distribute_workflow(T_eExecutionMode eMethod) {
  * @return 
  */
 int malone_execute_mutants_by_scheme(T_stExecutionStructure* pExeMode) {
-    char* dir;
     int nRet, nIndexTest, i, nTotalTests, nReorderTest, nTotalMutants, nIndexMutant;
     char* strResult;
     char* exeLine;
     double dInit, dTime, dOriginalTime;
-    T_stTestInfo* pTest;
     int nMutantInit, nMutantEnd, nTestInit, nTestEnd, nIsNull;
+    T_stTestInfo* pTest;
 
     if (MALONE_WORKER_LOG) printf("<%d> malone_execute_mutants_by_scheme - Init, mode: %d\n", m_nRank, pExeMode->nExecutionMode);
     if (pExeMode) {
@@ -851,8 +849,7 @@ int malone_execute_mutants_by_scheme(T_stExecutionStructure* pExeMode) {
 }
 
 int malone_execute_originalprogram_by_scheme(T_stExecutionStructure* pExeMode) {
-    char* dir;
-    int nRet, i, nTotalTests, nTotalMutants, nIndexMutant;
+    int nRet, nTotalTests, nTotalMutants, nIndexMutant;
     char* strResult;
 
     char* exeLine;
@@ -916,8 +913,7 @@ int malone_execute_originalprogram_by_scheme(T_stExecutionStructure* pExeMode) {
                         if (strResult == NULL) {
                             strResult = malloc(4 * sizeof (char));
                             strcpy(strResult, "N!L\0");
-                            //strlcpy(strResult, "N!L\0", 4);
-                            
+                            //strlcpy(strResult, "N!L\0", 4);                            
                         }
                     }
                 }
@@ -960,7 +956,6 @@ int malone_execute_originalprogram_by_scheme(T_stExecutionStructure* pExeMode) {
 }
 
 int malone_execute_mutants_single(int nMutantInit, int nMutantEnd) {
-    char* dir;
     int nRet, nIndexTest, i, nTotalTests, nTotalMutants, nIndexMutant;
     char* strResult;
     char* exeLine;
@@ -986,7 +981,6 @@ int malone_execute_mutants_single(int nMutantInit, int nMutantEnd) {
     if (m_stEnvValues->nStartingMutant != 0) {
         nMutantInit = m_stEnvValues->nStartingMutant;
     }
-
 
     //Mutant index starts in 1, because mutant 0 is the original app
     for (nIndexMutant = nMutantInit; nIndexMutant <= nMutantEnd; nIndexMutant++) {
@@ -1064,9 +1058,7 @@ int malone_execute_mutants_single(int nMutantInit, int nMutantEnd) {
 }
 
 int malone_distributed_mutation_testing(T_eExecutionMode eMethod) {
-    int nRet, nTests, nMutants;
-    long int lCompTickInit;
-    long int lCompTickEnd;
+    int nRet;
 
     nRet = 0;
 

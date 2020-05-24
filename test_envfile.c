@@ -151,7 +151,7 @@ void test_envfile_5()
     
     m_oAutoTests.nTotalTests++;
 }
-char* loadEnvFile_t(const char* envValue)
+char* loadEnvFile_t(char* envValue)
 {
     char* strEnvFile, *strMaloneHome, *fileRet;
     int nRet, nLen;

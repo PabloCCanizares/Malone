@@ -1,5 +1,5 @@
 /* 
- * File:   DistributionAlgorithms.h
+ * File:   distribution_full_dynamic.c
  * Author: Pablo C. Cañizares
  *
  * Created on August 15, 2018, 12:54 PM
@@ -12,7 +12,6 @@ int distribution_full_dynamic(T_eExecutionMode eMethod) {
     int nTestRecalc;
     T_stExecutionStructure exeVector[MAX_WORKERS];
     T_stExecutionStructure* pExeRetMode;
-    T_stTestInfo* pTest;
 
     if (MALONE_DEBUG_DIST_COMMON) printf("distribution_full_dynamic - Init\n");
     if (m_nRank == MALONE_MASTER) {
@@ -140,10 +139,7 @@ int distribution_full_dynamic(T_eExecutionMode eMethod) {
                 nIndexTest = pExeRetMode->nTestInit;
                 nIndexMutant = pExeRetMode->nMutantInit;
                 if (MALONE_DEBUG_DIST_WORKERS) printf("distribution_full_dynamic - Sending results to master [M: %d - T: %d]\n", nIndexMutant, nIndexTest);
-                
-                //Quitar esto de aqui, pero ya
-                //pTest = m_oMutantList.array[nIndexMutant]->oTestList.tests[nIndexTest];
-                //if (MALONE_DEBUG_DIST_WORKERS) printTest(pTest);
+
             } else {
                 if (MALONE_DEBUG_DIST_WORKERS) printf("distribution_full_dynamic - Worker <%d> finished!\n", m_nRank);
             }

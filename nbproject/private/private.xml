@@ -12,7 +12,6 @@
             <file>file:/home/j0hn/NetBeansProjects/Malone/executionMode.c</file>
             <file>file:/home/j0hn/NetBeansProjects/Malone/test_mutants.h</file>
             <file>file:/home/j0hn/NetBeansProjects/Malone/distribution_full_dynamic_scatter.c</file>
-            <file>file:/home/j0hn/NetBeansProjects/Malone/Options.h</file>
             <file>file:/home/j0hn/NetBeansProjects/Malone/main.c</file>
             <file>file:/home/j0hn/NetBeansProjects/Malone/MPIDataTypes.c</file>
             <file>file:/home/j0hn/NetBeansProjects/Malone/debugMode.h</file>
@@ -60,6 +59,7 @@
             <file>file:/home/j0hn/NetBeansProjects/Malone/MonteCarlo.c</file>
             <file>file:/home/j0hn/NetBeansProjects/Malone/test_testcases.h</file>
             <file>file:/home/j0hn/NetBeansProjects/Malone/ToDo</file>
+            <file>file:/home/j0hn/NetBeansProjects/Malone/transformations.h</file>
         </group>
     </open-files>
 </project-private>
