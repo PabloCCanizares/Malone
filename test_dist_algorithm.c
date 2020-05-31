@@ -1,9 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file test_dist_algorithm.c
+ *     Source code of the test suite for testing distribution algorithms.
+ * @par Purpose:
+ *     Testing the distribution algorithms and different combination of 
+ * optimisationts.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date  10 May 2020
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
 #include "test_dist_algorithm.h"
 #include "test_envfile.h"
 
@@ -1115,7 +1128,7 @@ void test_dist_algorithm_42()
     
     if(m_nRank == 0)
     {
-        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+        if(Equality(fMS, 0.909, 0.005))  //Equivalent mutants
             m_oAutoTests.nPass++;
         else
         {
@@ -1212,7 +1225,7 @@ void test_dist_algorithm_46()
     
     if(m_nRank == 0)
     {
-        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+        if(Equality(fMS, 0.909, 0.005))  //Equivalent mutants
             m_oAutoTests.nPass++;
         else
         {
@@ -1478,7 +1491,7 @@ void test_dist_algorithm_57()
     
     if(m_nRank == 0)
     {
-        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+        if(Equality(fMS, 0.909, 0.005))  //Equivalent mutants
             m_oAutoTests.nPass++;
         else
         {
@@ -1575,7 +1588,7 @@ void test_dist_algorithm_61()
     
     if(m_nRank == 0)
     {
-        if(Equality(fMS, 0.947, 0.005))  //Equivalent mutants
+        if(Equality(fMS, 0.909, 0.005))  //Equivalent mutants
             m_oAutoTests.nPass++;
         else
         {

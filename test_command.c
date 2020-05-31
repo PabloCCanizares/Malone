@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-#include "autotest.h"
+#include "Malone_autotest.h"
 #include "test_command.h"   
 #include "popen_noshell.h"
 #include <err.h>

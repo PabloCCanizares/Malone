@@ -1,5 +1,5 @@
 
-#include "EquivalenceChecking.h"
+#include "Malone_equivalence.h"
 
 void createClusters()
 {

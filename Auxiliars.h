@@ -1,6 +1,26 @@
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file Auxiliars.h
+ *     This file contains all the auxiliars methods necessaries to run MALONE. 
+ * @par Purpose:
+ *     Provide all the auxiliar methods of MALONE.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date     28 Oct 2015
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
 
 #ifndef AUXILIARS_H
 #define AUXILIARS_H
+
+#include "Malone_headers.h"
 
 #ifdef DISABLELOGS
 #define DEBUG_AUX 0
@@ -77,5 +97,6 @@ void copy(char *source, char *dest);
 char** str_split(char* a_str, const char a_delim);
 FILE * popen2(char* command, char* type, int * pid);
 int pclose2(FILE * fp, pid_t pid);
+
 #endif	// AUXILIARS_H
 

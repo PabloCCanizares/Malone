@@ -1,5 +1,24 @@
-#include "DistributionAlgorithms.h"
-//TODO: Renombrar a distribution algorithms common.
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file Malone_distribution_commons.c
+ *     Source file of the distribution algorithm commons.
+ * @par Purpose:
+ *    Provide the common methods to support the different distribution algorithms
+ * of MALONE.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date     15 Aug 2018
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
+
+#include "Malone_distribution_commons.h"
 
 int hasOriginalProgramRemainingWork(int nIndexTests) {
     int nRet;

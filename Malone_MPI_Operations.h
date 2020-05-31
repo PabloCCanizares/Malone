@@ -20,6 +20,9 @@
 #ifndef MPI_OPERATIONS_H
 #define	MPI_OPERATIONS_H
 
+#include "Malone_headers.h"
+#include "Malone_execution_info.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif

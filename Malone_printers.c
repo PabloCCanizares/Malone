@@ -1,5 +1,23 @@
-#include "printers.h"
-
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file Malone_printers.h
+ *     Header of the printer functions.
+ * @par Purpose:
+ *     Print to screen some of the most important elements of MALONE, such as 
+ *  tests, mutants, etc. It has been mainly included to debug tasks.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date     23 Oct 2015 - 20 May 2020
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
+#include "Malone_printers.h"
 
 #ifdef DISABLELOGS
 #define PRINTER_ON 0

@@ -1,10 +1,24 @@
-/* 
- * File:   distribution_adaptive_grain_scatter.c
- * Author: Pablo C. Cañizares
- *
- * Created on August 15, 2018, 12:54 PM
- */
-#include "DistributionAlgorithms.h"
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file distribution_adaptive_grain.c
+ *     Source file of the distribution adaptive grain.
+ * @par Purpose:
+ *    Provide the functionality of the dynamic algorithm that distributes
+ * the grain depending on the remaining workload, changing from mutant-grain to
+ * test-grain.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date     15 Aug 2018
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
+#include "Malone_distribution_commons.h"
 #include "Auxiliars.h"
 
 #define MINIMUM_MUTANTS m_nSize-2

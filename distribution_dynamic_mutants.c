@@ -4,7 +4,7 @@
  *
  * Created on August 15, 2018, 12:54 PM
  */
-#include "DistributionAlgorithms.h"
+#include "Malone_distribution_commons.h"
 int distribution_dynamic_mutants(T_eExecutionMode eMethod) {
     //Divide the number of mutants among the available workers!
     int nMutants, nTests, nIndex, nNumReceives, nWorkerSource, nFinish, nSent;

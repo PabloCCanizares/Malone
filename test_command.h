@@ -1,15 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   test_command.h
- * Author: Pablo C. Cañizares
- *
- * Created on April 28, 2020, 9:16 PM
- */
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file test_conffile.c
+ *     Source code of the test suite for checking the usage of the configuration
+ * file in MALONE.
+ * @par Purpose:
+ *     Testing the configuration file.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date  28 Apr 2020
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
 
 #ifndef TEST_COMMAND_H
 #define TEST_COMMAND_H
@@ -18,7 +25,7 @@
 extern "C" {
 #endif
 
-#include "autotest.h"
+#include "Malone_autotest.h"
 
 void testCommand();
 void test_command_1();

@@ -1,14 +1,27 @@
- 
-#include "transformations.h"
-#include "printers.h"
-//
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file Malone_transformations.h
+ *     Source file of transformation operations.
+ *     MALONE 
+ * @par Purpose:
+ *     Provides the data structure and operations needed to perform the transformations
+ * between tests/mutants and its reduced versions.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date  27 May 2020
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
 
-/*
-T_stTestInfo*  testred2Test(T_stTI* pTestRed);
-T_stMutant* redMut2Mut(T_stM* pReducedMut);
-void testList2redTestList(T_stTI* oTest, T_stTestList* pTestList);
-void test2redTest(T_stTestInfo* pTest, T_stTI* pTestRed);
-*/
+#include "Malone_transformations.h"
+#include "Malone_printers.h"
+//
 
 #ifdef DISABLELOGS
 #define DEBUG_TRANS 0
@@ -16,7 +29,6 @@ void test2redTest(T_stTestInfo* pTest, T_stTI* pTestRed);
 #define DEBUG_TRANS isEnabledTransLog()
 #endif
 
-//TODO: Cambiar el nombre del archivo a Malone_transformations
 T_stMutant* redMut2Mut(T_stM* pReducedMut)
 {
     T_stMutant* pRet;

@@ -1,19 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   md5Parallel.c
- * Author: Pablo C. Cañizares
- *
- * Created on October 4, 2018, 12:54 PM
- */
-#include "printers.h"
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file Malone_md5Parallel.h
+ *     Source code of the parallel chechsum.
+ * @par Purpose:
+ *     Provide all the methods to conduct the parallel md5 to detect equivalent
+ * mutants.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date     4 Oct 2018
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
+#include "Malone_printers.h"
 #include "Auxiliars.h"
-#include "MPI_Operations.h"
-#include "EquivalenceChecking.h"
+#include "Malone_MPI_Operations.h"
+#include "Malone_equivalence.h"
 
 int testEquivalenceChecking()
 {

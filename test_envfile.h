@@ -1,21 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   test_envfile.h
- * Author: j0hn
- *
- * Created on April 28, 2020, 9:28 PM
- */
-
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file test_enfile.h
+ *     Header of the environmental file test suite.
+ * @par Purpose:
+ *     Testing the environmental file functionality.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date  28 Apr 2020
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
 #ifndef TEST_ENVFILE_H
 #define TEST_ENVFILE_H
 
 #include "Auxiliars.h"
-#include "autotest.h"
+#include "Malone_autotest.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -17,12 +17,12 @@
  *     (at your option) any later version.
  */
 /******************************************************************************/
-#include "Options.h"
+#include "Malone_options.h"
 #include "Malone.h"
 #include "Auxiliars.h"
 #include "executionMode.h"
 #include "debugMode.h"
-#include "autotest.h"
+#include "Malone_autotest.h"
 
 #define MAIN_DEBUG 1
 

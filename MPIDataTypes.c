@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 # include "mpi.h"
-#include "Options.h"
+#include "Malone_options.h"
 
 #define NUMBER_OF_TESTS 10
 #define ROWS  10

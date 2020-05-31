@@ -4,22 +4,27 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>DistributionAlgorithms.h</itemPath>
-      <itemPath>EquivalenceChecking.h</itemPath>
+      <itemPath>Auxiliars.h</itemPath>
       <itemPath>MPIDataTypes.h</itemPath>
-      <itemPath>MPI_Operations.h</itemPath>
       <itemPath>Malone.h</itemPath>
+      <itemPath>Malone_MPI_Operations.h</itemPath>
+      <itemPath>Malone_configuration.h</itemPath>
+      <itemPath>Malone_distribution_commons.h</itemPath>
+      <itemPath>Malone_equivalence.h</itemPath>
+      <itemPath>Malone_execution_info.h</itemPath>
+      <itemPath>Malone_headers.h</itemPath>
+      <itemPath>Malone_md5Parallel.h</itemPath>
+      <itemPath>Malone_mutants.h</itemPath>
+      <itemPath>Malone_options.h</itemPath>
+      <itemPath>Malone_printers.h</itemPath>
+      <itemPath>Malone_saver.h</itemPath>
+      <itemPath>Malone_testcases.h</itemPath>
+      <itemPath>Malone_timing.h</itemPath>
+      <itemPath>Malone_transformations.h</itemPath>
       <itemPath>MonteCarlo.h</itemPath>
-      <itemPath>Options.h</itemPath>
-      <itemPath>Vector.h</itemPath>
-      <itemPath>configuration.h</itemPath>
-      <itemPath>kvec.h</itemPath>
-      <itemPath>md5Parallel.h</itemPath>
       <itemPath>particles.h</itemPath>
       <itemPath>popen_noshell.h</itemPath>
-      <itemPath>printers.h</itemPath>
       <itemPath>randomElements.h</itemPath>
-      <itemPath>transformations.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -31,7 +36,7 @@
       <logicalFolder name="f3"
                      displayName="DistributionAlgorithms"
                      projectFiles="true">
-        <itemPath>DistributionAlgorithms.c</itemPath>
+        <itemPath>Malone_distribution_commons.c</itemPath>
         <itemPath>distribution_adaptive_grain.c</itemPath>
         <itemPath>distribution_dynamic_mutants.c</itemPath>
         <itemPath>distribution_full_dynamic.c</itemPath>
@@ -45,12 +50,12 @@
       <logicalFolder name="f1" displayName="Operations" projectFiles="true">
         <logicalFolder name="f1" displayName="Aux" projectFiles="true">
           <itemPath>Auxiliars.c</itemPath>
-          <itemPath>ExecutionMapSaver.c</itemPath>
-          <itemPath>configuration.c</itemPath>
+          <itemPath>Malone_configuration.c</itemPath>
+          <itemPath>Malone_printers.c</itemPath>
+          <itemPath>Malone_saver.c</itemPath>
+          <itemPath>Malone_transformations.c</itemPath>
           <itemPath>popen_noshell.c</itemPath>
-          <itemPath>printers.c</itemPath>
           <itemPath>randomElements.c</itemPath>
-          <itemPath>transformations.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f4" displayName="Equivalence" projectFiles="true">
           <itemPath>EquivalenceChecking.c</itemPath>
@@ -61,15 +66,14 @@
           <itemPath>MonteCarlo.c</itemPath>
           <itemPath>PiReduce.c</itemPath>
           <itemPath>particles.c</itemPath>
-          <itemPath>testVec.c</itemPath>
           <itemPath>tests.c</itemPath>
         </logicalFolder>
         <itemPath>EnvFileSend.c</itemPath>
-        <itemPath>MPI_Operations.c</itemPath>
+        <itemPath>Malone_MPI_Operations.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="Tests" projectFiles="true">
-        <itemPath>autotest.c</itemPath>
-        <itemPath>autotest.h</itemPath>
+        <itemPath>Malone_autotest.c</itemPath>
+        <itemPath>Malone_autotest.h</itemPath>
         <itemPath>testConfFile.h</itemPath>
         <itemPath>test_command.c</itemPath>
         <itemPath>test_command.h</itemPath>
@@ -133,9 +137,7 @@
       </compileType>
       <item path="Auxiliars.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="DistributionAlgorithms.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="DistributionAlgorithms.h" ex="false" tool="3" flavor2="0">
+      <item path="Auxiliars.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="EnvFileSend.c" ex="false" tool="0" flavor2="0">
         <cTool>
@@ -147,43 +149,67 @@
       </item>
       <item path="EquivalenceChecking.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="EquivalenceChecking.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="ExecutionMapSaver.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="MPIDataTypes.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="MPIDataTypes.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="MPI_Operations.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="MPI_Operations.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Malone.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Malone.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Malone_MPI_Operations.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Malone_MPI_Operations.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_autotest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Malone_autotest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_configuration.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Malone_configuration.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_distribution_commons.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Malone_distribution_commons.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_equivalence.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_execution_info.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_headers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_md5Parallel.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_mutants.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_options.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_printers.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Malone_printers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_saver.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Malone_saver.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_testcases.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_timing.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_transformations.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Malone_transformations.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="MonteCarlo.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="MonteCarlo.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Options.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="PiReduce.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="ToDo" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Vector.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="autotest.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="autotest.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="backup.txt" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="configuration.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="configuration.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="debugMode.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -202,8 +228,6 @@
       </item>
       <item path="executionMode.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="kvec.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
         <cTool>
           <commandlineTool>gcc</commandlineTool>
@@ -211,8 +235,6 @@
         </cTool>
       </item>
       <item path="md5Parallel.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="md5Parallel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="particles.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -222,17 +244,11 @@
       </item>
       <item path="popen_noshell.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="printers.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="printers.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="randomElements.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="randomElements.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="testConfFile.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="testVec.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="test_command.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -261,10 +277,6 @@
       <item path="test_testcases.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="tests.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="transformations.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="transformations.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -300,51 +312,73 @@
       </compileType>
       <item path="Auxiliars.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="DistributionAlgorithms.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="DistributionAlgorithms.h" ex="false" tool="3" flavor2="0">
+      <item path="Auxiliars.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="EnvFileSend.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="EquivalenceChecking.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="EquivalenceChecking.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="ExecutionMapSaver.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="MPIDataTypes.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="MPIDataTypes.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="MPI_Operations.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="MPI_Operations.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Malone.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Malone.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Malone_MPI_Operations.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Malone_MPI_Operations.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_autotest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Malone_autotest.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_configuration.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Malone_configuration.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_distribution_commons.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Malone_distribution_commons.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_equivalence.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_execution_info.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_headers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_md5Parallel.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_mutants.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_options.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_printers.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Malone_printers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_saver.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Malone_saver.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_testcases.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_timing.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Malone_transformations.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Malone_transformations.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="MonteCarlo.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="MonteCarlo.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Options.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="PiReduce.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="ToDo" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="Vector.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="autotest.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="autotest.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="backup.txt" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="configuration.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="configuration.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="debugMode.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -363,13 +397,9 @@
       </item>
       <item path="executionMode.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="kvec.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="md5Parallel.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="md5Parallel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="particles.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -379,17 +409,11 @@
       </item>
       <item path="popen_noshell.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="printers.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="printers.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="randomElements.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="randomElements.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="testConfFile.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="testVec.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="test_command.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -418,10 +442,6 @@
       <item path="test_testcases.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="tests.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="transformations.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="transformations.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

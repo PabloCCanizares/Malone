@@ -1,14 +1,15 @@
 /******************************************************************************/
 // MALONE: Manager for pAralleL mutatiON tEsting.
 /******************************************************************************/
-/** @file test_mutants.h
- *     Header of the mutants test suite.
+/** @file Malone_md5Parallel.h
+ *     Header of the parallel chechsum.
  * @par Purpose:
- *     Testing the mutants functionality.
+ *     Provide all the methods to conduct the parallel md5 to detect equivalent
+ * mutants.
  * @par Comment:
  *     None.
  * @author   Pablo C. Cañizares
- *  * @date  10 May 2020
+ *  * @date     3 May 2020
  * @par  Copying and copyrights:
  *     This program is free software; you can redistribute it and/or modify
  *     it under the terms of the GNU General Public License as published by
@@ -16,21 +17,25 @@
  *     (at your option) any later version.
  */
 /******************************************************************************/
-#ifndef TEST_MUTANTS_H
-#define TEST_MUTANTS_H
+#ifndef MD5PARALLEL_H
+#define MD5PARALLEL_H
 
-#include "Malone_autotest.h"
+#include "Malone_options.h"
+#include "Auxiliars.h"
+#include "Malone.h"
+#include "Malone_printers.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void testMutants();
-void test_mutants_1();
+int testEquivalenceChecking();
+int parallelEquivalenceChecking();
+
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* TEST_MUTANTS_H */
+#endif /* MD5PARALLEL_H */
 

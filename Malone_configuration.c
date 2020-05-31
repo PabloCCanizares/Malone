@@ -1,19 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   configuration.c
- * Author: Pablo C. Cañizares
- *
- * Created on September 3, 2018, 4:05 PM
- */
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file Malone_configuration.c
+ *     Configuration and MALONE environmental files.
+ *     MALONE 
+ * @par Purpose:
+ *     Provide the methods to load and charge the configuration and environment
+ * files.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date  3 September 2018
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "Options.h"    
+#include "Malone_options.h"    
 #include "Auxiliars.h"
 
 void free_envfile(T_stIniValues* pEnvFile)

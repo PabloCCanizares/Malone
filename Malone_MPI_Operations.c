@@ -1,7 +1,7 @@
 /******************************************************************************/
 // MALONE: Manager for pAralleL mutatiON tEsting.
 /******************************************************************************/
-/** @file MPI_Operations.c
+/** @file Malone_MPI_Operations.c
  *     This file contains the main MPI operations of MALONE.
  * @par Purpose:
  *    Provide the main communication features of MALONE.
@@ -19,11 +19,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "mpi.h"
-#include "Options.h"
-#include "printers.h"
-#include "transformations.h"
+#include "Malone_options.h"
+#include "Malone_printers.h"
+#include "Malone_transformations.h"
 #include "Auxiliars.h"
-#include "MPI_Operations.h"
+#include "Malone_MPI_Operations.h"
 
 //TODO: Dividir MPI operations en minimo dos: MALONE_MPI_Ops_Tests && MALONE_MPI_Ops_Mutants
 

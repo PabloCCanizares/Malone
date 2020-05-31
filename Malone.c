@@ -18,14 +18,14 @@
  */
 /******************************************************************************/
 
-#include "Options.h"
+#include "Malone_options.h"
 #include "Malone.h"
-#include "ExecutionMapSaver.h"
+#include "Malone_saver.h"
 #include "Auxiliars.h"
-#include "MPI_Operations.h"
+#include "Malone_MPI_Operations.h"
 #include "tests.h"
-#include "printers.h"
-#include "EquivalenceChecking.h"
+#include "Malone_printers.h"
+#include "Malone_equivalence.h"
 #include "EnvFileSend.h"
 
 #ifdef DISABLELOGS

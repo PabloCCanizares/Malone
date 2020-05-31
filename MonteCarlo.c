@@ -4,7 +4,7 @@
 # include <time.h>
 
 # include "mpi.h"
-#include "Options.h"
+#include "Malone_options.h"
 
 # define DEBUG             0
 # define CHUNKSIZE      2000

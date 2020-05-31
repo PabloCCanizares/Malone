@@ -1,15 +1,30 @@
-/* 
- * File:   Malone.h
- * Author: Pablo C. Cañizares
- *
- * Created on October 28, 2015, 12:50 PM
- */
-
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file Malone.h
+ *     Main functions of the framework, which provide the principal features of 
+ *     MALONE 
+ * @par Purpose:
+ *     Provide the API of MALONE.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date     25 Oct 2015 - 20 May 2020
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
 #ifndef MALONE_H
 #define	MALONE_H
 
-#include "Options.h"
-#include "DistributionAlgorithms.h"
+#include "Malone_headers.h"
+#include "Malone_configuration.h"
+#include "Malone_options.h"
+#include "Malone_distribution_commons.h"
+
 
 int malone_initialize();
 int malone_initialize_debug_mode();

@@ -36,17 +36,19 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Auxiliars.o \
-	${OBJECTDIR}/DistributionAlgorithms.o \
 	${OBJECTDIR}/EnvFileSend.o \
 	${OBJECTDIR}/EquivalenceChecking.o \
-	${OBJECTDIR}/ExecutionMapSaver.o \
 	${OBJECTDIR}/MPIDataTypes.o \
-	${OBJECTDIR}/MPI_Operations.o \
 	${OBJECTDIR}/Malone.o \
+	${OBJECTDIR}/Malone_MPI_Operations.o \
+	${OBJECTDIR}/Malone_autotest.o \
+	${OBJECTDIR}/Malone_configuration.o \
+	${OBJECTDIR}/Malone_distribution_commons.o \
+	${OBJECTDIR}/Malone_printers.o \
+	${OBJECTDIR}/Malone_saver.o \
+	${OBJECTDIR}/Malone_transformations.o \
 	${OBJECTDIR}/MonteCarlo.o \
 	${OBJECTDIR}/PiReduce.o \
-	${OBJECTDIR}/autotest.o \
-	${OBJECTDIR}/configuration.o \
 	${OBJECTDIR}/debugMode.o \
 	${OBJECTDIR}/distribution_adaptive_grain.o \
 	${OBJECTDIR}/distribution_dynamic_mutants.o \
@@ -58,9 +60,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/md5Parallel.o \
 	${OBJECTDIR}/particles.o \
 	${OBJECTDIR}/popen_noshell.o \
-	${OBJECTDIR}/printers.o \
 	${OBJECTDIR}/randomElements.o \
-	${OBJECTDIR}/testVec.o \
 	${OBJECTDIR}/test_command.o \
 	${OBJECTDIR}/test_conffile.o \
 	${OBJECTDIR}/test_deploys.o \
@@ -68,8 +68,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/test_envfile.o \
 	${OBJECTDIR}/test_mutants.o \
 	${OBJECTDIR}/test_testcases.o \
-	${OBJECTDIR}/tests.o \
-	${OBJECTDIR}/transformations.o
+	${OBJECTDIR}/tests.o
 
 
 # C Compiler Flags
@@ -101,11 +100,6 @@ ${OBJECTDIR}/Auxiliars.o: Auxiliars.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Auxiliars.o Auxiliars.c
 
-${OBJECTDIR}/DistributionAlgorithms.o: DistributionAlgorithms.c
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DistributionAlgorithms.o DistributionAlgorithms.c
-
 ${OBJECTDIR}/EnvFileSend.o: EnvFileSend.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -116,25 +110,50 @@ ${OBJECTDIR}/EquivalenceChecking.o: EquivalenceChecking.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/EquivalenceChecking.o EquivalenceChecking.c
 
-${OBJECTDIR}/ExecutionMapSaver.o: ExecutionMapSaver.c
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ExecutionMapSaver.o ExecutionMapSaver.c
-
 ${OBJECTDIR}/MPIDataTypes.o: MPIDataTypes.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MPIDataTypes.o MPIDataTypes.c
 
-${OBJECTDIR}/MPI_Operations.o: MPI_Operations.c
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MPI_Operations.o MPI_Operations.c
-
 ${OBJECTDIR}/Malone.o: Malone.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Malone.o Malone.c
+
+${OBJECTDIR}/Malone_MPI_Operations.o: Malone_MPI_Operations.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Malone_MPI_Operations.o Malone_MPI_Operations.c
+
+${OBJECTDIR}/Malone_autotest.o: Malone_autotest.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Malone_autotest.o Malone_autotest.c
+
+${OBJECTDIR}/Malone_configuration.o: Malone_configuration.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Malone_configuration.o Malone_configuration.c
+
+${OBJECTDIR}/Malone_distribution_commons.o: Malone_distribution_commons.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Malone_distribution_commons.o Malone_distribution_commons.c
+
+${OBJECTDIR}/Malone_printers.o: Malone_printers.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Malone_printers.o Malone_printers.c
+
+${OBJECTDIR}/Malone_saver.o: Malone_saver.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Malone_saver.o Malone_saver.c
+
+${OBJECTDIR}/Malone_transformations.o: Malone_transformations.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Malone_transformations.o Malone_transformations.c
 
 ${OBJECTDIR}/MonteCarlo.o: MonteCarlo.c
 	${MKDIR} -p ${OBJECTDIR}
@@ -145,16 +164,6 @@ ${OBJECTDIR}/PiReduce.o: PiReduce.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PiReduce.o PiReduce.c
-
-${OBJECTDIR}/autotest.o: autotest.c
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/autotest.o autotest.c
-
-${OBJECTDIR}/configuration.o: configuration.c
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/configuration.o configuration.c
 
 ${OBJECTDIR}/debugMode.o: debugMode.c
 	${MKDIR} -p ${OBJECTDIR}
@@ -211,20 +220,10 @@ ${OBJECTDIR}/popen_noshell.o: popen_noshell.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/popen_noshell.o popen_noshell.c
 
-${OBJECTDIR}/printers.o: printers.c
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/printers.o printers.c
-
 ${OBJECTDIR}/randomElements.o: randomElements.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/randomElements.o randomElements.c
-
-${OBJECTDIR}/testVec.o: testVec.c
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/testVec.o testVec.c
 
 ${OBJECTDIR}/test_command.o: test_command.c
 	${MKDIR} -p ${OBJECTDIR}
@@ -265,11 +264,6 @@ ${OBJECTDIR}/tests.o: tests.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/tests.o tests.c
-
-${OBJECTDIR}/transformations.o: transformations.c
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -I../../libraries/mpich-3.1.4/src `pkg-config --cflags glib-2.0` `pkg-config --cflags mpich`   -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/transformations.o transformations.c
 
 # Subprojects
 .build-subprojects:

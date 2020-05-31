@@ -1,14 +1,14 @@
 /******************************************************************************/
 // MALONE: Manager for pAralleL mutatiON tEsting.
 /******************************************************************************/
-/** @file test_mutants.h
- *     Header of the mutants test suite.
+/** @file Malone_equivalence.h
+ *     Header of equivalence operations.
  * @par Purpose:
- *     Testing the mutants functionality.
+ *     This file provides the functionality to operate with equivalent mutants. 
  * @par Comment:
  *     None.
  * @author   Pablo C. Cañizares
- *  * @date  10 May 2020
+ *  * @date     28 May 2020
  * @par  Copying and copyrights:
  *     This program is free software; you can redistribute it and/or modify
  *     it under the terms of the GNU General Public License as published by
@@ -16,21 +16,21 @@
  *     (at your option) any later version.
  */
 /******************************************************************************/
-#ifndef TEST_MUTANTS_H
-#define TEST_MUTANTS_H
 
-#include "Malone_autotest.h"
+#ifndef EQUIVALENCECHECKING_H
+#define	EQUIVALENCECHECKING_H
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+#include "Malone_headers.h"
+#include "Auxiliars.h"
+#include "Malone_MPI_Operations.h"
+#include "Malone_md5Parallel.h"
 
-void testMutants();
-void test_mutants_1();
+#define EQUIVALENCE_PRINT 0
+#define EQUIVALENCE_PRINT_DEBUG 0
 
-#ifdef __cplusplus
-}
-#endif
 
-#endif /* TEST_MUTANTS_H */
+void createClusters();
+void checkMutantsEquivalence();
+int areEquals(int nMutantSource,int nMutantDest);
 
+#endif	/* EQUIVALENCECHECKING_H */

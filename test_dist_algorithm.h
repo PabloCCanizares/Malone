@@ -1,16 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   test_dist_algorithm.h
- * Author: Pablo C. Cañizares
- *
- * Created on May 10, 2020, 11:59 PM
- */
-
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file test_dist_algorithm.h
+ *     Header of the test suite for testing distribution algorithms.
+ * @par Purpose:
+ *     Testing the distribution algorithms and its combinations.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date  10 May 2020
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
 #ifndef TEST_DIST_ALGORITHM_H
 #define TEST_DIST_ALGORITHM_H
 
@@ -18,7 +23,7 @@
 extern "C" {
 #endif
 
-#include "autotest.h"
+#include "Malone_autotest.h"
 #include "executionMode.h"
 #include "Malone.h"
     

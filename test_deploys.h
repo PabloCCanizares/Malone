@@ -1,16 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   test_deploys.h
- * Author: Pablo C. Cañizares
- *
- * Created on May 3, 2020, 9:03 PM
- */
-
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file test_deploys.h
+ *     Header of the test suite for checking the deployment of an execution 
+ * structure used in the distributed algorithms in MALONE.
+ * @par Purpose:
+ *     Testing the execution structures.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date  3 May 2020
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
 #ifndef TEST_DEPLOYS_H
 #define TEST_DEPLOYS_H
 
@@ -18,7 +24,7 @@
 extern "C" {
 #endif
     
-#include "autotest.h"
+#include "Malone_autotest.h"
     
 void testDeploy();
 void test_deploy_1();

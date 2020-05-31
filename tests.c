@@ -1,6 +1,7 @@
-#include "Options.h"
-#include "printers.h"
-#include "MPI_Operations.h"
+#include "Malone_options.h"
+#include "Malone_headers.h"
+#include "Malone_printers.h"
+#include "Malone_MPI_Operations.h"
 #include "randomElements.h"
 void testDataType(int choice)
 {

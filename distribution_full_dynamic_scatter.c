@@ -4,7 +4,7 @@
  *
  * Created on August 15, 2018, 12:54 PM
  */
-#include "DistributionAlgorithms.h"
+#include "Malone_distribution_commons.h"
 
 int distribution_full_dynamic_scatter(T_eExecutionMode eMethod) {    
     int nMutants, nTests, nSent, nIndex, nAlive, nWorkerSource, nIndexTest, nIndexMutant, nFinish, nRemainBlocks, nCounterAux, nFirst;

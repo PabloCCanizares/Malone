@@ -1,23 +1,30 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   DistributionAlgorithms.h
- * Author: Pablo C. Cañizares
- *
- * Created on August 15, 2018, 12:54 PM
- */
-
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file Malone_distribution_commons.h
+ *     Header of the distribution algorithm commons.
+ * @par Purpose:
+ *    Provide the common methods to support the different distribution algorithms
+ * of MALONE.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date     15 Aug 2018
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
 #ifndef DISTRIBUTIONALGORITHMS_H
 #define DISTRIBUTIONALGORITHMS_H
 
-#include "Options.h"
-#include "printers.h"
-#include "MPI_Operations.h"
 #include "Malone.h"
+#include "Malone_options.h"
+#include "Malone_headers.h"
+#include "Malone_MPI_Operations.h"
+#include "Malone_execution_info.h"
 #include "Auxiliars.h"
 
 #ifdef DISABLELOGS

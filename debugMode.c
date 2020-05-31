@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Malone.h"
-#include "printers.h"
+#include "Malone_printers.h"
 #include "debugMode.h"
 #include "tests.h"
 #include "Auxiliars.h"

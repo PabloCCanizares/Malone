@@ -1,5 +1,23 @@
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file Auxiliars.c
+ *     This file contains all the auxiliars methods necessaries to run MALONE. 
+ * @par Purpose:
+ *     Provide all the auxiliar methods of MALONE.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date     28 Oct 2015
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
 
-#include "Options.h"
+#include "Malone_options.h"
 #include "Auxiliars.h"
 #include "Malone.h"
 #include <errno.h>
@@ -8,7 +26,7 @@
 #include <sys/wait.h> 
 #include <sys/stat.h>
 #include "popen_noshell.h"
-#include "configuration.h"
+#include "Malone_configuration.h"
 #define SLEEP_FOR_DEBUG 0
 
 
@@ -61,6 +79,8 @@ void free_mutant(T_stMutant* pMutant)
 void free_auxiliars()
 {
     if (DEBUG_AUX) printf("<%d>free_auxiliars - Init\n", m_nRank);
+    
+    
     //Free the mutant list
     for (int i = 0; i < m_oMutantList.nElems && i < MAX_MUTANTS; i++) {
         T_stMutant* pMutant;

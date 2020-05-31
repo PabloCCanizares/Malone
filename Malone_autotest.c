@@ -1,18 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   autotest.c
- * Author: Pablo C. Canizares
- *
- * Created on April 24, 2020, 8:58 PM
- */
-#include "autotest.h"
+/******************************************************************************/
+// MALONE: Manager for pAralleL mutatiON tEsting.
+/******************************************************************************/
+/** @file Malone_autotest.c
+ *     Source file of the MALONE autotest.
+ * @par Purpose:
+ *     Testing the different functionalities of MALONE. The test suite
+ * starts with basic components, such as, just o name a few, command executor, datatypes, configuration,
+ * and finishing with a combination of up to 60 distribution algorithms.
+ * @par Comment:
+ *     None.
+ * @author   Pablo C. Cañizares
+ *  * @date  24 Apr 2020
+ * @par  Copying and copyrights:
+ *     This program is free software; you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation; either version 2 of the License, or
+ *     (at your option) any later version.
+ */
+/******************************************************************************/
+#include "Malone_autotest.h"
 #include "Auxiliars.h"
-#include "MPI_Operations.h"
+#include "Malone_MPI_Operations.h"
 void autotest_initialise();
 void autotest();
 void autotest_print_results();

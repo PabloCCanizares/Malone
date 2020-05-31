@@ -5,7 +5,7 @@
  * Created on October 28, 2015, 12:42 PM
  */
 
-#include  "Options.h"
+#include  "Malone_options.h"
 #include <math.h>
 
 double f(double); 

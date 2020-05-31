@@ -1,14 +1,14 @@
 /******************************************************************************/
 // MALONE: Manager for pAralleL mutatiON tEsting.
 /******************************************************************************/
-/** @file test_mutants.h
- *     Header of the mutants test suite.
+/** @file Malone_headers.h
+ *     Header of headers.
  * @par Purpose:
- *     Testing the mutants functionality.
+ *     This file contains all the headers necessaries to compile MALONE. 
  * @par Comment:
  *     None.
  * @author   Pablo C. Cañizares
- *  * @date  10 May 2020
+ *  * @date     28 May 2020
  * @par  Copying and copyrights:
  *     This program is free software; you can redistribute it and/or modify
  *     it under the terms of the GNU General Public License as published by
@@ -16,21 +16,25 @@
  *     (at your option) any later version.
  */
 /******************************************************************************/
-#ifndef TEST_MUTANTS_H
-#define TEST_MUTANTS_H
-
-#include "Malone_autotest.h"
+#ifndef MALONE_HEADERS_H
+#define MALONE_HEADERS_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void testMutants();
-void test_mutants_1();
+#include "Malone_execution_info.h"
+#include "Malone_timing.h"
+#include "Malone_testcases.h"
+#include "Malone_mutants.h"
+#include "Malone_printers.h"
+#include "Malone_equivalence.h"
+#include "Malone_saver.h"
 
+    
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* TEST_MUTANTS_H */
+#endif /* MALONE_HEADERS_H */
 

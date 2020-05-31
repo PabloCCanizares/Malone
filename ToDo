@@ -56,7 +56,7 @@ TODO cercano:
 - Comentar algo el codigo
 - Quitar todo lo estatico posible, m_oTest[0] -> no hay necesidad. Done [21/05/20]
 - Comentar los tipos de Options.h
-- Tratar de eliminar los tipos que no aplican.
+- Tratar de eliminar los tipos que no aplican. Done [24/05/20]
 - Convertir oMap de estatico a dinamico (Pruebas empezadas en malone lab). Done [24/05/20]
 - Probar si los datatypes se pueden adaptar al maximo de test/mutantes para ahorrar envio por red.
 - Con un autotest_add y markertoken '-' Excepcion no controlada (Creo que está bien, pero la salida por abort es abrupta)
