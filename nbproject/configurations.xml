@@ -22,6 +22,7 @@
       <itemPath>Malone_timing.h</itemPath>
       <itemPath>Malone_transformations.h</itemPath>
       <itemPath>MonteCarlo.h</itemPath>
+      <itemPath>src/common_headers/distributed_algorithm_enum.h</itemPath>
       <itemPath>particles.h</itemPath>
       <itemPath>popen_noshell.h</itemPath>
       <itemPath>randomElements.h</itemPath>
@@ -248,6 +249,11 @@
       </item>
       <item path="randomElements.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="src/common_headers/distributed_algorithm_enum.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="testConfFile.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="test_command.c" ex="false" tool="0" flavor2="0">
@@ -412,6 +418,11 @@
       <item path="randomElements.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="randomElements.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/common_headers/distributed_algorithm_enum.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
       <item path="testConfFile.h" ex="false" tool="3" flavor2="0">
       </item>
