@@ -9,6 +9,7 @@
       <itemPath>Malone.h</itemPath>
       <itemPath>Malone_MPI_Operations.h</itemPath>
       <itemPath>Malone_configuration.h</itemPath>
+      <itemPath>src/common_headers/Malone_distributed_algorithm_types.h</itemPath>
       <itemPath>Malone_distribution_commons.h</itemPath>
       <itemPath>Malone_equivalence.h</itemPath>
       <itemPath>Malone_execution_info.h</itemPath>
@@ -22,7 +23,6 @@
       <itemPath>Malone_timing.h</itemPath>
       <itemPath>Malone_transformations.h</itemPath>
       <itemPath>MonteCarlo.h</itemPath>
-      <itemPath>src/common_headers/distributed_algorithm_enum.h</itemPath>
       <itemPath>particles.h</itemPath>
       <itemPath>popen_noshell.h</itemPath>
       <itemPath>randomElements.h</itemPath>
@@ -249,7 +249,7 @@
       </item>
       <item path="randomElements.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/common_headers/distributed_algorithm_enum.h"
+      <item path="src/common_headers/Malone_distributed_algorithm_types.h"
             ex="false"
             tool="3"
             flavor2="0">
@@ -419,7 +419,7 @@
       </item>
       <item path="randomElements.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/common_headers/distributed_algorithm_enum.h"
+      <item path="src/common_headers/Malone_distributed_algorithm_types.h"
             ex="false"
             tool="3"
             flavor2="0">
