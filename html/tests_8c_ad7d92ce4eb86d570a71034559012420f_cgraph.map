@@ -1,7 +1,0 @@
-<map id="mutantDataType" name="mutantDataType">
-<area shape="rect" id="node2" href="$randomElements_8c.html#a7f0f0094af9657adf9fb1488b58df1c1" title="generateRandomMutant" alt="" coords="174,5,335,32"/>
-<area shape="rect" id="node5" href="$printers_8c.html#a4478e7956b6e13411d1ead7c8cc8edae" title="printfMutantFull" alt="" coords="199,56,311,83"/>
-<area shape="rect" id="node6" href="$MPI__Operations_8c.html#a476914662140572321cca639d0f56938" title="sendMutant" alt="" coords="209,107,300,133"/>
-<area shape="rect" id="node3" href="$randomElements_8c.html#a3686a06fd3fa65e169ebcf503c4e76ce" title="generateRandomTestList" alt="" coords="384,5,552,32"/>
-<area shape="rect" id="node4" href="$randomElements_8c.html#a9c9ccad72c8e7f8cf47244dbfcf2780b" title="generateRandomTest" alt="" coords="600,5,747,32"/>
-</map>
