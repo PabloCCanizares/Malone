@@ -1,6 +1,6 @@
 # Prerequisites
 *.d
-
+*~
 # Compiled Object files
 *.slo
 *.lo
@@ -33,3 +33,7 @@
 /build/
 /Results/
 /nbproject/
+
+#Documentation
+/latex/
+/html
