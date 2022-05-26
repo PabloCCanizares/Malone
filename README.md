@@ -6,6 +6,9 @@ Malone is a framework for automatically parallelising the mutation testing frame
 
 ![MALONE architecture](/doc/architecture.png)
 
+This figure shows the basic architecture of MALONE. The left part depicts how the master and worker processes are deployed among the available computing nodes of the cluster. These nodes must contain a shared folder that is allocated in the different storage nodes of the cluster. Let us remind that the access to the data heavily depends on how the file system of the cluster is configured. Thus, parallel and distributed file systems should significantly improve the overall system performance. In essence, the shared folder stores the MALONE tool and the MuT tool to create the mutants and the test suite, which are also stored in the same folder.
+
+
 ###### Parallel distribution algorithms supported
 With respect to the distribution algorithms supported, the tool includes both static and dynamic strategies, an adapted version of *DMBO*, *DTC*, *PEDRO*, *EMINENT*, and the *Dynamic adaptive algorithm*.
 
