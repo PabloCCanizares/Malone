@@ -5,7 +5,7 @@ Malone is a framework for automatically parallelising the mutation testing frame
 ###### Main architecture
 
 ![This is an image](/doc/tool_support.pdf)
-
+[embed]/doc/tool_support.pdf[/embed]
 ###### Parallel distribution algorithms supported
 With respect to the distribution algorithms supported, the tool includes both static and dynamic strategies, an adapted version of *DMBO*, *DTC*, *PEDRO*, *EMINENT*, and the *Dynamic adaptive algorithm*.
 
