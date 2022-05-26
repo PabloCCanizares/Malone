@@ -17,3 +17,9 @@ Regarding the improvement techniques, MALONE includes *distributing the test sui
 
 ###### MALONE in High-Performance Computing environments
 MALONE has been designed to be used in large HPC environments. For this purpose, the tool uses MPI to interchange data between processes. The logical process schema is based on a master/worker pattern. In this way, the master process orchestrates the MuT process and distributes the workload among the workers. Finally, the tool also supports sequential MuT execution -- not based on a master/worker pattern, but on a single process -- which can be used to calculate the speed-up obtained in the parallel execution.
+
+Hence, MALONE has been used and deployed for research tasks in some of the most widely known supercomputers in Europe, such as:
+* ARCHER2 serves as the UK’s National High Performance Computing system and facilitates world-class science for UK researchers.
+* Cirrus, an HPC system designed to solve computational, simulation, modelling, and data science challenges.
+
+
