@@ -8,4 +8,5 @@ With respect to the distribution algorithms supported, the tool includes both st
 ###### Other supported techniques
 Regarding the improvement techniques, MALONE includes *distributing the test suite among the available processes*, *sorting the test suite before executing test cases*, *scatter improvement*, *clustering equivalent mutants*, *parallel compilation* and *parallel checksum*.
 
-
+###### MALONE in High-Performance Computing environments
+MALONE has been designed to be used in large HPC environments. For this purpose, the tool uses MPI to interchange data between processes. The logical process schema is based on a master/worker pattern. In this way, the master process orchestrates the MuT process and distributes the workload among the workers. Finally, the tool also supports sequential MuT execution -- not based on a master/worker pattern, but on a single process -- which can be used to calculate the speed-up obtained in the parallel execution.
