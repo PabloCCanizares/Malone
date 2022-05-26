@@ -40,12 +40,19 @@ void test_testcase_0()
     
     if(m_nRank == 0)
     {
-        createTestRefP(0, "Test BRO!\n", 0.1,1, &pTest);
+        //createTestRefP(0, "Test BRO!\n", 0.1,1, &pTest);
+        pTest = createTest(0, "Test BRO!\n", 0.1,1);
         printTest((T_stTestInfo*)pTest);
         
         for(int i=1;i<m_nSize;i++)
         {
             sendTest((T_stTestInfo*)pTest,i);
+        }
+        
+        //free test
+        if(pTest!= NULL)
+        {
+            free(pTest);            
         }
     }
     else
@@ -68,7 +75,8 @@ void test_testcase_1()
     MPI_Barrier(MPI_COMM_WORLD);
     if(m_nRank == 0)
     {
-        createTestRefP(0, "Test BRO!\n", 0.1,1, &pTest);
+        //createTestRefP(0, "Test BRO!\n", 0.1,1, &pTest);
+        pTest = createTest(0, "Test BRO!\n", 0.1,1);
         printTest(pTest);
         
         for(int i=1;i<m_nSize;i++)
@@ -76,12 +84,23 @@ void test_testcase_1()
             sendTest(pTest,i);
         }
         
+        //free test
+        if(pTest!= NULL)
+        {
+            free(pTest);            
+        }
     }
     else
     {
         receiveTestRefP(0, &pTest);
         
         printTest(pTest);
+        
+        //free test
+        if(pTest!= NULL)
+        {
+            free(pTest);            
+        }
     }
     m_oAutoTests.nPass++;
     m_oAutoTests.nTotalTests++;

@@ -522,6 +522,7 @@ char* buildExeLine_general(int nIndexMutant, int nIndexTest, int nOriginalMode) 
         bzero(buffer, MAX_EXELINE);
         nLen = sprintf(buffer, "%s/%d/bin/mut.exe %d", m_stEnvValues->strMutantsPath, nIndexMutant, nIndexTest);
 
+
         strAux2 = malloc(sizeof (char)*nLen);
         strcpy(strAux2, buffer);
     }
@@ -1310,16 +1311,16 @@ void saveConfigAndEnvironmentFiles() {
 
 char* execCommandLine(const char *fmt, ...) {
     va_list arg;
-    char strCommand[1000];
+    char strCommand[100000]; 
     char* strRet, *line;
-    int nAcc, nLineLen, nResLen, nNewLen;
+    int nAcc, nLineLen, nResLen, nNewLen, nLoops;
     FILE *pp;
     #ifndef PERFORMANCE_MODE 
     long lInitTick, lEndTick, lTotal;    
     #endif   
 
     //Initialise
-    nAcc = nNewLen = nResLen = 0;
+    nAcc = nNewLen = nResLen = nLoops = 0;
     strRet = NULL;
 
     
@@ -1374,6 +1375,8 @@ char* execCommandLine(const char *fmt, ...) {
                     strRet = realloc(strRet, nNewLen);
 
                 memcpy(strRet + nResLen, line, nLineLen + 1);
+                
+                nLoops++;
                 #ifndef PERFORMANCE_MODE     
                 if (MALONE_MAIN_COMMAND && DEBUG_AUX) printf("<%d> exeCommand - size: %d | Result: %s\n", m_nRank, nNewLen, strRet);
                 #endif                
@@ -1385,10 +1388,17 @@ char* execCommandLine(const char *fmt, ...) {
                 #endif                
             }
 
-        } while (line != NULL);
+        } while (line != NULL && nLoops<MAX_LOOPS_EXEC); //TODO: Esta limitacion parametrizarla
 
 
         pclose(pp);
+        
+        if(nLoops >= MAX_LOOPS_EXEC)
+        {
+            free(strRet);
+            strRet = NULL;
+            printf("<%d> exeCommand - infinite loop detected, deleting result\n", m_nRank);
+        }
     } else {
     #ifndef PERFORMANCE_MODE          
         if (MALONE_MAIN_COMMAND) printf("<%d> exeCommand - pp null\n", m_nRank);
@@ -1400,7 +1410,7 @@ char* execCommandLine(const char *fmt, ...) {
         lEndTick = getTick();
         lTotal = lEndTick - lInitTick;
         printf("<%d> exeCommand - size: %d | TotalTime: %ld |Result: %s \n", m_nRank, nNewLen, lTotal, strRet);
-        printf("<%d> exeCommand - end\n", m_nRank);
+        printf("<%d> exeCommand - end (loop %d)\n", m_nRank, nLoops);
     }
     #endif        
     return strRet;
@@ -1408,7 +1418,7 @@ char* execCommandLine(const char *fmt, ...) {
 
 char* execCommandLineHPC(const char *fmt, ...) {
     va_list arg;
-    char strCommand[1000];
+    char strCommand[MAX_COMMAND_SIZE];
     char* strRet, *line;
     int nAcc, nLineLen, nResLen, nNewLen;
     FILE *pp;
@@ -1450,7 +1460,7 @@ char* execCommandLineHPC(const char *fmt, ...) {
                 nNewLen = nResLen + nLineLen + 1;
                 #ifndef PERFORMANCE_MODE                     
                 if (0 && DEBUG_AUX)
-                    printf("> retLen: %d | lineLen: %d | newLen: %d\n", nResLen, nLineLen, nNewLen);
+                    printf("execCommandLineHPC> retLen: %d | lineLen: %d | newLen: %d\n", nResLen, nLineLen, nNewLen);
                 #endif                
                 if (strRet == NULL)
                     strRet = malloc(nNewLen);
@@ -1459,12 +1469,12 @@ char* execCommandLineHPC(const char *fmt, ...) {
 
                 memcpy(strRet + nResLen, line, nLineLen + 1);
                 #ifndef PERFORMANCE_MODE     
-                if (MALONE_MAIN_COMMAND && DEBUG_AUX) printf("<%d> exeCommand - size: %d | Result: %s\n", m_nRank, nNewLen, strRet);
+                if (MALONE_MAIN_COMMAND && DEBUG_AUX) printf("<%d> execCommandLineHPC - size: %d | Result: %s\n", m_nRank, nNewLen, strRet);
                 #endif                
             } else {
                 #ifndef PERFORMANCE_MODE                     
                 if (strRet == NULL) {
-                    if (MALONE_MAIN_COMMAND) printf("<%d> exeCommand - Executing: %s Result: null line!!\n", m_nRank, strCommand);
+                    if (MALONE_MAIN_COMMAND) printf("<%d> execCommandLineHPC - Executing: %s Result: null line!!\n", m_nRank, strCommand);
                 }
                 #endif                
             }
@@ -1475,7 +1485,7 @@ char* execCommandLineHPC(const char *fmt, ...) {
         status = pclose_noshell(&pclose_arg);
     } else {
     #ifndef PERFORMANCE_MODE          
-        if (MALONE_MAIN_COMMAND) printf("<%d> exeCommand - pp null\n", m_nRank);
+        if (MALONE_MAIN_COMMAND) printf("<%d> execCommandLineHPC - pp null\n", m_nRank);
     #endif        
     }
 
@@ -1483,8 +1493,8 @@ char* execCommandLineHPC(const char *fmt, ...) {
     if (MALONE_MAIN_COMMAND) {
         lEndTick = getTick();
         lTotal = lEndTick - lInitTick;
-        printf("<%d> exeCommand - size: %d | TotalTime: %ld |Result: %s \n", m_nRank, nNewLen, lTotal, strRet);
-        printf("<%d> exeCommand - end\n", m_nRank);
+        printf("<%d> execCommandLineHPC - size: %d | TotalTime: %ld |Result: %s \n", m_nRank, nNewLen, lTotal, strRet);
+        printf("<%d> execCommandLineHPC - end\n", m_nRank);
     }
     #endif        
     return strRet;
@@ -1643,8 +1653,8 @@ T_stTestInfo* createTestTrap2(int nIndexTest, char* strResult, double dTime, int
     pTest->nTest = nIndexTest;
     bzero(pTest->res, MAX_RESULT_SIZE);
 
-    if (strResult != NULL)
-        strcpy(pTest->res, strResult);
+    if (strResult != NULL && strlen(pTest->res) <MAX_RESULT_SIZE)
+        strcpy(pTest->res, strResult);        
 
     return pTest;
 }

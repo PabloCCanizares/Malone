@@ -53,7 +53,8 @@ typedef struct {
         
     double oTime[MAX_TESTS]; //Ojo, pensarnos si reducir esto a int solo
     int oKill[MAX_TESTS];
-    int oTest[MAX_TESTS];    
+    int oTest[MAX_TESTS];    //Deberiamos considerar poder activar/desactivar esta parte del codigo. Ya que unicamente es para reporting
+                             //y obviamente afecta al rendimiento.
 } T_stM; // reduced version
 
 typedef struct {

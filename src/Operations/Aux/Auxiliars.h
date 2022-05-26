@@ -37,6 +37,8 @@
 #else
 #define DEBUG_AUX isEnabledAuxLog()
 #define MALONE_MAIN_COMMAND isEnabledDebugMainCommandLog()
+
+#define MAX_LOOPS_EXEC 100
 #endif
 
 int prettyPrint(int nIndex,int nTotal,int nAntProg);

@@ -1615,7 +1615,7 @@ float test_dist_base(char* strPathIn)
     m_stEnvValues = (T_stIniValues*) loadEnvironmentFromIniFile(strPathComp);
     
     if(m_stConfigValues == NULL)
-        printf("Config null!\n");
+        printf("Config null! <%s>\n", strPathIn);
     
     if(m_stEnvValues != NULL)
     {
@@ -1633,7 +1633,7 @@ float test_dist_base(char* strPathIn)
     }
     else
     {
-        printf("Test [test_dist_base] - The environment file has not been loaded!\n");
+        printf("Test [test_dist_base] - The environment fil has not been loaded!\n");
     }
 
     //Calculate the MS

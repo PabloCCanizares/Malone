@@ -1150,48 +1150,54 @@ int malone_distributed_mutation_testing_workers() {
     //Wait for distribution method
     eMethod = (T_eExecutionMode) malone_receive_mode();
 
-    //If the user has selected distributed original program execution, lets do it!!
-    if (m_stEnvValues != NULL && m_stEnvValues->nDistributeOriginal == 1) {
-        if (MALONE_WORKER_LOG) printf("<%d> malone_distributed_mutation_testing_workers - Executing distributed original application test\n", m_nRank);
-        malone_execute_Original_Program_Distributed_workers();
+    if(eMethod != eSequential)
+    {
+        //If the user has selected distributed original program execution, lets do it!!
+        if (m_stEnvValues != NULL && m_stEnvValues->nDistributeOriginal == 1) {
+            if (MALONE_WORKER_LOG) printf("<%d> malone_distributed_mutation_testing_workers - Executing distributed original application test\n", m_nRank);
+            malone_execute_Original_Program_Distributed_workers();
+        }
+
+
+        if (MALONE_WORKER_LOG) printf("<%d> malone_distributed_mutation_testing_workers - Receiving original test results\n", m_nRank);
+
+        m_pResList = receiveOriginalTestResults_r();
+        if (MALONE_WORKER_LOG) printTestResults(m_pResList);
+
+        //Check if is enabled the parallel generation
+        malone_generate_mutants();
+
+        //Check if is enabled the parallel compilation
+        malone_compile_mutants();
+
+        //if is necessary to reorder the test suite
+        if (m_stEnvValues->nSortTestSuite != 0 && m_nSelAlgorithm == 5) {
+            //Reorder test suite
+            reorderTestSuite(&m_pResList);
+
+            //Create index conversion
+            createIndexVector(&m_pResList, m_oReorderIndexTest);
+            createSortIndexVector(&m_pResList, m_oSortedIndexTest);
+            if (MALONE_WORKER_LOG) printIndexVector(m_oReorderIndexTest, m_pResList->nElems);
+        }
+
+            //Checking if equivalence is parallel
+        if (m_stEnvValues->nClusterMutants != 0 && m_stEnvValues->nParallelMd5sum != 0 ) {
+            if (MALONE_WORKER_LOG) printf("<%d> malone_distributed_mutation_testing_workers - Checking equivalence in parallel\n", m_nRank);
+            checkMutantsEquivalence();
+        }
+
+        //Select a distribution mode!
+        malone_distribute_workflow(eMethod);
+
+        printf("<%d> malone_distributed_mutation_testing_workers - End\n", m_nRank);
+
+        //Check if the monitor mode is enabled
+        malone_check_Monitoring_Data();
     }
-
+    else
+        printf("<%d> malone_distributed_mutation_testing_workers - Sequential mode identified, exiting!\n", m_nRank);
     
-    if (MALONE_WORKER_LOG) printf("<%d> malone_distributed_mutation_testing_workers - Receiving original test results\n", m_nRank);
-
-    m_pResList = receiveOriginalTestResults_r();
-    if (MALONE_WORKER_LOG) printTestResults(m_pResList);
-
-    //Check if is enabled the parallel generation
-    malone_generate_mutants();
-    
-    //Check if is enabled the parallel compilation
-    malone_compile_mutants();
-
-    //if is necessary to reorder the test suite
-    if (m_stEnvValues->nSortTestSuite != 0 && m_nSelAlgorithm == 5) {
-        //Reorder test suite
-        reorderTestSuite(&m_pResList);
-
-        //Create index conversion
-        createIndexVector(&m_pResList, m_oReorderIndexTest);
-        createSortIndexVector(&m_pResList, m_oSortedIndexTest);
-        if (MALONE_WORKER_LOG) printIndexVector(m_oReorderIndexTest, m_pResList->nElems);
-    }
-    
-        //Checking if equivalence is parallel
-    if (m_stEnvValues->nClusterMutants != 0 && m_stEnvValues->nParallelMd5sum != 0 ) {
-        if (MALONE_WORKER_LOG) printf("<%d> malone_distributed_mutation_testing_workers - Checking equivalence in parallel\n", m_nRank);
-        checkMutantsEquivalence();
-    }
-    
-    //Select a distribution mode!
-    malone_distribute_workflow(eMethod);
-
-    printf("<%d> malone_distributed_mutation_testing_workers - End\n", m_nRank);
-
-    //Check if the monitor mode is enabled
-    malone_check_Monitoring_Data();
     
     return nRet;
 }
@@ -1369,24 +1375,24 @@ int malone_load_environment_debug()
 
             if (m_stEnvValues != NULL && m_stEnvValues->nStandalone == 1) {
                 if (m_nRank == MALONE_MASTER)
-                    printf("<%d> malone_initialize - Standalone!!\n", m_nRank);
+                    printf("<%d> malone_load_environment_debug - Standalone!!\n", m_nRank);
 
                 nTCs = readTestSuite();
                 if (nTCs > 0) {
                     nRet = 1;
-                    printf("<%d> malone_initialize - Test suite (%d tcs) readed sucessfully!!\n", m_nRank, nTCs);
+                    printf("<%d> malone_load_environment_debug - Test suite (%d tcs) readed sucessfully!!\n", m_nRank, nTCs);
                 } else
-                    printf("<%d> malone_initialize - Error reading the test suite\n", m_nRank);
+                    printf("<%d> malone_load_environment_debug - Error reading the test suite\n", m_nRank);
 
                 //Barrier
                 //MPI_Barrier(MPI_COMM_WORLD);
 
                 if (m_nRank == MALONE_MASTER) {
-                    printf("<%d> malone_initialize - Final barrier completed! Lets get ready\n", m_nRank);
+                    printf("<%d> malone_load_environment_debug - Final barrier completed! Lets get ready\n", m_nRank);
                 }
             } else
                 nRet = 1;
         } else
-            printf("<%d> malone_initialize - There exist some problem related with the configuration!!\n", m_nRank);
+            printf("<%d> malone_load_environment_debug - There exist some problem related with the configuration!!\n", m_nRank);
     }
 }

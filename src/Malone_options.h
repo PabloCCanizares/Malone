@@ -70,8 +70,8 @@
 #define MINIMUM_WORKER_TIME_MARGIN 5    //Minimum number of times that the execution of a mutant can be delayed with respect to the original program.
 #define DEFAULT_MARKER_TOKEN "#__#"     //Default token used to grep a result line.
 
-#define LINE_SIZE 500                   //Maximum size of a test suite line.
-#define TESTSUITE_SIZE 10000            //Maximum size of a test suite.
+#define LINE_SIZE 1000                   //Maximum size of a test suite line.
+#define TESTSUITE_SIZE 5000            //Maximum size of a test suite.
 
 #define TOTAL_MUTANTS_ALIAS "[[NUMBER_MUTANT]]"     //Wildcard used to be replaced by the total number of mutants.
 #define TOTAL_TESTS_ALIAS "[[TOTAL_TESTS]]"         //Wildcard used to be replaced by the total number of test cases.
@@ -90,6 +90,7 @@
 #define COMMAND_EXEC_HPC 1
 #define NUM_DEPLOY_PARAMS 5
 
+#define MAX_COMMAND_SIZE 10000
 static gint MALONE_MASTER = 0;
 
 
@@ -123,6 +124,6 @@ char* m_strEnvironment;         //Environment file to load.
 //char* m_strConfig;              //Config file to load.
 char* m_strResFolder;           //Path where the results of the MuT process will be stored.
 
-FILE* m_pp;     //<- esto que es?
+FILE* m_pp;     //<- esto que es? [09/05/21] pabloSays: Sigo preguntandome que es.
 
 #endif	/* MALONE_OPTIONS_H */
